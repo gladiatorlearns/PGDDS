@@ -1,13 +1,13 @@
-Linear Equations - Straight Line
+A - Linear Equations - Straight Line
 Ex -  Y = 2X-3 
       4x-3y=12
     
-No Linear equations - Not a straight line
+B - No Linear equations - Not a straight line
      y = X**2 (squared)
      5/x+y=10
      xy=12
      
- Variable Equations - 
+C-  Variable Equations - 
  
  1. Identify the solution -3x-y=6  
  
@@ -27,7 +27,18 @@ No Linear equations - Not a straight line
 
 5(3)+2(-4)=7? Yes
 
-Intercepts -  
+C2-Two Variable Equations -
+
+Solve - -3x+7y=5x+2y
+
+  X = -5 , Y ? =  
+  Y=8, X=? =
+  
+  7Y-2Y=5X+3X = 5Y=8X = 5Y = -40, Y = -8
+                40=8X = X=40/5 = 5
+
+
+D - Intercepts -  
 
 y = 1/2*x-3
 
@@ -38,5 +49,27 @@ x|Y
 
 X intercept = 6,which is y=0, is where line crosses x axis
 Y Intercept = -3, which is x=0, is where line crosses y axis.
+
+Ex - 5X +6Y = 30 to find intercept
+
+X | Y
+0 | 5   --> X intercept - (0,5)
+6 | 0  -- Y intercept - (6,0)
+
+E - Line Intercept - 
+
+2y+3x = 7 Determine x intercept
+
+X | Y
+0 | 3.5
+2.33 | 0
+
+F - Intercept from an equation - 
+
+
+
+
+
+
 
 
