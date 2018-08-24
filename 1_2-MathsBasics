@@ -67,7 +67,7 @@ X | Y
 F - Intercept from an equation - 
 
 
-G - Slopes -
+G - Slopes - Measure of steepness of a line = rise/run 
 
 Increase in vertial/increase in horizontal = slope = Delta Y/ Delta X = Change in Y/Change in X
 
@@ -80,3 +80,14 @@ Postive and Negetive slope
   
 Calculating slope from two coorinates - Slope = Raise/run = Y2-Y1/X2-X1 = m = Y1-Y2/X1-X2 = Inclination of a line
 
+ Dy/Dx = infinite, then we are dealing with straight line, so no slope
+ 
+ 
+ What is the slope between these 2 lines - (−2,−6)(2,2)?
+ 
+ Dy = 2-(-6) =8
+ Dx= 2-(-2)=4
+ Dy/Dx =8/4 =2
+ 
+ 
+ 
