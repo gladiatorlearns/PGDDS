@@ -1,0 +1,49 @@
+Problem 1 =
+Program to remove empty spaces from given string - 
+
+Desc - Remove the leading spaces from the string  input_str = '         This is my first code'
+
+# Reading the input as a string; ignore the following two lines
+import ast, sys
+input_str = sys.stdin.read()
+
+# Write your code here
+final_str = input_str.lstrip()
+print(final_str)
+
+String Split -
+
+Problem - Description
+Split the string input_str = 'Kumar_Ravi_003' to the person's second name, first name and unique customer code. In this example, second_name= 'Kumar', first_name= 'Ravi', customer_code = '003'.
+
+A sample output of the input 'Kumar_Ravi_003' is:
+
+Ravi
+Kumar
+003
+
+ 
+Note that you need to print in the order first name, last name and customer code.
+
+Solution - 
+import ast,sys
+input_str = sys.stdin.read()
+splist_list=input_str.split('_')
+first_name = splist_list[1]
+second_name = splist_list[0]
+customer_code = splist_list[2]
+print(first_name)
+print(second_name)
+print(customer_code)
+
+
+or alternatively
+
+import ast,sys
+input_str = sys.stdin.read()
+first_name = input_str[6:10]
+second_name = input_str[0:5]
+customer_code =input_str[11:14]
+print(first_name)
+print(second_name)
+print(customer_code)
