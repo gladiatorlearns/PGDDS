@@ -47,3 +47,13 @@ customer_code =input_str[11:14]
 print(first_name)
 print(second_name)
 print(customer_code)
+
+List_remove_append
+Description
+Remove SPSS from input_list=['SAS', 'R', 'PYTHON', 'SPSS'] and add 'SPARK' in its place.
+
+import ast,sys
+input_list = (sys.stdin.read()).split(',')
+input_list.pop()
+input_list.append('SPARK')
+print(input_list)
