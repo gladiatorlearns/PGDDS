@@ -57,3 +57,42 @@ input_list = (sys.stdin.read()).split(',')
 input_list.pop()
 input_list.append('SPARK')
 print(input_list)
+
+string to list conversion
+Description
+Convert a string input_str = 'I love Data Science & Python' to a list by splitting it on ‘&’. The sample output for this string will be:
+
+['I love Data Science ', ' Python']
+
+
+import ast,sys
+input_str = sys.stdin.read()
+
+output_list = input_str.split('&')
+print(output_list)
+
+List to String
+Description
+Convert a list ['Pythons syntax is easy to learn', 'Pythons syntax is very clear'] to a string using ‘&’. The sample output of this string will be:
+
+Pythons syntax is easy to learn & Pythons syntax is very clear
+
+
+Note that there is a space on both sides of '&' (as usual in English sentences).
+
+import ast,sys
+input_str = (sys.stdin.read()).split(',')
+
+string_1 = input_str[0]+" & "+input_str[1]
+print(string_1)
+
+Nested List
+Description
+Extract Python from a nested list input_list =  [['SAS','R'],['Tableau','SQL'],['Python','Java']]
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+
+answer = input_list[2][0]
+print(answer)
