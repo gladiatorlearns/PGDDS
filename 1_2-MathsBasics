@@ -98,3 +98,58 @@ m = Slope = DY/Dx = Change in Y/Change in x
  Example Y = 2x+3, slope 2, y'=3.  with Y'intercept having x=0, gives (0,3), add slope with x=1, (0+1, 3+2) = (1,5)
  
  Example - y=mx+b
+ 
+ Solution approaches - If the slop (m) is provided, use given cordinates to find the b and arrive at intercept form.
+ 
+ Point Slope - simply equation with two variables, represented in  y-b= x(x-a) where (a, b) are the points that line passes through.
+ 
+ Example - Line that passes through (4,9) and (6, 1)
+ Here, Slope - m = dy/dx = 1-9/6-4 = -8/2 = -4
+ Now, for any point in the slope, the formular becomes,
+     y-9/x-4 = -4
+     Point slope = y-9 = -4(x-4)
+     y-9 = -4x+16
+     y-9+9=-4x+16+9
+     Intercept form = y=-4x+25
+     Y intercept when x=0, (0,25)
+     
+Linear equation in standard form - 
+
+  Ax+By=C
+  
+  Example= 9x+16y=72
+  
+  X intercept = Y=0, x=72/9 =8
+  Y Intercept = X=0, 72/16=36/8=9/2 =4.5
+  m=slope - 4.5/-8 = -9/16
+  intercept form =  16y = -9x+72
+                       y= -9/16x+4.5
+  
+Convert below intercept form into standard form - y = 2/3 x+4/7
+                                                  3y=2x+12/7
+                                                  21y=14x+12
+                                                  -14x+21y=-12
+
+Linear equations for word problems 
+           Hours worked      money earned
+half day =  4                 54
+1 day =     8                 108
+2 Days =    16                216
+1 Week =    40                540
+1 Month =   180               2430
+
+Slope =  change in dependent variable/change in independant variable = dy/dx
+
+Here Hours is x,  Money is earned y
+
+      Slope = 108-54
+              --------
+                 8-4
+                 = 54/4 =$13.50 per hour
+                 
+      Slope represents hours wage.
+      
+      
+
+
+
