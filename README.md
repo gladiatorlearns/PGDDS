@@ -1,2 +1,3 @@
 # IIITB-PGDDS-SEP2018
-Notes
+
+Personal Scratch pad and notes.
