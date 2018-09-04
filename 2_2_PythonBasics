@@ -124,3 +124,151 @@ input_dict = ast.literal_eval(input_str)
 
 answer = input_dict.get('Label','NA')
 print(answer)
+
+Getting a Value from a Dictionary.
+Description
+Extract the company headed by Tim Cook from the dictionary {'Jack Dorsey': 'Twitter', 'Tim Cook': 'Apple','Jeff Bezos': 'Amazon','Mukesh Ambani': 'RJIO'}
+
+import ast,sys
+input_str = sys.stdin.read()
+input_dict = ast.literal_eval(input_str)
+
+name = input_dict['Tim Cook']
+print(name)
+
+
+List of Values in a Dictionary.
+Description
+Create a SORTED list of all values from the dictionary input_dict = {'Jack Dorsey' : 'Twitter' , 'Tim Cook' : 'Apple','Jeff Bezos' : 'Amazon' ,'Mukesh Ambani' : 'RJIO'}
+
+import ast,sys
+input_str = sys.stdin.read()
+input_dict = ast.literal_eval(input_str)
+
+value_list = input_dict.values()
+print(sorted(value_list))
+
+Set_diff
+Description
+Find the difference, using difference and symmetric_difference, between two given lists - list1 and list2.
+
+First, convert the lists into sets and store them as set_1 and set_2. Then store the difference and symmetric difference in answer_1 and answer_2 respectively. Print both the answers as sorted lists, i.e. convert the final sets to lists, sort it and then return it.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+
+set_1 = set(list_1)
+set_2 = set(list_2)
+answer_1 = list(sorted(set_1.difference(set_2)))
+answer_2 = list(sorted(set_1.symmetric_difference(set_2)))
+
+print(answer_1)
+print(answer_2)
+
+To conclude, in this session, you learnt about the most important Python data structures, and you now have an idea of how they can be used. The various types of data structures that you learnt about are —
+
+Lists
+Tuples
+Dictionaries
+Sets
+ 
+
+The notes for this session are available in the format of a .ipynb file, with demonstrations to help you understand the structures' functionalities. These notes can be downloaded from below.
+
+Control Structures
+
+Control structures are the essence of programming since they help computers do what they do best — automate repetitive tasks intelligently. The most common control structures are if-else statements, for and while loops, and (specific to Python) list and dictionary comprehensions. This session will cover all of these.
+
+ 
+
+Another crucial thing you will learn in Session 2 is to write your own functions. Almost every powerful program — whether a web app or a machine learning algorithm — is basically a set of functions written to perform specific tasks. 
+
+ 
+
+In this session
+Control structures
+If-elif-else
+For loop
+While loop
+List comprehensions
+Dictionary comprehensions
+Functions
+Map
+Filter
+Reduce
+
+If-Else
+Description
+Write a code to check if the string in input_str starts with a vowel or not. Print capital YES  or NO.
+
+For example, if input_str = 'analytics' then, your output should print 'YES'.
+
+import ast,sys
+input_str = sys.stdin.read()
+
+vowels={'a','e','i','o','u'}
+if input_str[0] in vowels:
+    print('YES')
+else:
+    print('NO')
+    
+ The most basic control structure is a conditional statement. When you want different operations to be performed when the values of the variable vary, you need conditional statements. In this segment, you will learn about the syntax and functioning of if-else statements.
+
+ 
+
+The syntax of an if statement is pretty simple:
+
+if <condition 1>:
+    do something
+ 
+
+The statement needs to be indented with a tab. In Sublime Text, at the bottom right, you can adjust the tab size to be equal to any number of white spaces. A good practice is to make use of four white spaces as the tab size for indentations. Anything outside an indentation is not a part of the if statement. So, for the following statement —
+
+if i>10 and j<8:
+    c+=5
+print(c)
+ 
+
+The print statement is not a part of if statement as it is not indented on the if statement. Now, this is how an if-else statement will look:
+
+if <condition 1>:
+    do something
+else:
+    do something else
+ 
+
+Similarly, you can have the elif statement (In R, this is 'else-if'):
+
+if <condition 1>:
+    do something
+elif <condition 2>:
+    do something else
+else:
+    do something else
+ 
+ Loops
+Looping is an important part of carrying out operations — whether it is looping over a range of numbers, numbers in an array, items in a list, or keys and values in a dictionary, etc. You must be familiar with the use of loops in Python.
+ 
+ Iterations can be over any collection. The iteration in a string goes over each character; however, in lists and tuples, the iteration goes over each item in turn, and in dictionaries, you can iterate over both keys and values or any one of them. Another keyword — 'enumerate' — can be used to introduce another iterating variable that counts the iterations. Note that it starts with 0.
+
+ 
+
+Other commands that can be used are 'break', 'continue', and 'pass'. To see the differences between them, use the following piece of code:
+
+ 
+
+for i in range(100):
+    print(i)
+    if i>50:
+        break
+        print("Hello")
+ 
+
+Notice how the break command breaks out of the loop once i = 51, and it is used to exit the iteration. Replace 'break' with pass'. You will now see that after the value of i exceeds 50, the string "Hello" is printed. 'Pass' does nothing and allows the remaining code to be executed. If you now replace 'pass' with 'continue', you will notice that the keyword "Hello" isn't printed at all, but the values of i are. The reason behind this is that 'continue' exits that iteration and moves to the next one, not allowing anything below it to be executed. 'Pass', on the other hand, allows for statements to be executed below it in the loop.
+
+ 
+
+A while loop is used when you aren't sure of the number of iterations you need to have. It should be used when your results depend on the value of a variable.
