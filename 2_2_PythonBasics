@@ -404,3 +404,59 @@ What is the output of this program?
 
 min = (lambda x, y: x if x < y else y)
 min(101*99, 102*98)
+
+Lambda
+Description
+Create a lambda function 'greater', which takes two arguments x and y and return x if x>y otherwise y.
+If x = 2 and y= 3, then the output should be 3.
+
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+a = int(input_list[0])
+b = int(input_list[1])
+greater=lambda a,b: a if a > b else b
+
+print(greater(a,b))
+
+Map, Filter, and Reduce
+Map is a function that works like list comprehensions and for loops. It is used when you need to map or implement functions on various elements at the same time.
+
+Map Function
+Description
+Using the Map function, create a list 'cube', which consists of the cube of numbers in input_list.
+
+For e.g. if the input list is [5,6,4,8,9], the output should be [125, 216, 64, 512, 729].
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+
+cube = list(map(lambda x: x**3,input_list))
+print(cube)
+
+Map Function
+Description
+Using the function Map, count the number of words that start with ‘S’ in input_list.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+print(len(list(filter(None,list(map(lambda x: x if x[0].upper() == 'S' else None,input_list))))))
+
+Map Function
+Description
+Create a list ‘name’ consisting of the combination of the first name and the second name from list 1 and 2 respectively. 
+
+For e.g. if the input list is:
+[ ['Ankur', 'Avik', 'Kiran', 'Nitin'], ['Narang', 'Sarkar', 'R', 'Sareen']]
+
+the output list should be the list:
+['Ankur Narang', 'Avik Sarkar', 'Kiran R', 'Nitin Sareen']
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+first_name = input_list[0]
+last_name = input_list[1]
+name = list(map(lambda x,y: x + " " +y,first_name,last_name))
+print(name)
