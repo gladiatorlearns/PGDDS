@@ -460,3 +460,52 @@ first_name = input_list[0]
 last_name = input_list[1]
 name = list(map(lambda x,y: x + " " +y,first_name,last_name))
 print(name)
+
+Filter Function
+Description
+Extract a list of numbers that are multiples of 5 from a list of integers named input_list.
+
+Note: Use the filter() function.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_answer = list(filter(None,list(map(lambda x: x if x%5==0 else None,input_list))))
+print(list_answer)
+
+Filter Function
+Description
+You are given a list of strings such as input_list =  ['hdjk', 'salsap', 'sherpa'].
+
+Extract a list of names that start with an ‘s’ and end with a ‘p’ (both 's' and 'p' are lowercase) in input_list.
+
+Note: Use the filter() function.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+sp = list(filter(None,list(map(lambda x: x if x[0] == 's' and x[-1] == 'p' else None,input_list))))
+print(sp)
+
+Reduce Function
+Description
+Using the Reduce function, concatenate a list of words in input_list, and print the output as a string.
+If input_list = ['I','Love','Python'], the output should be the string 'I Love Python'.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+from functools import reduce
+print(reduce(lambda x,y: x+" "+y,input_list))
+
+Reduce Function
+Description
+You are given a list of numbers such as input_list = [31, 63, 76, 89]. Find and print the largest number in input_list using the reduce() function.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+from functools import reduce
+answer = reduce(lambda x,y: x if x> y else y, input_list)
+print(answer)
+
