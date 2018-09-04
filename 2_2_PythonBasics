@@ -96,3 +96,31 @@ input_list = ast.literal_eval(input_str)
 
 answer = input_list[2][0]
 print(answer)
+
+
+Tuple
+Description
+Add the element ‘Python’ to a tuple input_tuple = ('Monty Python', 'British', 1969). Since tuples are immutable, one way to do this is to convert the tuple to a list, add the element, and convert it back to a tuple.
+
+To learn how to convert a list to a tuple, search for it on Google / Stack Overflow etc.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_tuple = ast.literal_eval(input_str)
+tuple_1=list(input_tuple)
+tuple_1.append('Python')
+tuple_2=tuple(tuple_1)
+# Make sure to name the final tuple 'tuple_2'
+print(tuple_2)
+
+
+Dict_Error
+Description
+From a Dictionary input_dict={'Name': 'Monty', 'Profession': 'Singer' }, get the value of a key ‘Label’ which is not a part of the dictionary, in such a way that Python doesn't hit an error. If the key does not exist in the dictionary, Python should return 'NA'.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_dict = ast.literal_eval(input_str)
+
+answer = input_dict.get('Label','NA')
+print(answer)
