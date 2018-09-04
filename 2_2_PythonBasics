@@ -272,3 +272,135 @@ Notice how the break command breaks out of the loop once i = 51, and it is used 
  
 
 A while loop is used when you aren't sure of the number of iterations you need to have. It should be used when your results depend on the value of a variable.
+
+
+Python comprehensions  - are syntactic constructs that enable sequences to be built from other sequences in a clear and concise manner. Here, we will cover list comprehensions and dictionary comprehensions.
+
+Creating a List Comprehension
+Description
+You are given an integer 'n' as the input. Create a list comprehension containing the squares of the integers from 1 till n^2 (including 1 and n), and print the list. 
+
+For example, if the input is 4, the output should be a list as follows:
+
+import ast, sys
+n = int(input())
+square_list=[x**2 for x in range(1,n+1)]
+print(square_list)
+
+List Comprehensions
+Description
+Extract the words that start with a vowel from a list input_list=[wood, old, apple, big, item, euphoria] using list comprehensions.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+vowel_list = ['a','e','i','o','u']
+list_vowel=[word for word in input_list if word[0].lower() in vowel_list]
+print(list_vowel)
+
+Using list comprehensions is much more concise and elegant than explicit for loops. An example of creating a list using a loop and a comprehension is as follows:
+
+# using a for loop
+
+product_list = []
+for i in range(10):
+    for j in range(10,20):
+        product_list.append(i*j)
+ 
+
+The same code using a list comprehension is as follows:
+
+# using list comprehension
+product_list = [ i*j for i in range(10) for j in range(10,20) ]
+ 
+ Dictionary Comprehension
+Description
+You are given an integer input n.
+
+Write a program to generate a dictionary that contains the key-value pairs i: i**2 where ' i ' is an integer number from 1 to n (both 1 and n included). 
+
+For example, if the input is n=8, the output should be a dictionary as follows:
+
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+import ast,sys
+n = int(input())
+dictionary = {x: x**2 for x in range(1,n+1)}
+print(dictionary)
+
+List Comprehension
+What will the output of the following code be?
+
+print([i+j for i in "abc" for j in "def"])
+ 
+ AnS -
+
+['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+
+Dictionary Comprehension
+What will the output of the following code be?
+
+d = {x.upper(): x*3 for x in 'acbd'}
+print(d)
+
+{'A': 'aaa', 'C': 'ccc', 'B': 'bbb', 'D': 'ddd'}
+
+
+Functions
+ Functions, as the name suggests, perform a task or function. 
+ They are blocks of code that can be reused at various parts of the code as well as various files.
+ When you import any package and call any of its methods, you make use of the functions defined in it. 
+ This makes determining the use of each portion of the code significantly easier.
+
+Function
+Description
+Create a function squared(),  which takes x and y as arguments and returns the x**y value. For e.g., if x = 2  and y = 3 , then the output is 8.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+x = int(input_list[0])
+y = int(input_list[1])
+def squared(x,y):
+    return x**y
+print(squared(x,y))
+
+Similar to if-else and the for loop, the parts belonging to a function are indented on it. There is no need for brackets except for the input parameters that are specified just after the function name. In the next video, you will see the use of 'lambda' expressions, which are another way to make use of functions.
+
+ 
+
+Lambda expressions are also another way of defining functions but with a difference. They aren't capable of multiple expressions and can only handle single expressions. The format of lambda statements is as follows:
+
+function_name  = lambda <space>  input_parameters  :  output_parameters
+
+Eg: join_by_comma = lambda x : ','.join(x)
+ 
+
+This will create a function called join_by_comma and will return a string with each item of the list separated by a comma.
+
+Functions
+What is the output of the following program?
+
+def say(message, times = 1):
+    print(message * times)
+
+say('Hello')
+say('World', 5)
+
+ANS - Hello WorldWorldWorldWorldWorld
+Feedback : For some functions, you may want to make some parameters optional and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition of the assignment operator (=), followed by the default value. The function 'say' is used to print a string as many times as specified. If you don’t supply a value, then by default, the string is printed just once. You achieve this by specifying a default argument value of 1 to the parameter ‘times’. In the first usage of ‘say’, you supply only the string, and it prints the string once. In the second usage of ‘say’, you supply both the string and an argument 5, stating that you want to say the string message five times.
+
+Id Function
+Which of the following is the use of the id() function in Python?
+
+
+Every object doesn’t have a unique id, and hence, id() returns a cluster of similar objects.
+
+Id returns the identity of the object.
+Feedback : Python has a unique identification number for each object created, id() return the id number of that object.
+
+Lambdas
+What is the output of this program?
+
+min = (lambda x, y: x if x < y else y)
+min(101*99, 102*98)
