@@ -23,3 +23,28 @@ Pattern matching is an important concept in the string or text-based processing.
 select essn, hours
 from works_on
 where hours between 25 and 30;
+
+
+Basics of Sorting
+Sorting and ordering is a common operation which you have already learnt to do in Excel and R. In SQL, sorting is done using the clauses 'asc' and 'desc' for ascending and descending order respectively. You will also learn to use the IN, NOT IN and IS NULL clauses.
+
+IN
+
+NOT IN
+
+IS NULL
+
+Asc
+
+desc
+
+
+Additional Reading 
+Select Statement  - http://www.mysqltutorial.org/mysql-select-statement-query-data.aspx
+Removal of duplicates and Distinct keyword - http://www.mysqltutorial.org/mysql-distinct.aspx
+More clauses in filtering data:
+OR operator - http://www.mysqltutorial.org/mysql-or/
+LIMIT clauses-http://www.mysqltutorial.org/mysql-limit.aspx
+Insert Statement  - http://www.mysqltutorial.org/mysql-insert-statement.aspx
+Handling duplicate records - http://www.mysqltutorial.org/mysql-insert-or-update-on-duplicate-key-update/
+Update Statement  - http://www.mysqltutorial.org/mysql-update-data.aspx
