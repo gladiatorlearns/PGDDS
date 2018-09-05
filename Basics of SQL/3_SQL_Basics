@@ -1,1 +1,25 @@
 An introduction to RDBMS and SQL
+
+The commands are broadly categorised as follows:
+
+Data Definition Language (DDL)
+
+Data Manipulation Language (DML)
+
+Data Retrieval with SQL
+In this lecture, you will learn the basic constructs in the SELECT query. The session will also cover the creation of schema for the database that will be used throughout the session. You will specifically learn the following:
+
+SELECT clause
+
+FROM Clause
+
+WHERE Clause
+
+Basic Sorting and Filtering in SQL
+
+Pattern Matching with Wildcards
+
+Pattern matching is an important concept in the string or text-based processing. In SQL, certain characters are reserved as wildcards that can match any number of preceding or trailing characters.
+select essn, hours
+from works_on
+where hours between 25 and 30;
