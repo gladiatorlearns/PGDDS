@@ -168,6 +168,8 @@ group by dno, sex;
 
 -- 22. Display the number of male employees in each department
 
+select count(*), dno from employee group by dno
+
 -- 23. Display the average, minimum, maximum hours spent in each project
 
 select pno, avg(hours), min(hours), max(hours)
@@ -183,6 +185,7 @@ group by year(bdate)
 order by year(bdate);
 
 -- 25. Dipslay the number of projects each employee is working on
+select count(*), essn from works_on  group by pno order by essn
 
 -- 26. Display the Dno of those departments that has at least 3 employees
 select dno, count(*)
@@ -233,8 +236,14 @@ having numemps =
 
 -- 31. Display the fname of those employees who work for at least 20 hours
 
+select fname from employee e, works_on w where e.ssn=w.essn and w.hours > 20
+
+
 -- 32. What is the average salary of those employees who have at least one
 --     dependent
+
+select avg(salary) from employee 
+where ssn in (select e.ssn from employee e, dependent d where e.ssn=d.essn)
 
 -- JOIN Examples
 
@@ -262,7 +271,6 @@ order by ssn;
 select e.ssn, e.lname, p.pname
 from employee e inner join works_on w on e.ssn = w.essn 
 	inner join project p on w.pno = p.pnumber;
-
 
 
 
