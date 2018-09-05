@@ -1,0 +1,8 @@
+Order by Clause
+You have used and executed the basic SELECT queries on the employee table, among others. There is one thing that must have caught your eye — all the records retrieved through the SELECT query do not necessarily follow an order, i.e.
+they do not appear in alphabetical, increasing or decreasing order by default.
+
+Aggregate Functions
+As a data analyst, you would frequently prepare reports which present an overall picture of the data in hand. This task usually includes calculating sums, averages, finding highest and lowest, counting the qualifying records, etc.
+
+In other words, you will often need to find aggregate values of certain variables like the average age, total salary of employees, the number of males or females etc. You know how to do all these things in R.
