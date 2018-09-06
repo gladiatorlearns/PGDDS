@@ -6,3 +6,7 @@ Aggregate Functions
 As a data analyst, you would frequently prepare reports which present an overall picture of the data in hand. This task usually includes calculating sums, averages, finding highest and lowest, counting the qualifying records, etc.
 
 In other words, you will often need to find aggregate values of certain variables like the average age, total salary of employees, the number of males or females etc. You know how to do all these things in R.
+
+Having Clause
+Suppose your manager asks you to count all the employees whose salary is more than the average salary in that particular department. Now, intuitively, you know that two aggregate functions would be used here — count() and avg(). You decide to apply the where condition on the average salary of the department, but to your surprise, the query fails. In fact, you should try writing this query before moving ahead.
+
