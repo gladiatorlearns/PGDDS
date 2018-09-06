@@ -59,3 +59,28 @@ To summarise, an outer join is used when you want to display the rows in one tab
  
 
 Also, the outer join is of two types - left outer join and right outer join. It doesn't really matter which table you treat as left and right, i.e. you can choose the one you are more comfortable with.
+
+
+
+Additional Reading
+It is recommended that you refer to the following links specific to MySQL and attempt the questions given on this page.
+
+Grouping data http://www.mysqltutorial.org/mysql-group-by.aspx
+
+Having clause http://www.mysqltutorial.org/mysql-having.aspx
+
+Nested queries and subqueries http://www.mysqltutorial.org/mysql-subquery/
+
+Order by clause http://www.mysqltutorial.org/mysql-order-by/
+
+Natural Sorting  http://www.mysqltutorial.org/mysql-natural-sorting/
+
+Joining tables https://www.techonthenet.com/mysql/joins.php
+
+Inner join http://www.mysqltutorial.org/mysql-inner-join.aspx
+
+Left join http://www.mysqltutorial.org/mysql-left-join.aspx
+
+Union Operation  http://www.mysqltutorial.org/sql-union-mysql.aspx
+
+Intersect Operation http://www.mysqltutorial.org/mysql-intersect/
