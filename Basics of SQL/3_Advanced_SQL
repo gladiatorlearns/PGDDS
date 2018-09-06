@@ -16,3 +16,21 @@ You know that a database is a collection of multiple related tables. While gener
 Joins
 
 Nested queries/Subqueries
+
+To summarise, you learnt nested sub-queries which are typically used when you have to select columns from one table based on filter conditions from another table. In such cases, you put a sub-query inside the 'where' clause instead of a certain value. In other words, if you want to select columns 'a' and 'b' from table_1 and the condition is to be applied on table_2, then the general structure of the query will is:
+
+ 
+
+select a, b 
+from table_1
+where c = (select d from table_2 where e = x);
+ 
+
+The other typical use case of nested queries is when you have to apply a filter condition on an aggregated value, for example, display two columns a, b from table_1 such that a is greater than the average value of c:
+
+ 
+
+select a, b 
+from table_1
+where c > (select avg(c) from table_1);
+ 
