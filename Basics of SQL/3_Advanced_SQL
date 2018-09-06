@@ -34,3 +34,28 @@ select a, b
 from table_1
 where c > (select avg(c) from table_1);
  
+ To summarise, join is a way to retrieve data from multiple tables. The most common join is the inner join, which selects only those rows from two tables where the common column has the same value. The general structure of an inner join statement is as follows: 
+
+ 
+
+select * 
+from table_1 inner join table_2 
+on table_1.column_x = table_2.column_y;
+
+Multi Join
+You previously learnt about the inner joins and writing the join queries. You must have noticed that only two tables were referred to in the join. But what if you have a complicated problem statement which needs referencing three, four, five or more tables? You can write the join queries for such situations using multi-joins.
+
+To summarise multi-joins, you can join multiple tables using the common attributes between pairs of tables. This is possible because the result of a join is also a table which you can join further to another table (with a common attribute).
+
+ 
+
+For example, you wanted to retrieve columns from the tables employee and project, but there is no common attribute in these tables.  Thus, you join the employee table with works_on using the common attribute 'ssn'. The result of this join is then further joined to the project table.   
+
+ Outer Join
+In an inner join, all the records from the first table are referred to and joined together. However, there may be situations when you need to join the records based on a second table. This lecture will cover the concept of outer join which allows you to accomplish such tasks.
+
+To summarise, an outer join is used when you want to display the rows in one table even if they do not have a corresponding entry in the other table. For example, if you inner join the employee table with the dependent table,  you will get only those employees who have at least one dependent. To avoid this 'loss of information' you can use an outer join. 
+
+ 
+
+Also, the outer join is of two types - left outer join and right outer join. It doesn't really matter which table you treat as left and right, i.e. you can choose the one you are more comfortable with.
