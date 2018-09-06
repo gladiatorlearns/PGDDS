@@ -135,6 +135,49 @@ You may have noted that conditional formatting fulfils the same dual purpose as 
 
 While using conditional formatting, you will have to choose between colours, formatting rules etc. Remember that anything which fulfils the above two requirements is a good formatting technique. This principle can be generalised to other formatting techniques.
 
+
+Passwords and Naming Files
+
+Security of data is usually of critical importance to most organisations. You often want that the data should only be read but not edited without your permission or should be accessible to only a few people. Passwords are used to do that. 
+
+ 
+
+In this segment, you'll learn to lock Excel sheets so that users can only perform only certain allowed tasks. Also, you'll learn to name files - another seemingly easy but an often incorrectly performed task.
  
 
 Next, you will learn a few more tips and tricks of conditional formatting. Towards the end, we will also hear from Anand about how Conditional Formatting has helped him uncover insights from data.
+
+Report Making III: Advanced Formatting
+
+In this segment, you will give a finishing touch to the report using borders, formatting borders, wrap text and a few other formatting options. 
+
+Borders
+
+In a report containing hospital charges data from multiple states / regions, good readability  means that the reader can easily identify the various states and the sub-regions within them. You'll learn to do that using borders. Borders will help demarcate different sections of the report.
+
+Next, you'll see that it is also possible to create borders manually. This becomes helpful when you want to draw borders only on certain cells which are staggered or do not fall in a pattern where the conventional borders can be used.
+
+Next, you'll learn another frequently used technique - wrap text, which is a way to use the available text space efficiently.
+
+In the next short video, you'll learn some advanced formatting options to make the data much more presentable .
+
+With this, you've reached the end of Report Making. You should now be able to create a well-formatted report for pretty much any sort of data.  Remember that a good report improves readability of important information and reduces the amount of time spent on reading and understanding the data.
+
+ 
+
+In the next segment, you will learn a task which is frequently done wrong - printing an Excel report. 
+
+
+Printing and Page Layout
+
+In this segment, you'll learn how to print an Excel sheet. If you've not tried printing a spreadsheet before, you'll see that there are a number of important steps involved in the seemingly trivial task. The objective is to learn the techniques to print an Excel spreadsheet in as few pages as possible with the best possible readability.
+
+A key advantage of using PDFs is that the users cannot fiddle with the data, which is often how you want it. This apart, there are ways to ensure security in the Excel format also by putting passwords and limiting users to perform only certain allowed tasks. You'll learn to do that in the next segment.  
+
+ In the last short lecture, you'll learn to name files appropriately. You may have been irritated searching for files on your system which are not often used. Also, you may experienced the feeling 'I have no clue what this file contains' while staring at the icons and names of a number of files. These silly issues occur often because we don't put enough thought behind naming files.
+ 
+ Naming files becomes especially important at a larger scale when your file is likely to get lost among a number of similar looking ones. Also, we try to do a lot of stuff to reduce the time spent by the reader to understand a report or data. There is no point doing that if a person takes an hour just to find a file. 
+
+ 
+
+With this, you have reached the end of the first session. In the next session, you will learn to create data visualisations and use pivot tables, formulae and a number of other incredibly useful tools. 
