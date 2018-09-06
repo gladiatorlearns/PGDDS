@@ -49,4 +49,40 @@ You can download the bank-marketing dataset here.
 bank-marketing.csv
 file_downloadDownload
 
+ Delimited Files
+
+Delimited files are data files which have values separated by certain special characters (e.g.: Tab, Comma, Semi - Colon). They are in widespread use because they can be easily accessed by various platforms and spreadsheet software apart from Excel. Some of the most commonly used delimited file formats are:
+
+ 
+
+    Comma Separated Values Files (CSV)
+    Semi-Colon Separated File
+    Tab Separated File
+
+ 
+
+For example, the following fields in each record are separated by Semi-Colons, and each record by new lines:
+
+ 
+Semi Colon Separated File Storage
+
+ 
+
+The following image shows how the same file would look after exporting to MS Excel
+
+ 
+Semi Colon Separated File - Extracted in Excel
+
+ 
+
+In this segment, you will learn about extracting data (to MS Excel) from one type of Delimited Files - Semi Colon Separated Files. In the process, you will learn about some important functions like Text to Columns.
+
+ 
+
+ 
+
+In the next segment, you will learn about exploring keyboard shortcuts in MS Excel. Using keyboard shortcuts will increase the speed of your analysis tremendously!
+
+ 
+
  
