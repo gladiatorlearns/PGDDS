@@ -289,43 +289,42 @@ from employee e inner join department ed on e.dno=ed.dnumber
 -- 35b. Display the deptname, the project the department runs
 -- 	Output heading: dept-name, pname
 
-
+select dname 'dept-name', pname from department d inner join project p on d.dnumber=p.dnum
 
 -- SOME COMPLICATED SQL Queries for Self-Study
 
 -- 36. What is the name of the department that has least number of 
 --     employees?
 
--- select dname 
--- from employee e, department d 
--- where e.dno=d.dnumber 
--- group by dno having count(ssn) =
---     (select min(mycount) 
---      from (select count(ssn) as mycount 
---            from employee
---            group by dno
---           ) mytable
---     );
+  select dname, count(e.ssn) 'empcount' from department d 
+  inner join employee e on d.dnumber = e.dno 
+  group by d.dname 
+  order by empcount asc
+  limit 0, 1
+
+ select dname 
+ from employee e, department d 
+ where e.dno=d.dnumber 
+ group by dno having count(ssn) =(select min(mycount) from (select count(ssn) as mycount from employee group by dno) mytable);
 
 -- 37. What is the name of the department whose employees have the highest
 --     average salary?
 
 -- 38. Display the fname of the employee along with the fname of the manager
--- 	select e.fname 'EmpName', m.fname 'MgrName'
--- 	from employee e, employee m
--- 	where e.super_ssn = m.ssn;
+     select e.fname 'EmpName', m.fname 'MgrName'
+     from employee e, employee m
+	 where e.super_ssn = m.ssn;
 
 -- 39. Which employees work on projects belonging to departments other
 --     than departments they belong to
 -- 	Output: ssn, pname, emp-dept-name, proj-dept-name
 
--- select e.ssn, pname, ed.dname 'emp-dept-name', pd.dname 'project-dept-name' 
--- from employee e,  works_on w,  project p,  department ed,  department pd 
--- where e.ssn = w.essn 
--- 	and w.pno = p.pnumber 
--- 	and e.dno = ed.dnumber 
--- 	and p.dnum = pd.dnumber 
--- 	and e.dno <> p.dnum;
+select e.ssn, pname, ed.dname 'emp-dept-name', pd.dname 'project-dept-name' 
+from employee e,  works_on w,  project p,  department ed,  department pd 
+where e.ssn = w.essn 
+and w.pno = p.pnumber 
+and e.dno = ed.dnumber 
+and p.dnum = pd.dnumber and e.dno <> p.dnum;
 -- ==============================================
 
 -- LEFT OUTER JOIN
@@ -340,4 +339,4 @@ from employee e left join dependent d on e.ssn = d.essn;
 
 -- Right out joint between dependent and employee
 select e.ssn, e.fname, d.dependent_name
-from deparment d right join employee e on e.ssn = d.essn;
+from dependent d right join employee e on e.ssn = d.essn;

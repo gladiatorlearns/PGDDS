@@ -1,3 +1,1 @@
-# IIITB-PGDDS-SEP2018
-
-Personal Scratch pad and notes.
+Personal referene documents for study purpose. Do not copy without prior permission.
