@@ -1,0 +1,52 @@
+Introduction
+
+Welcome to the second session of Data Analysis in Excel. In this session, you will learn to use some powerful Excel techniques used to understand and manipulate data. The learning objectives of this session are:
+
+    Use csv and delimited files to read data
+    To understand common tricks in Data Analysis (e.g.: Bucketing & Segmenting)
+    Use shortcuts while working in MS Excel
+    Use formulae and Cell Referencing in MS Excel
+    Create visualisations to analyse and present data / important insights 
+
+ 
+
+This module assumes no pre-requisite knowledge of Excel and essentially builds on what you've learnt in session 1.
+
+ 
+In this session:
+
+In this session, you will take a bank's telemarketing business problem to understand the types of customers which should be targeted for future marketing campaigns. The dataset contains demographic and personal information of about 45000 people and their response to a telemarketing campaign, i.e. whether they bought a certain product when contacted by the company through telemarketing. 
+
+ 
+
+Our objective is to find the attributes of customers who are likely to buy the product when contacted through telemarketing. This is a classic case of acquisition analytics where companies use past data to predict which customers are likely to buy certain products.   
+
+ 
+
+The following topics will be covered in this session:
+
+    Delimited files
+    Discovering shortcuts
+    Formulae in Excel
+    Complex Functions
+    Cell Referencing and Text Functions
+    Logical Formulae
+    Creating & Formatting Charts in Excel
+    Choosing the right type of Chart
+
+ 
+Guidelines for In-Module Questions:
+
+The in-video and in-content questions and the assignments of this module are not graded. 
+
+ 
+
+We suggest that you download the dataset from the end of this page and work alongside.
+
+Downloads
+
+You can download the bank-marketing dataset here.
+bank-marketing.csv
+file_downloadDownload
+
+ 
