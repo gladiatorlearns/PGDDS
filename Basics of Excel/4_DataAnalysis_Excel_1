@@ -86,3 +86,37 @@ In the next segment, you will learn about exploring keyboard shortcuts in MS Exc
  
 
  
+Introduction to Formulae
+In the last segment, we developed an understanding of the telemarketing dataset -
+
+A bank contacted approximately 45,000 people for a telemarketing campaign and recorded their opinion on purchasing a new product. In this session, you will analyse the dataset to find profiles of people who should be targeted i.e. categories of people who have a higher propensity to buy the new product.
+
+ 
+
+Why is this important?
+
+A focused targeting will not only increase the sales of the new product but also reduce the marketing cost.
+
+This is a fairly common analysis and a lot of you would have faced similar questions at work:
+
+Which customers to reach out for an e-mail marketing campaign?
+Which customers to target based on their demographics?
+All such analysis includes bucketing/segmenting. In this session, apart from Excel skills, we will also learn about developing the analytical skills like Bucketing & Segmenting.
+
+Remember, formulae start with an equal sign '='. Recall that:
+
+Cells are named as a combination of the respective rows and columns i.e. the cell at the intersection of Column A and Row 2 is named as A2.
+Formulae can use cell references. Copy and Pasting formulae adjust the input cells references appropriately.
+Double Click on the Autofill square at the bottom right of a cell to fill an entire range. Excel is smart enough to change the input references for each cell.
+ 
+
+In the next  video, you will learn about Mathematical Formulae.
+
+Complex Functions
+Recall that our primary aim is to find the types of people who are most likely to respond positively to the campaign. You can analyse various attributes like age group, marital status etc. one at a time or could automate the task to do the same thing in a fraction of seconds. In this segment, you will learn faster ways to extract the important pieces of information from the data.
+
+ n the previous video, we observed the use of:
+
+0 & 1 instead of No & Yes. The use of binary values (especially 0 & 1)  makes the computation of average easier. 
+Remove Duplicates in the Data Tab. Remove Duplicates can be used to find only the unique values in a column.
+Is there a formula that can automate the aggregation by age group and eliminate the use of filters? Let's explore
