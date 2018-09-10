@@ -31,3 +31,94 @@ The in-video and in-content questions and the assignments of this module are not
 We suggest that you download the dataset from the end of this page and work alongside.
 
  
+Creating a Pivot Table
+Recall, in the last session, we had used statistical formulae like AVERAGEIF() to aggregate data by multiple groups (e.g.: Marital Status - Single, Married, Divorced). 
+
+Pivot Tables are an extremely useful tool to aggregate such data without using formulae. Using Pivot Tables eases the analysis. To a large extent, it eliminates the need for statistical formulae. 
+
+The PIVOT Table is structured like a normal table. The rows have the individual values of a particular field. The columns have the aggregation corresponding to the fields.
+
+ 
+
+The value field settings is a powerful option to choose between formatting options for the aggregated values.
+
+Before moving ahead, try aggregating response rates by age group. Do you get the same answer as before (recall - AVERAGEIF())? 
+
+Analysing Data in a Pivot Table
+Recall, we had calculated response rates for groups having multiple parameters (e.g.: marital - education; job - marital). We had accomplished this using Text functions & Statistical functions like AVERAGEIF(). Can we do the same - multivariate analysis - through PIVOT Tables? Yes. Let's explore!
+
+That may have been a little too heavy! Let's summarize what we have observed:
+
+We can drag and drop fields into rows and columns to create a hierarchical/matrix-like pivot table. Hierarchical tables often help deep dive into data i.e. they help answer the following questions:
+Among married people, which is the "best" job type?
+Instead of just looking at Profits at a Product Category level, a salesperson may use a hierarchical table to analyse profits at a Product Sub-Category Level.
+The values in a PIVOT Table can be sorted. Applying conditional formatting to the sorted values helps:
+Understand the trend in data
+Isolate exceptions to the general trend (Exceptions are pockets of a particular colour surrounded by a different colour).
+ 
+
+We should remember a statistical thumb rule: Before using any data to extrapolate, we should check whether we have >30 individual observations or not. Statistically, whenever we have >30 sample observations, we can extrapolate the same to the population as well.
+
+ 
+
+Before moving ahead, why don't you try to use the PIVOT Tables to calculate the response rates by a combined marital-education group? You will now appreciate the power of PIVOT Tables. They help aggregate without having to use statistical and text functions. Moreover, the drag and drop feature makes it very easy to validate hypotheses on the fly!
+
+Filtering Data in a Pivot Table
+Suppose, we aggregate data by groups of parameters, say marital-education. Within these groups, can we selectively look at the response rates of only self-employed people i.e. self-employed single & tertiary educated or self-employed divorced & tertiary educated?
+
+Filters allow us to achieve the same.
+
+PIVOT Tables should be used when we wish to aggregate data or get an answer to the questions:
+
+What are the top ten performers?
+What are the exceptions to a general trend?
+ 
+ VLOOKUP - Linking Data from multiple files & tables
+Suppose you have data in two different tables and you wish to combine the data. How do you do this? Excel has a formula - VLOOKUP() that facilitates combining data from multiple tables/files. Let's learn how to use VLOOKUP.
+
+The basic idea of VLOOKUP is to merge two tables using a common column. If there's no column common among tables, merging will not be applicable (it will simply be equivalent to placing two tables alongside each other). 
+
+ 
+
+VLOOKUP has 4 arguments - 
+
+LOOKUP_VALUE: Value to be found
+TABLE_ARRAY: Table in which the LOOKUP_VALUE has to be searched
+COL_INDEX_RETURN: Index of the column that has to be returned
+RANGE_LOOKUP: This is an optional parameter. However, in order to ensure an exact match, always use False here
+We also used Named References for tables. These make the Excel Formula more readable and reduce the chances of an error due to a Dollar Sign.
+
+ 
+
+In the next video, let's explore VLOOKUP in greater detail:
+
+
+Remember:
+
+The value that we're searching should be the 1st column in the target table.
+When looking up a value from another Excel File, the target file should be in the same directory as the parent file.
+In the next video, we will look at some common errors that we are likely to commit while using VLOOKUP.
+
+To summarise, the top 3 mistakes we're most likely to commit while using VLOOKUP are:
+
+The key (column to be searched) should be the first column in the target table
+#NA error due to missing Dollar Signs
+The last argument in VLOOKUP is mostly FALSE
+
+Common Errors in Excel
+As a data analyst, work in Excel will take up a fair amount of time in your daily work. While working in Excel, we're bound to face some errors. What is important is to understand the root cause of the error and the mechanism to rectify the error. 
+
+Often, in a large Excel Sheet, errors can occur due to incorrect referencing, changes in the referenced cell, etc.
+
+To summarise, the Formulas Tab of the Ribbon has the following options which help find/rectify errors:
+
+Evaluate Formula: It allows to debug a complex formula by evaluating every individual part of a formula.
+Error Checking: To find the errors in formulae's
+Show Formulas: Display's all the formulas in each cell instead of the resulting value
+
+Additional Reading - https://support.office.com/en-us/article/Detect-errors-in-formulas-3a8acca5-1d61-4702-80e0-99a36a2822c1?ui=en-US&rs=en-US&ad=US
+
+Some Helpful Links:
+
+List of All Functions in Excel -https://support.office.com/en-us/article/Excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188?ui=en-US&rs=en-US&ad=US
+Telemarketing Dataset
