@@ -120,3 +120,31 @@ Recall that our primary aim is to find the types of people who are most likely t
 0 & 1 instead of No & Yes. The use of binary values (especially 0 & 1)  makes the computation of average easier. 
 Remove Duplicates in the Data Tab. Remove Duplicates can be used to find only the unique values in a column.
 Is there a formula that can automate the aggregation by age group and eliminate the use of filters? Let's explore
+
+To summarize the most important things you've learnt:
+
+You calculated the average of the response column based on the marital  column using the AVERAGEIF function; it computes the average of the response column if the marital status is married / single / divorced
+You learnt how to freeze certain cells in a formula using a dollar sign; in the AVERAGEIF formula, you wanted the marital status to change but not the range of response values
+Freezing cells in formulae is one of the most important skills you'll need to do in everyday analysis, so make sure to practise a bit more of that in the upcoming segments. 
+
+Cell Referencing and Text Functions
+Until now, you have analyzed one variable at a time, i.e. age, marital status etc. In reality, it is possible that a combination of variables affects the propensity of a person to buy a product. For example, it is possible that married and tertiary educated  people do not buy many banking products, but unmarried and tertiary educated ones do. 
+
+ 
+
+In this segment, you will analyze multiple variables at a time. In the process, you'll learn text functions and a few more techniques to combine variables. 
+
+
+Cell Referencing and Text Functions
+Until now, you have analyzed one variable at a time, i.e. age, marital status etc. In reality, it is possible that a combination of variables affects the propensity of a person to buy a product. For example, it is possible that married and tertiary educated  people do not buy many banking products, but unmarried and tertiary educated ones do. 
+
+ 
+
+In this segment, you will analyze multiple variables at a time. In the process, you'll learn text functions and a few more techniques to combine variables. 
+
+You can now create multiple new variables by combining two or more of the original ones, like marital-housing, gender-age group, loan-month etc. But that would create far too many new variables than you can possibly analyze and make sense out of, and so we should think of better ways to do it?
+
+ 
+
+Excel provides the option of using PIVOT Tables which help perform such aggregation automatically. We will learn more about PIVOT Tables in the next session.
+ 
