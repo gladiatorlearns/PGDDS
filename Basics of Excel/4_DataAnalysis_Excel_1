@@ -148,3 +148,86 @@ You can now create multiple new variables by combining two or more of the origin
 
 Excel provides the option of using PIVOT Tables which help perform such aggregation automatically. We will learn more about PIVOT Tables in the next session.
  
+ 
+ Logical Formulae
+Logical formulae are used to manipulate variables which can take only two values. For example, you may want to divide the data into two parts based on age - young (< 40 years) and old (>40 years). You can use logical formulae to do the same. The word 'logical' indicates either of two values, e.g. 1 or 0. 
+
+ 
+
+The most commonly used logical functions are IF and OR, which you will learn in this segment.
+
+
+Recall, so far, we've learnt about different kinds of formulae:
+
+Mathematical
+Statistical
+Text
+Logical
+We've also learnt about Keyboard Shortcuts and some tricks in analysis (e.g.: Bucketing, Using Binary variables like 0 & 1, Use of Text to Columns and Remove Duplicates). Are you amazed at the speed at which Anand has performed this analysis? Have you observed the style of analysis i.e. Anand poses a business relevant question/hypotheses and uses the data to validate the hypotheses. 
+
+ 
+
+Let's hear Anand talk about what enables him to perform analysis at such a speed.
+
+In the telemarketing case-study, the most important question was to identify the most important customer segments. It turns out that this type of analysis is one of the most widely used in the industry, primarily because it leads to actionable insights. 
+
+ 
+
+It is important to remember that analytics is useful only when it can be used by the business. It doesn't matter if you have a lot of data and sophisticated analytics tools; if the analysis doesn't lead to actionable business insights, it is useless.
+
+ 
+
+Thus, it is important for you to ask the right questions before starting the analysis. Anand will talk about a few things to keep in mind while doing so.
+
+In the telemarketing case-study, the most important question was to identify the most important customer segments. It turns out that this type of analysis is one of the most widely used in the industry, primarily because it leads to actionable insights. 
+
+ 
+
+It is important to remember that analytics is useful only when it can be used by the business. It doesn't matter if you have a lot of data and sophisticated analytics tools; if the analysis doesn't lead to actionable business insights, it is useless.
+
+ 
+
+Thus, it is important for you to ask the right questions before starting the analysis. Anand will talk about a few things to keep in mind while doing so.
+
+You saw that the most common analytics questions are similar across industries - which are the top 10 'x'.
+
+For example, in our case-study, we wanted to know the top customer segments based on their propensity to buy a bank's loan product. 
+
+ 
+
+In the next few segments, you will learn data visualisation and ways to use plots to explore and present data.  
+
+Creating and Formatting Charts
+Charts and visualisations are how data analysts communicate with the business. You may have seen presentations made by managers, CEOs and analysts etc. Charts are widely used because they are simple to understand and communicate the key information quickly.   
+
+ 
+
+In this segment, you'll learn how to plot charts in Excel. 
+
+It is important to understand that data visualisations can be used in two ways- 1) to explore insights in the data and 2) to present insights to other people. A typical presentation contains the latter type. While analysing data, you can (and should) use charts to understand patterns and trends. In fact, conditional formatting is also a type of data visualisation and is usually used to explore data.  
+
+ 
+
+In the next segment, you will learn to plot a few more types of charts.
+
+Types of Charts
+Excel offers a wide range of charts like line charts, pie charts, scatter plots etc. and it is natural to get overwhelmed with the choice. Thus, it is helpful to understand the pros and cons of the various chart types.
+
+ To summarise the most important thumb rules to choose charts:
+
+Bar charts are used when one variable is categorical and one is numeric, e.g. marital status (3 categories) and age
+Stacked bar charts (or simply stacked charts) are used when there are more than one categorical variables, e.g. marital status and gender plotted in two different colours 
+Line charts are also used with one categorical variable and one numeric variable
+If time is a variable to be plotted, it almost always plotted on the x-axis of a line chart
+ Pie charts have poor readability and thus you should avoid using them
+Scatter plots are used when you want to plot two numeric variables e.g. age and income
+You can add transparency in scatter plots to improve readability  
+In the following lecture, you will see a few more charts and try to answer the questions - when should which chart should be used?
+
+Despite having a wide range of options of chart types, the most commonly used ones are bar charts, line charts and scatter plots. The reason is that these are easy to read. In fact, pie charts sometimes decrease the readability of data!
+
+ 
+
+In the next lecture, you will see why pie charts are usually terrible and the cases in which line / bar / scatter charts work best.
+
+With this, you have reached the end of Data Visualisation in Excel. You can now choose an appropriate chart for presenting information in a readable manner. Remember that the most important principle of creating charts is that they should improve readability and reduce the time taken to understand the key pieces of information.
