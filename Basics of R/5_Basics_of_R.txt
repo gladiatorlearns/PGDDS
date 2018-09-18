@@ -173,4 +173,75 @@ Always use # to write comments in your R script file - to mention the context ab
 # You can write whatever you want after putting a hashtag
 
 # R does not take it seriously
+
+Data Frames
+Remember when you read that all well-designed structures have strong building blocks? Data frames are the most important data structures in R, and data frames use vectors as their building blocks.
+
+ 
+
+In almost every data analysis project, data frames are used to store data in R. Going through the lecture will enable you to learn more about data frames.
+
+Do you understand the difference between data frames and matrices? Data Frames can have different data types along different columns, while in a matrix, all the columns have the same data type.
+
+ 
+
+Now learn how to access different elements, rows, and columns in a data frame and perform different operations on a data frame.
+
+This is the complete_team data frame, used in the lecture. Answer the following questions in the context of this data frame.
+
+
+Figure 1: "complete_team" Data Frame
+
+You either used built-in data frames or made a data frame by combining vectors. But how can you import data from external files into R and use that for data analytics? Watch this lecture to find out.
+
+ 
+
+Download these files - which have been used to import data into R-Studio.
+
+Myfile.txtfile_download	Download
+Myfile.csv
+
+Summary:
+
+You learnt how to:
+
+Create data frames using vectors
+
+Use built-in data frames like iris
+
+Access different elements/columns/rows of a data frame
+
+Use rbind and cbind functions to add rows and columns
+
+Import datasets from .txt and .csv files
+
+Lists
+You now have an armoury of data structures and data types to work with - vectors, data frames, matrices, characters, factors etc. In a typical R project, you may need to use multiple data structures.
+
+ 
+
+Naturally, the next problem to solve is to store them together. This is where lists come in.
+
+ 
+
+A List is a one-dimensional data structure – similar in appearance to a vector - each element is in itself a data structure. Each element of a list could be a vector, matrix, data frame or even a list itself.
+
+Summary
+In this session, you have covered the basics of R programming, where you got introduced to R programming and started working on the following data structures in R:
+
+ 
+
+Vectors –  Data stored in one-dimensional structures, all elements have same data type
+
+Factors –   Data stored in discrete categories/levels
+
+Matrices – Data stored in two-dimensional structures, all elements have same data type
+
+Data Frames – Data stored in two-dimensional structures, all elements in each column have same data type
+
+Lists - Data stored in one-dimensional structures, each element can be a data structure itself
+
+ 
+
+Check out where you have reached in your roadmap to becoming an R expert after this session.
  
