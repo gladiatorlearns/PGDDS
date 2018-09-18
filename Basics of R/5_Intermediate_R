@@ -74,3 +74,95 @@ Let’s again go back to our previous example of Discussion Forum analytics, whe
 
 A_upvotes <- c(7, 3, 2, 8, 0, 4)
 B_upvotes <- c(2, 1, 3, 4, 2, 4)
+
+Creating your own functions is one of the most useful skills — simply because then you can automate very specific tasks for you. The main points to remember are:
+
+Functions take arguments as pieces of information or data which are needed to perform a task.
+
+They can take in as many arguments as you want.
+
+Arguments can be numeric, character or logical, vectors, and even large data sets.
+
+The body of the function contains the main set of instructions.
+
+Functions may return anything — numbers, characters, vectors, data sets, models, etc.
+Creating your own functions is one of the most useful skills — simply because then you can automate very specific tasks for you. The main points to remember are:
+
+Functions take arguments as pieces of information or data which are needed to perform a task.
+
+They can take in as many arguments as you want.
+
+Arguments can be numeric, character or logical, vectors, and even large data sets.
+
+The body of the function contains the main set of instructions.
+
+Apply Family
+There is an extremely useful set of functions collectively referred to as the Apply family. Some common functions in this family are sapply(), lapply(), vapply() etc.
+
+ 
+
+These functions are typically used as an alternative to writing a 'for' loop, e.g. to apply a particular function like mean() to a sequence of vectors.
+
+ 
+
+In this lecture, you will learn about how and where to use the sapply( ) function.
+
+Although you have studied only sapply(), there are more functions in this family, like lapply(), vapply() etc. You’ll study about them later when needed. If interested, check out the additional readings at the bottom of the page.
+
+ 
+
+Comprehension - Discussion Forum Analytics - 4
+
+ 
+
+Let’s again go back to our previous example of Discussion Forum analytics, where we recorded the answer upvotes of A and B for the last 6 questions on the forum. 2 more students C and D have come up as competitors to the Forum Leaderboard top scorers. You have to save all the information in these four vectors in a combined vector and combined data frame.
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+B_upvotes <- c(2, 1, 3, 4, 2, 4)
+C_upvotes <- c(3, 2, 3, 4, 6, 2)
+D_upvotes <- c(4, 2, 5, 3, 3, 1)
+
+combined_vector <- c(A_upvotes, B_upvotes, C_upvotes, D_upvotes)
+combined_df <- data.frame(A_upvotes, B_upvotes, C_upvotes, D_upvotes)
+Answer the following questions to get insight on how sapply( ) function can be used to simplify and automate tasks by saving you from writing long for loops.
+
+So here comes your second lesson on Swirl. Since you are now quite comfortable to R, you have to teach someone in learning R. See. who is waiting for you in this swirl lesson?
+
+ 
+
+Download the file in the attachment and place it in your working directory. The following set of commands will help you get started with this lesson. 
+
+library(swirl)
+install_course()       #Select the functions.swc file after this command
+swirl()
+ 
+
+Functionsfile_download	Download
+Complete this swirl assignment before you move to next page to attempt the graded questions and assignment. 
+
+ 
+
+Additional Reading
+
+When to use the apply family of functions https://www.r-bloggers.com/using-apply-sapply-lapply-in-r/
+A well-written StackOverflow answer on sapply, vapply, tapply etc. https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family
+Functions may return anything — numbers, characters, vectors, data sets, models, etc.
+
+Summary
+Here’s a quick summary of the topics you have studied:
+
+ 
+
+Relational and Logical Operators Vectors - Used on different R objects to define your conditions
+
+Conditional Statements - Used to implement any logic for decision-making
+
+Loops - Used when the same logic has to be applied over a sequence of objects
+
+Functions - Used as a black-box, which takes in different R objects and gives output in any required format
+
+APPLY Family - Used when a particular function has to be applied over a sequence of objects
+
+ 
+
+Have a look at where you have reached in your roadmap to becoming an R expert and what you will learn in the upcoming modules.
