@@ -50,3 +50,127 @@ Step 2: Install R-Studio using user’s setup process.
  
 
 Before you move on, make sure you have installed both R and R-Studio on your system. In this lecture, you will be introduced to different components of R-Studio.
+
+Basic Operations in R
+It’s time to start playing with R. You will begin with some basic mathematical operations and commands.
+
+ 
+
+Remember to keep imitating the code on the screen. In no time, you would start loving R. Download the R script for this session from the link below and open it as a script file in R-Studio.
+
+Introduction- file_download	and run
+
+You saw how to use R-Studio as a calculator, but you did not learn how to save your results and use them further. Variables will help you do that, which you are going to learn next.
+
+Vectors
+All well-designed structures have strong building blocks; as buildings have bricks, similarly datasets in R have vectors.
+
+Datasets have rows and columns. In R, they are frequently stored as vectors which are sequences of elements of the same data type (numeric, character etc.).
+
+One important thing to note is that the index starts from 1 in R, unlike other languages where the index may start from 0. The first element in R is accessed by vector[1]; in some other languages, index of the 1st element is 0.
+
+ 
+
+R Smart Programming Tip #1
+
+You can always use Ctrl + R or Ctrl + Enter as a shortcut to run your code from the R script file. 
+
+my_number <- c(3, 8, 9, 10)
+my_number
+class(my_number)
+
+#To run all the three commands in one go from R script file, select the lines and press Ctrl + R or Ctrl + Enter
+
+You can always add/subtract/multiply/divide two vectors of unequal length, in which recycling is done to perform the particular operation. If the length of larger vector is an integral multiple of the length of shorter vector, this is an example of complete recycling. If the length of the vector is not integral multiple, the operation still gets performed and command gets executed, but R shows a warning - "longer object length is not a multiple of shorter object length". But this should be fine, it's a warning, not an error. This is called partial recycling.
+
+ 
+
+Remember that datasets in R are stored as rows and columns of vectors. The more comfortable you are with vectors, the better you are with datasets in R.  
+
+ 
+
+Hopefully, you are getting familiar with writing commands in R-Studio. Now is a good time to introduce you to a special learning tool in R-Studio called SWIRL, which will help you practise with R. This lecture will introduce you to SWIRL.
+
+Excited to use SWIRL to practise R better?
+
+ 
+
+Install Swirl package in your R console and start playing around with some pre-installed sessions from Swirl course repository. These commands will help you get started.
+
+ 
+
+install.packages("swirl")
+library(swirl)
+swirl()
+ 
+
+You can start with any of the basic R Programming lessons. If you are stuck somewhere, this link will help you get started in SWIRL. Try exploring SWIRL after installing the package because your first SWIRL lesson is coming up in the next segment.
+
+
+Factors
+As you have just finished learning about vectors, the next thing you should know about is Factors. The factor is a data type in R used to categorise values into discrete categories.
+
+ 
+
+For example, say a numeric vector to store the values of a dice roll is created:
+
+dice  <-  c(1, 2, 4, 5, 5, 3, 2, 6, 3, 5, 6, 2, 1, 4, 3, 6, 5, 3, 2, 2, 5) 
+ 
+
+Since there are only 6 possible values, one can convert the vector into 6-factor levels using a built-in function factor. 
+
+dice_levels <-  factor(dice)
+dice_levels
+ 
+
+If you now look at the new vector levels in the console, R will show all elements of dice vector, along with the 6 levels mentioned.
+
+ 
+
+1 2 4 5 5 3 2 6 3 5 6 2 1 4 3 6 5 3 2 2 5
+
+Levels: 1   2   3   4   5   6
+
+ 
+
+To learn about factors in detail, open your R script file in R-Studio and continue with the lecture below. Download the R script file for this session, if you haven't done already.
+
+R Smart Programming Tip #2
+
+You can use Ctrl + L to clear your console screen. 
+
+ 
+
+So here comes your first lesson on Swirl. You are going to meet a bot, who is going to teach and help you get better at R, especially on vectors & factors.
+
+ 
+
+Download the file in the attachment and place it in your working directory. The following set of commands will help you get started with this lesson.
+
+library(swirl)
+install_course()       #Select the vectors.swc file after this command
+swirl()
+ 
+ Matrices
+Vector is a one-dimensional structure, containing data in a sequence.
+
+ 
+
+At this point, you might be wondering, if there are structures containing data in a two-dimensional format, such as in rows and columns. In fact that is the case in R. The most basic two-dimensional data structure in R is called a matrix, with all elements in rows and columns having the same data-type. It’s time to learn about matrices.
+
+You learnt about matrices and how to create them in R. But what about accessing different elements of a matrix, and performing different operations in matrices?
+
+ 
+
+You’ll do all of that in the next segment when you get introduced to data frames – the better and the most used two-dimensional data structure.  
+
+ 
+
+R Smart Programming Tip #3
+
+Always use # to write comments in your R script file - to mention the context about commands and to avoid getting lost in the script file.
+
+# You can write whatever you want after putting a hashtag
+
+# R does not take it seriously
+ 
