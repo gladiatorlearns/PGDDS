@@ -1,0 +1,52 @@
+Introduction
+Module Introduction:
+In this module, you will learn Tableau, a business intelligence software that allows anyone to connect easily to data, visualise and create interactive dashboards. The module focuses on the usage of Tableau to create interactive plots, dashboards and so-called 'stories'.
+
+Tableau is a powerful tool to visualise even the most complex of data. By the end of this module, you will be able to do your analysis on data sets and build dashboards using Tableau.
+
+UpGrad and IIIT-B are in collaboration with Tableau, and we will be using their official teaching videos as a part of this module. So make sure to go through the links given in the session to understand all the concepts and techniques.
+In this Session:
+In this session, you will get familiar with the Tableau interface and will learn to navigate through it. Before any visualisations can be made, data must be imported. You will understand how to import data into Tableau and how to prepare it for creating visualisations. You will also learn about the features Tableau offers to manipulate data such as sorting, splitting etc. 
+
+In this Session:
+In this session, you will get familiar with the Tableau interface and will learn to navigate through it. Before any visualisations can be made, data must be imported. You will understand how to import data into Tableau and how to prepare it for creating visualisations. You will also learn about the features Tableau offers to manipulate data such as sorting, splitting etc. 
+
+ 
+
+Dataset:
+Download the sample superstore dataset from below which is used in the official Tableau videos.
+
+Sample Superstore Datafile_download	Download
+Guidelines for In-Module Questions:
+There are no graded questions in this module. There is a graded assignment which will be made available to you at the beginning of the cohort. 
+
+ 
+
+Pre-requisites:
+There are no prerequisites for this session and it is designed for beginners with absolutely no experience in Tableau. It's easy enough that any Excel user can learn it! To use Tableau you need a Windows system or a Mac. 
+
+ 
+
+Installation:
+Download the Tableau Free version (15 day trial period) from here. You will be given the license key, once the actual program starts.
+
+ 
+
+How to go through this session:
+We suggest that as you watch the video lectures, you keep practising side by side to understand how it works.  There are links to the official Tableau learning videos which should definitely be watched. You are suggested to go through other official Tableau learning videos as well to get well versed with the concepts.
+
+ 
+
+Note: Lecture notes for this module are provided in the last segment of session 2.  
+
+https://www.tableau.com/products/desktop/download
+
+https://onlinehelp.tableau.com/v9.3/offline/en-us/tableau_desktop_windows_9.3.pdf
+
+Data Formats and Tableau Interface
+In Data Analytics, one of your most important tasks is to clearly convey information to an audience, and few practices are as effective as data visualisation, also known as visual analytics. By expressing information visually, through graphics, for example, a large amount of data can be intuitively understood and absorbed than if you used a simple spreadsheet. Tableau is one of the most commonly used tools for visualisation, and in the subsequent lectures, you will understand why.
+
+Before any visualisations can be made on data, you need to understand the data and bring it in the correct format. For example, imagine a feature containing numerical entries from 1 to 14, and it is reported as numeric. But, more often than not, this feature would represent a categorical feature having 14 categories. Therefore, it is imperative that this feature is represented as categorical in Tableau. Apart from this, you need to have a clear understanding of the options/features provided by Tableau to create interactive visualisations. Tableau is quite simple to use, characterised by a drag and drop interface. It automatically displays column names, cleans data of any discrepancy and provides for an easy learning experience for beginners. In the following lectures, you will learn more about data formats and the Tableau interface.
+
+
+https://www.tableau.com/learn/tutorials/on-demand/tableau-interface
