@@ -46,3 +46,31 @@ You learnt if-else statements in this segment. Aren’t they bringing a cool aut
 Additional Resources
 
 Check this link to go through more examples of writing 'if-else' statements in R. --https://www.datamentor.io/r-programming/if-else-statement/
+
+Loops
+Loops are used when you have to repeat a task multiple times. In R programming and data analysis, loops are mostly used to apply a particular logic over a sequence of data items/objects.
+
+Apart from the ‘for’ loop, there are other loops as well, like ‘while’ and ‘repeat’. There also exist statements like break( ) and next( ) which can be used inside loops in certain situations. You don’t need to worry about them at this moment; you can learn them easily later when needed.
+
+ 
+
+Comprehension - Discussion Forum Analytics - 2
+
+Let’s again go back to our previous example of Discussion Forum analytics, where we recorded the answer upvotes of A & B for the last 6 questions on the forum.
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+B_upvotes <- c(2, 1, 3, 4, 2, 4)
+
+https://www.datamentor.io/r-programming/for-loop/
+
+Functions
+You have already used functions in R - mean(), sqrt(), exp(), etc. These functions are called built-in functions. Study a few more useful functions by applying them on the bank dataset.
+
+Comprehension - Discussion Forum Analytics - 3
+
+ 
+
+Let’s again go back to our previous example of Discussion Forum analytics, where the answer upvotes of A & B were recorded for the last 6 questions on the forum.
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+B_upvotes <- c(2, 1, 3, 4, 2, 4)
