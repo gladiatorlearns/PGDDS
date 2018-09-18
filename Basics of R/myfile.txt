@@ -1,0 +1,4 @@
+"Player_name" "Total_runs" "Strike_rate" "Player_age" "hit_six"
+"1" "Rohit" 5000 "84.22" 26 230
+"2" "Kohli" 7200 "89.12" 25 123
+"3" "dhoni" 8900 "87" 37 133
