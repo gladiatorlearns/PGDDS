@@ -1,0 +1,52 @@
+Introduction
+In this module, you’ll get started with the most popular programming language among data scientists - R. This language is widely used for data mining, statistics and data analysis by data analysts, data scientists and professional research analysts.
+
+ 
+
+It is very easy to pick up for beginners and is sophisticated enough to perform highly advanced data analysis. That is why this program is primarily based on R. 
+
+ 
+
+Note: The graded questions and assignments of this module are not accessible currently. They will be made available after the program launches.
+
+ 
+
+Pre-requisites:
+This module is designed for beginners with absolutely no experience in R (or other programming languages).
+
+ 
+
+If you have worked with R before, you may find the initial segments easy. Nonetheless, you are recommended to go through the segments and write programs to make sure you don’t miss out on anything important.
+
+ 
+
+In this session:
+This session’s aim is to familiarise yourself with R, so you can pick up the intermediate and advanced sessions easily later.
+
+R Programming Language
+Through this lecture, you will realise the importance of programming in data analytics. You will also see how and where R is being used by data scientists, as well as understand the reasons for its popularity.
+
+Now, in order to ensure effective learning, the learning path of R is broken down into 3 pieces. Next, Rohit will walk you through your roadmap in learning this language and becoming an R expert.
+
+Installing R & R-Studio
+You need to install both R and R-Studio on your system before actually getting started with R. In this page, you will be guided through the installation process and get introduced to both of them.
+
+ 
+
+Install R
+
+Step 1: Download the package relevant to your system (Windows or Mac or Linux) from the CRAN website.   
+
+Step 2: Install R like you normally install any new software package.
+
+ 
+
+Now, Install R-Studio
+
+Step 1: Download the R-Studio Desktop package from the R-Studio website.
+
+Step 2: Install R-Studio using user’s setup process.
+
+ 
+
+Before you move on, make sure you have installed both R and R-Studio on your system. In this lecture, you will be introduced to different components of R-Studio.
