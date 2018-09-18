@@ -1,0 +1,48 @@
+Introduction
+In the previous session, you learnt the basics of R – mostly revolving around different data structures in R.
+
+This session’s objective is to take your skills in R to an intermediate level, where you'll learn some more new tools (or constructs, what Prof RC generally calls it), which are common to most programming languages.
+
+ 
+
+You will apply all the skills learnt in the previous session on a bank marketing case study and use it to learn the new constructs in a hands-on way.
+
+ 
+
+Download the Bank Marketing data file and the R script for this session from the links below. We recommend you to work alongside the lectures in your R-Studio.
+
+Bankfile_download	Download
+Intermediatefile_download	Download
+Recall what you learnt in the last session in this quick lecture and get ready for the case study.
+
+Logical and Relational Operators
+In this lecture, you’ll learn to apply relational and logical operators.
+
+Comprehension - Discussion Forum Analytics - 1
+
+ 
+
+Do you ever wonder how your Discussion Forum points are calculated based on your activity in the forum?  Let’s try to understand the interesting analytics behind it.
+
+ 
+
+Two active members A and B always try to answer as many questions as possible on the forum. On the last 6 common questions which both of them answered on the forum, they received few upvotes which are recorded as vectors as given below:
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+B_upvotes <- c(2, 1, 3, 4, 2, 4)
+ 
+
+The following questions will help you understand how answer upvotes’ data can be analysed.
+
+Conditional Statements
+You will now study a commonly used construct - the "if-else" conditional statement. As the name implies, conditional statements are used to implement code if some predefined condition is satisfied. Let’s see how it works.   
+
+Summary
+
+You learnt if-else statements in this segment. Aren’t they bringing a cool automatic decision-making ability to your plate of R programming?
+
+ 
+
+Additional Resources
+
+Check this link to go through more examples of writing 'if-else' statements in R. --https://www.datamentor.io/r-programming/if-else-statement/
