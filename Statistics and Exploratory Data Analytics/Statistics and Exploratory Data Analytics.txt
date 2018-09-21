@@ -50,3 +50,28 @@ Before any visualisations can be made on data, you need to understand the data a
 
 
 https://www.tableau.com/learn/tutorials/on-demand/tableau-interface
+
+
+Connecting to the Data
+
+Now you have a better understanding about the Tableau interface, capable of utilising the various shelves and panes provided to you by the tool.
+
+ 
+
+As a first step, you need to import the relevant data into the system. Data is often stored in multiple ways, such as Excel files, different sheets within an Excel file, text files, online databases, etc. Therefore it is imperative that you know how to connect to the data. Watch the following lectures to learn to do that:
+
+ 
+
+Connecting to Data
+
+ 
+
+But what happens if the data you connect to is not imported the way you want it to be? For example, features you want to be stored as a character are stored as numeric or vice-versa. In such cases, you have to manually change the data type, and there are several ways in Tableau to do so.
+
+ 
+
+Managing Metadata
+
+ 
+
+In most cases, no matter where the data is stored, it will be present in different files, such as, Excel and text files, offline and online data which needs to be collated and so on. Therefore, you would almost always need to collate the data together into a single file to perform visual analytics. In the following lecture, Professor RC will talk about the techniques which can be leveraged to collate the data together.
