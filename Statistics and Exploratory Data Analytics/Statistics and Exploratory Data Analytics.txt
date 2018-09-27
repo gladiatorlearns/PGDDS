@@ -75,3 +75,33 @@ Managing Metadata
  
 
 In most cases, no matter where the data is stored, it will be present in different files, such as, Excel and text files, offline and online data which needs to be collated and so on. Therefore, you would almost always need to collate the data together into a single file to perform visual analytics. In the following lecture, Professor RC will talk about the techniques which can be leveraged to collate the data together.
+
+Data Preparation in Tableau
+Once the data is imported into Tableau, it must be prepared i.e. the data must be converted to the correct format and any discrepancies within the data must be removed. You have already seen how to do some basic data preparation activities in Tableau, like converting data types etc. In addition to those basic data preparation tasks, you might have to extract information out of the current features by making new features. In the following lecture, Prof RC will take you through the concept of splitting, a very handy option in Tableau when creating new features.
+
+A normal split is carried out on a column of the data if the delimiter (the symbol on which the split is performed) is common and present in all the rows of that column. If not, a custom split will be carried out.
+
+ 
+
+Sometimes, instead of extracting new information, you might want to group on or aggregate on some data. This can be done in Tableau using an option called pivot, which is also available to you in Excel. Please watch the lectures below to learn more about data preparation in Tableau:
+
+
+Data Preparation in Tableau
+
+ 
+
+Comprehension Questions 
+
+ 
+
+Consider the column given below where B, C, D stand for some departments in a company. The numbers represent the employee id’s and c, p, i stand for a contract, part-time and intern respectively. The columns which do not have c, p and i refer to permanent employees.
+
+Employee Data
+B - 23_c
+B - 47
+C - 29
+D - 33_p
+C - 54_i
+B - 10
+D - 21
+
