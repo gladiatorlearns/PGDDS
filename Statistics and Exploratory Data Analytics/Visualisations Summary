@@ -1,0 +1,14 @@
+Summary
+
+Tableau is a very powerful and handy visualisation tool which gives you the freedom to visualise, analyse and manipulate data. The important thing is how well you can come up with various relations between variables. The rest is handled by Tableau itself. Here's a quick summary of what you have studied. For detailed summary please refer to the lecture notes provided at the end of this segment. 
+
+ 
+
+    Dimensions - These are categorical variables on the basis of which the data is analysed.
+    Measures - These are the quantitative variables which are analysed.
+    Merging/Joining - When the data belongs to different files of the same data source, it is merged.
+    Data Blending - It is carried out to collate data belonging to different data sources.
+    Hierarchies - They are very effective to visualise a drilled down version of data.
+    You also learnt about various charts such as bar chart, scatter plot, histogram, pie chart, box plot and tree map etc. that can be created in Tableau to visualise data. You can read up on them in the lecture notes provided below.  
+    
+    Refer lecture notes pdf file
