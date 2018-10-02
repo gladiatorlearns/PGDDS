@@ -1,0 +1,5 @@
+Dual Axes Charts
+
+A grouped bar chart is plotted for 2 quantitative and 1 categorical variable. However, what happens if the ranges of the quantitative variables differ significantly? For example, consider the overall sales of a product in a city of different brands vs individual product price. In such a case, the grouped bar chart or stacked bar chart won't be of much help as the bars representing the individual product price will be very small and you won't be able to make any inference from that. In the following lecture, you will understand how to get around a problem such as this.
+
+A dual axis bar chart is used when the ranges of the quantitative variables differ a lot. In such a bar chart there are 2 y-axes, one on each side representing a quantitative variable and the categorical variable is represented on the x-axis. Dual axes bar chart is most useful when you wish to compare measures having different scales. Please watch the following lecture to learn how to make dual axes charts in Tableau:
