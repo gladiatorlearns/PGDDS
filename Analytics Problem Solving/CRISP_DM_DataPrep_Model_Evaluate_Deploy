@@ -1,0 +1,65 @@
+The Heart of Data Analysis: Modelling
+Guidelines for in-module questions
+
+The in-video and in-content questions for this session are not graded. 
+
+ 
+
+"If you torture the data long enough, it will confess."
+ 
+
+Modelling is the heart of data analytics. One can think of a model as a black box which takes relevant data as input and gives an output you are interested in.
+
+ 
+
+Let's see how modelling is used to solve business problems.
+
+This was just an overview of modelling. You will learn much more interesting and complex models in detail in the upcoming courses.
+Questions:1/1
+Data Modelling
+
+Which of the following are examples of a model?
+Doctor Bill measures the size of 500 cancer tumours and concludes that if the size of tumour is less than 4mm, chances of death are less than 20%.
+Feedback : This is a classification model in predictive analysis. It tells us the relationship between tumour size and chances of death.
+Correct
+In the investments example, Spark Funds conclude that Big Data Analytics companies have received the most investments last year
+Bill tells Steve that the price of house y (in INR) in Mumbai depends on the floor area x only.
+Feedback : A model should concise and mathematically sound? You need the select a model and not a conclusion derived from data analysis.
+Incorrect
+All of the above
+
+
+Model Evaluation and Deployment
+
+"True genius resides in the capacity for evaluation of uncertain, hazardous and conflicting information."
+
+ 
+
+In data analytics, evaluation is when you put everything you have done to litmus tests. If the results obtained from model evaluation are not satisfactory, you reiterate the whole process. If the model performs well and gives you accurate results, congratulations. You can move on to implementation of the model. 
+
+Let us listen what our experts have to say about the final two stages of analysis-model evaluation and deployment.
+
+Evaluation is necessary to ensure that your model is robust and effective. Finally, implementation is the natural fruition of a project life-cycle.
+
+ 
+
+One interesting insight is that the whole process is iterative in nature. The intelligence of a model has to evolve continuously.
+
+ 
+
+This completes the typical life cycle of a data analytics project.
+Questions:1/1
+Data Modelling
+
+Which of the following are correct about model evaluation? More than one option may be correct.
+Model evaluation is done to verify or validate that the model developed is correct and conforms to reality.
+Feedback : After the model is built, we need to check if the model works well on the actual data (such as data about new emails which we want to classify as spam) and not just the data from which it was built (such as sample data about emails which have already been classified as spam)
+Correct
+We can build multiple models for a certain phenomenon, but a lot of them may be imperfect. Model evaluation helps us choose and build a perfect model
+Feedback : Model evaluation helps us choose the best model among a given set of possible models that can be built. We can compare the performance of different models in various situations and then decide the best model class or algorithm to use for the required business problem.
+Correct
+If model evaluation reveals that the model gives incorrect results for certain data, then the data is likely to be incorrect
+Modelling and Evaluation is an iterative process.
+Feedback : This means that a model is built and then evaluated; if the evaluation proves that model is incorrect, we go back to make the model better and repeat the cycle till evaluation proves the correctness of the model.
+Correct
+doneYour answer is Correct.
