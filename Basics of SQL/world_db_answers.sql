@@ -5,7 +5,7 @@ describe country;
 describe countrylanguage;
 
 # 1. count of cities
-select count (*) from city
+select count(*) from city
 
 # 2. Country having highest number of cities
 #Method 1:
