@@ -1,0 +1,711 @@
+#Write code to generate a sequence of numbers from 1 to 99(Including both)
+
+print(1:99)
+
+# Write R code to create a sequence 12356789
+
+print(1:9)
+
+
+# Print the type of the the given code c(1:3, 5:9)
+x <-c(1:3, 5:9)
+print(typeof(x))
+
+# Run the code and observe the result
+
+(10+20/2+10)
+
+
+# Run the following code and observe the result
+
+(10*15/5+10)%%6
+
+
+# Character/String variables cannot be combined using binary operators. 
+# For ex. if you will try to run “Hero” + “Hiralal” you will encounter and error.
+# There is a specific functions paste() used to combine/concatenate strings.
+
+# Now try to add two strings i.e "Hero" and "Hiralal" to get output as "Hero Hiralal"
+# After that try using sep as a argument and try to get output as "Hero,Hiralal"
+
+# Write your code here
+
+print(paste("Hero", ",","Hiralal"))
+
+
+Vectors -
+
+# Multiply the given vectors and observe the result.
+
+vector1 <- c(1,5,9) 
+vector2 <- c(3,4)
+
+vector <- # Multiply vector1 and vector2
+
+print(vector)
+
+# Print the type of vector4, use typeof()
+
+vector1 <- c(1,2,3,3,4,5,5,5,"a")
+vector2 <- c(1,2,3,3,4,5,5,5,T)
+vector3 <- c(T,T,F,T,"a","r")
+vector4 <- c(vector1, vector2, vector3)
+
+print(typeof(vector4))
+
+Relational Operators
+
+#Like most programming languages, you can compare two variables in R using relational operators like ==, >, <= etc. 
+#For example, x==y will check whether x is equal to y; it will return TRUE if they are equal and FALSE otherwise. 
+#Thus, 5==6 returns FALSE, 4>3 returns TRUE etc.
+#When you compare two vectors, the comparison is made element-wise. 
+#For example, c(1, 3, 4) == c(1, 6, 4) returns the vector c(TRUE, FALSE, TRUE). 
+
+# Run the below code and observe the result
+x <- c(1, 3, 5, 7)
+y <- c(2, 1, 5, 6)
+x >= y
+
+#You have already used boolean values by now. In an earlier example, 
+#you compared the vectors x = c(1, 3, 5, 7) and y = c(2, 1, 5, 6) 
+#using x >= y which returned c(F, T, T, T) which is a vector of boolean values. 
+#Boolean values TRUE (or T) and FALSE (or F) have numeric values of 1 and 0 respectively. 
+
+# Run the following code and observe the result
+
+x <- c(1, 3, 5, 7)
+y <- c(2, 1, 5, 6)
+sum(x >= y)
+
+# Run the following code and observe the results.
+
+4 == 3+TRUE 
+
+
+Comprehension
+
+In boolean terms, x AND y returns TRUE if both x and y evaluate to TRUE, and FALSE otherwise. 
+
+On the other hand, x OR y evaluates to TRUE if either of x or y is TRUE. Only when both x and y are FALSE this expression evaluates to FALSE.
+
+ 
+
+The AND (&) operator is equivalent to multiplication whereas OR (|) is equivalent to addition. However, the returned value has to be either 0 or 1 (F or T). 
+For example:
+
+    T & F returns F
+    T & T returns T
+    T | F returns T
+    T | T returns T
+
+You could have more complex expressions like:
+
+    T | F & T returns T
+    T | T | F returns T
+    F &T | T * F returns FALSE
+
+To understand how this works, please read the following stack overflow answer:
+
+
+A practical use of logical operators occurs when you want to check multiple conditions being satisfied. For example, consider two vectors containing age and income of 5 people as follows:
+
+age <- c( 18, 25, 21, 19, 50)
+income <- c(20000, 40000, 30000, 45000, 60000)
+
+Say you work for a bank where the criterion for lending a debit card is that the person should be either:
+
+    Between 18 to 19 years old (including 18 and 19) and has an income greater than 30,000, OR
+    Between 19 to 21 years old (excluding 19 and including 21) and has an income greater than 10,000, OR
+    Greater than 21 years old 
+
+Figure 1: Relational Operations
+
+Questions:1/2
+Relational & Logical Operators
+
+What is the correct expression to evaluate for lending debit cards?
+(age >= 18 & age <= 19 & income > 30000) & (age > 19 & age<=21 & income > 10000) | (age > 21)
+(age >= 18 & age <= 19 & income > 30000) | (age > 19 & age<=21 & income > 10000) | (age > 21)
+Feedback : You should start with putting three brackets for the three outer OR conditions, i.e. () | () | () and then write the conditions within each of the three brackets. The first bracket will be age >= 18 & age <= 19 & income > 30000. Note the use of >= and the <= sign, since age is inclusive of 18 and 19. Similarly, you can complete the other two brackets.
+Correct
+(age >= 18 & age <= 19 | income > 30000) | (age > 19 & age<=21 | income > 10000) | (age > 21)
+
+Questions:2/2
+Relational & Logical Operators
+
+How many people will get the debit card?
+1
+3
+Feedback : For the first person age 18 and income 20000, the expression gives FALSE.
+Incorrect
+2
+4
+Feedback : The expression evaluates to FALSE TRUE TRUE TRUE TRUE.
+
+
+Built In Functions - 
+#A vector (or any data structure) need not contain all elements, 
+#some of them may have empty elements. 
+#In R, empty elements are denoted by NA which is an abbreviation for ‘not available’. 
+
+#Example:
+Vector1 <- c("a","b","c",NA,"d",NA)
+#Let’s say you want to see which elements are empty in the vector. 
+#There is an inbuilt function is.na(). It returns boolean/logical values. 
+#Eg. is.na(c(1,2,4,NA)) will give output - FALSE FALSE FALSE TRUE.
+
+#Read help documentation using ?is.na() or help(is.na) for more info.
+
+#Run the code and observe the results
+is.na(Vector1)
+
+
+
+Comprehension
+
+ 
+
+In R, the which() function is commonly used to find the indices ‘which’ satisfy a particular condition. For example, in a vector age <- c(18, 25, 21, 19, 50), you can find out which elements have a value > 20 using which(age > 20). 
+
+ 
+
+In this case, age > 20 returns F, T, T, F, T. Then, which(age > 20) is equivalent to which(c(F, T, T, F, T)). These expressions return 2, 3, 5. 
+
+ 
+
+In other words, which(logical expression) returns the indices where the value of that expression is TRUE.
+
+ 
+
+Try this in your console and confirm that it returns 2, 3, 5. These are the indices where age > 20. Similarly, see the output of which(age<20). 
+
+ 
+
+Also, note that the which function only takes expressions returning 'logical vectors' as input. Input cannot be a numeric vector. For example, try typing which(c(3, 5, 6)) - it will return an error. You can read the documentation of which() using ?which(). 
+
+ 
+
+The which() function is often used to subset vectors according to certain conditions. For example, if you want to separately store the age values greater than 20, you can use:
+
+old_age = age[which(age > 20)]
+
+This evaluates to age[2, 3, 5] which returns the corresponding elements of age.
+
+
+Questions:1/2
+which()
+
+Consider the vector having incomes of 5 people: income = c(20000, 40000, 30000, 45000, 60000). The expression which returns the values of income between 20000 and 50000 is:
+ 
+income(which(income >20000 & income < 50000))
+income[which(income >20000 & income < 50000)]
+Feedback : The expression which(income >20000 & income < 50000) returns the indices where income is between 20000 and 50000, i.e. (2, 3, 4). The expression income[2, 3, 4] then returns the answer.
+Correct
+which(income >20000 & income < 50000)
+Feedback : which() function returns indices where the expression income >20000 & income < 50000 holds TRUE. These indices are used to get values stored in these indices in the vector.
+Incorrect
+which(income >20000 and income < 50000)
+
+Questions:2/2
+which()
+
+Let’s say you add two new entries to the age and income vectors. One of the new member’s age and other’s income is not known. The new age and income vectors are:
+
+age <- c( 18, 25, 21, 19, 50, NA, 32)
+income <- c(20000, 40000, 30000, 45000, 60000, 65000, NA)
+
+Which expression will return the index of the vector age whose age is NA?
+ 
+is.na(age)
+which(is.na(age))
+Feedback : The expression is.na(age) returns the logical vector representing the NA elements as TRUE in the original vector “age”, i.e. FALSE FALSE FALSE FALSE FALSE TRUE FALSE. To find the indices having the value TRUE, you use which(is.na(age)). This returns the index 6. It might appear at first that which(age=='NA') will give the correct response, but it is faulty at the very basic principle, something that is not assigned cannot be compared to anything else. NA is not a value, rather absence of a value.
+Correct
+which[is.na(age)]
+which(age == ‘NA’)
+
+
+Factors
+
+Factors in R are a convenient way to store and manipulate categorical data. By categorical data, we mean data that can only have certain discrete values, e.g. male and female, average-good-great, ratings as the number of stars on Amazon.com (can be only from 1,2,3,4,5) etc. 
+
+ 
+
+There are certain built-in functions for converting data into factors. Consider a vector gender <- c("m", "f", "m", "m", "f", "m") containing the gender of six people. 
+
+ 
+
+Try typing summary(gender) and observe the result. It will be a character type vector.
+
+ 
+
+To convert it into factor, you can use the function as.factor(gender). Try doing it and observe what str(gender) returns.
+
+gender <-  c("m", "f", "m", "m", "f", "m")
+str(gender)
+gender <- as.factor(gender)
+str(gender)
+
+
+
+
+#There is a factor vector created by the following syntax -
+
+bloodgroup <-  c("O", "B", "A", "B", "AB", "O", "A", "B", "B", "AB", "A", "O")
+bloodgroup <- as.factor(bloodgroup)
+
+#What function could be used to the see how many of A, B, AB and O each are there in the vector.
+
+# Write your code here.
+summary(bloodgroup)
+
+Matrices -
+
+
+#Create a 2 x 4 matrix containing the 8 elements of the vector 
+vector <- c(2, 4, 3, 1, 5, 7, 5, 6)
+
+
+# Write your code here.
+matrix(vector,nrow = 2,ncol = 4)
+
+
+Comprehension
+
+ 
+
+Matrices are often used to combine vectors of the same length. For example, consider the age, income and the bank balance of five people stored in the following vectors:
+
+ 
+
+age <- c( 18, 25, 21, 19, 50)
+income <- c(20000, 40000, 30000, 45000, 60000)
+balance <-c(5000, 12000, 23000, 14000, 6000)
+
+ 
+
+To store all of this information together, you can create a matrix with five rows and three columns such that each row corresponds to a person and each column to a vector. 
+
+
+Read the documentation carefully and answer the following questions. 
+
+
+Questions:1/4
+Matrix Construction
+
+The correct way to construct the matrix is:
+matrix(c(age, income, balance))
+matrix(c(age, income, balance), nrow=5, ncol=3)
+Feedback : The argument byrow=T/F is important here. By default, byrow is F and the elements are stored column-wise. In this case, the matrix creates 5 rows and 3 columns and fills the values of age, income and balance column wise (5 in each column), and so the matrix is correctly created.
+Correct
+matrix(c(age, income, balance), nrow=5, ncol=3, byrow=T)
+matrix(c(age, income, balance), byrow=T)
+
+Questions:2/4
+Accessing elements of a Matrix
+
+To access the (i, j)th element of a matrix, you can use matrix[i, j] - note the square brackets for indexing. This is similar to accessing vectors using vector[index].
+
+Let’s say the matrix of age, income and balance is named m = matrix(c(age, income, balance), nrow=5, ncol=3). What is the age of the second person?
+m[1,2]
+m[2,1]
+Feedback : Since age is stored in the first column, you need to access the second row of the first column using m[2,1]
+Correct
+m[2,2]
+m[1,1]
+
+Questions:3/4
+Using functions
+
+Let’s say the matrix of age, income and balance is named m <-matrix(c(age, income, balance), nrow=5, ncol=3). 
+
+You can apply functions like sum(), mean() etc. to an entire row or column of a matrix. For example, matrix[i, ] will return the ith row and matrix[, j] the jth column. 
+
+What is the total balance of the five people?
+ 
+sum(m[, 3])
+Feedback : The balance is stored in third column, and can be accessed using m[, 3]
+Correct
+sum(m[3, ])
+sum(m)
+sum(m[3, 3])
+
+
+Questions:4/4
+Matrix Operations
+
+Let’s say the matrix of age, income and balance is named m = matrix(c(age, income, balance), nrow=5, ncol=3). 
+
+You can do mathematical operations on entire rows and columns of matrices as well. For example, the second column of matrix m[, 2] can be multiplied by any number n using m[, 2]*n. 
+
+You can also add, multiply, divide the rows with each other. 
+
+Let’s say you want to find out the ratio of income:balance for the five people. The correct way to do that is:
+m[,3] / m[,2]
+m[,2] / m[,3]
+Feedback : You need to find the ratio of the second and the third column, i.e. m[, 2]/m[, 3].
+Correct
+m[2] / m[3]
+m[2, ] / m[3, ]
+
+
+Data Frames
+
+Comprehension
+
+An instructor Rochelle is the academics in-charge in a university. She is tasked with creating a database of the students. The headmaster asks her to consider following columns from a manual directory maintained by the college- Student Name, Age, Major Subject, Pass/Fail.
+
+ 
+
+A vector for each of these has been separately created by another instructor - Reena, but Reena did not know how to connect them.
+ 
+
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+
+
+#Create the dataframe named “students” that contains these vectors.
+
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+
+
+students <- data.frame(name,age,majorsubject,pass)
+students
+
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+#----------------------------------------------------------------------------
+
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+
+# Write R code to add data to right of the students dataframe
+students <- cbind(students,data)
+students
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+students <- cbind(students, data)
+#----------------------------------------------------------------------------
+name <- c("Kunal", "Hema", "Mohini", "Preet", "Myra", "Salma")
+age<- c(26, 34, 28, 19, 25, 32)
+majorsubject <- c("Science", "Maths","English", "Hindi", "Maths", "Maths")
+pass <- c(FALSE,TRUE, FALSE,TRUE, TRUE, FALSE)
+gender <- c("Male", "Female", "Female", "Male", "Female", "Female")
+overallpercentage<- c(38, 67, 53, 62, 68, 53 )
+students2 <- data.frame(name,age,majorsubject,pass,gender,overallpercentage)
+
+# Write R code to add students2 to students dataframe
+finaldata <- cbind(students,students2)
+finaldata
+
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+students <- cbind(students, data)
+name <- c("Kunal", "Hema", "Mohini", "Preet", "Myra", "Salma")
+age<- c(26, 34, 28, 19, 25, 32)
+majorsubject <- c("Science", "Maths","English", "Hindi", "Maths", "Maths")
+pass <- c(FALSE,TRUE, FALSE,TRUE, TRUE, FALSE)
+gender <- c("Male", "Female", "Female", "Male", "Female", "Female")
+overallpercentage<- c(38, 67, 53, 62, 68, 53 )
+students2 <- data.frame(name,age,majorsubject,pass,gender,overallpercentage)
+finaldata <- rbind(students, students2)
+#----------------------------------------------------------------------------
+
+
+# Write R code to find summary of the finaldata, use summary()
+# Observe the mean percentage.
+# Write your code here
+summary(finaldata)
+
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+students <- cbind(students, data)
+name <- c("Kunal", "Hema", "Mohini", "Preet", "Myra", "Salma")
+age<- c(26, 34, 28, 19, 25, 32)
+majorsubject <- c("Science", "Maths","English", "Hindi", "Maths", "Maths")
+pass <- c(FALSE,TRUE, FALSE,TRUE, TRUE, FALSE)
+gender <- c("Male", "Female", "Female", "Male", "Female", "Female")
+overallpercentage<- c(38, 67, 53, 62, 68, 53 )
+students2 <- data.frame(name,age,majorsubject,pass,gender,overallpercentage)
+finaldata <- rbind(students, students2)
+#----------------------------------------------------------------------------
+
+
+# Run the code and observe the results.
+finaldata[4,1] <- "Nitish"
+finaldata
+
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+students <- cbind(students, data)
+name <- c("Kunal", "Hema", "Mohini", "Preet", "Myra", "Salma")
+age<- c(26, 34, 28, 19, 25, 32)
+majorsubject <- c("Science", "Maths","English", "Hindi", "Maths", "Maths")
+pass <- c(FALSE,TRUE, FALSE,TRUE, TRUE, FALSE)
+gender <- c("Male", "Female", "Female", "Male", "Female", "Female")
+overallpercentage<- c(38, 67, 53, 62, 68, 53 )
+students2 <- data.frame(name,age,majorsubject,pass,gender,overallpercentage)
+finaldata <- rbind(students, students2)
+finaldata[4,1] <- "Nitish"
+#----------------------------------------------------------------------------
+#if you look at the finaldata now, 
+#you will see that the entry corresponding to ‘Nitish’ has been replaced by NA 
+#(because of the error we caused right now). 
+#The way out is to convert the column ‘name’ to character type, 
+#replace the NA value by ‘Nitish’ and convert it back to factor again.
+
+# Write code to convert the column - "name" to character type
+
+finaldata$name <- as.character(finaldata$name)
+finaldata
+
+
+#----------------------------------------------------------------------------
+name <- c("Meena", "Teena", "Kiran", "Nitin", "Harpreet", "Shaikh")
+age <- c(23, 34, 26, 28, 25,18)
+majorsubject <- c("Maths","English", "Science", "English", "Science", "Maths")
+pass <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE)
+students <- data.frame(name, age, majorsubject, pass)
+gender <- c("Female", "Female", "Male", "Male", "Female", "Male")
+overallpercentage<- c(54, 67, 46, 59, 64, 48)
+data <- data.frame(gender, overallpercentage)
+students <- cbind(students, data)
+name <- c("Kunal", "Hema", "Mohini", "Preet", "Myra", "Salma")
+age<- c(26, 34, 28, 19, 25, 32)
+majorsubject <- c("Science", "Maths","English", "Hindi", "Maths", "Maths")
+pass <- c(FALSE,TRUE, FALSE,TRUE, TRUE, FALSE)
+gender <- c("Male", "Female", "Female", "Male", "Female", "Female")
+overallpercentage<- c(38, 67, 53, 62, 68, 53 )
+students2 <- data.frame(name,age,majorsubject,pass,gender,overallpercentage)
+finaldata <- rbind(students, students2)
+finaldata[4,1] <- "Nitish"
+finaldata$name <- as.character(finaldata$name)
+#----------------------------------------------------------------------------
+#Replace the NA value in the first column (name) with “Nitish”.
+
+finaldata[which(is.na(finaldata$name)), 1] <- "Nitish"
+finaldata
+
+Intermediate R
+
+Comprehension
+
+A vector contains the marks scored by 5 students in the subject “English”. 
+
+marks <- c(82, 59, 45, 90, 71)
+
+The teacher wishes to analyse the scores and come up with some future strategy.
+
+
+Questions:1/2
+if-else statements
+
+The teacher plans to conduct the exam again if the mean of the class is less than 60. She writes a program in R that calculates the mean and if the mean is more than or equal to 60, the output is “No re-exam” and if the mean is less than 60, the output is “re-exam”.
+
+She writes the following code to do this, which contains a mistake. Find it.
+
+ 
+
+if (mean(marks) >= 60):
+  print("No re-exam")
+else:
+  print("re-exam")
+
+The if-condition is incorrect
+The else condition is not defined
+The colons should be replaced with curly braces
+Feedback : In R, the body of the statements (and loops) is written inside curly braces
+Correct
+The mean(marks) statement is causing the error
+
+
+Questions:2/2
+Grading Students
+
+In the above case, the teacher realises that she should store the grades instead of marks. Based on the criterion she has decided, the output should be the grades of each student as shown below:
+
+[1] "B"
+[1] "E"
+[1] "F"
+[1] "A"
+[1] "C"
+
+The marks vector is:
+
+marks <- c(82, 59, 45, 90, 71)
+
+She writes a program as follows which contains a mistake. Find it.
+
+if (marks >=90) {
+  grade <- "A"
+  print(grade)
+  } else if (marks>=80){
+  grade <- "B"
+  print(grade)
+  } else if (marks>=70) {
+  grade <- "C"
+  print(grade)
+  } else if (marks>=60) {
+  grade <- "D"
+  print(grade)
+  } else if (marks>=50) {
+  grade <- "E"
+  print(grade)
+  } else {
+  grade <-"F"
+  print(grade)
+  }
+
+The if statements are syntactically wrong (i.e. contain syntax error)
+The entire program should be wrapped inside a for loop
+Feedback : Since you want to compare the marks of each student, you need a for loop, i.e. for (mark in marks).... Inside which you can write the given program. The loop iterates over each ‘mark’ in the marks vector and prints the grade accordingly.
+Correct
+The print() function should be replaced by paste()
+The entire program should be wrapped inside another if-else conditional statement
+
+Comprehension
+
+The mtcars data frame comes built-in with R Studio. You can have a look at it using View(mtcars) or str(mtcars).
+
+ 
+
+It contains information of 32 cars like miles per gallon, weight, horsepower, number of gears etc. For this short exercise, you have to download the commented R file from this page.
+
+
+Comprehension
+
+The mtcars data frame comes built-in with R Studio. You can have a look at it using View(mtcars) or str(mtcars).
+
+ 
+
+It contains information of 32 cars like miles per gallon, weight, horsepower, number of gears etc. For this short exercise, you have to download the commented R file from this page. 
+
+ 
+Commented Guide
+file_downloadDownload
+
+There are two parts to this exercise as mentioned below:
+
+ 
+
+Part 1: Scores
+You work at a car dealership and want to analyse the performance of cars in a simplified way.
+
+ 
+
+Cars are often chosen by customers based on attributes like mileage, horsepower, etc. In mtcars, the variables mpg, hp and wt represent these three attributes. 
+
+ 
+
+To consolidate the attributes into one metric, you can define a ‘score’ for each car as score = mpg*hp/wt. 
+
+    Store the mtcars data frame in a separate data frame ‘cars’
+    Create a new column ‘score’ in cars containing the score of each car 
+    Store the scores in a separate vector named ‘s’
+    Find the mean score of cars
+
+Part 2: Performance
+Now each car has a numeric score, but you need to simplify it further for customers and salespeople to understand. So you need to create a categorical variable ‘performance’ which can be stored either ‘good’ or ‘average’. If a car’s score is greater than or equal to the average score, it is ‘good’, else ‘average’.
+
+    Create a new character vector named "performance" equal to the length of the vectors (you can read the following StackOverflow answer. -click here
+        Populate the "performance" vector using the logic - if a car’s score is greater than or equal to the average score, it is ‘good’, else ‘average’
+    Add the performance vector to the cars data frame
+    Summarise the performance variable to find the number of average and good cars.
+
+After you have attempted the exercise, answer the following questions. 
+
+
+Questions:1/3
+Average Score
+
+What is the average score of the cars?
+ 
+845.50
+880.98
+Feedback : Using the formula and using mean(scores) the correct answer is 880.98
+Correct
+890.20
+900.00
+
+Questions:2/3
+Initializing an empty vector
+
+What is the right way to initialise an empty character vector of length l?
+performance <- c(length=l)
+performance <- vector(l)
+performance <- c(mode=”character”)*l
+performance <- vector(mode="character", length=l)
+
+Questions:3/3
+Car Count
+
+How many average and good mtcars are there?
+Average = 17, good = 15
+Average = 19, good = 13
+Feedback : You can look at the solution R code provided on the next page.
+Correct
+Average = 16, good = 16
+Incorrect
+Average = 12, good = 20
+
+
+Solutions to mtcars Exercise
+
+Here are the solutions to the mtcars exercise.
+mtcars Exercise
+file_downloadDownload
+
+ 
+
+You can download the lecture notes for the session from below. The lecture notes include a summary of the entire module. 
+
+Feedback : vector() is used to initialise an empty vector
+
+
+
+
+
+
+
