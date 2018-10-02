@@ -18,3 +18,168 @@ In case you cannot find the database in your MySQL Workbench, you can download i
 You are expected to write queries in the commented file provided below and attempt the following questions. 
 
 Refer Commented File - World Database
+
+Questions:1/12
+Count of Cities
+
+How many cities are there in the cities table?
+ 
+1079
+2079
+3079
+4079 - correct
+Feedback : This is straightforward: select count (*) from city
+
+Questions:2/12
+Number of Cities
+
+Which country has the highest number of cities in the database?
+China
+Feedback : There are at least two ways to do this: 1) Grouping the number of cities by CountryCode and arranging in descending order and 2) Using sub queries (provided in the solution)
+Correct
+India
+United States
+Brazil
+
+Questions:3/12
+The most widely spoken official language
+
+ Which language is its country’s official language and spoken by 80 to 90 percent of people?
+ 
+Albanian
+Spanish
+Feedback : This is also easy: select * from countrylanguage where IsOfficial = "T" and Percentage between 80 and 90
+Correct
+French
+Hindi
+
+Questions:4/12
+Cities in Maharashtra
+
+In India, how many cities have been listed in “Maharashtra” district?
+ 
+21
+28
+35
+Feedback : Use a simple count(*) to count the number of rows where district is Maharashtra. One solution is select count(*) as count_MH from city where District = "Maharashtra"
+Correct
+42
+
+Questions:5/12
+Most populous country
+
+Which country has the maximum population (If population is taken as the population of the country table)?
+ 
+China
+Feedback : select * from Country where population = (select max(population) from country)
+Correct
+India
+Brazil
+USA
+
+Which row is max
+
+Which language is spoken in the maximum number of countries? We recommend reading the following SO answer before attempting the question.
+
+URL: Stack Overflow (having versus where)
+
+ 
+English
+Feedback : select language,count(*) as number from countrylanguage group by language order by number desc
+Correct
+Arabic
+Spanish
+French
+
+Questions:7/12
+Most common official language
+
+Among the given options, which language is the official language of the most number of countries?
+Tamil
+Portuguese
+Feedback : select language,count(*) as number from countrylanguage where IsOfficial = "T" group by language order by number desc
+Correct
+Dutch
+Turkish
+
+Questions:8/12
+English speaking cities in North America
+
+How many cities in the continent North America are there where English is the official language?
+
+309
+
+319
+
+329
+
+339
+Feedback :
+
+This is a join problem. You can see the ideal solution on the next page.
+
+
+Questions:9/12
+Maximum population
+
+Which city has the maximum population among these cities?
+Phoenix
+Los Angeles
+Chicago
+New York
+Feedback : This is a simple order by problem. Order the 4 cities by population. This is the smart way to do it in case of an MCQ exam. Otherwise you can use multiple join. The solution is provided in the solutions script.
+
+
+Questions:10/12
+NULL values
+
+How many row entries are there with any value in the country table being NULL?
+ 
+72
+Feedback : Use “Is Null” for all the columns. The sample solution is provided in the solution script.
+Correct
+92
+112
+132
+
+Questions:11/12
+I***A
+
+How many countries are there whose name starts with I and ends with A
+ 
+1
+2
+Feedback : select * from country where name like "I%A"
+Correct
+3
+4
+Questions:12/12
+Least surface area
+
+Which continent has least surface area?
+
+
+ 
+
+Europe
+
+Oceania
+Feedback :
+
+The correct answer is :select continent, sum(SurfaceArea) from country group by Continent order by sum(SurfaceArea);"
+Correct
+
+Antarctica
+
+Asia
+
+
+
+
+
+
+
+
+
+
+
