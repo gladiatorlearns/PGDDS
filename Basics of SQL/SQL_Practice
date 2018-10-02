@@ -10,8 +10,8 @@ For the following questions, you need to use the 'world' database which comes bu
 
 In case you cannot find the database in your MySQL Workbench, you can download it from the MySQL website from the following URLs:
 
-    Download the world database
-    Instructions to set up the world database
+    Download the world database  https://dev.mysql.com/doc/index-other.html
+    Instructions to set up the world database https://downloads.mysql.com/docs/world-setup-en.pdf
 
  
 
