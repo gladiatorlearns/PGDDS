@@ -1,0 +1,6 @@
+Histograms
+
+Now that you know all about bar charts, let’s move to another visualisation technique called histogram. In the following lecture, prof RC will discuss histograms in detail and will also explain how they differ from a bar chart.
+
+Histograms plot quantitative data with ranges of data grouped into bins which are decided automatically by Tableau. Histograms show the distribution of variables, whereas bar charts are used for comparison. To learn how to create histograms in Tableau, please watch the following lecture:
+
