@@ -1,0 +1,222 @@
+Define the Business Problem - Business Understanding
+
+"I never failed once. It just happened to be a 2000-step process."
+
+ 
+
+As a data analyst, you will face a multitude of challenges ranging from understanding various business problems to choosing the best techniques to solve them. To avoid getting lost, data scientists have developed a robust process to solve virtually any analytics problem in any industry–appropriately called the Cross Industry Standard Process for Data Mining (CRISP–DM) framework.
+
+ 
+
+It involves a series of steps which you will soon find quite intuitive:
+
+    Business understanding
+    Data understanding
+    Data Preparation
+    Data Modelling
+    Model Evaluation
+    Model Deployment
+
+B3D2M - a code to remember
+
+We now have a framework to think about complex problems, but where do we start from? Do we ask for data straightaway? Or do we ask some fundamental questions to understand the problem better?
+
+ 
+
+Imagine you are driving to a hill station and your car broke down in the middle of nowhere. You have a toolkit and you want to repair the car. To do so, you need to know exactly what has gone wrong. Is it the engine, the battery or you simply ran out of fuel?  
+
+ 
+
+For a data analyst, understanding the business and its specific problems is of utmost importance. You ought to understand the problem clearly to convert it into a well-defined analytics problem. Only then you can lay out a brilliant strategy to solve it, else you'll be super efficient in solving the wrong problem!
+
+ 
+
+After figuring out the problem with the car, you ideally experiment with various tools and follow a somewhat sequential procedure, like a good mechanic.  Similarly, analytics projects have a typical life-cycle with the six stages of the CRISP-DM framework.
+
+ 
+
+Professor R.C. will introduce you to these 6 stages.
+
+Spark Funds - 40 Billion - Sectors that are most attractive for investment.
+
+1. Develop business understanding/objective - Firm want to identify which avenues have great ROI on investment
+    Potential Areas - Analysis for current investment across sectors / clusters of sectors
+    
+    Consider a scenario of churn management, where identifying high value customers
+       1. Person with 4k spending connected to 2 people 
+       2. Person with 500 spending connected to 50.
+       
+       
+       It is important to note that steps in CRISP-DM framework are not necessarily sequential in nature. For example, your data understanding can improve your understanding of business itself. But it all starts with business understanding. We should be able to articulate the business objectives from the broad problem statement so that the next steps in the CRISP-DM framework can be performed effectively. 
+
+ 
+
+In summary, to understand the business problem, one has to undertake the following steps of analyses:
+
+    Determine the business objectives clearly
+    Determine the goals of data analysis 
+    
+    
+Owning an IPL Team - Business Understanding
+
+Let's understand the relevance of business understanding using an example we all connect with - cricket! Imagine you are working as a data scientist in an IPL team.  
+
+ 
+
+One of the business problems for IPL team owners is buying the right players. Interestingly, match-winners are not always the right players, but rather the ones who help team owners make money. 
+
+ 
+
+As with any business, IPL team owners want to make profits. Since profits = revenue – cost, the team needs to generate more revenues than costs. Let's look at the components of revenues and costs. 
+
+ 
+Revenue
+
+Media Rights: 60%
+
+The cricket board of India, BCCI, collects revenue from broadcasters like Sony and shares a part with the teams. This forms about 60% of the total revenue and teams always get it no matter what players they choose. 
+
+ 
+
+Sponsorship: 25-30%
+
+The logos on players’ jerseys and helmets are advertisements by sponsors. Players also promote for sponsors through TV ads, and most of that money goes to the team owners. Sponsors pay more when they get higher viewership -which means star players and the ones who entertain help teams make more money! How much money? A whole lot! The sponsorship revenue forms about 25 to 30% of total revenue. And this is why most IPL players resemble walking billboards. Or Formula 1 drivers.
+
+ 
+
+Ticket Sales: 6-8%
+
+Most of the ticket money goes to team owners, which amounts to about 6-8% of the total revenue.
+
+ 
+
+Prize Money: 5-10% (if applicable)
+
+In any tournament, every player wants the glory of lifting the cup. Strangely enough, though, prize money is not a large part of the overall revenue. The winning team itself gets about 15-20 crore rupees, which is somewhat low compared to the revenue from sponsors and advertisements.
+
+ 
+
+So what’s the lesson here? Firstly, the business objective is to buy players who help generate revenue, not necessarily the ones who make the most runs. Since one of the largest components of revenue is sponsorships, this will have huge implications on what data you collect and analyse.
+
+ 
+
+Rather than only analysing cricketing statistics like average runs and wickets, you would rather also analyse the effect of players on sponsorship revenue. Maybe buy young and marketable players for deodorant and fairness cream ads!
+
+ 
+
+Let’s now look at the costs.
+
+ 
+Costs
+
+There are three main types of costs in buying and maintaining an IPL team:
+
+ 
+
+Franchise Fee: 60%
+
+There’s the cost of owning an IPL team, the money that the team owner pays to the BCCI for the honour of owning a team in the IPL. This cost is fixed and amounts to about 60% of the total cost. 
+
+ 
+
+Player Costs: 30-35%
+
+This amounts to roughly 30-35% of the total cost and depends upon the choice of players. 
+
+ 
+
+Maintenance costs: 5-10%
+
+This is the cost of running the day-to-day activities, staff salaries etc. This does not depend on the choice of players. 
+
+ 
+
+What's the lesson here? You need to keep the player costs down. This sounds obvious, but teams often buy expensive players who have been playing well recently. Do you now think it is a wise decision?
+
+ 
+
+To sum up, the business objective is to identify low-moderate cost players who can generate high sponsorship revenue. This understanding will significantly change the data, the analysis and the final choice of players. 
+    
+    
+    Understanding Raw Data
+
+"Data! Data! Data! I can’t make bricks without clay!"
+ 
+
+After business understanding, the next step is data understanding. Once you get your hands on the data for the first time, you would want to know its structure (number of files, rows, columns etc.), understand how they are related to each other and whether something looks fishy–like a date column having negative values. Broadly, you are interested in:  
+
+    The type of data sets that are available for analysis
+    The information you can get from the datasets
+    Exploring the data (by plotting graphs and observing them)
+    Performing quality checks on the data sets
+
+Questions:1/1
+Data Understanding
+
+A critical part of data understanding is exploring the data though plotting charts. What type of insights can you expect to draw through plots? (select all that may apply)
+Spotting outlier values
+Observing trends of variables (increasing/decreasing) etc.
+Observing correlation between variables
+Building predictive models
+
+
+Questions:1/1
+Data Understanding
+
+A critical part of data understanding is exploring the data though plotting charts. What type of insights can you expect to draw through plots? (select all that may apply)
+Spotting outlier values
+Feedback : Graphs such as scatter plots and box plots can give you outlier values and the distribution of data.
+Correct
+Observing trends of variables (increasing/decreasing) etc.
+Feedback : Simple scatter plots or line plots can help you figure out trends, something which looking at rows of data will not help with.
+Correct
+Observing correlation between variables
+Feedback : You can plot multiple variables against each other or again another variable together and see how both the variables are related.
+
+You learnt a few steps on understanding the data and its quality. To summarize, under data understanding one should:
+
+    Collect relevant data
+    Describe datasets
+    Explore data by plotting graphs
+    Check data quality
+    
+    Preparing Data for Analysis
+
+"Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+
+ 
+
+Across projects, data analysts spend around 50-80% of the time on data cleaning and preparation, and therefore data preparation becomes one of the most crucial steps.
+
+ 
+
+Data is usually spread across different files. Collating those files together and selecting the required rows and columns based on business understanding is a major step in data preparation. After collating the data set we address missing values and outliers. It is considered the most crucial step because the model will be built on the data sets created here. 
+
+ 
+
+If the data set is erroneous, the solution to the problem we get after building a model would be erroneous too-no matter how the model is being created. Let’s hear more about Data Preparation.
+Questions:1/1
+Data preparation
+
+Which of the following steps would NOT be a part of data preparation?
+Integrating the data spread across multiple files into one single file for analysis
+Cleaning discrepancies such as outliers and missing values
+Creating derivative variables, e.g. creating nicknames from email IDs
+Plotting data to understand range of values
+Attempt 1 of 2
+
+To summarise, data preparation is one of the most time-consuming steps of the entire analysis. It consists of the following steps:
+
+    Select relevant data
+    Clean data
+    Construct Data: Derive new features
+    Integrate Data
+    Format Data
+
+In the next session, you will understand the next steps of the CRISP-DM framework - modelling, model evaluation and deployment.
+
+ 
+
+In the next segment, you will see how the raw data is prepared for analysis.
+    
+       
