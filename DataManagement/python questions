@@ -318,4 +318,13 @@ print(sorted(list(((C & F) | (F & H) | (C & H)) - (C & F & H))))
 print(sorted(list(set(range(1,21)) - (C | F | H))))
 
 
+Coding Questions: Solution
 
+Refer to the following videos for a walkthrough of the graded coding questions.
+
+    Factorial using reduce()
+
+
+We hope that you now feel confident with the Python syntax and will be able to perform the basic Python operations. Apart from what you have studied in Introduction to Python, there is an additional optional module which teaches you programming in Python. This module covers some of the common algorithms, implementation and data structure questions which are frequently asked in interviews. If you have the time, it is recommended you go through this module. The link to the module is provided below:
+
+    Data Structures and Algorithms in Python - 
