@@ -1,0 +1,51 @@
+Introduction
+
+Welcome to this module on Python for Data Science.
+
+  
+In this module
+
+In this module, we will be covering NumPy and Pandas that are the most used Python libraries for Data Science.
+
+ 
+
+This module will teach you the basics of NumPy, which is the fundamental package for scientific computing in Python. NumPy consists of a powerful data structure called multidimensional arrays. Pandas is another powerful Python library that provides fast and easy data analysis platform. You will also learn about 'Data Visualisation in Python' in a separate module.
+
+ 
+Pre-requisite for this Module
+
+The students are expected to have gone through "Intro to Python" module before beginning with this module.
+
+ 
+In this session
+
+    Understand advantages of vectorised code using Numpy (over standard Python ways)
+    Create NumPy arrays
+        Convert lists and tuples to NumPy arrays
+        Create (initialise) arrays
+    Inspect the structure and content of arrays
+    Subset, slice, index and iterate through arrays
+    Compare computation times in NumPy and standard Python lists
+
+ 
+Guidelines for coding console questions
+
+The lectures are interspersed with coding consoles to help you practise writing Python code. You will be given a brief problem statement and some pre-written code. You can write the code in the provided space, verify your answer using test cases, and submit when you are confident about the answer.
+
+ 
+
+Note that the coding console questions are non-graded. Some instructions for these questions are as follows:
+
+    Ignore the pre-written code on the console. Please don't change it.
+    Write your answer where you're asked to write it.
+
+    You may run and verify your codes any number of times.
+
+ 
+People you will hear from in this session
+
+Subject Matter Expert
+Prof. G. Srinivasaraghavan
+Professor, IIIT-B
+
+Rated as one of the top 10 academicians in the field of Data Science in India, Prof. Raghavan is an authoritative figure and a delight to learn from.
