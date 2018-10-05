@@ -49,3 +49,18 @@ Prof. G. Srinivasaraghavan
 Professor, IIIT-B
 
 Rated as one of the top 10 academicians in the field of Data Science in India, Prof. Raghavan is an authoritative figure and a delight to learn from.
+
+NumPy Basics
+
+NumPy is a library written for scientific computing and data analysis. It stands for numerical python.
+
+ 
+
+The most basic object in NumPy is the ndarray, or simply an array which is an n-dimensional, homogeneous array. By homogenous, we mean that all the elements in a NumPy array have to be of the same data type, which is commonly numeric (float or integer).
+
+ 
+
+You can download the Python notebooks used in the lecture from the link below. It is recommended that you keep executing the commands on your computer at pace with the lecture.
+
+
+
