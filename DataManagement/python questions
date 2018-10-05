@@ -1,0 +1,279 @@
+Questions:1/2
+Python Operators
+
+What will the output be of ((500//7) % 5) ** 3?
+
+1
+Feedback :
+
+    (500//7) means integer division. Hence, you will get 71.
+    71 % 5 will return the remainder when 71 is divided by 5. Hence, you will get 1.
+    1 ** 3 will return 1 raised to the third power. Hence, you will get 1.
+
+Correct
+
+2.91
+
+71.42
+
+0
+
+8
+
+
+Questions:2/2
+Indexing
+
+How will you extract ‘love’ from the string S = “I love Python”? (More than one option may be correct.).
+
+S[2:5]
+
+S[2:6]
+Feedback :
+
+The substring ‘love’ in S starts from index 2 and goes up to index 5. Hence, you need to write ‘S[2:6]’ to extract it, since the last index mentioned, i.e. 6, will be excluded by default.
+Correct
+
+S[3:7]
+
+S[-11:-7]
+Feedback :
+
+Alternatively, you can also use negative indexing in Python, with the last index being ‘-1’. Hence, by using a negative index, you can extract ‘love’ by writing ‘S[-11:-7]’.
+Correct
+
+S[-11:-8]
+
+
+Questions:1/3
+List Multiplication
+
+If you have a list L = [1, 2, 3], what will the output of L * 2 be?
+
+[2, 4, 6]
+
+[1, 2, 3, 1, 2, 3]
+Feedback :
+
+L * 2 will replicate all the elements present in the list twice. Hence, you will get [1, 2, 3, 1, 2, 3] as the output.
+Correct
+
+[1, 4, 9]
+
+[[1, 2, 3], [1, 2, 3]]
+
+
+Questions:2/3
+List Slicing
+
+If you have a list L = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]], what will the output of L[2: ] be?
+
+[[7, 8, 9, 10]]
+Feedback :
+
+Since this is a nested list, L[2: ] will return all the lists, starting from index 2, and since the list present at index 2 is [7, 8, 9, 10] and there are no lists after it, it will return [[7, 8, 9, 10]].
+Correct
+
+[7, 8, 9, 10]
+
+[3, 4, 5, 6, 7, 8, 9, 10]
+
+[[3], [4, 5, 6], [7, 8, 9, 10]]
+
+
+Questions:3/3
+Tuples
+
+If you have a tuple T = (3, 5, 7, 11), what will the output of T.append(9) be?
+
+(3, 5, 7, 9, 11)
+
+(3, 5, 7, 11, 9)
+
+(9, 3, 5, 7, 11)
+ 
+
+Error
+Feedback :
+
+Tuples are immutable, i.e. once a tuple is created, you cannot alter it. This is why if you attempt to append a value to the tuple in the question, Python will throw an error.
+
+Questions:1/4
+Dictionary Iteration
+
+What will the output be of the following code?
+
+D = {1:['Raj', 22], 2:['Simran', 21], 3:['Rahul', 40]}
+for val in D:
+     print(val)
+
+1
+2
+3
+Feedback :
+
+By default, iteration in a dictionary is done over the keys of the dictionary. Hence, the code will return ‘1, 2, 3’. The name of the variable used for the iteration (‘val’, in this case) is insignificant.
+Correct
+
+[‘Raj’, 22]
+[‘Simran’, 21]
+[‘Rahul’, 40]
+
+1 [‘Raj’, 22]
+2 [‘Simran’, 21]
+3 [‘Rahul’, 40]
+
+‘Raj’
+‘Simran’
+‘Rahul’
+
+Questions:2/4
+Python Comprehensions
+
+What will the ‘comprehension equivalent’ be for the following snippet of code?
+
+for sentence in paragraph:
+    for word in sentence.split():
+        single_word_list.append(word)
+
+word for sentence in paragraph for word in sentence.split()
+
+[word for sentence in paragraph for word in sentence.split()]
+Feedback :
+
+[word for sentence in paragraph for word in sentence.split()] is the right comprehension equivalent of the code provided. You need to put it in square brackets [] since the output will be a list.
+Correct
+
+word for word in sentence.split() for sentence in paragraph
+
+[word for word in sentence.split() for sentence in paragraph]
+
+Questions:3/4
+Function Arguments
+
+What will the output of the following code be?
+
+def my_func(*args):
+    return(sum(args))
+
+print(my_func(1,2,3,4,5))
+print(my_func(6,7,8))
+
+15
+
+21
+Feedback :
+
+Using ‘*args’ as an argument for a function in Python enables you to pass as many arguments as you desire. Hence, Python will compute the function, no matter if the argument has five elements or three or any other number of elements.
+Correct
+
+15.0
+
+21.0
+
+15
+Error: Invalid number of arguments passed
+
+Error
+
+Questions:4/4
+Operations on a List
+
+Which of the following commands will output the squares of all the numbers in a list L = [1, 2, 3, 4]?
+
+L ** 2
+
+map(lambda x : x ** 2, L)
+
+list(map(lambda x : x ** 2, L))
+Feedback :
+
+list(map(lambda x : x ** 2, L)) will output the squares of all the numbers. However, just map(lambda x : x ** 2, L) will only perform the required task and won’t output the list. It will just return the ID number where the result is stored. Hence, you need to use the ‘list()’ command along with it, to get the required result.
+Correct
+
+map(x : x ** 2, L)
+
+
+Question 
+Factorial
+Description
+Given a number ‘n’, output its factorial using reduce().
+Note: Make sure you handle the edge case of zero. As you know, 0! = 1
+
+P.S.: Finding the factorial without using the reduce() function might lead to deduction of marks.
+
+Examples:
+Input 1:
+1
+Output 1:
+1
+
+Input 2:
+3
+Output 2:
+6
+Execution time limit
+
+5 seconds
+
+# Read the input as an integer
+n = int(input())
+
+# Import the reduce() function
+from functools import reduce
+
+print(str(reduce(lambda x,y: x*y, [i for i in range(1,n+1)])))
+
+or 
+
+# Read the input as an integer
+n = int(input())
+
+# Import the reduce() function
+from functools import reduce
+numlist=[]
+if n < 2:
+    print(1)
+else:
+    for i in range(1,n+1):
+        numlist.append(i)
+    print(str(reduce(lambda x,y: x*y, numlist)))
+
+Question 2 - 
+
+Set Operations
+Description
+In a school, there are total 20 students numbered from 1 to 20. You’re given three lists named ‘C’, ‘F’, and ‘H’, representing students who play cricket, football, and hockey, respectively. Based on this information, find out and print the following: 
+
+    Students who play all the three sports
+    Students who play both cricket and football but don’t play hockey
+    Students who play exactly two of the sports
+    Students who don’t play any of the three sports
+
+Format:
+Input:
+3 lists containing numbers (ranging from 1 to 20) representing students who play cricket, football and hockey respectively.
+Output:
+4 different lists containing the students according to the constraints provided in the questions.
+
+Note: Make sure you sort the final lists (in an ascending order) that you get before printing them; otherwise your answer might not match the test-cases.
+
+Examples:
+Input 1:
+[2, 5, 9, 12, 13, 15, 16, 17, 18, 19]
+[2, 4, 5, 6, 7, 9, 13, 16]
+[1, 2, 5, 9, 10, 11, 12, 13, 15]
+Output 1:
+[2, 5, 9, 13]
+[16]
+[12, 15, 16]
+[3, 8, 14, 20]
+
+Explanation:
+1.Given the three sets, you can see that the students numbered '2', '5', '9', and '13' play all the three sports. 
+2. The student numbered '16' plays cricket and football but doesn't play hockey. 
+3. The student numbered '12' and '15' plays cricket and hockey and the student numbered '16' plays cricket and football. There are no students who play only football and hockey. Hence, the students who play exactly two sports are 12, 15, and 16.
+4. As you can see, the students who play none of the sports are 3, 8, 14, and 20.
+Execution time limit
+
+5 seconds
