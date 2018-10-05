@@ -63,4 +63,18 @@ The most basic object in NumPy is the ndarray, or simply an array which is an n-
 You can download the Python notebooks used in the lecture from the link below. It is recommended that you keep executing the commands on your computer at pace with the lecture.
 
 
+Lets now learn about 'arrays' which are the basic data structures in NumPy, we will also learn how to efficiently operate on NumPy arrays.
+
+Advantages of NumPy
+
+What is the use of arrays over lists, specifically for data analysis? Putting crudely, it is convenience and speed :
+
+    You can write vectorised code on NumPy arrays, not on lists, which is convenient to read and write, and concise.
+    NumPy is much faster than the standard Python ways to do computations.
+
+Vectorised code typically does not contain explicit looping and indexing etc. (all of this happens behind the scenes, in precompiled C-code), and thus it is much more concise.
+
+ 
+
+Let's see more in the next lecture.
 
