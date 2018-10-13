@@ -1,0 +1,129 @@
+Creating NumPy Arrays
+There are multiple ways to create NumPy arrays, the most common ones being:
+
+Convert lists or tuples to arrays using, np.array() as done above
+Initialise arrays of fixed size (when the size is known)
+The other common way is to initialise arrays. You do this when you know the size of the array beforehand.
+
+The following ways are commonly used:
+
+np.ones(): Create an array of 1s
+np.zeros(): Create an array of 0s
+np.random.random(): Create an array of random numbers between 0 and 1
+np.arange(): Create an array with increments of a fixed step size
+np.linspace(): Create an array of fixed length
+
+Apart from the functions mentioned in the video, there are a few more useful functions for creating arrays, such as: 
+
+np.full(): Create a constant array of any number ‘n’
+np.tile(): Create a new array — by repeating an existing array — for a particular number of times
+np.eye(): Create an identity matrix of any dimension
+np.random.randint(): Create a random array of integers within a particular range
+These functions, along with appropriate examples, have been mentioned at the end of the ‘Creating NumPy Arrays’ section of the Jupyter Notebook used in this session.
+ 
+
+The following coding question has a video solution, the link to which will be present in the sample solution. The sample solution will appear once you've successfully submitted the code.
+
+From here onwards, some of the coding questions will have such video links provided in the solution. Make sure you go through them if you had difficulty understanding the question or the solution.
+
+Create NumPy Array
+Description
+Given an integer 'x', create an array of size m*n having all integer values equal to 'x'. 
+Hint: Use dtype to specify integer.
+
+Format:
+Input: 
+Line 1: A single integer 'x'
+Line 2: A single integer 'm' indicating the number of rows
+Line 3: A single integer 'n' indicating the number of columns
+Output: An array of size 'm*n' having all the values as 'x'
+
+Example:
+Input 1:
+1
+3
+3
+Output 1:
+[[1 1 1]
+
+import sys
+lines = sys.stdin.readlines()
+int_x = int(lines[0])
+rows_m = int(lines[1])
+cols_n = int(lines[2])
+
+import numpy as np
+array_x = np.full((rows_m,cols_n), int_x,dtype=np.int)
+
+print(array_x)
+
+Array 'arange' Function
+Description
+Create an array of first 10 multiples of 5 using the 'arange' function.
+Execution Time Limit
+5 seconds
+
+import numpy as np
+array_multipleof5 = np.arange(5,55,5)
+
+print(array_multipleof5)
+
+upgrad  solution - 
+import numpy as np
+array_multipleof5 = np.arange(5,51,5)
+
+Checkerboard Matrix
+Description
+Given an even integer ‘n’, create an ‘n*n’ checkerboard matrix with the values 0 and 1, using the tile function. 
+ 
+Format:
+Input: A single even integer 'n'.
+Output: An 'n*n' NumPy array in checkerboard format.
+
+Example: 
+Input 1: 
+2 
+Output 1: 
+[[0 1] 
+ [1 0]] 
+Input 2: 
+4 
+Output 2: 
+[[0 1 0 1] 
+ [1 0 1 0]
+ [0 1 0 1]
+ [1 0 1 0]]
+
+Execution Time Limit
+5 seconds
+
+my solution - 
+n = int(input())
+list_1=([0,1],[1,0])
+import numpy as np 
+print(np.tile(np.array(list_1),(n//2,n//2)))
+
+upgrad - 
+
+# For a video solution of the code, copy-paste the following link in your browser:
+# https://youtu.be/cak6Y6yN4AU
+
+# Read the variable from STDIN
+n = int(input())
+
+import numpy as np
+
+# Create the smallest unit of a checkerboard matrix
+x = np.array([[0, 1], [1, 0]])
+
+# Create a checkerboard matrix of size n*n using the tile() function. We use n//2 
+# since the smallest unit of a checkerboard matrix is already of size 2*2. So, for 
+# creating a larger matrix, say, of size 8, we need to replicate it using the tile()
+# function 4 times as it will then give a matrix of size 8*8.
+check = np.tile(x, (n//2, n//2))
+
+# Print the created matrix
+print(check)
+
+
+
