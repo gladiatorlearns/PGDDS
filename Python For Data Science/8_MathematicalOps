@@ -1,0 +1,115 @@
+Operations on Arrays
+Performing mathematical operations on arrays is extremely simple. Let's see some common operations.
+
+ 
+
+Basic Mathematical Operations
+NumPy provides almost all the basic math functions - exp, sin, cos, log, sqrt etc. The function is applied to each element of the array.
+
+ 
+
+Applying User Defined Functions
+You can also apply your own functions on arrays. For e.g. applying the function x/(x+1) to each element of an array.
+
+ 
+
+One way to do that is by looping through the array, which is the non-NumPy way. You would rather want to write vectorised code.
+
+ 
+
+The simplest way to do that is to vectorise the function you want, and then apply it on the array. NumPy provides the np.vectorize() method to vectorise functions.
+
+ 
+
+Let's look at both the ways to do it.
+
+ 
+
+Note: The Python notebook used in this section can be downloaded from Introduction section.
+
+Vectorize Numpy
+Description
+Given an array, 'array_3' divide each element with 5. 
+Hint: Create a vectorized function, then apply it to the array_3.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0:2]
+list_2 = input_list[2:4]
+import numpy as np
+array_1 = np.array(list_1)
+array_2 = np.array(list_2)
+array_3 =np.hstack((array_1,array_2))
+
+function = np.vectorize(lambda x: x/5)
+
+print(function(array_3))
+
+What is the difference in using the arithmetic operators (+, -, * and /) between regular Python lists and NumPy arrays?
+Define two python list
+>>> L1 = [1,2,3,4]
+>>> L2 = [5,6,7,8]
+
+Perform (+) operation
+>>> L1 + L2
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+Perform (-) operation
+>>> L1 - L2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'list'
+
+Perform (*) operation
+>>> L1 * L2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'list'
+
+Perform (/) operation
+>>> L1 / L2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'list' and 'list'
+
+It is clear only (+) operation is allowed between two python lists which results in concatanation of the lists.
+
+
+Lets convert above two lists into numpy array and perform same operations
+
+>>> L1 = np.asarray(L1)
+>>> L1
+array([1, 2, 3, 4])
+>>> type(L1)
+<class 'numpy.ndarray'>
+>>>
+>>>
+>>> L2 = np.asarray(L2)
+>>> L2
+array([5, 6, 7, 8])
+>>> type(L2)
+<class 'numpy.ndarray'>
+>>>
+>>>
+>>>
+Perform (+) operation
+>>> L1 + L2
+array([ 6,  8, 10, 12])
+
+Perform (-) operation
+>>> L1 - L2
+array([-4, -4, -4, -4])
+
+Perform (*) operation
+>>> L1 * L2
+array([ 5, 12, 21, 32])
+
+Perform (/) operation
+>>> L1 / L2
+array([0.2       , 0.33333333, 0.42857143, 0.5       ])
+
+In this case we can see that the two lists are added, substracted, multiplied and divided element wise
+
+Conclusion:
+In this case of numpy array the two lists were added, substracted, multiplied and divided element wise on +,-,* and / operations, while for python lists only (+) operation was allowed between two python lists which results in concatenation of the lists.
