@@ -69,3 +69,11 @@ Note that the dot product is calculated as follows:
 [[1*5 + 2*7, 1*6 + 2*8],
 
  [3*5 + 4*7, 3*6 + 4*8]]
+ 
+ Summary
+To conclude, in this session, you learnt about the various operation you may do on a NumPy array. The various operations that you learnt about are —
+
+Manipulating arrays which can be done using reshape().
+Stacking and splitting arrays which are similar to merging and appending and can be done using hstack(), vstack().
+Applying user-defined functions on an array to vectorise the code using np.vectorize().
+Performing linear algebra operations on an array like Inverse, Determinant or eigenvalues of a matrix.
