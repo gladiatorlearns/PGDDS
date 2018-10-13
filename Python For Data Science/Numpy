@@ -98,3 +98,35 @@ array_1 = np.array([list_1,list_2,list_3])
 
 print(array_1)
 
+Element Wise Multiplication
+Description
+Perform an element-wise multiplication using list_1 = [2,3,4,5] list_2 = [7,8,9,6] and obtain the output as a list. 
+Hint: Convert the list to an array and after multiplication convert it back to a list.
+Execution Time Limit
+5 seconds
+
+
+Q. What does the stub in the beginning of the code do?
+The following code:
+
+import ast,sys
+input_str = sys.stdin.read()
+
+is used to read the input from the standard input/output stream. It will be present in almost all the coding questions that are present because when you're writing code in any console, you need to read the input from and write the output to the standard I/O stream.
+
+Also, note that the variable name in the second line is 'input_str'. This is because all the inputs provided to the standard I/O stream are read as a string and you need to convert them as required. This will also be done for all the codes. For example, the code in this page requires you to read a list. Hence, the following code is used to convert the read input from string to list:
+
+input_list = ast.literal_eval(input_str)
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+
+import numpy as np
+array_1 = np.array(list_1)
+array_2 = np.array(list_2)
+array_3 = array_1*array_2
+
+print(list(array_3))
