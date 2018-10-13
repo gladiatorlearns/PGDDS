@@ -1,0 +1,34 @@
+Structure and Content of Arrays
+It is helpful to inspect the structure of NumPy arrays, especially while working with large arrays. Some attributes of NumPy arrays are:
+
+shape: Shape of array (n x m)
+dtype: data type (int, float etc.)
+ndim: Number of dimensions (or axes)
+itemsize: Memory used by each array element in bytes
+ 
+
+Note: At 1:11, the notebook shows rand_array[1, ] to print the first row. However, please note that this command will print the second row. For printing the first row, you need to specify the index as zero.
+
+2D Array
+Description
+Create an array using list list_1 = [10,11,12,13] and list_2 = [15,12,13,14] and print the shape and dimension of the array created.
+Execution Time Limit
+5 seconds
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+
+import numpy as np
+array_1 = np.array([list_1,list_2])
+
+print(array_1.shape)
+print(array_1.ndim)
+
+
+When the professor says rand_array[1, ], he says this will print the first row but it should actually print the second row.
+This is a small mistake made by the professor. The command 'rand_array[1, ]' will indeed print the second row. For printing the first row, you need to use, 'rand_array[0, ]' as indexing in Python starts from zero.
+
+
