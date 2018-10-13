@@ -1,0 +1,44 @@
+Computation Times in NumPy and Standard Python Lists
+We mentioned that the key advantages of NumPy are convenience and speed of computation.
+
+ 
+
+You'll often work with extremely large datasets, and thus it is important to point for you to understand how much computation time (and memory) you can save using NumPy, compared to standard python lists.
+
+ 
+
+Let's compare the computation times of arrays and lists for a simple task of calculating the element-wise product of numbers.
+
+
+In this case, NumPy is an order of magnitude faster than lists. This is with arrays of size in millions, but you may work on much larger arrays of sizes in order of billions. Then, the difference is even larger.
+
+ 
+
+Some reasons for such difference in speed are:
+
+NumPy is written in C, which is basically being executed behind the scenes
+NumPy arrays are more compact than lists, i.e. they take much lesser storage space than lists
+The following discussions demonstrate the differences in speeds of NumPy and standard python:
+
+Why are NumPy arrays so fast? = https://stackoverflow.com/questions/8385602/why-are-numpy-arrays-so-fast
+Why NumPy instead of Python lists?  https://stackoverflow.com/questions/993984/what-are-the-advantages-of-numpy-over-regular-python-lists
+
+Summary
+To conclude, in this session, you learnt about the most important package for scientific computing in Python NumPy. The various operations that you learnt about are —
+
+Arrays which are the basic data structure in NumPy library.
+Creating NumPy arrays from a list or a tuple.
+Creating randomly large arrays which can be done using the arange command.
+Analysing the shape and dimension of an array using array.shape, array.ndim and so on.
+Indexing, slicing and subsetting an array which is very similar to indexing in lists.
+Working on multidimensional arrays.
+Lastly, you studied the computation times in NumPy and standard Python lists and you concluded that NumPy arrays are faster than standard lists.
+
+ 
+
+In the next session, you will dive deep into various operations on NumPy arrays, and you will use these data structures to perform various tasks.
+
+Additional Reading
+If you want to learn more than what is provided in this module,  you can optionally use the additional resources provided below. 
+
+NumPy in detail
