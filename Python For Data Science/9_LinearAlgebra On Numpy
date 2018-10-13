@@ -1,0 +1,35 @@
+Basic Linear Algebra Operations
+NumPy provides the np.linalg package to apply common linear algebra operations, such as:
+
+np.linalg.inv: Inverse of a matrix
+np.linalg.det: Determinant of a matrix
+np.linalg.eig: Eigenvalues and eigenvectors of a matrix
+Also, you can multiply matrices using np.dot(a, b).
+
+ 
+
+Note: The Python notebook used in this section can be downloaded from Introduction section.
+
+Linear algebra
+Description
+Find the inverse, eigenvalues, eigenvectors, determinants of a given matrix 'array_1'.
+
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+list_3 = input_list[2]
+
+import numpy as np
+array_1 = np.array([list_1,list_2,list_3])
+eigen = np.linalg.eig(array_1)
+inv = np.linalg.inv(array_1)
+det = np.linalg.det(array_1)
+print(eigen)
+print(inv)
+print(det)
+
+Apart from these basic functions, there are a lot of other linear algebra operations that can be performed in NumPy. These functions come built-in in another package called SciPy. SciPy is built on top of NumPy, so you can use both of them hand in hand. Many of the functions in SciPy are quite advanced and usually aren’t of much use. But, you can still go through the following cheat sheet of SciPy functions provided below:
+
+SciPy Cheat Sheet - https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_SciPy_Cheat_Sheet_Linear_Algebra.pdf
