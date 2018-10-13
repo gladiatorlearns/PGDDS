@@ -1,0 +1,97 @@
+Introduction
+In this session we will go through the following:
+
+Manipulate arrays
+Reshape arrays
+Stack arrays
+Perform operations on arrays
+Perform basic mathematical operations
+Apply built-in functions
+Apply your own functions
+Apply basic linear algebra operations
+You can download the Python notebooks used in this session from the link below.
+
+IPython Notebook used in this Session
+
+Basic Operations
+Manipulating Arrays
+We can manipulate arrays, i.e. changing the shape, combining and splitting arrays, etc.
+
+Reshaping Arrays
+Reshaping is done using the reshape() function.
+
+Stacking and Splitting Arrays
+Stacking: np.hstack() and np.vstack()
+
+Stacking is done using the np.hstack() and np.vstack() methods. For horizontal stacking, the number of rows should be the same, while for vertical stacking, the number of columns should be the same.
+
+ 
+
+Note: The Python notebook used in this section can be downloaded from Introduction section.
+
+Stack Three Arrays
+Description
+Horizontally stack two arrays using hstack, and finally, vertically stack the resultant array with the third array. 
+
+Example:
+Input 1:
+[[1, 2],
+ [5, 6]]
+
+[[3, 4],
+ [7, 8]]
+
+[[9, 10, 11, 12]]
+Output 1:
+[[1 2 3 4]
+ [5 6 7 8]
+ [9 10 11 12]]
+ 
+ # Read the input
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+list_3 = input_list[2]
+
+# Import NumPy
+import numpy as np
+
+hstacklist=np.hstack((list_1, list_2))
+vstack=np.vstack((hstacklist,list_3))
+print(vstack)
+
+upgrd solution
+# For a video solution of the code, copy-paste the following link in your browser:
+# https://youtu.be/cuKRGMpn4kM
+
+# Read the input
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+list_3 = input_list[2]
+
+# Import NumPy
+import numpy as np
+
+# Convert the given lists to NumPy arrays
+array_1 = np.array(list_1)
+array_2 = np.array(list_2)
+array_3 = np.array(list_3)
+
+# Horizontally stack the first and second NumPy arrays
+final_array = np.hstack((array_1, array_2))
+
+# Vertically stack the third array with the array obtained by stacking the first
+# two vertically 
+final_array = np.vstack((final_array, array_3))
+
+# Print the final array
+print(final_array)
+
+
+
+ 
