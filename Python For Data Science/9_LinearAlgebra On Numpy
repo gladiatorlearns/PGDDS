@@ -33,3 +33,39 @@ print(det)
 Apart from these basic functions, there are a lot of other linear algebra operations that can be performed in NumPy. These functions come built-in in another package called SciPy. SciPy is built on top of NumPy, so you can use both of them hand in hand. Many of the functions in SciPy are quite advanced and usually aren’t of much use. But, you can still go through the following cheat sheet of SciPy functions provided below:
 
 SciPy Cheat Sheet - https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_SciPy_Cheat_Sheet_Linear_Algebra.pdf
+
+What is the difference between the output of 'np.linalg.eig()' and 'np.linalg.eigvals()'?
+np.linalg.eig(): Returns both the eigenvalues and eigenvectors.
+
+np.linalg.eigvals(): Returns just the eigenvalues.
+
+What is the major difference between element-wise matrix multiplication and multiplication using numpy.dot()?
+Let's take an example for the following two arrays:
+
+a = [[1, 2],  
+
+       [3, 4]]
+
+b = [[5, 6],
+
+       [7, 8]]
+
+a * b specifies matrix multiplication. And its output would be:
+
+[[ 5, 12],
+
+ [21, 32]]
+
+Notice here that every element in the first array is multiplied with the element in its corresponding position in the second array. This is what matrix multiplication does.
+
+Now, np.dot(a, b) specifies the dot product. And its output would be:
+
+[[19, 22],
+
+ [43, 50]]
+
+Note that the dot product is calculated as follows:
+
+[[1*5 + 2*7, 1*6 + 2*8],
+
+ [3*5 + 4*7, 3*6 + 4*8]]
