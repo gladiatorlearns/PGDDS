@@ -11,3 +11,60 @@ Scrape data from websites
 Get data from publicly available APIs
 Read PDFs into python
 In the process, you will also learn how to deal with nuances that inevitably come while getting data from various sources.
+
+
+Delimited Files
+Read the document and answer the following question.
+
+What will happen if we didn't specify the sep attribute in read_csv command?
+
+
+Python will hit an error.
+
+
+Python will assume ' , ' (Comma) as a default separator.
+
+Feedback :
+Python by default assumes ',' as the separator when the 'sep' argument is not specified.
+
+Correct
+
+Python will automatically detect the separator by Python’s builtin sniffer tool.
+
+Feedback :
+This happens when you set the 'sep' argument to 'None'.
+
+
+Encoding
+Read the document and answer the following questions.
+
+How will you find out the encoding scheme of your dataset if unknown?
+
+
+Will ask the developer
+
+Use the library chardet
+Feedback :
+Yes, we can use library chardet to identify the encoding scheme used in the given csv file.
+Correct
+
+Use read_csv to identify the encoding scheme automatic.
+
+I am unclear regarding the 'sep' attribute in the 'read_csv' command.
+The detection of seperator works in two ways
+
+a . In the read_csv method if you pass the sep either ',' or some other delimiter like '\t', the C engine automatically searches for that separator and does the seperation for you. If you don't specify the 'sep' argument at all, Python takes the value to be ',' by default.
+
+b. But when the sep is None, the C engine cannot automatically detect the separator, but the python parasing engine does that for you using its builtin sniffer tool called csv.sniffer.
+
+Refer to the following link for more details: 
+
+I am getting the following error: ModuleNotFoundError: No module named 'pymysql'.
+This happens probably because you have two or more versions of python. You are installing pymysql with a different Python version and the anaconda is using a different Python version. Try to install pymysql from anaconda distribution using the following command:
+
+>> conda install -c anaconda pymysql
+
+After installing pymysql this way, just update your conda distribution.
+
+
+
