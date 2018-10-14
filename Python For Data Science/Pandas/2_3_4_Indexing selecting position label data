@@ -1,0 +1,104 @@
+Indexing and Selecting Data
+In this section, we will learn:
+
+Select rows from a dataframe
+Select columns from a dataframe
+Select subsets of dataframes
+Selecting Rows
+Selecting rows in dataframes is similar to the indexing you have seen in NumPy arrays. The syntax df[start_index:end_index]will subset rows according to the start and end indices.
+
+Selecting Subsets of Dataframes
+Until now, you have seen selecting rows and columns using the following ways:
+
+Selecting rows: df[start:stop]
+Selecting columns: df['column'] or df.column or df[['col_x', 'col_y']]
+df['column'] or df.column return a series
+df[['col_x', 'col_y']] returns a dataframe
+But Pandas does not prefer this way of indexing dataframes, since it has some ambiguity. For instance, let's try and select the third row of the dataframe.
+
+ 
+
+Note: The Python notebook used in this section can be downloaded from the Introduction section.
+
+Indexing Dataframes
+Description
+Print only the even numbers of rows of the dataframe 'df'.
+
+Note: Don't include the row indexed zero.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df[2::2]
+print(df_2.head(20))
+
+Selecting Columns of a Dataframe
+Description
+Print out the columns 'month', 'day', 'temp', 'area' from the dataframe 'df'.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df[['month', 'day' , 'temp' , 'area']]
+print(df_2.head(20))
+
+You have seen some ways of selecting rows and columns from dataframes. Let's now see some other ways of indexing dataframes, which pandas recommends, since they are more explicit (and less ambiguous).
+
+There are two main ways of indexing dataframes:
+
+Position based indexing using df.iloc
+Label based indexing using df.loc
+Using both the methods, we will do the following indexing operations on a dataframe:
+
+Selecting single elements/cells
+Selecting single and multiple rows
+Selecting single and multiple columns
+Selecting multiple rows and columns
+
+
+Dataframe iloc
+Description
+Using iloc index the dataframe to print all the rows of the columns at index 3,4,5.
+Hint: Use 3,4,5 not 2,3,4
+
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df.iloc[:,3:6]
+print(df_2.head(20))
+
+
+To summarise, df.iloc[x, y] uses integer indices starting at 0.
+
+The other common way of indexing is the label based indexing, which uses df.loc[].
+
+Label Based Indexing
+Pandas provides the df.loc[] functionality to index dataframes using labels.
+
+As mentioned in the documentation, the inputs x, y to df.loc[x, y] can be:
+
+A single label, e.g. '3' or 'row_index'
+A list or array of labels, e.g. ['3', '7', '8']
+A range of labels, where row_x and row_y both are included, i.e. 'row_x':'row_y'
+A boolean array Let's see some examples.
+Note: At 4:12, the prof. says, "I am taking these three columns". He meant to say, "I am taking these three rows."
+
+Dataframes loc
+Description
+Using loc function print out all the columns and rows from 2 to 20 of the 'df' dataset.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df.loc[2:20,:]
+print(df_2)
+
+You have seen how to do indexing of dataframes using df.iloc and df.loc. Now, let's see how to subset dataframes based on certain conditions.
+
+Subsetting Rows Based on Conditions
+Often, you want to select rows which satisfy some given conditions. For e.g., select all the orders where the Sales > 3000, or all the orders where 2000 < Sales < 3000 and Profit < 100.
+
+Arguably, the best way to do these operations is using df.loc[], since df.iloc[] would require you to remember the integer column indices, which is tedious.
+
+Let's see some more in the next lecture.
+
+ 
+
+Note: At 2:33, the prof. says '300' but he actually meant to say '3000'.
