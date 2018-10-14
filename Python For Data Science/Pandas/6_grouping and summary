@@ -1,0 +1,31 @@
+Grouping and Summarizing Dataframes
+Grouping and aggregation are some of the most frequently used operations in data analysis, especially while doing exploratory data analysis (EDA), where comparing summary statistics across groups of data is common.
+
+For e.g., in the retail sales data we are working with, you may want to compare the average sales of various regions, or compare the total profit of two customer segments.
+
+ 
+
+Grouping analysis can be thought of as having three parts:
+
+Splitting the data into groups (e.g. groups of customer segments, product categories, etc.)
+Applying a function to each group (e.g. mean or total sales of each customer segment)
+Combining the results into a data structure showing the summary statistics
+
+Dataframe grouping
+Description
+Group the data 'df' by 'month' and 'day' and find the mean value for column 'rain' and 'wind'.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+#Type your groupby command here
+df_1 = df.groupby(['month','day'])['rain','wind'].mean()
+print(df_1.head(20))
+
+How do I view the grouped dataframe after applying groupby operation?
+When you apply groupby to any dataframe, it returns an object. If you want to see your grouped dataframe, the you need to apply an aggregate function on it.
+
+Using head() might not work as this returns some top rows only which might distort the grouped function. Basically groupby just creates an object and this object can be used to apply some function on the dataframe.
+
+If you want to see it, try using df.describe() or df.count().
+
+You can also try to apply some function like df.groupby('customer_segment').apply(lambda x: x).
