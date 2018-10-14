@@ -1,0 +1,13 @@
+Introduction
+There are multiple ways of getting data into Python, depending on where the data is stored. The simplest case is when you have data in CSV files, but often, you need to get data from other formats, sources and documents, such as text files, relational databases, websites, APIs, PDF documents, etc.
+
+ 
+
+In the following sections, you will learn to get data into Python from a number of sources. You will learn to:
+
+Get data from text files
+Get data from relational databases
+Scrape data from websites
+Get data from publicly available APIs
+Read PDFs into python
+In the process, you will also learn how to deal with nuances that inevitably come while getting data from various sources.
