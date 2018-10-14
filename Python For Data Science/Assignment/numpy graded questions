@@ -1,0 +1,112 @@
+Index of 100th element
+Consider an (11,12) shape array. What is the index (x,y) of the 100th element?
+
+Note: For counting the elements go row-wise. For example, the array,
+
+[[1, 5, 9],
+
+ [3, 0, 2]]
+
+the 5th element would be '0'.
+
+
+(8, 3)
+
+Feedback :
+You can create an 11 x 12 array using np.array(range(1, 11*12+1)),reshape it to an (11 x 12) array and then, check the position of 100. Be clear that the indexing starts from 0; hence, the 9th row will have the index 8.
+
+Alternatively, you can also use np.unravel_index(100) on the created array.
+
+Correct
+
+(8, 4)
+
+
+(9, 3)
+
+
+(9, 4)
+
+Slicing Arrays
+Which of the following would extract all the rows of the first 3 columns in a given numpy 2D array ‘a’?
+
+
+a[ : , :2]
+
+
+a[( : , :2)] 
+
+
+a[ : , :3]
+
+Feedback :
+a[ : , :3] extracts all the rows of the first 3 columns. Note that even though the first 3 columns have the indices 0, 1, and 2 respectively, we need to mention a[ : , :3] instead of a[ : , :2] since the last column index mentioned is not included, i.e. a[ : , :2] will give you just the first two columns, i.e. 0 and 1.
+
+Correct
+
+a[( : , :3)]
+
+Swap two rows
+Description
+Given m and n, swap the mth and nth rows of the 2-D NumPy array given below.
+
+a = [[4 3 1] 
+         [5 7 0] 
+         [9 9 3] 
+         [8 2 4]] 
+
+Example: 
+Input 1: 
+0 
+2 
+Output 1: 
+[[9 9 3] 
+ [5 7 0] 
+ [4 3 1] 
+ [8 2 4]] 
+
+
+import numpy as np 
+
+# Given array
+a = np.array([[4, 3, 1], [5, 7, 0], [9, 9, 3], [8, 2, 4]])
+
+# Read the values of m and n
+import sys
+lines = sys.stdin.readlines()
+m = int(lines[0])
+n = int(lines[1])
+
+b=np.copy(a)
+a[m,:]=a[n,:]
+a[n,:]=b[m,:]
+# Print the array after swapping
+print(a)
+
+Create border array
+Description
+Given a single integer n, create an (n x n) 2D array with 1 on the border and 0 on the inside. 
+
+Note: Make sure the array is of type int.
+
+Example: 
+Input 1: 
+4 
+Output 1: 
+[[1 1 1 1] 
+[1 0 0 1]
+[1 0 0 1]
+[1 1 1 1]]
+Input 2: 
+2 
+Output 2: 
+[[1 1] 
+# Read the variable from STDIN
+n = int(input())
+
+import numpy as np
+
+base_array= np.ones((n,n), dtype = np.int)
+base_array[1:-1,1:-1]=0
+print(base_array)
+ [1 1]] 
