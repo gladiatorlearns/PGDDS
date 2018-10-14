@@ -1,0 +1,117 @@
+Cleaning Datasets
+In this section, we will study ways to identify and treat missing data. We will:
+
+Identify missing data in dataframes
+Treat (delete or impute) missing values
+There are various reasons for missing data, such as human-errors during data-entry, non-availability at the end of the user (e.g. DOB of certain people), etc. Most often, the reasons are simply unknown.
+
+ 
+
+In Python, missing data is represented using either of the two objects NaN (Not a Number) or NULL. We'll not get into the differences between them and how Python stores them internally etc. We'll focus on studying ways to identify and treat missing values in Pandas dataframes.
+
+ 
+
+There are four main methods to identify and treat missing data:
+
+isnull(): Indicates presence of missing values, returns a boolean
+notnull(): Opposite of isnull(), returns a boolean
+dropna(): Drops the missing values from a data frame and returns the rest
+fillna(): Fills (or imputes) the missing values by a specified value
+For this exercise, we will use the Melbourne house pricing dataset
+
+Identifying Missing Values
+The methods isnull() and notnull() are the most common ways of identifying missing values.
+
+While handling missing data, you first need to identify the rows and columns containing missing values, count the number of missing values, and then decide how you want to treat them.
+
+ 
+
+It is important that you treat missing values in each column separately, rather than implementing a single solution (e.g. replacing NaNs by the mean of a column) for all columns.
+
+ 
+
+isnull() returns a boolean (True/False) which can then be used to find the rows or columns containing missing values.
+
+Missing Values
+Description
+Print out the number of missing values in each column in the given dataframe.
+
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/Hfu_PsEuD1Z_yJHmGaxWTxvkz7W_b0')
+print(df.isnull().sum())
+
+Treating Missing Values
+There are broadly two ways to treat missing values:
+
+Delete: Delete the missing values
+Impute:
+Imputing by a simple statistic: Replace the missing values by another value, commonly the mean, median, mode etc.
+Predictive techniques: Use statistical models such as k-NN, SVM etc. to predict and impute missing values
+In general, imputation makes assumptions about the missing values and replaces missing values by arbitrary numbers such as mean, median etc. It should be used only when you are reasonably confident about the assumptions.
+
+ 
+
+Otherwise, deletion is often safer and recommended. You may lose some data, but will not make any unreasonable assumptions.
+
+ 
+
+Caution: Always have a backup of the original data if you're deleting missing values.
+
+Missing Values Percentage
+Description
+Find out the percentage of missing values in each column in the given dataset.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/Hfu_PsEuD1Z_yJHmGaxWTxvkz7W_b0')
+print(round(100*(df.isnull().sum()/len(df.index)),2))
+
+Removing Missing Values From the Rows
+Description
+Remove the missing values from the rows having greater 
+than 5 missing values and then print the percentage of missing values in each column.
+Execution Time Limit
+20 seconds
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/Hfu_PsEuD1Z_yJHmGaxWTxvkz7W_b0')
+df = df[df.isnull().sum(axis=1) <= 5]
+print(round(100*(df.isnull().sum()/len(df.index)), 2))#Round off to 2 decimal places.
+
+Mean Imputation
+Description
+Impute the mean value at all the missing values of the column 'Product_Base_Margin' and then print the percentage of missing values in each column.
+
+import numpy as np
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/Hfu_PsEuD1Z_yJHmGaxWTxvkz7W_b0')
+df.loc[np.isnan(df['Product_Base_Margin']), ['Product_Base_Margin']] = df['Product_Base_Margin'].mean()
+print(round(100*(df.isnull().sum()/len(df.index)), 2))
+
+What is the logical explanation of removing NaN rows using the command 'df[~np.isnan(df['Price'])]'?
+np.isnan(df['Price']): This command checks if there are any NaN rows. If yes, it returns True; else it returns False.
+
+~np.isnan(df['Price']): This is the negation (~) of above step, i.e. for the row with a numbered value it returns True and for the rows with NaN values, it returns False.
+
+ df[~np.isnan(df['Price'])]: This will return all rows with True value and filter out the rows with False.
+ 
+ Additional Reading
+How you treat missing values should ideally depend upon an understanding of why missing values occur. The reasons are classified into categories such as missing completely at random, missing at random, missingness that depends on the missing value itself etc.
+
+ 
+
+We'll not discuss why missing values occur, though you can read this article if interested.
+
+http://www.stat.columbia.edu/~gelman/arm/missing.pdf
+
+Summary
+To conclude, in this session, you learnt how to get data from various sources and then clean it to use it for analysis later. The various topics that you learnt about are —
+
+ 
+
+Getting data from delimited files and relational databases.
+Getting data from websites.
+Getting data from APIs.
+Getting data from PDF files.
+Identify missing data in dataframes which can be done using .isnull() command.
+Treating (delete or impute) missing values which involve a long process of carefully examining the percentage of missing values in rows and columns and then deciding whether to delete it or impute it with the mean value.
