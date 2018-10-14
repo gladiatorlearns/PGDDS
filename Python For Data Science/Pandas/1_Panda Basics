@@ -17,5 +17,142 @@ Reading and summarising dataframes
 Sorting dataframes
 IPython Notebooks used in this Sessionfile_download	Download
 
+Pandas Basics
+The Pandas Series
+A series is similar to a 1-D numpy array, and contains scalar values of the same type (numeric, character, datetime etc.). A dataframe is simply a table where each column is a pandas series.
+
+Creating Pandas Series
+Series are one-dimensional array-like structures, though unlike NumPy arrays, they often contain non-numeric data (characters, dates, time, booleans etc.)
+
+ 
+
+You can create pandas series from array-like objects using pd.Series()
+
+Usually, you will work with Series only as a part of dataframes. Let's study the basics of dataframes.
+
+The Pandas Dataframe
+Dataframe is the most widely used data-structure in data analysis. It is a table with rows and columns, with rows having an index and columns having meaningful names.
+
+Creating dataframes from dictionaries
+There are various ways of creating dataframes, such as creating them from dictionaries, JSON objects, reading from txt, CSV files, etc.
+
+ 
+
+Note: The Python notebook used in this section can be downloaded from Introduction section.
+
+You might have noticed that — while creating a series, Pandas automatically indexes it from 0 to (n-1), with n being the number of rows. But, if you want, you can also explicitly set the index yourself, using the ‘index’ argument — while creating the series using pd.Series():
+
+Example: pd.Series([1, 2, 3], index = [‘a’, ‘b’, ‘c’]) creates the following series:
+a   1
+b   2
+c   3
+
+Ensure you check how the ‘index’ argument works at the end of the ‘Creating Panda Series’ subsection of the Jupyter Notebook used in this session.
+   
+Pandas Series
+Description
+Create a series using list = [6,7,8,9,2,3,4,5] and print the output series as the square of each number in the list.
+Hint: If input series = 1,2,3 the output series should be 1,4,9
+Hint: First create the series and then using apply and lambda find the output series.
+
+import numpy as np
+import pandas as pd
+series_1 = pd.Series([6,7,8,9,2,3,4,5])
+series_2 = series_1.apply(lambda x:x**2)
+print(series_1)
+print(series_2)
+
+DataFrames
+Description
+Given a dataframe 'df' use the following commands and analyse the result.
+describe() 
+columns
+shape
+Execution Time Limit
+20 seconds
+
+import numpy as np
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+print(df.describe())
+print(df.columns)
+print(df.shape)
+
+Manual Indexing
+Description
+Create a panda series that contains the first ‘n’ natural numbers and their respective squares. The first ‘n’ numbers should appear in the index position. 
+Hint: Use manual indexing.
+ 
+Format:
+Input: A natural number 'n'
+Output: A pandas series with the first 'n' natural numbers in the index position and their respective squares in the adjacent column.
+
+Example: 
+Input 1: 
+4 
+Output 1: 
+1  1 
+2  4 
+3  9 
+4  16 
+dtype: int64
+
+# Read the variable from STDIN
+n = int(input())
+
+import numpy as np 
+import pandas as pd 
+
+list1 = pd.Series([i for i in range (1,n+1)], index = range(1,n+1))
+print(list1.apply(lambda x : x**2))
+
+# For a video solution of the code, copy-paste the following link in your browser:
+# https://youtu.be/frrYX65Kmh0
+
+# Read the variable from STDIN
+n = int(input())
+
+import numpy as np 
+import pandas as pd 
+
+# Create a pandas series having the squares of the first 'n' natural numbers using
+# the range function and specify the index explicitly from 1 to n, again, using the
+# range function
+x = pd.Series(np.array(range(1,n+1))**2, index = range(1,n+1))
+
+# Print the created series
+print(x)
+
+
+An important concept in Pandas dataframes is that of row indices. By default, each row is assigned indices starting from 0, and are represented at the left side of the dataframe.
+
+ 
+
+Let's now learn how we can change or manipulate the default indices and replace it with more sensible indices.
+
+Set Index in Dataframe
+Description
+Using set_index command set the column 'X' as the index of the dataset and then print the head of the dataset.
+Hint: Use inplace = False 
+Execution Time Limit
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df.set_index('X', inplace = False)
+print(df_2.head())
+
+Sorting Dataframes
+Description
+Sort the dataframe on 'month' and 'day' in ascending order in the dataframe 'df'.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df.sort_values(by=['month','day'], ascending = True)
+print(df_2.head(20))
+
+What is the difference in setting inplace = True and inplace = False in the 'set_index' function?
+Setting the 'inplace' argument to 'True' updates the dataframe inplace, i.e. you don't need to assign it to another variable. The change will permanently reflect on the dataframe it is applied to. Whereas, is you specify the 'inplace' argument to 'False', the change is temporary, i.e. the dataframe is not updated. 
+
+
 
 
