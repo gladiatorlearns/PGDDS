@@ -1,0 +1,54 @@
+Lambda function & Pivot tables
+Until now, we have not made any changes or modifications to the data. In this section, we will:
+
+Use lambda functions to create new and alter existing columns
+Use Pandas pivot tables as an alternative to df.groupby() to summarise data
+Lambda Functions
+Say you want to create a new column indicating whether a given order was profitable or not (1/0).
+
+You need to apply a function which returns 1 if Profit > 0, else 0. This can be easily done using the apply() method on a column of the dataframe.Creating New Column in a Dataframe
+Description
+Create a new column 'XY' which consist of values obtained from multiplying column 'X' and column 'Y
+
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df['XY'] = df['X']*df['Y']
+print(df.head(20))
+
+Pivot Tables
+You may want to use Pandas pivot tables as an alternative to groupby(). They provide Excel-like functionalities to create aggregate tables.
+
+Creating New Column in a Dataframe
+Description
+Create a new column 'XY' which consist of values obtained from multiplying column 'X' and column 'Y'.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df['XY'] = df['X']*df['Y']
+print(df.head(20))
+
+
+Dataframe Pivot Table
+Description
+Group the data 'df' by 'month' and 'day' and find the mean value for column 'rain' and 'wind' using the pivot table command.
+
+
+import numpy as np
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_1 = df.pivot_table(values=['rain','wind'],index=['month','day'], aggfunc='mean')
+print(df_1.head(20))
+
+Summary
+To conclude, in this session, you learnt about the Pandas library which provides the various function to conduct data analysis in Python. The various topics that you learnt about are —
+
+ 
+
+Pandas series and dataframes which are the basic data structures in Pandas library.
+Indexing, Selecting and Subsetting a dataframe.
+Merging and appending two dataframes which can be done using .merge and .concat commands.
+Grouping and Summarising dataframes which can be done using groupby() to make an object then using this object to play around.
+Using Pivot table function on a dataframe which are similar to pivot tables provided in M.S Excel.
+In the next session, you will learn how to get data from various sources and cleaning it to use it for analysis.
+
