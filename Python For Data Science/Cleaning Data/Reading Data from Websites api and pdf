@@ -1,0 +1,74 @@
+Reading Data From Websites
+Web scraping refers to the art of programmatically getting data from the internet. One of the coolest features of Python is that it makes it easy to scrape websites.
+
+ 
+
+In Python 3, the most popular library for web scraping is BeautifulSoup. To use BeautifulSoup, we will also need the requestsmodule, which basically connects to a given URL and fetches data from it (in HTML format). A web page is basically HTML code, and the main use of BeautifulSoup is that it helps you parse HTML easily.
+
+Note: Discussion on HTML syntax is beyond the scope of this module, though even very basic HTML experience should be enough to understand web scraping.
+
+ 
+Use Case - Fetching Mobile App Reviews from Google Playstore
+Let's say you want to understand why people install and uninstall mobile apps, and why they like or dislike certain apps. A very rich source of app-reviews data is the Google Play Store, where people write their feedback about the app.
+
+ 
+
+The reviews of the Facebook Messenger app can be found here: https://play.google.com/store/apps/details?id=com.facebook.orca&hl=en
+
+ 
+
+We will scrape reviews of the Messenger app, i.e. get them into Python, and then you can do some interesting analyses on that.
+
+
+Getting Data From APIs
+APIs, or application programming interfaces, are created by companies and organisations to provide restricted access to data. It is very common to get data from APIs for data analysis, for example, you can get financial data (stock prices etc.), social media data (Facebook, Twitter etc. provide APIs), weather data, data about healthcare, music, food and drinks, and from almost every domain.
+
+ 
+
+Apart from being rich sources of data, there are other reasons to use APIs:
+
+When the data is being updated in real time. If you use downloaded CSV files, you'll have to download data manually and update your analysis multiple times. Through APIs, you can automate the process of getting real-time data.
+Easy access to structured and verified data - though you can scrape websites, APIs can directly provide data in structured format and is of better quality
+Access to restricted data: You cannot scrape all websites easily, and that's often illegal (e.g. Facebook, financial data etc.). APIs are the only way to get this data.
+There are many more reasons depending on the use cases and the domain of application.
+
+A list of useful APIs is available here: https://github.com/toddmotto/public-apis
+
+ 
+Example Use Case: Google Maps Geocoding API
+Google Maps provides many APIs, one of which is the Google Maps Geocoding API. You can use it to geocode addresses, i.e. get the latitude-longitude coordinates, and vice-versa. 
+
+Reading Data From PDF Files
+Reading PDF files is not as straightforward as reading text or delimited files, since PDFs often contain images, tables, etc. PDFs are mainly designed to be human-readable, and thus you need special libraries to read them in python (or any other programming language).
+
+ 
+
+Luckily, there are some really good libraries in Python. We will use PyPDF2 to read PDFs in Python since it is easy to use and works with most types of PDFs.
+
+ 
+
+Note that Python will only be able to read text from PDFs, not images, tables etc. (though that is possible using other specialised libraries).
+
+ 
+
+You can install PyPDF2 using pip install PyPDF2.
+
+ 
+https://www.geeksforgeeks.org/working-with-pdf-files-in-python/
+
+For this illustration, we will read a PDF of the book 'Animal Farm' written by George Orwell.
+
+Reading PDF Files
+Read the document and answer the question.
+
+After creating a pdf file object, a pdf reader object, a page object which command you will use for extracting text from a pdf page?
+
+
+readText()
+
+extractText()
+Feedback :
+Yes, we can read a pdf page by using extractText() command.
+Correct
+
+getText()
