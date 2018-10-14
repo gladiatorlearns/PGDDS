@@ -1,0 +1,63 @@
+Extract top four teams
+Which of the following commands can you use to extract the top 4 teams in the dataset ‘ipl18’ with just the ‘Team’ and ‘Points’ column?
+
+
+ipl18.loc [0:3, [‘Team’, ‘Points’]]
+
+
+ipl18.loc [1:4, [‘Team’, ‘Points’]]
+
+Feedback :
+Using label-based indexing, i.e. loc, you need to specify the row labels, which is why we mention it as 1:4. Also, note that since this is label based indexing, all the rows labelled from 1 to 4 — including both 1 and 4 — are extracted. For the two columns, you just need to mention the column names in a list.
+
+Correct
+
+ipl18.iloc [0:3, [0, 6]]
+
+Incorrect
+
+ipl18.iloc [0:4, [0, 6]]
+
+Feedback :
+Position based indexing, i.e. iloc, follows the default indexing rule in Python, like everywhere else. Thus, you need to specify 0:4, so that it extracts the first four rows indexed as 0, 1, 2 and 3. As you can see from the dataframe, the columns ‘Team’ and ‘Points’ have the indices 0 and 6, respectively.
+
+Filtering based on conditions
+Suppose in ‘ipl18’, you want to filter out the teams that have an NRR greater than zero, and for which the ‘For’ score exceeds the ‘Against’ score, i.e. both the conditions should be satisfied. Which teams will be left after you perform the above filtration? (Run the commands on the Python Notebook provided, rather than performing a manual calculation)
+
+
+CSK, MI
+
+
+SRH, CSK, MI
+
+Feedback :
+Running the following code in the Jupyter IPython Notebook gives you the required result:
+ipl18.loc[(ipl18.NRR > 0) & (ipl18.For > ipl18.Against), ]
+
+Thus, you can see that after running the code, only SRH, CSK and MI remain.
+
+Correct
+
+SRH, CSK, RCB
+
+
+SRH, CSK, MI, RCB
+
+Operations on multiple dataframes
+If all the stats are taken for both ‘ipl17’ and ‘ipl18’, which team with its total points greater than 25 will have the highest win percentage?
+
+
+KKR
+
+
+CSK
+
+
+RPS
+
+
+SRH
+
+Feedback :
+After performing the appropriate operations, you can find out that SRH has the highest win percentage(~60.7%). Check the IPython solution notebook that’s provided for the explanation.
+
