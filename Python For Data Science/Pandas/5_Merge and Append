@@ -1,0 +1,126 @@
+Merge and Append
+In this section, you will merge and concatenate multiple dataframes. Merging is one of the most common operations you will do, since data often comes in various files.
+
+In our case, we have sales data of a retail store spread across multiple files. We will now work with all these data files and learn to:
+
+Merge multiple dataframes using common columns/keys using pd.merge()
+Concatenate dataframes using pd.concat()
+
+Dataframes Merge
+Description
+Perform an inner merge on two data frames df_1 and df_2 on  'unique_id' and print the combined dataframe.
+
+import pandas as pd
+df_1 = pd.read_csv('https://query.data.world/s/vv3snq28bp0TJq2ggCdxGOghEQKPZo')
+df_2 = pd.read_csv('https://query.data.world/s/9wVKjNT0yiRc3YbVJaiI8a6HGl2d74')
+df_3 = pd.merge(df_1,df_2, how="inner", on="unique_id")
+print(df_3.head(20))
+
+Concatenating Dataframes
+Concatenation is much more straightforward than merging. It is used when you have dataframes having the same columns and want to append them (pile one on top of the other), or having the same rows and want to append them side-by-side.
+
+Dataframe Append
+Description
+Append two datasets df_1 and df_2, and print the combined dataframe.
+
+import pandas as pd
+df_1 = pd.read_csv('https://query.data.world/s/vv3snq28bp0TJq2ggCdxGOghEQKPZo')
+df_2 = pd.read_csv('https://query.data.world/s/9wVKjNT0yiRc3YbVJaiI8a6HGl2d74')
+df_3 = df_1.append(df_2)
+print(df_3.head())
+
+alernatively -
+import pandas as pd
+df_1 = pd.read_csv('https://query.data.world/s/vv3snq28bp0TJq2ggCdxGOghEQKPZo')
+df_2 = pd.read_csv('https://query.data.world/s/9wVKjNT0yiRc3YbVJaiI8a6HGl2d74')
+df_3 = pd.concat([df_1, df_2])
+print(df_3.head())
+
+You can also perform various mathematical operations between two or more dataframes. Below is a list of functions that you can use for the same:
+
+add(): +
+sub(): -
+mul(): *
+div(): /
+floordiv(): //
+mod(): %
+pow(): **
+Check the last part labelled ‘Performing Arithmetic Operations on two or more data frames’ of the Jupyter Notebook used in this section for implementation details.
+ 
+ Operations on multiple dataframes
+Description
+Given three data frames containing the number of gold, silver, and bronze Olympic medals won by some countries, determine the total number of medals won by each country. 
+Note: All the three data frames don’t have all the same countries. So, ensure you use the ‘fill_value’ argument (set it to zero), to avoid getting NaN values. Also, ensure you sort the final dataframe, according to the total medal count in descending order.
+
+import numpy as np 
+import pandas as pd
+
+# Defining the three dataframes indicating the gold, silver, and bronze medal counts
+# of different countries
+gold = pd.DataFrame({'Country': ['USA', 'France', 'Russia'],
+                         'Medals': [15, 13, 9]}
+                    )
+silver = pd.DataFrame({'Country': ['USA', 'Germany', 'Russia'],
+                        'Medals': [29, 20, 16]}
+                    )
+bronze = pd.DataFrame({'Country': ['France', 'USA', 'UK'],
+                        'Medals': [40, 28, 27]}
+                    )
+gold.set_index("Country", inplace=True)
+silver.set_index("Country", inplace=True)
+bronze.set_index("Country", inplace=True)
+
+totalGS=gold.add(silver, fill_value=0)
+total=totalGS.add(bronze,fill_value=0)
+print(total.sort_values("Medals", ascending=False))
+
+What is the difference between the functionalities of 'merge' and 'append'?
+Append: Adds two dataframs vertically, keeping total number of columns as the union of the colums from both the dataframes, and adding the rows.
+
+Merge: Adds dataframes horizontally by taking one column from each dataframe as the key (which by deault is common column).
+
+For example:
+
+Let's say you have two dataframes namely a1 and a2.
+
+
+a1 = pd.DataFrame({'A':range(0,40,10),'B':range(0,400,100)})
+
+a2 = pd.DataFrame({'A':range(0,90,15),'C':range(0,6000,1000)}) 
+
+a1.append(a2) will give the following output:
+
+    A       B       C
+0   0     0.0    NaN
+1  10   100.0  NaN
+2  20   200.0  NaN
+3  30   300.0  NaN
+0   0    NaN   0.0
+1  15   NaN  1000.0
+2  30   NaN  2000.0
+3  45   NaN  3000.0
+4  60   NaN  4000.0
+5  75   NaN  5000.0
+
+whereas, pd.merge(a1, a2) or pd.merge(a1, a2, left_on = 'A', right_on = 'A', how = 'inner') will give the following output:
+
+     A    B     C
+0   0    0     0
+1  30  300  2000
+
+What is the difference between 'merge' and 'concat' on axis 1?
+Merge :
+
+When you are merging, you are merge the columns of the dataframes on the column that is common. For example, say, when you have first dataframe with 10 columns and second dataframe with 10 columns, then, after the merge operation, the resulted dataframe will have a total of 19 columns with one column being the common column between two dataframes. And this common column is what is used as reference to perform the megre operation.
+
+The way you merge any two dataframes will be as below :
+
+df_1 = pd.merge(market_df, customer_df, how = 'inner', on = 'Cust_id')
+
+Here on 'Cust_id'  column you are merging two dataframes for the matching values of 'Cust_id' as you are making inner merge.
+
+If you make merge as outer merge then the columns of both the dataframes merges though the 'Cust_id' column value doesn't match/exists in both the dataframes and passing axis is not supported in merge action.
+
+Concat :
+
+Two dataframes can be concatenated on axis=1 if you want the resultant dataframe to be the wider one. As two dataframes get appended side by side.
