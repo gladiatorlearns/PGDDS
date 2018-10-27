@@ -1,0 +1,127 @@
+Graded Questions - IV
+
+In one of the questions before, we've looked at the distance between two addressess. We considered the distance between two houses as difference in the house numbers, so the distance between house number 2 and 38 is 36 units. Now answer the questions given below.
+
+Questions:1/3
+ 
+ 
+ 
+Supervisor details
+
+Fill in the blank space so as to create a stored procedure to display the details of the supervisor. Take the input as ssn and return nothing.
+
+create procedure supervisor 
+
+(in n char(9))
+
+select *
+
+from employee
+
+where ssn = ( ___ );
+
+n
+
+select super_ssn from employee where ssn = n
+Feedback :
+
+Use call supervisor('123456789'); to check.
+Correct
+
+select * from employee where ssn = n
+
+select ssn, super_ssn from employee where ssn=n;
+
+Questions:2/3
+ 
+ 
+ 
+User defined function for address
+
+Create a User defined function to calculate the Average distance of an employee's house from the other employees. Take the input as the ssn and return the Average distance of that employee's house. Using the function, determine the average distance between the house of CEO (super_ssn is null) and the employees.
+
+1797.00
+
+1429.28
+Feedback :
+
+create function distance (s char(20))
+
+returns float (10,4) deterministic
+
+return 
+
+(
+
+select avg(abs(hno-
+
+(select hno 
+
+from employee
+
+where ssn = s)))
+
+from employee
+
+where ssn != s
+
+);
+
+select distance(ssn), ssn
+
+from employee
+
+where super_ssn IS NULL;
+
+Correct
+
+1296.74
+
+1295.28
+
+Questions:3/3
+ 
+ 
+ 
+Average distance in department
+
+In the earlier question, to calculate the average distance, we had used all the employees. Now we want to determine the average distance considering only the employees in the same department. What will be the department average distance for Franklin T Wong?
+
+1745.66
+
+4849.66
+
+1807.66
+Feedback :
+
+create function dep_distance (s char(20), d int)
+
+returns float (10,4) deterministic
+
+return 
+
+(
+
+select avg(abs(hno-
+
+(select hno 
+
+from employee
+
+where ssn = s)))
+
+from employee
+
+where ssn != s and dno = d
+);
+
+select dno, hno, name, dep_distance(ssn, dno)
+
+from employee
+
+where name = 'Franklin T wong';
+
+Correct
+
+2129.50
+
