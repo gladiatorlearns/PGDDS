@@ -38,3 +38,295 @@ The International Institute of Information Technology, Bangalore, commonly known
 Presenter
 
 Rohit Sharma
+
+Defining Data Warehouse
+
+Think of yourself as a data analyst working in a company with three departments — Marketing, Sales, and Finance. Let’s assume that each department maintains its database separately.
+
+ 
+
+Now, this could lead to a situation where each department has its own version of the truth. For a question such as 'What is the total revenue of the last quarter?' every department might have a different answer. This happens because all the departments draw information from different data systems.
+
+ 
+
+This is where a data warehouse can help in creating a single version of the truth. Therefore, a data warehouse would be a central repository of the data of the entire enterprise.
+
+ 
+
+Watch the video below to learn what a data warehouse is and how is it useful to companies in carrying out data analytics. You will also learn about OLAP - Online Analytical Processing systems. OLAP is used to extract business relevant information and perform analysis on the data stored in data warehouses.
+
+
+A data warehouse is a collection of data. It exhibits the following properties:
+
+    Subject-oriented: A data warehouse should contain information about a few well-defined subjects rather than containing information about the entire enterprise.
+    Integrated: A data warehouse is an integrated repository of data. It contains information from various systems within an organisation.
+    Non-volatile: Data values cannot be changed without a valid reason.
+    Time-variant: A data warehouse contains historical data for analysis.
+    
+    Questions:1/1
+ 
+Defining Data Warehouse
+
+In the investment.csv data set, the amount of funding received by companies is stored in one of the columns. What does non-volatility and time variance imply for this data set? More than one option may be correct.
+If a company receives a new round of funding, we can update the data set with the funding amount, investor ID, etc. by adding a new row to it
+Feedback : Historic data is stored in a data warehouse for the purpose of analysis. Data keeps getting updated with time
+Correct
+If a company receives a new round of funding, you can update the investment amount attribute of the existing entries
+If an already stored investment amount is reported to be incorrect by the company, we can update the value with the correct one
+Feedback : If the data stored is incorrect, then it can be changed.
+Correct
+
+
+Questions:1/1
+ 
+Data Warehousing
+
+A data warehouse contains data from multiple sources in a single repository or location. For a typical organisation, what are the benefits of a data warehouse? More than one option may be correct.
+It helps integrate data from multiple source systems, enabling a central view across the enterprise
+Feedback : A data warehouse is an integrated repository of data. It contains data from different data sources.
+Correct
+Data persistence: A data warehouse stores current as well as historical data, which may not be the case with locally stored files in MS Excel, etc.
+Feedback : A data warehouse stores historical data. It is time variant and contains information on the data in the past.
+CorrectYou missed this!
+It enables analysts to create holistic business reports easily with information from multiple departments
+Feedback : Since a data warehouse is an integrated repository, it contains data about various aspects of the business, thus helping analysts gain deeper insights.
+Correct
+It makes the analysis and processing of data faster as compared to having isolated databases
+Feedback : The data is stored in a way which makes analysis very easy and gives an entire view of the organisation. 
+
+
+Structure of Data Warehouse
+
+In the previous session, you learnt the basic concepts of data warehousing. One of the primary methods of designing a data warehouse is called dimensional modelling.
+
+ 
+
+The two key elements of dimensional modelling are facts and dimensions, which are basically different types of variables used to design a warehouse. They are arranged together in a specific way known as a schema diagram. Let's learn more about them by watching the video.
+
+ 
+
+Before moving ahead, please download the investment data files from the link below. It will be referred to in the video below.
+
+Basically, facts are the numerical data in a data warehouse and dimensions are the metadata – data explaining some other data – attached to the fact variables. Both facts and dimensions are equally important for generating actionable insights from the data set.
+
+Questions:1/1
+ 
+Dimensional Modelling
+
+Identify the fact variable/s in the companies data file.
+funding_total _USD
+Feedback :
+This is a numeric attribute
+Correct
+category_list
+region
+name
+
+Facts and Dimensions
+
+Consider a bank having thousands of ATMs across India. In every transaction, the following variables are recorded:
+
+    Withdrawal amount
+    Account balance after withdrawal
+    Transaction charge amount
+    Customer ID
+    ATM ID
+    Date of withdrawal
+
+Which among the following are fact variables (mark all that apply)?
+Withdrawal amount
+Feedback : Fact variable - It is numerical data
+Correct
+Account balance after withdrawal
+Feedback : Fact variable - It is numerical data
+Correct
+Transaction charge amount
+Feedback : Fact variable - It is numerical data
+Correct
+Customer ID
+ATM ID
+Date of withdrawal
+
+
+Questions:2/2
+ 
+ 
+Dimensional Modelling
+
+What are the benefits of having dimension variables apart from the facts? More than one option may be correct.
+Performing various types of analyses such as sector-wise, country-wise or funding type-wise
+Feedback : This activity needs metadata along with the fact data
+Correct
+Summarising fact variables by calculating their sum, average, range, etc.
+Feedback : This can be performed without additional dimension variables attached to the fact variables
+Incorrect
+Extracting specific, useful information such as the total investment made in India between 2014 and 2015 in the Automobile sector
+Feedback : This activity needs metadata along with the fact data
+
+OLAP vs. OLTP
+
+You already have a good understanding of databases. Surely, you're wondering, 'What is the difference between a data warehouse and a database?
+
+ 
+
+In this section, you will learn exactly which features of a data warehouse distinguish it from a regular database.
+
+You learnt the difference between a transactional database (i.e. OLTP or Online Transactional Processing) and a data warehouse (which is often referred to as OLAP or Online Analytical Processing).  Notice that the major difference between OLAP and OLTP is apparent in the names themselves - OLTP is used for day to day transactions whereas OLAP is used for analytical purposes.  
+
+ 
+
+You were introduced to the terms dimensional modelling and star schema. They are essential for creating the structure of the data warehouse. These techniques involve finding out the variables on which analysis can be done and combining them with metadata to gain useful insights. You will learn more about them in the next session.
+
+ 
+
+Another term that you were introduced to is ETL - Extract, Transform and Load. This process includes the typical operations involved in extracting data from multiple sources, operating on the data so that data from multiple sources is compatible, and loading this data into a data warehouse for analytical purposes. You will learn more about this in the next session.
+
+ 
+
+Additional References
+
+    Read more about the data warehouse and its characteristics here. -->https://docs.oracle.com/cd/B10501_01/server.920/a96520/concept.htm
+
+    Read more about the differences between OLAP and OLTP systems here. -->http://datawarehouse4u.info/OLTP-vs-OLAP.html
+
+Questions:1/1
+ 
+Data Warehouse versus Transactional Database
+
+The main difference between a transactional database and a data warehouse is in terms of:
+The purpose - a data warehouse is for storing and managing data whereas a transactional database is for making decisions
+The purpose - transactional database is for storing and managing data whereas a warehouse is for making decisions
+Feedback :
+The main difference is in the purpose - transactional database are mainly used for storing and managing data whereas a warehouses are for making business decisions.
+Correct
+
+OLTP vs. OLAP
+
+We can divide IT systems into transactional (OLTP) and analytical (OLAP). In general we can assume that OLTP systems provide source data to data warehouses, whereas OLAP systems help to analyze it.
+
+olap vs oltp
+
+
+- OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processing, maintaining data integrity in multi-access environments and an effectiveness measured by number of transactions per second. In OLTP database there is detailed and current data, and schema used to store transactional databases is the entity model (usually 3NF).
+
+- OLAP (On-line Analytical Processing) is characterized by relatively low volume of transactions. Queries are often very complex and involve aggregations. For OLAP systems a response time is an effectiveness measure. OLAP applications are widely used by Data Mining techniques. In OLAP database there is aggregated, historical data, stored in multi-dimensional schemas (usually star schema).
+
+
+The following table summarizes the major differences between OLTP and OLAP system design.
+
+	
+OLTP System
+Online Transaction Processing
+(Operational System)
+	
+OLAP System
+Online Analytical Processing
+(Data Warehouse)
+
+Source of data
+	
+
+Operational data; OLTPs are the original source of the data.
+	
+
+Consolidation data; OLAP data comes from the various OLTP Databases
+
+Purpose of data
+	
+
+To control and run fundamental business tasks
+	
+
+To help with planning, problem solving, and decision support
+
+What the data
+	
+
+Reveals a snapshot of ongoing business processes
+	
+
+Multi-dimensional views of various kinds of business activities
+
+Inserts and Updates
+	
+
+Short and fast inserts and updates initiated by end users
+	
+
+Periodic long-running batch jobs refresh the data
+
+Queries
+	
+
+Relatively standardized and simple queries Returning relatively few records
+	
+
+Often complex queries involving aggregations
+
+Processing Speed
+	
+
+Typically very fast
+	
+
+Depends on the amount of data involved; batch data refreshes and complex queries may take many hours; query speed can be improved by creating indexes
+
+Space Requirements
+	
+
+Can be relatively small if historical data is archived
+	
+
+Larger due to the existence of aggregation structures and history data; requires more indexes than OLTP
+
+Database Design
+	
+
+Highly normalized with many tables
+	
+
+Typically de-normalized with fewer tables; use of star and/or snowflake schemas
+
+Questions:1/2
+ 
+ 
+OLAP vs OLTP
+
+Which of the following statements is/are true? More than one option may be correct.
+In OLAP systems, the data is from a single data source
+Compared to OLAP, OLTP systems use complex queries to perform tasks
+Feedback : OLTP systems use simple queries for adding, deleting, updating and retrieving data. Relative complex queries are used in OLAP involving aggregations
+Incorrect
+OLTP systems use ETL
+Feedback : OLAP systems need data from different data sources. Before all the data is collected, it has to be ensured that the interpretation of data from different data sources is the same and then it has to be loaded into the data warehouse structure.
+Incorrect
+Schemas are an essential part of creating OLAP systems
+Feedback : Schema diagrams are essential for creating a data warehouse design.They indicate how the fact and dimension tables will be connected.
+
+Questions:2/2
+ 
+ 
+OLAP vs OLTP
+
+List the following operations by which database will be used to conduct them:
+
+    Making a purchase
+    Withdrawing cash from an ATM
+    Finding the average sales of a local store
+    Finding the profits by region for a specific product of a food and beverages MNC
+
+1 - Transactional, 2 - Transactional, 3 - Transactional and data warehouse, 4 - Data warehouse
+Feedback :
+The average can be computed both by using the local sales database of the store or by using a larger data warehouse of the entire organisation to which the store belongs.
+Correct
+1 - Data warehouse, 2 - Transactional, 3 - Data warehouse, 4 - Data warehouse
+1 - Transactional, 2 - Transactional, 3 - Transactional and data warehouse, 4 - Transactional
+1 - Data warehouse, 2 - Transactional, 3 - Transactional and data warehouse, 4 - Data warehouse
+
+Backup and Recovery
+	
+
+Backup religiously; operational data is critical to run the business, data loss is likely to entail significant monetary loss and legal liability
+	
+
+Instead of regular backups, some environments may consider simply reloading the OLTP data as a recovery method
