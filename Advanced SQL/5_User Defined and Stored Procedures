@@ -1,0 +1,278 @@
+Introduction
+
+ 
+
+In the previous section, you learned about the windowing functions. You shall have noted that the functions we used in windowing were all inbuilt SQL functions.
+In this session
+
+You will be introduced to the concept of User-defined functions and stored procedures. You will learn how to create and call a UDF or Stored Procedure.
+
+You will learn about the use of delimiter and if else commands and see their application in creating a UDF and stored procedure.
+
+Introduction to User defined Functions
+
+So far, we have learned how to deploy numerous inbuilt functions in MySQL like sum, avg, concat to make the tasks easier. It is very well possible to find the sum of two numbers in MySQL without using the sum function. You can use the arithmetic addition operator (+) for this purpose. Similarly, you can use arithmetic addition and division operator to find the average of two numbers.
+
+ 
+
+However, we use the sum and avg functions because it is easier to use and increase the readability of the code. Another important factor is the reusability. We can understand it as we don’t need to see the whole definition behind the sum () function every time, all we need is the name sum() to invoke the function whenever we want to determine the sum.
+
+ 
+
+There are however operations that you may want to repeat multiple times in a piece of code, which unfortunately don’t have an inbuilt function.
+
+ 
+
+This is where we have to use User-defined functions.
+
+ 
+
+Please find the SQL file we will be using during the course of this session.
+Session 3
+file_downloadDownload
+
+In this section, Pooja will walk you through the basics and applications of User-defined functions.
+
+Following is the syntax to define a user-defined function :
+
+ 
+
+create function hello (s char(20))
+
+returns char(50) deterministic
+
+return concat('Hello, ', s, '!');
+
+ 
+
+The name of the function is hello
+
+The input argument is a string of length 20.
+
+It returns a string of length 50.
+
+ 
+
+To call the above function we use
+
+ 
+
+select hello ('Pooja') as greeting;
+
+User defined functions (Application)
+
+In the previous section, you learnt the basic application of a function. In this section, you’ll see a more advanced application of a user-defined function. You will learn the use of delimiters and see how to use it to write User-defined functions.
+
+ 
+
+A delimiter is a marker for the end of each command you send to the MySQL command line client. But defining user-defined functions and stored procedures is one strong use case as you wish them to contain semicolons (;) which are otherwise the default delimiter.
+
+ 
+
+The syntax to define a delimiter is
+
+ 
+
+delimiter $$
+
+ 
+
+What the above query does is that it now treats ‘$$’ as the end of a MySQL statement. You will see the application in the video below.
+
+ 
+
+In this section, Pooja will tell you about the application of User-defined functions and the use of delimiters.
+
+Following is the code used to create the function:
+
+delimiter $$
+
+
+create function project_pay_calc( pno int, num_of_hours float(4,2))
+
+returns float(8,2)
+
+deterministic
+
+begin
+
+declare project_pay_per_hour float(8,2);
+
+
+if (pno > 0 and pno <=5 ) then
+
+set project_pay_per_hour = 1000;
+
+elseif (pno > 5 and pno <= 10) then
+
+set project_pay_per_hour = 2000;
+
+else
+
+set project_pay_per_hour = 3000;
+
+end if;
+
+
+return (project_pay_per_hour * num_of_hours);
+
+end
+
+$$
+
+delimiter;
+
+ 
+
+Below is a sample query to call the function
+
+ 
+
+select essn, pno, hours,
+
+project_pay_calc(pno, hours) as total_project_pay
+
+from works_on;
+
+Introduction to Stored Procedures
+
+A stored procedure is a collection of SQL statements and SQL command logic which is compiled and stored in the database. They are typically made to encapsulate complex and frequently utilized business logic.
+
+ 
+
+The biggest difference between a UDF and a Stored procedure is that where UDF always returns a value, a stored procedure might not return a value at all or it might return multiple values.
+
+ 
+
+In this section, Pooja will walk you through you the basics of stored procedures.
+
+Below is the syntax to create a stored procedure 
+
+delimiter $$
+
+create procedure employee_details
+
+(in n char(9))
+
+begin
+
+select *
+
+from employee
+
+where ssn = n;
+
+end $$
+
+delimiter ;
+
+
+As you can see the above-stored procedure does not return a value. Any output is displayed during the execution of the stored procedure. However, the method to call a stored procedure is similar to the way we call a User defined function.
+
+
+Questions:1/1
+ 
+Introduction to Stored procedures
+
+Write a SQL query to convert the hello function (used in the previous section) to a stored procedure.
+
+ 
+
+The hello function for reference :
+
+create function hello (s char(20))
+
+returns char(50) deterministic
+
+return concat('Hello, ', s, '!');
+
+Suggested Answer
+
+create procedure hi
+
+(in s char(20))
+
+select concat ('Hello, ' , s, '!' ) ;
+
+call hi('ram');
+
+
+Stored Procedures (Application)
+
+In the previous section, you were introduced to the concept of stored procedures. You learnt the importance of stored procedure and learnt the difference between stored procedure and a User defined function.
+
+delimiter $$
+
+create procedure employee_salary
+
+ (
+
+in n char(9),
+
+out annual_salary float(10, 2),
+
+out all_project_pay float(8,2)
+
+)
+
+begin
+
+ -- Query annual salary
+
+select salary into annual_salary
+
+from employee
+
+where ssn = n;
+
+
+ -- Query project_pay
+
+select
+
+sum(per_project_pay) into all_project_pay
+
+from
+
+(
+
+select essn, project_pay_calc(pno, hours) as per_project_pay
+
+from works_on
+
+where essn = n
+
+) a;
+
+end $$
+
+delimiter ;
+
+ 
+
+You will notice the use of the function we created in the previous section. This should make it clear that there is no difference between a User defined function and an inbuilt function.
+
+ 
+
+You can call the stored procedure by
+
+ 
+
+call employee_salary ('123456789', @annual_salary, @all_project_pay);
+
+select @annual_salary, @all_project_pay;
+
+
+Session Summary
+
+We began this session with an introduction to User-defined functions. You learnt the use of the Create Function command. You also learnt about the use of Deterministic and Delimiter keywords. 
+
+ 
+
+You saw that once created, there is no difference between an in-built SQL function and a User-defined function.  We noted that one particular characteristic of a function is that it always returns a value, though it could be null as well. 
+
+ 
+
+This is when we introduced the concept of  Stored Procedures, which is created with the use of the Create Procedure command. We learnt that a procedure need not necessarily return a value. And in case it does return a value, it can very well return multiple values.
+
+
