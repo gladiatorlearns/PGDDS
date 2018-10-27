@@ -1,0 +1,121 @@
+Star Schema
+
+Facts and dimensions are the two key elements of dimension modelling. A typical problem might involve multiple databases with many different variables and we may not be interested in all the variables. Hence, only some facts and dimensions are combined in a specific manner to create the structure of data warehouse. This structure is called as a schema diagram. 
+
+
+A schema is an outline of the entire data warehouse. It shows how different data sets are connected and the different attributes of each data being used for the data warehouse.
+
+ 
+
+In this lecture, you will see an example of how an e-commerce company can design a data warehouse. 
+
+You learnt about star schema in the above video. Though there are other kinds of schema available, the star schema is the most widely used. You can read more about other schema types in the link provided under additional reading.
+
+ 
+
+Additional References:
+
+    Click here to read more about dimension modelling techniques -https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/
+    Click here to read more about types of schemas - https://www.folkstalk.com/2010/01/data-warehouse-dimensional-modelling.html
+    
+    Questions:1/1
+ 
+Star Schema
+
+Which of the following can be attributes in the date dimension table?
+Day of the week
+Feedback : This attribute will tell what day of the week it is.
+Correct
+Holiday Flag
+Feedback : This attribute will tell whether there is a holiday on this day or not.
+CorrectYou missed this!
+Quarter
+Feedback : This attribute will tell which quarter the date falls in.
+Correct
+Month
+Feedback : This attribute will tell what month the date falls in. All these attributes can help us analyse the data much more deeply compared to just having the date.
+
+Questions:1/1
+ 
+Star Schema
+
+In a star schema, what is the name of the table that contains metadata needed for analysing numerical/quantitative data?
+Fact table
+Dimension table
+Feedback :
+Dimension variables describe the fact data - they are data about data
+Correct
+Star table
+Constellation table
+Feedback :
+Metadata is data about data. It describes the numerical data which is present. Which table contains this data?
+
+How to Use a Star Schema - A Demonstration
+Startup Funding
+file_downloadDownload
+
+Based on the startup funding data attached above, answer the questions that follow:
+
+Questions:1/1
+ 
+Using Star Schema
+
+Open the Investments and Companies data sets. Look at the various facts and dimension attributes. Come up with at least 3 business questions that can be asked, given these data sets.
+
+1. Who are the top 3 investors from USA with based on funds raised over last 10 years
+2. Who are the top 5 Indian companies who got highest funding
+3.  What type/category of business in US are getting highest funding/investments in last 15 years?  who among them top the list?
+
+Based on the queries that you asked, can you think of a schema which could help you solve those questions?
+
+ 
+
+Some of the questions that can be asked are:
+
+    Is there any pattern in funding received - does a particular funding round attract more funding?
+    Do investors prefer companies located in their own region?
+    Do certain categories of companies attract more funding than others? Which category attracts the maximum funding?
+
+One sample star schema of the investment data which can solve the above questions is as follows: 
+
+Star Schema in an E-commerce Company
+
+ 
+
+Let's extend the e-commerce company's example we saw previously. Suppose you work in an e-commerce company which uses a data warehouse to store data related to various dimensions such as customers, products, website, shipping, etc. 
+
+ 
+
+Given below is a fact table which contains attributes such as date (of order), time, customer_key (ID), product_key, location_key, discount amount, etc. Connected to the fact table, there are a number of dimension tables (not shown below), e.g. customer dimension, promotion dimension, etc.
+
+The CEO of the company has some interesting questions in mind, some of which are listed below. Think about the dimension tables and the attributes in those tables that you should have in the schema to be able to answer these questions: 
+
+    What is the average number of orders per day delivered by two wheelers in a certain locality of Bangalore (e.g. Jayanagar, Bangalore)?
+    What is the average amount of sales per day in Whitefield, Bangalore in the mornings (8 am - 11 am)? 
+    How many orders were placed on holidays using at least one promotional coupon?
+
+In the text box below, briefly mention the names of the dimension tables and the attributes that would help you answer these questions.
+
+Questions:1/1
+ 
+Star Schema of an E-commerce Company
+
+Mention the names of the dimension tables and the component attributes that would help you answer the questions. You may use the structure below (your answer may include any number of dimension tables):
+
+Dimension table 1
+
+List of attributes
+
+Dimension table 2
+
+List of attributes
+
+Dimension table 3
+
+List of attributes
+
+And so on
+
+You will now see how the star schema can be used to solve actual business problems. This demonstration will also give you a reference solution to the question asked above. You will find the star schema used on page 16 of the following reference text: 
+
+https://www.researchgate.net/publication/2359314_Data_Warehouse_Design_for_E-Commerce_Environment
