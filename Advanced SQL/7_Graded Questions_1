@@ -1,0 +1,86 @@
+Graded Questions - I
+Guidelines for in-module questions
+
+ The questions in this session will adhere to the following guidelines:
+
+ 
+
+ 
+ 	First Attempt Marks	Second Attempt Marks
+
+Question
+
+with 2 Attempts
+	10	5
+
+Question
+
+with 1 Attempt
+	10 	0
+
+ 
+ Questions:1/2
+ 
+ 
+Benefits of a Data Warehouse
+
+As an analyst at a pan-India chain of hospitals, you have to convince the upper management to invest in building a data warehouse architecture. Which of the following reasons is NOT a good one to give in favour of a data warehouse?
+
+It will give a holistic view of various departments across various hospital branches in different cities, and hence help in better planning
+
+It will make it easier to enter and update the information of patients since all the information would be in one place
+Feedback :
+
+A data warehouse is not meant for creating or updating data. It is needed for data analysis. For entering and updating data, we will prefer a transactional database.
+Correct
+
+It will help preserve historic data, and hence will help in identifying trends
+
+It will assist in faster analysis and reporting since relevant data can be retrieved easily using a warehouse
+
+Questions:2/2
+ 
+ 
+OLAP vs OLTP
+
+Choose the correct statement among the following:
+
+Transactional databases and data warehouse databases use similar front-end interface
+
+Dimension modelling is used to create a transactional database
+
+Data is stored differently in the transactional database and data warehouse database
+Feedback :
+
+A transactional database’s function is easy CRUD operations. For this, it is better if the data is highly normalised and in separate tables to avoid redundancy. But for a data warehouse, this is not a good system, since you need to analyse a lot of metadata for analysis.
+Correct
+
+Star schema is used for creating a transactional database
+
+Consider a bank having thousands of ATMs across India. In every transaction, the following variables are recorded. Let us again consider the bank with multiple ATMs across India. In every transaction, the following variables are recorded:
+
+    Withdrawal amount
+    Account balance after withdrawal
+    Transaction charge amount
+    Customer ID
+    ATM ID
+    Date of withdrawal
+    
+    
+    Questions:1/1
+ 
+Facts and Dimensions
+
+Suppose you are an analyst at the bank and you have a data file with these six variables only. Based on a star schema, how many dimension variables would you need to find out the number of withdrawals made in Pondicherry by a customer named Rohit Sharma?
+
+At least 3
+
+At least 1
+
+At least 4
+
+At least 2
+Feedback :
+
+You would require a customer name dimension which connects with customer id and an ATM location, which connects to ATM ID.
+
