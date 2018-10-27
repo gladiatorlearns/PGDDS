@@ -1,0 +1,40 @@
+Introduction
+
+Welcome to the session on ‘Designing a Data Warehouse’.
+
+ 
+
+Data warehousing is the study of systematically organising the way we store data. As you have seen in Introduction to SQL, data is best stored in databases or DBMS (Database Management Systems)  like MySQL, PostgreSQL etc. In this module, we will extend our understanding of databases and learn the best practices for storing data in a large organisation.
+
+ 
+In this session
+
+We will begin this session by understanding the concept of a data warehouse and identifying the business need of a data warehouse. Then, we will compare a data warehouse to a regular database.
+
+ 
+
+Please download the data sets from the link below. You will be using them in this module.
+
+These datasets contain information on a few startups. The 'companies' dataset gives information on the names, categories, total funding and locations of the startups. The 'investments' dataset has information on the investments these companies have received, such as the investor, the amount invested, the investor location, etc. Please go through the data sets and get acquainted with the data.
+
+ 
+
+We will discuss the design of the data warehouse and dive into a specific design technique called dimensional modelling. 
+
+ 
+
+You will learn about facts and dimensions and see how a fact table can be augmented with relevant dimensions so that you can gain meaningful insights from the data.
+
+ 
+People you will hear from in this session
+
+Subject Matter Expert
+
+Chandrashekar Ramanathan
+Associate Professor & Associate Dean (Academics), IIIT- B
+The International Institute of Information Technology, Bangalore, commonly known as IIIT Bangalore, is a premier national graduate school in India. Founded in 1999, it offers Integrated M.Tech., M.Tech., M.S. (Research) and PhD programs in the field of Information Technology.
+                                                                                                        
+
+Presenter
+
+Rohit Sharma
