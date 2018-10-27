@@ -334,3 +334,48 @@ Here are the steps that you must follow during submitting any assignment-
  
 
 Create a zip file consisting of the SQL file and the PDF file and submit it below.
+
+
+Hello everyone! I'm sure all of you are having fun doing the course and the assignment too. There have been a lot of questions regarding the assignment. As the live session is going to start in some time, let me address the major issues you guys have been facing.
+
+First of all, please ensure that you have MySQL version of 8.0 or above. There are a few functionalities which are used in the assignment which are supported only in these versions. 
+
+Then for importing the csv files:
+
+You can follow any process you like to import the data into MySQL. It doesn't have to be a code specifically, you can use the import wizard to do the same. But please make sure you're not skipping any data from the files given, while you're importing them. And remember that, it is enough to do whatever is specified you don't need to import extra data. 
+
+1. Creating new tables:
+
+Make sure you are creating 6 different tables as mentioned. And the column names should be exactly the same as given(if given) in the problem statement throughout the assignment. 
+
+2. Creating the master table: 
+
+The stocks are taken from the same NSE website for the same time period. So, all the dates should be the same for all the 6 stocks. 
+
+To create a master table, there have been timeout errors faced by a few of the folks. Make sure you're optimising the process of joining tables here by detailing the code with keys on which the joining has to be done. 
+
+3. Buy/Sell/Hold
+
+Please understand the concept of Moving Average(50) right. It is important to understand it perfectly to carry out this task. 
+
+Here, we need to compare MA50 and MA20. 
+
+Many of you have asked about the first 49/50 rows. Think about it, if we need 50 data points to find an average, can an MA50 be generated for these intital rows?  
+
+4. UDF
+
+It is mentioned that this process needs to be carried out only for the Bajaj stock. 
+
+5. Summary
+
+You're expected to answer this according to the analysis you have performed and the results you obtained. Make sure that the conclusion you make regarding the stock data should be backed by the facts obtained from the analysis you carried out. 
+
+PS:
+
+I hope this helps you guys. Good look for the assignment. 
+
+And of course, I'll be happy to help if you have any other questions apart from the mentioned. :) 
+
+PPS:
+
+Please do not post your questions as comments, you need to ask them on the Discussion Forum as separate questions. If not, it's difficult for me to track them. Thank you! 
