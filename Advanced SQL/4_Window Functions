@@ -77,3 +77,9 @@ hours*100/sum(hours) over (partition by essn) as contribution_personal
 from works_on
 
 order by essn;
+
+lightbulb_outline
+
+Suggested Answer
+
+Average provides the average of all the 'hours' entries in the table works_on. contribution_project shows how much of the project's total hours is provided by the employee. contribution_personal shows the percentage of employee's total time dedicated to a particular project
