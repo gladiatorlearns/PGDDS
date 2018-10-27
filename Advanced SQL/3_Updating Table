@@ -1,0 +1,35 @@
+Introduction
+
+By now, you know how to perform basic data analysis using MySQL and the basics of schema design. In your role as a data analyst, there will be numerous situations you will encounter where you will have to change the structure of database i.e. add or delete a column in any particular table or change constraints (Primary and Foreign key). You will also be required to perform operations on date and strings, knowledge of which is essential for any aspiring data analyst.
+
+ 
+In this session
+
+In this session, you will learn how to modify the existing table structure in MySQL. You will also learn how to change (add and delete) constraints in MySQL. Further, you will learn how to apply operations on strings and date variables. By the end of the session, you'll be able to modify table structures and perform operations on strings and dates.
+
+ 
+People you will hear from in this session:
+
+Subject Matter Expert:
+
+Pooja Patel
+
+Director (Engineering), Upgrad
+
+ 
+
+Pooja is the Director of Engineering at UpGrad and has over 10 years of experience in building robust platforms, both at a large enterprise and at a start-up with lean and agile teams. She is a seasoned technologist and is passionate about bringing together the right mixes of data, science, and software for creating practical and scalable business solutions. Prior to UpGrad, Pooja worked on creating a data-driven TV advertising platform at Simulmedia and a developer workflow automation solution at Cisco Systems. She holds a Master's degree from SUNY Binghamton, in Computer Science and Engineering.
+
+Adding and Deleting Columns
+
+Imagine the Amazon database before the advent of prime membership. It has a multitude of columns covering personal details of the customers, payment preferences, bank details, product preferences and many more. Now think of the same database after the introduction of prime membership. It still contains the personal details, payment preferences, bank details, product preferences and there is another data field saying prime member, to be filled as a yes or a no.
+
+ 
+
+Either we can create a new table including all the existing fields and the new column titled prime member and migrate the data from the old table to the new table. Bear in mind that the Amazon dataset probably has millions of rows, it is neither a practical nor a feasible approach.
+
+ 
+
+Please find the SQL file we will be using during the course of this session.
+Session 1
+file_downloadDownload
