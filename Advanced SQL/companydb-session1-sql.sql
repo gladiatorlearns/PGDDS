@@ -1,6 +1,6 @@
 
 
-use companydb_pp;
+use companydb;
 SET SQL_SAFE_UPDATES = 0;
 
 -- ------------------------------ Session 1 :: START ------------------------------
@@ -137,3 +137,5 @@ from employee;
 -- 1.5 Date Manipulation :: END
 
 -- ------------------------------ Session 1 :: END ------------------------------
+
+select * from employee order by extract(year from bdate) desc;
