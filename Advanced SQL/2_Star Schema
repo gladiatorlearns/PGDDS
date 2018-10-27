@@ -119,3 +119,81 @@ And so on
 You will now see how the star schema can be used to solve actual business problems. This demonstration will also give you a reference solution to the question asked above. You will find the star schema used on page 16 of the following reference text: 
 
 https://www.researchgate.net/publication/2359314_Data_Warehouse_Design_for_E-Commerce_Environment
+
+Company_Dimension
+CompanyID
+Company_Region
+Company_Started
+Company_Last_Fund_Recvd
+
+Investor_Dimension
+InvestorID
+InvestorName
+InvestorRegion
+InvestedDate
+
+Funding_Dimension
+FundingID
+FundingType
+FundingDate
+FundAmount
+
+You saw how a star schema can be used for solving business problems. Various dimensions and attributes such as time, customer address, transportation type, etc. can be combined with the star schema to identify the most common transportation mode in the mornings in a certain locality.
+
+ 
+
+Now that you know what a schema diagram is, let's move on to seeing how data can be transferred from various databases into a central data warehouse.
+
+Data Warehouse Schema- Industry Example
+
+You have already learnt about dimensional modelling and schema diagrams. In this session, you will see a real life example of how a data warehouse was built for UpGrad. This session will give you a good idea about the life cycle of designing a data warehouse, right from the selection of dimensions to deploying the data warehouse for analysis. Given below is the schema used in the video. 
+
+Refer Upgrad Schema Png
+
+The marketing team at UpGrad wanted to analyse marketing touch points and know the profile of customers. Keeping these requirements in mind, suitable fact and dimension tables were created with appropriate attributes, i.e. the attributes important for the use cases in hand. 
+
+ 
+
+As you can notice, some dimension tables contain information on lead (prospective customer) details, date and time of interaction, education, location, work details etc. These dimension variables collate information from a variety of sources and make it available for analysis. 
+
+ 
+
+Some examples of useful analysis that can be done using this data are:
+
+    Profiling (or segmenting) the leads into 'clusters' e.g. 'students', 'mid-level employees' etc. 
+    Predicting the likelihood of conversion for each lead using machine learning models
+    Day-to-day reporting within the sales and marketing teams
+
+ 
+
+The variety of attributes and dimensions heavily determines what the warehouse can be used for. In this case, most attributes are chosen to enhance the amount and quality of information mainly from a marketing perspective. 
+
+Questions:1/1
+ 
+Use Cases of a Data Warehouse
+
+Deepak mentioned that the use cases of a data warehouse play an important role in its design. For example, lead scoring  (assigning a 'score' to each lead indicating his propensity to buy), user profiling etc. are some of the use cases which may influence the design of the warehouse.
+
+Which property of data warehouse design does this correspond to?
+Subject-oriented
+Feedback :
+Subject oriented implies that the warehouse be built for a specific range of purposes. User profiling, predictive scoring etc. are examples of purposes or 'subjects' for which a warehouse may be designed.
+Correct
+Non-volatile
+Time invariant
+
+Session Summary
+
+In this session, you learnt about what a data warehouse is and the difference between a data warehouse and a transactional database. You learnt that OLAP systems are Subject-oriented, Integrated, Non-volatile and Time variant. 
+
+ 
+
+You learnt that the data warehouse gives an integrated view of the entire organisation and the data is organised for efficiently carrying out analysis. You also learnt the difference between a data warehouse and a transactional database.
+
+ 
+
+You also learnt about facts and dimensions. You also learnt how to arrange facts and dimensions to design a data warehouse. You saw how dimension tables act as the metadata that is the data about data and they enhance the facts table to enhance insights about the data.
+
+ 
+
+You further learnt through the example of the Upgrad schema.
