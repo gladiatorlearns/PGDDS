@@ -1,0 +1,233 @@
+Introduction
+
+So far, we have learnt how to use different commands and tools in SQL. There is, however, one marked difference in the datasets we used and the datasets used by the likes of Flipkart and ilk.  The difference, of course, is the size.
+
+ 
+
+We were using a small database for simplicity and ease of understanding. However, real-life data sets, used by the likes of Flipkart and ilk would have millions of rows. Hence, where a select on our dummy employee table takes less than a fraction of a second, a similar query when applied on a table of millions of rows, for eg, on the customer table or a product table for Flipkart - it might take hours if not optimized correctly.
+
+Optimisation in Select Clause
+
+The most widely used clause, appearing in every SQL query is the SELECT clause. On the face of it, a select clause looks extremely simple. It retrieves all the columns mentioned. However, there are a few tips you should keep in mind while using the select clause.
+
+ 
+
+Please find the SQL file we will be using during the course of this session.
+Session 4
+file_downloadDownload
+
+In this session, Pooja will tell you about these tips and tell you why query optimisation is extremely important for every data analyst.
+
+Here are some of the techniques used by data analysts to:
+
+    Only select columns which you require. Avoid using select star
+    Always use Limit clause. 
+    Prefer where clause over the having clause.
+
+ 
+
+Here is the code used in the video:
+
+ 
+
+select *
+
+from employee e
+
+inner join department d
+
+on e.dno = d.dnumber
+
+having  dname like '%Research%';  
+
+ 
+
+The above piece of code can be easily tweaked into the one shown below, which is also much more efficient while preserving the required functionality.
+
+ 
+
+select fname, bdate
+
+from employee e
+
+inner join department d
+
+on e.dno = d.dnumber
+
+where dname like '%Research%'
+
+limit 2;
+
+Optimisation in Where Clause
+
+In the previous section, you learnt about optimisation in the select clause. Another of the most widely used clauses is the where clause. The where clause as you already know is used to perform the filtering operation. 
+
+ 
+
+In this section, you will learn about optimisation in the where clause.
+
+Provided below is the code used above:
+
+ 
+
+#unoptimised query
+
+select fname, salary
+
+from employee
+
+where salary > 10000 and (salary/5) > 6000;
+
+
+#optimised query
+
+select fname, salary
+
+from employee
+
+where salary > 30000;
+
+ 
+
+You saw that it is best to limit the number of conditions in the where clause. It is also advised to perform the filtering operation on an index or a key column.
+
+Optimisation in Group by and Order by
+
+So far in this section, you've learnt to optimise the select and where clause. Other widely used clauses include the Group by and Order by clause.
+
+ 
+
+In this section, Pooja will teach you about the optimisation in the group by and order by clauses.
+
+You must have noticed that one thing repeatedly stressed upon is the use of keys. It is preferable to use group by and order by commands on keys. To learn more about the use of keys in optimisation, use this link. ( https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html )
+
+Optimisation in Joins
+
+Joins, as you've already learned are used to retrieve data from multiple tables at the same time. They are of utmost use and importance as the queries become gradually complex. Hence, it is imperative to know how the join clause can be optimised.
+
+ 
+
+In this section, Pooja will teach you about the optimisation in the Join clause.
+
+Following is the code used in the above video:
+
+ 
+
+select fname, ssn, essn, dependent_name, relationship
+
+from
+
+(
+select fname, ssn, dno
+
+from employee
+
+where dno=4
+) e
+
+inner join
+
+(
+select essn, dependent_name, relationship
+
+from dependent
+
+where relationship = 'Spouse'
+) d 
+
+on e.ssn = d.essn;
+
+ 
+
+The above query can be optimised as below 
+
+select fname, ssn, essn, dependent_name, relationship
+
+from
+
+(
+select fname, ssn, dno
+
+from employee
+
+) e
+
+inner join
+(
+select essn, dependent_name, relationship
+
+from dependent
+) d 
+
+on e.ssn = d.essn and e.dno=4 and d.relationship= 'Spouse';
+
+ 
+
+You saw that it is advisable to combine the where clauses in the join statement and not apply them in individual subqueries.
+
+ 
+
+Once again, the importance of keys becomes extremely apparent. It is always preferred to apply the join clause on an index field. Since we know the importance of keys, it is advised to make the columns which are heavily used in key columns. It improves the performance of the database execution engine.
+
+Optimisation in Window Function
+
+So far in this session, you have learnt about the optimisation in basic SQL commands. Another widely used featured of MySQL is the Window functions particularly while dealing with any type of time series data.
+
+ 
+
+In this session, Pooja will teach you how to optimise Window functions and improve the efficiency of the code.
+
+The code used in the above video :
+
+select ssn, salary,
+
+row_number()     over (order by salary ) as 'row_number',
+
+rank()           over (order by salary ) as 'rank',
+
+dense_rank()     over (order by salary ) as 'dense_rank'
+
+from employee;
+
+
+select ssn, salary,
+
+row_number()     over w as 'row_number',
+
+rank()           over w as 'rank',
+
+dense_rank()     over w as 'dense_rank'
+
+from employee
+
+window w as (order by salary);
+
+ 
+
+ 
+
+You learnt that is preferable to use named windows when you plan to use the same window multiple times in the program.
+
+Session Summary
+
+In this section, you learnt about the importance of Query optimisation. You saw that if not optimised correctly, queries could take up valuable computational power and time. When working on real-life data sets having thousands of records, it is essential to optimise every query.
+
+ 
+
+You learnt about optimisation in widely used MySQL commands :
+
+1) SELECT clause
+
+2) WHERE clause
+
+3) GROUP BY clause
+
+4) ORDER BY clause
+
+5) JOIN clause
+
+6) Window function
+
+ 
+
+Please note that although we have shown the optimisation in select queries, they can be applied to update and alter commands as well.
