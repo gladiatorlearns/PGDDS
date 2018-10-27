@@ -1,0 +1,130 @@
+Graded Questions - III
+
+You have already learnt about the concept of joins. You know that joins are used when data is to be retrieved from multiple tables at the same time. You learnt about inner join and outer join. MySQL also provides you with the option of joining a table with itself. Such a join is known as Self Join. It is extremely useful in case of self-referencing tables.
+
+ 
+
+In the employee table, you shall have noted that one of the foreign keys is fk_super_ssn which references to the super_ssn column of the employee table itself.
+
+ 
+
+To know more about self-join, please refer here.
+
+ 
+
+Please note that if in the following question on self-join the answer you obtain is not matching with any of the options, please choose the one that is the closest to the one you are getting.
+
+https://www.w3resource.com/sql/joins/perform-a-self-join.php
+
+Questions:1/1
+ 
+Self Join
+
+Write a SQL query to extract the name and birthdate of the employee's super_ssn using self-join. What is the birth date of the super_ssn of the employee with ssn '666884444'
+
+1972-01-19
+
+1962-01-09
+
+1955-02-09
+Feedback :
+
+select e.name , b.bdate
+
+from employee e inner join employee b  on e.super_ssn = b.ssn
+
+where e.ssn = '666884444';
+
+Correct
+
+1968-01-06
+
+
+Curdate() function in MySQL return the current date. It is extremely useful when assigning an age to various elements. You can learn more about curdate here.
+
+ 
+
+To find the age of any person, you subtract the current year from the year of birth.
+
+https://www.w3resource.com/mysql/date-and-time-functions/mysql-curdate-function.php
+
+Questions:1/3
+ 
+ 
+ 
+Age
+
+Create a new column named 'age' storing the age of all employees as of 30 September 2018. What is the sum of the age of all employees?
+
+437
+
+444
+
+487
+
+475
+Feedback :
+
+alter table employee
+
+add age int;
+
+update employee
+
+set age = 2018 - year(bdate);
+
+select sum(age)
+
+from employee;
+
+Questions:2/3
+ 
+ 
+ 
+Difference in age
+
+Use self-join to find the difference between the age of the employees and their respective supervisors. What is the difference in the age of employee with ssn '987654321' and its supervisor?
+
+9 years
+
+4 years
+Feedback :
+
+select e.age, b.age, e.name, b.name,abs(e.age-b.age), e.ssn
+
+from employee e inner join employee b on e.super_ssn = b.ssn
+
+where e.ssn ='987654321';
+
+Correct
+
+7 years
+
+6 years
+
+Questions:3/3
+ 
+ 
+ 
+Salary/Age
+
+Use window function to rank the employees in order of salary/age (Salary divided by age) in descending order (Employee with greatest salary/age is ranked first and so forth). What is the Salary/Age of employee ranked fifth?
+
+556.03
+
+558.44
+Feedback :
+
+select name,ssn,dno, salary/age,
+
+rank() over(order by (salary/age) desc) as 'Rank'
+
+from employee;
+
+Correct
+
+634.92
+
+543.47
+
+
