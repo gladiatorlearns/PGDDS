@@ -1,0 +1,311 @@
+Graded Questions - I
+Guidelines for in-module questions
+
+ The questions in this session will adhere to the following guidelines:
+
+ 
+
+ 
+ 	First Attempt Marks	Second Attempt Marks
+
+Question
+
+with 2 Attempts
+	10	5
+
+Question
+
+with 1 Attempt
+	10 	0
+
+ 
+
+DataCorporation is a budding data management services startup in India. It provides data organisation, data architecture, and data analytics services to its customers. A retail company called BuzzingBee Corporation Inc. Ltd. is looking for a vendor who can maintain and help get insights from its sales and related data.
+
+ 
+
+BuzzingBee currently uses Excel files to store its data for all its stores spread across India. As there are hundreds of stores and thousands of salespersons and managers working in their stores, it becomes tedious to retrieve data from locally stored Excel files, even though the files are hosted on common servers. Also, it is difficult to assure the integrity of data since anyone may mistakenly change the values or introduce errors (e.g inserting a character in a numeric column). 
+
+ 
+
+Therefore, the management of BuzzingBee decides to upgrade its technology to handle the data. Using this information, answer the following questions.
+
+Questions:1/1
+ 
+Suggest the appropriate technology
+
+Which of the following technologies can help BuzzingBee during its technology upgrade process?
+
+A relational database management system
+Feedback :
+
+DBMS allows storing data in a more related manner, hence it is a most obvious choice for data storage and processing.
+Correct
+
+More powerful servers
+
+Advanced data analytics software
+
+BuzzingBee have multiple files containing information about the details of its stores, staff, inventory for each store, vendors providing goods, products etc. Apart from these, each store has its own data about employees (e.g. leaves, salary and other employee-related data). The new proposed system will be designed accordingly.
+
+ 
+
+Using this information, answer the following questions.
+
+Questions:1/2
+ 
+ 
+Schema Design
+
+Which of the following do you think will be a part of the proposed system?
+
+Employee management system
+
+Inventory management system
+
+Sales management system
+
+All of the above
+Feedback :
+
+As it is very clear that BuzzingBee is looking for an entire solution, all these will be the part of entire solution.
+
+Questions:2/2
+ 
+ 
+Keys
+
+Match the following tables and their respective fields, primary keys and foreign keys.
+ 	Table Names	 	Fields	 	Primary Key	 	Foreign Key
+a	Employee	I	VendorID, VendorName, ProductID, ProductName	1	PrdID	A	ProductID
+b	Store	II	StoreID, MgrName, MgrID, No_of_employees	2	EmpID	B	MgrID
+c	Product	III	PrdID, PrdName, VendID, AvailableQty, Profit_earned	3	StoreID	C	VendID
+d	Vendor	IV	
+
+EmpID, EmpName, StrID, DOJ, DOB, ReportingtoManager, Salary
+	4	VendorID	D	StrID
+
+a-IV-2-D, b-III-3-D, c-II-4-C, d-I-1-B
+
+a-IV-2-D, b-II-3-B, c-III-1-C, d-I-4-A
+Feedback :
+
+Employee should be mapped to employee ID, store to store id, vendor to vendor id and product to product id. These will serve as the primary keys.
+Correct
+
+a-IV-3-A, b-III-2-C, c-II-3-B, d-I-2-B
+
+None of the above
+doneYour answer is Correct.
+
+Questions:1/2
+ 
+ 
+SELECT query
+
+What will be the output of ‘SELECT distinct(PrdName) from Product where VendID = 2358;’?
+
+A list of all the products provided by the vendor whose id is 2358
+
+A list of products with repetition in names provided by the vendor whose id is 2358
+
+A list of products without any duplicates provided by the vendor whose id is 2358
+Feedback :
+
+The distinct keyword is used to remove the duplicates from the selection
+Correct
+
+Both B and C
+
+Questions:2/2
+ 
+ 
+Aggregate Functions
+
+What will be the output of ‘SELECT sum(profit_earned) from Product where PrdName like “%Home%";’?
+
+It displays the total profit only for the products with the name ‘Home’
+
+It displays the total profit for all the products with a name containing the word ‘Home’
+Feedback :
+
+The % wildcard is used to match any number of characters in the given pattern.
+Correct
+
+It displays the total profit only for the products with a name starting with ‘Home’
+
+All of the above
+
+Graded Questions - II
+
+A university maintains the records of students, departments, courses taken by each student, marks etc. in a database. Refer to the University database schema given below and answer the following questions. Note that the data in the university database is complete that is all the rows in every table, all columns are filled with values which are NOT NULL.
+
+Questions:1/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+Match the tables with their primary keys.
+ 	Table	 	Primary Key
+1	Student	a	
+
+Course_Id
+2	Classroom	b	ID in student table
+3	Instructor	c	building, room_no
+4	Course	d	ID in instructor table
+
+1-d, 2-c, 3-b, 4-a
+
+1-b, 2-c, 3-d, 4-a
+Feedback :
+
+The primary keys are underlined in each table and the foreign keys are marked with an arrow. A foreign key connects two different tables and is the primary key of one of the tables.
+Correct
+
+1-b, 2-d, 3-c, 4-a
+
+None of the above
+
+Questions:2/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+Mark the correct statement/s. 
+
+__ is a foreign key to __:
+
+instructor.dept_name to department.dept_name
+
+teaches.course_id to section.course_id, teaches.sec_id to section.sec_id, teaches.semester to section.semester, teaches.year to section.year
+
+department.building to classroom.building
+
+Both A and B
+Feedback :
+
+A foreign key is used to relate the information between tables
+Correct
+
+Questions:3/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+What will be the output of ‘SELECT title FROM course WHERE dept_name=”Comp. Sci.” and credits = 3;’?
+It finds the title of the courses in the Comp. Sci. department with 3 credits
+Feedback :
+It is the and condition which will decide the records to be selected
+Correct
+It finds the title of the courses in the Comp. Sci. department with 3 or more credits
+It finds the title of the courses in the Comp. Sci. department which do not have 3 credits
+It finds the title of the courses in the Comp. Sci. department
+
+Questions:4/7
+ 
+ 
+  
+SQL
+
+Which of the following queries gives the highest salary among all the instructors?
+SELECT id, name FROM instructor WHERE salary = (SELECT max(salary) FROM instructor);
+SELECT max(salary) FROM instructor;
+Feedback :
+It is a simple query with max() aggregate function
+Correct
+Both A and B
+None of the above
+
+Questions:5/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+What will be the output of the following query?
+
+SELECT count(distinct ID) FROM takes WHERE (course_id, sec_id, semester,year) in ( SELECT (course_id, sec_id, semester, year) FROM teaches WHERE teaches.ID=10101);
+The total number of students who have taken course sections taught by the instructor ID 10101
+The total number of distinct students who have taken course sections taught by the instructor ID 10101
+Feedback :
+The keyword distinct and the WHERE clause determined the output of this query
+Correct
+The students who have taken course sections taught by the instructor ID 10101
+Both A and B
+
+Questions:6/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+Match the following:
+1	Relational Operators	a	order by clause
+2	Aggregate functions	b	Union, intersect, union all, intersect all
+3	Ordering display	c	<,>,<=,>=
+4	Set operations	d	max(), sum(), count(), min()
+
+1-d, 2-c, 3-a, 4-b
+
+1-c, 2-d, 3-a, 4-b
+Feedback :
+
+Relational operators find the relation between different quantities. You will use order by clause to order objects. Aggregate functions are sum, max etc while set operators are union and intersection (joins).
+Correct
+
+1-c, 2-d, 3-b, 4-a
+
+None of the above
+
+
+
+Questions:7/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SQL
+
+Which of the following is/are supported in MySQL?
+
+Inner Join
+
+Natural Join
+
+Outer Join
+
+All the above
+Feedback :
+
+All these joins are supported by MySQL
+
+
+
+
+
