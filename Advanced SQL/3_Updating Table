@@ -33,3 +33,380 @@ Either we can create a new table including all the existing fields and the new c
 Please find the SQL file we will be using during the course of this session.
 Session 1
 file_downloadDownload
+
+To add a column and update it, the following commands are used
+
+ 
+
+# adding a column
+
+alter table employee
+
+add des varchar(50)
+
+default 'manager';
+
+
+
+#updating table
+
+update employee
+
+set des = 'dummy1'
+
+where ssn ='123456789';
+
+To delete a column the following commands are used
+
+ 
+
+# dropping a column
+
+alter table employee
+
+drop column des;
+
+Questions:1/1
+ 
+Adding Column
+
+What will be the output of the following set of queries 
+
+ 
+
+Alter table employee
+
+Add col varchar(15)
+
+Default ‘upgrad’ ;
+
+Select * from employee
+
+Where col = ‘upgrad’ ;
+
+It will result in an error.
+
+It will display the complete table.
+Feedback :
+
+A new column name 'col' is added to the employee table with col having value 'upgrad'. 
+Correct
+
+It will display zero rows.
+
+It will display the first four rows of the table.
+
+Changing Column Name and Data Type
+
+ 
+
+In the initial phase of any database design. It is a fairly common practice to use non-intuitive column names like ssn, fname, dno. This is fine for when the database is small and used by a few people. But as the size of the database and the number of people accessing the database increases, these non-intuitive column headers may lead to inefficiency and inconsistency. This is why there is a need to change the column names.
+
+ 
+
+In the Amazon database, think of a table carrying delivery details. It has a column containing the date. Initially, this field was marked as data type char. Now, a need is felt to perform operations on the date field, but since it is in char format, it can’t be performed directly. This is where we need to change the column data type.
+
+ 
+
+In this section, Pooja will take you through the SQL queries to change the column name and data type.
+
+To change the data type of a column
+
+ 
+
+# changing column data type
+
+alter table employee
+
+modify salary float(10,4);
+
+ 
+
+To  change the name of an existing column
+
+ 
+
+# changing the column name
+
+alter table employee
+
+change minit minitial char(1);
+
+
+Questions:1/1
+ 
+Changing column data type
+
+ 
+
+What will be the output of the following set of SQL queries?
+
+Alter table employee
+
+Modify salary varchar(10);
+
+Alter table employee
+
+Change salary pay varchar(10);
+
+Select salary from employee
+
+Order by salary desc;
+
+List of salary in ascending order.
+
+List of salary in descending order
+
+Error message showing that column salary does not exist
+Feedback :
+
+The column name has been changed to 'pay' using the 'change' command.
+Correct
+
+All details of table employee
+
+Creating Table from existing table
+
+So far during the course of the program, we have created tables and performed operations on existing tables to fetch data. What if you wish to create a table using parts of an existing table. Do we need to run the complete create table and update commands?
+
+ 
+
+Fortunately for me, you and all data analysts around the world,  the answer is no. MySQL provides us with a better alternative where we can use our good old select clause in conjunction with the create table command to create a table from existing tables.
+
+ 
+
+Suppose you want to create a table 'emp' with employee's name, ssn and birth date.
+
+ 
+
+create table emp as
+
+select fname, minit, lname, ssn, bdate
+
+from employee;
+
+ 
+
+What the above piece of code will do is create a table named 'emp' storing the results of the select query. Note that this may be any select query, including multiple joins. The resulting table 'emp' is no different than any existing table. You can perform the same operations on this table as you can on any other table, which include creating another table out of this table.
+
+ 
+
+create table e2 as
+
+select concat(fname, minit, lname) as 'Name' , ssn, bdate
+
+from emp;
+
+ 
+
+You must have noticed that the column names we have used so far do not contain space nor are they MySQL keywords. To use such column names, we use the backtick (`). This key is located on the left of the '1' key on the top left corner of the keyboard. 
+
+ 
+
+create table e3 as
+
+select name  as `Full Name`, bdate as `Birth Date`, ssn as `Select`
+
+from e2;
+
+Changing Constraints (Primary key)
+
+We have used primary and foreign keys extensively in our queries so far. They are essential in identifying records in any table. 
+
+ 
+
+Consider the Uber database in its early days, and think about the driver table.
+
+Since there are a limited number of drivers, a good primary key might be the driver name itself. It is intuitive and easy to comprehend and most importantly, unique. But as Uber grew into the global behemoth it is today, it becomes painfully apparent that the driver name no longer ticks the uniqueness box. It is required to change it to something like a driver id.
+
+In this section, Pooja will teach you how to add and delete primary and foreign key in a database.
+
+To change a primary key (adding and dropping a primary key)
+
+ 
+
+# dropping primary key
+alter table recipes
+drop primary key;
+
+#adding primary key
+alter table recipes
+add primary key (recipe_id);
+
+Changing Constraints (Foreign key)
+
+In the previous section, you learned how to add and delete primary keys. MySQL also provides us with the functionality of foreign keys to enforce the referential integrity constraint. In one's role as a data analyst, it might become imperative to change these constraints as and when the business requirements change. 
+
+ 
+
+In this section, Pooja will teach you how to add and delete foreign key in a database.
+
+Following is the syntax to change foreign keys in a table.
+
+ 
+
+# dropping foreign key
+alter table employee
+drop foreign key fk_super_ssn;
+
+#adding a foreign key
+alter table employee
+add constraint fk_super_ssn foreign key (super_ssn) references employee(ssn);
+
+Questions:1/1
+ 
+Adding and removing keys
+
+What will the primary and foreign key for the table works_on after implementing the following commands? (refer to the database file)
+
+Alter table works_on
+
+Drop foreign key fk_essn;
+
+Alter table works_on
+
+Drop foreign key fk_pno;
+
+Alter table works_on
+
+Drop primary key;
+
+Primary key: none; Foreign key: none
+Feedback :
+
+Dropped the primary key and dropped both foreign keys.
+Correct
+
+Primary key: none; Foreign key: pno
+
+Primary key: pno; Foreign key: essn
+
+Primary key: pno; Foreign key: none
+
+
+String Manipulation
+
+Let’s go back to the Amazon database. Say you want to find the revenue and profit for the bag segment in the last 3 years. On the surface, it looks like a simple filtering operation. But imagine, there is no column titled 'Product type', marked 'bag' in all the bags. Instead what we find is there are hundreds of different types of bags.
+
+ 
+
+This is where we realise a simple filtering operation is not good enough. Hence there is a need for string manipulation. It is one of the most common functions of a data analyst on a daily basis.
+
+ 
+
+In this section, Pooja will walk you through the string manipulation functions available in MySQL.
+
+
+Below is the code used in the video
+
+ 
+
+# selecting a substring
+
+select 
+
+recipe_name                              as orig_recipe_name, 
+
+substring_index(recipe_name, ' ', 1)     as upd_reciper_name
+
+from recipes;
+
+
+#concatenating the string
+
+select concat(fname, ' ' , lname) as name ,ssn
+
+from employee;
+
+You can find a list of string manipulation functions here.
+
+Questions:1/1
+ 
+String Manipulation
+
+What will the output of the following set of commands
+
+Select concat (reverse(fname) , ' ', UPPER(lname))
+
+From employee
+
+where dno=1;
+
+James BORG
+
+Semal Borg
+
+semaJ BORG
+Feedback :
+
+Reverse () reverses the string and UPPER converts the string to upper case.
+Correct
+
+semaJBORG
+
+Date Manipulation
+
+When dates are stored in the  ‘DD-MM-YYYY’ and ‘MM-DD-YYYY’ formats and in the form of data type string, they can’t be sorted in a chronological order. Converting the data type from string to date does not resolve the issue. MySQL and other relational databases store the date data type in the ‘YYYY-MM-DD’ format. This format helps to sort the dates in the same order even if they are stored as date or string data types. This issue is often encountered when data is imported from Excel to MySQL. Here, you will learn various date manipulation skills, which will help you handle such issues.
+
+ 
+
+Once the date is converted to the ‘Date’ format, it can be further manipulated to extract useful information. Depending on the type of operations performed on the dates, the data type of the output will vary.
+
+ 
+
+To take advantage of the date functionality, the date field needs to be formatted appropriately. This often involves some text manipulation, followed by a CAST. Once you ensure that the date is in the YYYY-MM-DD format, you can manipulate it to extract the required information.
+
+The EXTRACT statement can be used to get the required information from the ‘Date’ column.
+
+ 
+
+select bdate,
+
+extract(year from bdate) as year,
+
+extract(month from bdate) as month,
+
+extract(day from bdate) as day
+
+from employee;
+
+Questions:1/1
+ 
+Date Manipulation
+
+Session Summary
+
+We began this session with a discussion on the ‘Alter table’ clause. This clause is used to make changes in the table structure that is adding or deleting columns. And change constraints, namely the primary and foreign key.
+
+ 
+
+The session also covered String manipulation. You learnt the ‘update’ clause and ‘alter’ clause. You learnt string functions like substring_index(), concat(), lower(), etc.
+
+ 
+
+Further, the session covered the concepts of Date manipulation. We finished the session with the use of ‘Extract’ clause.
+
+ 
+
+What will be the output of the following set of commands
+
+Select * from employee
+
+Order by extract(year from bdate) desc;
+
+Details of the employees, youngest first
+Correct
+
+Details of the employees, youngest last
+
+Error message
+
+Details of the employees in the order they were entered.
+
+
+
+
+
+
+ 
+
