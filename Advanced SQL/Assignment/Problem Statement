@@ -40,3 +40,297 @@ Please note that it is important that the Moving Averages Cross each other in or
  
 
 When the signal is neither buy nor sell, it is classified as hold. If you already own the stock, keep it and if you don't then don't buy it now.
+
+Data Set
+
+The dataset provided here has been extracted from the NSE website. The Stock price data provided is from 1-Jan-2015 to 31-July-2018 for six stocks Eicher Motors, Hero, Bajaj Auto, TVS Motors, Infosys and TCS.
+
+ 
+
+Please note that for the days where it is not possible to calculate the required Moving Averages, it is better to ignore these rows rather than trying to deal with NULL by filling it with average value as that would make no practical sense.
+
+ 
+
+Create a new schema named 'Assignment'
+
+Import the CSV files in MySQL, naming the tables as the name of the stocks. 
+MySQL Assignment Dataset
+file_downloadDownload
+Results Expected
+
+1. Create a new table named 'bajaj1' containing the date, close price, 20 Day MA and 50 Day MA. (This has to be done for all 6 stocks)
+
+ 
+             Date            	            Close Price             	              20 Day MA           	             50 Day MA               
+
+ 
+
+2. Create a master table containing the date and close price of all the six stocks. (Column header for the price is the name of the stock)
+
+ 
+
+The table header should appear as below:
+
+ 
+          Date         	      Bajaj        	       TCS      	   TVS      	     Infosys   	      Eicher       	        Hero         
+
+ 
+
+3. Use the table created in Part(1) to generate buy and sell signal. Store this in another table named 'bajaj2'. Perform this operation for all stocks.
+
+ 
+        Date      	          Close Price       	      Signal        
+
+ 
+
+4. Create a User defined function, that takes the date as input and returns the signal for that particular day (Buy/Sell/Hold) for the Bajaj stock.
+
+ 
+
+5. Write a brief summary of the results obtained and what inferences you can draw from the analysis performed. (Less than 250 words to be submitted in a pdf file)
+
+ 
+
+You will be required to submit the commented a zip file consisting of a SQL file and pdf file describing the key observations and summary in under 250 words that you can make from the results.
+
+
+Grading Criteria
+
+Grading
+
+This assignment is worth 150 points. The rubrics for grading are mentioned below.
+
+ 
+
+Rubrics
+
+Your assignment will be evaluated using the following guidelines.
+
+ 
+ 	 	Performance Level	 
+Criteria	Approx. % of grade	
+
+Meets expectations
+
+ 
+	Does not meet expectations
+Creating Table bajaj1 and five others with Date, Close Price, 20 Day MA and 50 Day MA	20 %	
+
+The names of the fields are marked correctly.
+
+ 
+
+ 
+
+The operation has been performed for all 6 stocks.  
+
+ 
+
+The Query is optimised.
+ 
+
+ 
+
+The query is syntactically correct.
+	
+
+The names of the fields are marked incorrectly.
+
+ 
+
+The operation has not been performed for all 6 stocks.
+
+ 
+
+The query is unoptimised.
+
+ 
+
+The query is syntactically incorrect
+Creating a Master table	15 %	
+
+The names of the fields are marked correctly.
+
+ 
+
+ 
+
+The Query is optimised.
+
+ 
+
+ 
+
+The query is syntactically correct.
+
+ 
+	
+
+The names of the fields are made incorrectly.
+
+ 
+
+The query is unoptimised.
+
+ 
+
+The query is syntactically incorrect.
+Creating Table bajaj2 and five others with details from bajaj1 and including the signal(buy/sell/hold)	30 %	
+
+The names of the fields are marked correctly.
+
+ 
+
+ 
+
+The operation has been performed for all 6 stocks.  
+
+ 
+
+The Query is optimised.
+
+ 
+
+ 
+
+The query is syntactically correct.
+	
+
+The names of the fields are marked incorrectly.
+
+ 
+
+The operation has not been performed for all 6 stocks.
+
+ 
+
+The query is unoptimised.
+
+ 
+
+The query is syntactically incorrect
+Creating the required User defined function	20 %	
+
+The names of the fields are marked correctly.
+
+ 
+
+ 
+
+The Query is optimised.  
+
+ 
+
+The query is syntactically correct.
+	
+
+The names of the fields are marked incorrectly.
+
+ 
+
+The query is unoptimised.
+
+ 
+
+The query is syntactically incorrect
+Coding Guidelines 	5 %	
+
+If required, appropriate comments are written.
+
+ 
+
+
+If new variables are created, the names are descriptive and unambiguous.
+
+ 
+
+The code is written concisely wherever possible.
+
+
+Overall, code readability is good with appropriate indentations.
+	
+
+Comments are not written rendering the code difficult to understand.
+
+
+Variables are poorly or ambiguously named.
+
+ 
+
+ 
+
+The code is more complex than what is required by the problem.
+
+
+Code readability is poor because of poor indentation / other reasons.
+Executive Summary (less than 250 words)	10 %	
+
+The structure of the narrative is clear.
+
+ 
+
+ 
+
+The content is concise and readable.
+
+ 
+
+ 
+
+The narrative is backed by facts.
+	
+
+The structure of the narrative is haphazard.
+
+ 
+
+The content is not concise and difficult to understand.
+
+ 
+
+The narrative is not backed by facts.
+
+
+Submission
+
+For submissions obtained within 1 week of the deadline, there will be a 30% penalty. Submissions beyond 1 week of the deadline will be provided only feedback and score zero marks (100% penalty).
+
+ 
+
+You must go through these guidelines-
+
+    Make sure you have not made any changes to the original dataset provided to you. Your SQL code should work on the dataset given to you as part of the problem statement. You are not allowed to make modifications in the dataset using excel and then use it in your SQL code. Entire data processing must be done in SQL only. During grading we will be running your code on the dataset provided by us, in case your code gives errors with that, then marks will be deducted accordingly.
+
+    All penalties are automatically applied by the system based on time of submission. Hence, submissions that are late, even by a second, will attract penalties.
+
+ 
+
+For e.g.- If the deadline is 28 October 2018, 11:59:00 PM IST, the submissions at 28 October 2018, 11:59:01 PM IST will attract a penalty of 30%. Hence we recommend that assignments are submitted at least 30 minutes before the deadline to avoid any last minute issues.
+
+ 
+
+Also, note the all the deadlines are in IST (UTC +5.5), hence, if you are in a different time zone, then your deadline may vary according to local time. For eg - If you are in London and following BST (British Summer Time) which is UTC +1 then deadline for you in local time would be 7:29:00 PM BST when the deadline in India is 11:59:00 PM IST.
+
+ 
+
+    Make sure you click “Submit for Grading” only if you are 100% sure, else you must just upload your file and leave it there. It will be automatically submitted before the deadline. If you click “Submit for grading” after uploading the file, under no circumstance you will be allowed to resubmit or change your upload.
+
+ 
+
+Here are the steps that you must follow during submitting any assignment-
+
+ 
+
+    Collect all the files (if there are multiple files) and compress them together.
+
+    Try to upload this compressed file latest by 11:30 PM
+
+    Download your submission and check that you have included all the required files.
+
+    Check that none of the files or the zip is corrupt. If it is found to be corrupt during grading, you will NOT be allowed to re-submit.
+
+    If you are 100% sure that you will not need to make any more changes in the assignment, click “Submit for Grading”, else, just let it be. Unless you remove it, it will be automatically submitted at the upcoming deadline.
+
+ 
+
+Create a zip file consisting of the SQL file and the PDF file and submit it below.
