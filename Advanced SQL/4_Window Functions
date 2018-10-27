@@ -83,3 +83,166 @@ lightbulb_outline
 Suggested Answer
 
 Average provides the average of all the 'hours' entries in the table works_on. contribution_project shows how much of the project's total hours is provided by the employee. contribution_personal shows the percentage of employee's total time dedicated to a particular project
+
+
+rames
+
+In the last section, you were introduced to the concept of windowing functions and windows. You learned the use of basic aggregate functions, like sum in windowing.
+
+ 
+
+In this section, you will learn about the concept of frames and how frames move while a query is executed. You will learn how to implement the concept of moving average in SQL.
+
+The following query demonstrates the use of moving frames to compute running totals within each department. Similar queries can be used to determine rolling averages computed from the current row and the rows that immediately precede and follow it.
+
+ 
+
+select ssn, concat(fname, ' ', lname) as emp_name, dno, salary,
+
+sum(salary) over (partition by dno order by ssn rows unbounded preceding) as cumulative_total,
+
+sum(salary) over (partition by dno order by ssn rows between 1 preceding and 1 following )   as one_above_and_one_below
+
+from employee;
+
+
+We can also use non-arithmetic functions in windowing.
+ 
+
+select ssn, concat(fname, ' ', lname) as emp_name, dno, salary,
+
+first_value(salary) over (partition by dno order by ssn rows unbounded preceding) as first_val,  
+
+nth_value(salary,2) over (partition by dno order by ssn rows unbounded preceding) as second_val
+
+from employee;
+
+
+We can also use non-arithmetic functions in windowing.
+ 
+
+select ssn, concat(fname, ' ', lname) as emp_name, dno, salary,
+
+first_value(salary) over (partition by dno order by ssn rows unbounded preceding) as first_val,  
+
+nth_value(salary,2) over (partition by dno order by ssn rows unbounded preceding) as second_val
+
+from employee;
+
+Questions:2/2
+ 
+ 
+Window function
+
+Predict the output of the following piece of code
+
+ 
+
+select concat(fname,' ',lname) as Name ,
+
+min(salary) over(partition by dno) as Result
+
+from employee
+
+order by dno desc;
+
+Name of employees with the minimum salary in their respective department
+Feedback :
+
+min(salary) over (partition by dno) gives the minimum salary in the particular department
+Correct
+
+Name of employees along with their salary
+
+Name of employees along with the maximum salary in their department
+
+An error message is displayed
+
+Named Windows
+
+In the previous session, you learnt that we can use multiple window functions in the same query. You shall have noticed that in one of the queries we used the same window in both the window functions. This makes the code bulkier and difficult to tweak as and when the need arises. In this section, Pooja will teach you the concept of creating, storing and using named windows.
+
+A WINDOW clause is useful for queries in which multiple OVER clauses would otherwise define the same window. Instead, you can define the window once, give it a name, and refer to the name in the OVER clauses. Consider this query, which defines the same window multiple times:
+
+ 
+
+select ssn, salary,
+
+row_number()     over (order by salary ) as 'row_number',
+
+rank()           over (order by salary ) as 'rank',
+
+dense_rank()     over (order by salary ) as 'dense_rank'
+
+from employee;
+
+
+select ssn, salary,
+
+row_number()     over w as 'row_number',
+
+rank()           over w as 'rank',
+
+dense_rank()     over w as 'dense_rank'
+
+from employee
+
+window w as (order by salary);
+
+ 
+
+A named window also makes it easier to experiment with the window definition to see the effect on query results. You need only modify the window definition in the WINDOW clause, rather than multiple OVER clause definitions.
+
+Questions:1/1
+ 
+Named windows
+
+Predict the output of the following SQL query.
+
+ 
+
+select concat ( fname, ' ', lname) as name , ssn,
+
+row_number() over w as 'row_number' ,
+
+rank() over w as 'rank'
+
+from employee
+
+window w as (order by concat(fname, ' ', lname));
+
+Rank the employees alphabetically
+Correct
+
+Rank the employees in the opposite order of the alphabetical order
+
+An error message is displayed
+
+Rank the employees in the ascending order of social security number (ssn).
+
+Window Functions' Restrictions
+
+So far in the session, you have learned the various applications of window functions. However, there are a few important caveats to know before you start using window functions extensively.
+
+ 
+
+    Window functions cannot be used in UPDATE or DELETE statements to update rows.
+
+    DISTINCT command is not allowed with windowing.
+
+    Nested windowing functions are not allowed.
+
+    Dynamic frames are not allowed.
+    
+    Session Summary
+
+We began this session with an introduction to Windowing and discussion on the ‘over’ clause. The over clause is used to specify the window on which the function executes.
+
+ 
+
+We learned about the use of aggregate functions like sum, max, min, average along with non- aggregate functions like rank, row_number in windowing functions.
+
+ 
+
+You learnt the concept of named windows to make the code more concise and easier to understand. We understood the shortcoming of the windowing functions to finish the session.
+
