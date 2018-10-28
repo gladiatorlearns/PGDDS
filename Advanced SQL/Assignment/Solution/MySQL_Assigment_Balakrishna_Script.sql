@@ -288,8 +288,12 @@ END $$
 Delimiter ;
 
 -- demonstation of result from query, returns 'BUY' under Recommendation column
-SELECT RECOMMENDATION('2018-07-17') AS 'Recommendation'
+SELECT RECOMMENDATION('2018-07-17') AS 'Recommendation';
 
 -- Problem Statement 5 - Summary is provided in AssignmentSummary.pdf.
 
--- End --
+    
+Select distinct `signal`, count(`signal`) over(partition by `signal`) as 'counts' from bajaj2 order by `signal` 
+-- buy 484
+-- sell 389
+-- hold 14
