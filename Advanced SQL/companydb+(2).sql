@@ -1,4 +1,5 @@
-
+create database companydb2;
+use companydb2;
 create table employee(
 	fname varchar(30),
 	minit char(1),

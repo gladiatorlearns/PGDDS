@@ -1,4 +1,4 @@
-use companydb_pp;
+use companydb;
 SET SQL_SAFE_UPDATES = 0;
 
 -- ------------------------------ Session 4 :: START ------------------------------

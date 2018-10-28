@@ -87,3 +87,16 @@ window w as (partition by dno order by salary);
 -- 2.3 Named Windows :: END
 
 -- ------------------------------ Session 2 :: END ------------------------------
+
+
+select essn, pno, hours,
+
+avg(hours) over() as Average,
+
+hours*100/sum(hours) over (partition by pno) as contribution_project,
+
+hours*100/sum(hours) over (partition by essn) as contribution_personal
+
+from works_on
+
+order by essn;
