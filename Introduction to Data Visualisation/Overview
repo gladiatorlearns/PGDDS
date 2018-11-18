@@ -1,0 +1,76 @@
+Course Overview
+
+Welcome to the course on EDA & Statistics! Let's listen to Rohit Sharma, Program Director, as he gives a quick overview of what you will be learning in this course.
+
+Introduction: Data Visualisation
+
+Welcome to the session on 'Introduction to Data Visualisation'.
+
+ 
+In this session
+
+ 
+
+Let's begin this session by understanding how data visualisation can add value to the information you want to convey. Graphics and visuals, if used intelligently and innovatively, can convey a lot more than what raw data alone can convey. You will learn about the pre-attentive and attentive attributes, which are the differentiating factors in making your visuals interesting for the reader. 
+
+ 
+
+Next, we will delve deeper into the different types of charts such as:
+
+    Line chart
+    Bar chart
+    Histogram
+    Pie chart
+    Stacked bar chart
+    Scatter plot
+    Box plot
+    Grouped bar chart
+
+You will learn about the utility and limitations of these different types of charts. 
+
+ 
+Guidelines for in-module questions
+
+The in-video and in-content questions for this module are not graded. There are no graded questions for this session.
+
+ 
+People you will hear from in this session
+Subject Matter Expert
+
+Chandrashekar Ramanathan
+
+Professor & Dean (Academics), IIIT- B
+
+The International Institute of Information Technology, Bangalore, also known as IIIT-B, is one of India's foremost graduate schools. Through its Integrated M.Tech., M.Tech., M.S. (Research) and PhD programs in the IT space, it focuses equally on innovation and education.
+
+                                                                                                          
+Industry Expert
+
+S. Anand
+Chief Data Scientist, Gramener
+
+Gramener is a data visualisation and analytics company. Founded in 2010 by Ex-IBM and BCG leaders, it addresses the essential need of making the "consumption" of data simple, rapid and coherent across organisations.
+
+ 
+Presenter
+
+Rohit Sharma
+
+
+Visualisations - Some Examples - https://www.youtube.com/watch?v=N721QfaY4XQ
+
+Now that you know the various types of data visualisation techniques available, let's look at a real-life example of how data visualisation can help you derive insights out of data very quickly.
+
+You saw how data visualisation can improve data density and improve the amount of information being conveyed. Just imagine how difficult it would be to interpret a spreadsheet with the score of each inning of each batsman being recorded along with his strike rate. In this case, data visualisation can help you figure out many insights just by looking at the plot. You can see the visualisation here:https://gramener.com/cricket/
+
+You saw how a tree map diagram showed how multiple companies and sectors react to the budget. You can find the interactive graph here. https://gramener.com/budget/?Year=2007
+
+ 
+
+An important point to remember is that visualisations should be accompanied by a voice or text narrative if possible - it improves the experience of the user drastically. 
+
+ 
+
+Next, let's see how visualisation can help in visual exploratory analytics. Here, you will see how data visualisation helped in understanding the connections between different software and clustering them together based on common features. You can find the visual here. https://gramener.com/software/
+
+
