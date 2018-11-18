@@ -1,0 +1,166 @@
+Graded Questions
+
+Download the data set given below and load it in Tableau. This data set is the batting performance of Virat Kohli 
+
+ 
+
+Batting Performance
+file_download-Download - Viray Kolhi
+
+Answer the following questions:
+
+Batting Performance
+
+Using the data set, find out the country against which Virat Kohli has the maximum batting average. Here, the batting average is the (number of runs scored)/(the number of innings) and not the average runs Virat Kohli scored before getting out.
+The Netherlands
+Bangladesh
+Feedback :
+One way to convert the runs into a proper format is to split the runs column to remove the * sign. Then, you can modify the data types of the split columns and perform all your operations on that column. Here, you have to plot the average of the runs against the opposition.
+Correct
+West Indies
+Sri Lanka
+
+Questions:2/10
+  
+Batting Performance
+
+Plot a histogram to see where Virat Kohli has scored the most number of times.
+(0-10]
+Feedback :
+Upon plotting the histogram, you will see that this is the case. Remember to change the bin widths accordingly. And perform the aggregation on the count of runs, since you want the number of times Virat has scored in these areas.
+Correct
+(20-30]
+(40-50]
+(100-110]
+
+Questions:3/10
+ 
+ 
+Batting Performance
+
+Whenever Virat Kohli has scored 90-100 runs (exclude 100), what has been the average strike rate?
+
+83
+
+93
+Feedback :
+
+You can put the the SR measure as an additional information through the colour. Tableau will tell you what the strike rate is when you click on the 90-100 histogram bar.
+Correct
+
+103
+
+113
+
+
+Batting Performance
+
+Using the previous histogram find the runs interval where Virat has scored the maximum number of sixes. Also, mention the number of fours he hit in the same bracket.
+
+110-120, 79
+
+100-110, 90
+Feedback :
+
+One way to solve this is to add the 6S and 4S column to the histogram and compare and check in which run bracket he has hit the maximum number of sixes and then report back the corresponding number of fours in that bracket.
+Correct
+
+90-100, 52
+
+70-80, 44
+
+Batting Performance
+
+Plot a pie chart to find out the approximate percentage of the times Virat Kohli has been out by LBW in all his innings. Take into account all his innings, including the ones in which he remained not out.
+56%
+28%
+14%
+7%
+Feedback :
+Use Dismissals as a dimension and count of any numeric variable such as innings as a measure. Plot a pie chart, choose the quick calculation table by right clicking the measure value, and choose percentage.
+Correct
+
+Batting Performance
+
+Let’s say you want to visualise the consistency of the runs scored by Virat against various teams, i.e. you want to compare the spread of the runs scored by Virat against various teams. Which of the following plots will be the most appropriate for visualising this?
+
+A bar chart with x = Opposition and y = Average runs scored
+
+A bar chart with x = Opposition and y = Median of runs scored
+
+A boxplot with x = Opposition and y = Runs scored
+Feedback :
+
+Boxplots are almost always the best choice for visualising the spread of a numeric variable because they do not show you aggregate statistics like mean,, median but rather show the entire range of values and how they are distributed.
+Correct
+
+A pie chart with each pie showing the percentage of runs scored
+Feedback :
+
+The pie chart will only show you the percentages, not the entire range of runs scored.
+
+Batting Performance
+
+In which years have Kohli’s runs kept improving in the Q2-Q4 period given that he played at least one match in that period?
+
+2013 and 2015
+Feedback :
+
+First, you need to add start date the column and runs scored in the rows. Then create a drill down from year class, as it would be the default class in the Tableau workspace, into the quarter class. Here you need to check in which years scores exist in Q2 and Q4. Then you need to see if the runs scored form an upward straight line or not, indicating that he kept improving his scores.
+Correct
+
+2011 and 2014
+
+2012 and 2013
+
+2012 and 2015
+
+Batting Performance
+
+Against which country has Virat scored the maximum runs in matches where the mode of dismissal was “caught”?
+
+Australia
+Feedback :
+
+One way to solve this is to create a bar graph with the runs (taken as a measure after being split) and dismissal in the row and the opposition in the column. You can observe that against Australia the number of runs scored is the highest at 664.
+Correct
+
+West Indies
+
+New Zealand
+
+Bangladesh
+
+Batting Performance
+
+What is the batting position at which Virat has the best average against England?
+
+3
+
+4
+Feedback :
+
+First, you need to take the runs(after performing the split) scored as the measure and Pos as a dimension. Then once you have created the bar chart with average runs scored and the position numbers, add the opposition dimension to the workspace by using the colour feature. Virat has the best average against England at Pos 4.
+Correct
+
+1
+
+2
+
+Batting Performance
+
+What is the average strike rate of Kohli in the ground where he has also spent the longest time?
+
+82.7
+
+84.8
+
+94.3
+Feedback :
+
+Plot a bar chart taking mins in the rows and Ground in the columns. You get that Virat has spent the maximum amount of time in Vishakhapatnam Ground. Then add avg. SR as a detail to the current chart. Once you click on the Vishakhapatnam bar, you will get the avg. SR as  94.3.
+Correct
+
+91.3
+
+
