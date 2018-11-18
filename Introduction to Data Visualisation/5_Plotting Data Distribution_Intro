@@ -1,0 +1,34 @@
+Introduction
+About This Session
+
+As the name suggests, distributions tell us how the data is distributed across values of different attributes of the data. These distributions could be across one variable, or more than one variable too. As an example, while looking at social media data, you can find the number of users distributed across different amounts of time spent per month on the website. 
+
+ 
+
+In this session, you will learn how to visualise distributions of data. Through these examples, you will also understand why visualising distributions is useful and adds value to your analysis.
+
+ 
+Course Material
+
+In this session, you will go through some videos where we have demonstrated data visualisation techniques on a Jupyter notebook. For your benefit, we have placed the Jupyter notebooks along with the datasets that we have used in the following downloadable link:
+
+Univariate Distributions
+
+ 
+
+A univariate distribution shows how data points of one variable are distributed. As an example, a frequency distribution of sales is a univariate distribution. Another example is number of users distributed across time spent on website per week.
+
+ 
+
+Prof. Raghavan will take you through some basics about univariate distributions, and common plots used with this type of distributions. In this lecture, we'll be using the seaborn library for plotting. However, as you will see, matplotlib works well in conjunction with seaborn, and you may continue using matplotlib even while using seaborn.
+
+ 
+
+In this video, we will use some sales data. The main attributes that we will work with in this data set are sales, profit, order quantity and shipping costs. 
+
+To recap, you learnt to create the following types of univariate plots using seaborn:
+
+    Histograms
+    Density plots
+
+These plots give you detailed information on the spectrum of values that your data spread across. In the example of shipping cost, a histogram or a density plot will show the spread of shipping costs across all purchases. You may do the same for attributes like sales, profit, etc.
