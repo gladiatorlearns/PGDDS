@@ -37,3 +37,166 @@ Subject Matter Expert
 Prof. G. Srinivasaraghavan
 Professor, IIIT-B
 Rated as one of the top 10 academicians in the field of Data Science in India, Prof. Raghavan is an authoritative figure and a delight to learn from.
+
+Data Visualisation Toolkit
+
+Before we start learning about different visualisations and their uses, let's try and answer a more fundamental question - what are the tools and libraries you would need to employ to perform visualisations?
+
+ 
+
+For the purpose of this module, we will be dealing with the following two libraries:
+
+    matplotlib
+    seaborn
+
+Once your toolkit is equipped with these libraries, you can perform most types of visualisations. Our Subject Matter Expert, Prof. Srinivasaraghavan, will take you through the reasons why these libraries are commonly used. Also, you will hear some more about why visualisations are a critical part of a data analyst's skillset.
+
+To summarise, seaborn is built on top of matplotlib, and they can be used well in conjunction. In the upcoming lectures, you will learn to create some common types of data visualisations using matplotlib and seaborn.
+
+Components of a Plot
+
+Previously, you were introduced to the toolkit that we will be using throughout the data visualisation module. Between matplotlib and seaborn, we can perform most types of visualisations.
+
+ 
+
+In this lecture, you will learn the basic anatomy of a plot in matplotlib. You will learn how to create basic plots, label them, add headings, manipulate line types etc.
+
+ 
+
+Note: The Jupyter notebook used in this demonstration can be found in the 'Introduction' page of this session.
+
+To recap, matplotlib allows you to use a simple and intuitive workflow to create plots. Here are the important commands of matplotlib that you learnt in this video:
+
+    plt.plot() - Create a plot object 
+    plt.show()- Explicit command required to display the plot object
+    plt.xlabel(), plt.ylabel()- Specify labels for the X and Y axis respectively.
+    plt.title()- Add a title to the plot object
+    
+    Specifying Line Style
+
+Let's say 'x' and 'y' are two lists that you want to plot. You have initialised matplotlib.pyplot as plt. Now, you want to plot a blue coloured line with circles as markers for your points. What is the function call for this?
+
+For your reference, here is the official documentation of the Pyplot API.
+
+plt.plot(x, y, 'bo') plt.show()
+Feedback :
+
+Try the above command in your IPython notebook to check.
+Correct
+
+plt.plot(x, y, 'bO') plt.show()
+
+plt.plot(x, y, 'bcircle') plt.show()
+
+plt.plot(x, y, 'b-circle') plt.show()
+
+
+Sub-Plots
+
+In the previous section, you learnt about the basic ways to make plots. 
+
+ 
+
+Sometimes, it is beneficial to counter-pose different plots next to each other. For example, say you have some data on e-commerce purchases. If you want to analyse the number of purchases across different categories, you can make two histograms for two categories - one for male buyers, one for female buyers. These two placed next to each other make it easy to compare the buying patterns of males and females.
+
+ 
+
+Different plots present in a single plot object are commonly referred to as subplots. Let's look at how to create subplots inside a single plot in matplotlib.
+
+ 
+
+Note: The Jupyter notebook used in this demonstration can be found in the 'Introduction' page of this session.
+
+To recap, sub-plots are a good way to compare the shape and size of different plots. Here are the matplotlib commands you learnt in this video:
+
+    plt.figure(n)- Initiates a figure which will be used to populate with subplots. 'n' is a unique index for this figure.
+     plt.subplot(nrow, ncol, x)- Creates a subplot. 'nrow' and 'ncol' are the dimensions of the array inside the figure, and 'x' is the position in the array.
+     
+     
+     Arrays of Plots
+
+In 'plt.subplot(), the numbering starts from the top left element, and moves rightward along each row, and then goes to the next row.
+
+Out of the following subplot options, which one does NOT represent a plot which is part of the second column from the left in the array of sub-plots?
+
+plt.subplot(4,4,2)
+
+plt.subplot(4,4,14)
+
+plt.subplot(3,3,7)
+Feedback :
+
+This represents row 3, column 1
+Correct
+
+plt.subplot(3,3,8)
+Feedback :
+
+This represents row 3, column 2
+
+Functionalities of Plots
+
+ 
+
+Plots are used to convey different types of ideas. For example, using some plots, you may want to visualise the spread of the data in two variables. With some others, you may want to gauge the frequency of a certain label. Depending on the objective of your visualisation task, you will choose the appropriate type of plot. 
+
+ 
+
+In this section, we will examine different types of plots, learn how they are created, and compare their uses and limitations.
+
+ 
+
+To summarise, following are the important types of plots that you will often use while visualising data, along with their function calls as well as most common uses:
+
+ 
+
+    Box Plots - Displays the spread of the data. Used to visualise the variance in the data, as well as to find information on what proportion of the data is above and below the median value.
+    Histogram - Displays frequency distribution of a single variable. Used to see what fraction of data is around which values.
+    Scatter Plot - Displays the scatter of the data. Used to detect outliers. Points to the naturally occurring clusters in the data.
+    
+    Deciding which type of plot to use
+
+You have some data of credit card transactions. In this data, you're trying to find transaction values that are way outside the usual range of the data, in order to investigate some fraud.
+
+Which type of plot will you use in this case?
+Pie Chart
+Scatter Plot
+Correct
+Histogram
+Box Plot
+
+Box Plot
+
+The following box plot was plotted for the feature 'Order_Quantity' from a dataset. What inferences can be drawn looking at the following boxplot? (More than one option may be correct)
+
+ https://images.upgrad.com/5f45269f-d3ce-4cf4-bc44-4cb944964acf-BoxPlot.PNG
+
+The lower quartile of 'Order_Quantity' lies between 10 and 20
+Feedback :
+
+The lower part of the box represents the lower quartile and as you can see in the boxplot, that part lies between 10 and 20.
+Correct
+
+The minimum value of Order_Quantity is 0
+
+The median of the 'Order_Quantity' is 30.
+
+The upper quartile of 'Order_Quantity' lies between 30 and 40
+Feedback :
+
+The upper part of the box represents the upper quartile and as you can see in the boxplot, that part lies between 30 and 40.
+
+Summary
+
+To reiterate the fundamental adage of this module, a picture is worth a thousand words.
+
+ 
+
+In this module, you first started with some details about the visualisation toolkit and libraries that you will use. Through this session, we perform visualisations using matplotlib .
+
+ 
+
+Further, you learnt about the elements that display more information about a plot. Also, you saw how to fit in several sub-plots inside a single plot object, which is useful to compare different properties of your data.
+
+
+Finally, you saw different types of plots satisfying different objectives from a plot.
