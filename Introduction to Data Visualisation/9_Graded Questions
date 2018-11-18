@@ -54,3 +54,25 @@ df = df[(df.Profit < 0) | (df.Sales > 15000)]
 
 sns.jointplot('Sales', 'Profit', df)
 plt.show()
+
+Questions:3/3
+ 
+Ref - Heat map plot graded question png
+ 
+Correlation using heatmap
+
+What is the highest value of correlation between two variables as observed from the following heatmap?
+
+ 
+
+1
+
+0.79
+Feedback :
+
+As we can see from the heatmap, 'Close_qt' and 'Close_et' are most correlated with the value 0.79.
+Correct
+
+0.73
+
+0.38
