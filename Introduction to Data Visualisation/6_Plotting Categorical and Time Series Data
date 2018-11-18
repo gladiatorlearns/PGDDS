@@ -1,0 +1,25 @@
+Introduction
+About This Session
+
+Data is often divided into categories. In most data involving sales of products, there is information about what category a particular product belongs to. As another example, while looking at transactions on credit cards, there is information on which tier a certain credit card belongs to (regular, premium, gold, etc.). 
+
+ 
+
+More often than not, insights require to be divided according to the categories, since different categories usually carry different business goals. In this session, you will see how you can use your recently learnt visualisation skills to find insights about categories.
+
+ 
+
+Also, we will cover time-series data in this session.
+
+ 
+Course Material
+
+In this session, you will go through some videos where we have demonstrated data visualisation techniques on a Jupyter notebook. For your benefit, we have placed the Jupyter notebooks along with the datasets that we have used in the following downloadable link:
+
+Plotting Distributions Across Categories
+
+In the previous pages, you saw how to visualise distributions of one or two variables. Now, let's move on to data that involves categories.
+
+ 
+
+For example, while working with data of sales from an e-commerce website, the products are usually divided into various categories of purchase (e.g., Home Appliances, Furniture, Kitchen Items, etc.). Let's see how we can visualise this data to get a better understanding of it. 
