@@ -1,0 +1,208 @@
+Introduction
+
+In this session, you are provided with some extra practice questions that would be pretty useful for strengthening your concepts in Tableau. You are advised to go through the entire module of Visualisation with Tableau along with the official demonstration videos before attempting the following segment. 
+
+ 
+Overview
+
+You will be attempting both MCQs as well as subjective questions. These questions are ungraded and solely for practice. Go through the subjective questions thoroughly as they test your conceptual understanding in Tableau.
+
+Visualisation with Tableau
+
+If you are given 3 tables containing the sales/profit information of three separate products of a particular company and want to compare which product is the most profitable, which operation should be performed at first to connect to all of them?
+
+Blend
+
+Join
+Correct
+
+Heirarchy
+
+Calculation
+
+
+Visualisation with Tableau
+
+Now once you have performed a join, you need to know how the product sales vary over a year. Which Tableau functionality would you use to solve this issue?
+
+Date/Time Conversion only
+
+Date/Time Conversion followed by a hierarchial division of the products based on either quarters or months depending on the problem asked
+Correct
+
+No change needed. Once the data is loaded into Tableau, the software would intuitively draw a comparison between all the products simultaneously
+
+Manually plot in the Tableau software
+
+
+Visualisation with Tableau
+
+Now you would like to know in which state(given that there are more than 50 states) each product has had the maximum number of sales. Which data visualisation would suitably portray the above scenario?
+
+Bar chart
+
+Scatter Plot
+
+Tree Map
+Feedback :
+
+Since we are comparing nearly 50 dimensions to find out which state has the highest sales, a tree-map would accurately portray the above scenario
+Correct
+
+Box Plot
+
+Visualisation with Tableau
+
+For a particular product, you have the historical prices( adjusted for inflation) along with the total sales it was able to generate at that price point. In order to visualise at which price-points the product does a good job of being appealing to the market, which of the following methods need to be used?
+
+Box-plot
+
+Scatter-plot
+
+Bar-chart
+
+Dual Axes
+Feedback :
+
+Since the ranges of the quantitative variables differ largely, we need to use dual axes to compare and contrast the price point with the total sales
+
+Visualisation with Tableau
+
+For a particular product, you need to know which geographical region has the maximum sales. Which visualisation technique would be best suitable for this?
+
+Tree Map
+
+Area Map
+Correct
+
+Box Plot
+
+Scatter Plot
+
+
+Visualisation with Tableau
+
+What is the average balance for the those where the campaign outcome was successful?
+
+1921
+
+1487
+
+1465
+
+1939
+Feedback :
+
+Create a bar chart with average balance and campaign outcome as the 2 variables and then check the average balance for the success outcome column
+
+Visualisation with Tableau
+
+What is the average duration for people whose marital status is single and they have been given a loan, i.e., their loan status is "yes"?
+
+243
+
+262
+
+266
+Feedback :
+
+Create a bar chart with Loan status and the average duration and then add the marital status to the colour field.
+Correct
+
+304
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+Visualisation with Tableau
+
+If you want to know the spread of duration of loan application over the entire year, which of the following visualisation method should be used?
+
+Scatter plot
+
+Tree Map
+
+Box Plot
+Feedback :
+
+Box plots can give the accurate picture of the spread of data without taking into consideration the measures like mean , median , etc.
+Correct
+
+Bar chart
+
+
+Visualisation with Tableau
+
+Using a pie-chart report the average salary of customers who were last contacted in the month of May.
+
+56,032
+
+52,487
+Correct
+
+64,886
+
+58,893
+
+Visualisation with Tableau
+
+What is the percent difference in the average salary for the month of July? (By default the percent difference calculation would be between the previous and the current month)
+
+8%
+Feedback :
+
+Once you have created a chart showing Salary and month, change the aggregation of salary to average and then create a calculation for percent difference. 
+Correct
+
+4%
+
+3%
+
+7%
+
+
+Assignment 2
+
+
+Assessments II
+
+In this segment, you have been provided with some subjective questions which test your understanding of concepts in Tableau. Please attempt the questions on your own before checking on the ideal solution. These questions are ungraded and solely for practice purposes. You also need not worry if your answer does not match exactly with the ideal solution as long as the basic idea remains the same.
+
+Advantages of Tree-Maps over Bar-charts
+
+You know that Tableau employs different visualisation techniques to solve a similar problem. For example, if you want to know which measure has the highest value, a bar chart or a tree-map would solve the problem. However, each visualisation technique has its own advantage and disadvantage. Could you give an example where a tree-map would be far more suitable to visually portray the previous scenario?
+
+Tree-maps use rectangular bars and their colour intensity to show the deviation in the measures. From a visual perspective, tree-maps would be far more suitable in scenarios where the dimension variables are pretty high and it would be difficult to portray all that information clearly with the help of a bar chart. For example, if the sample data size is more than 100, a bar chart is visually strenuous and even though the peaks would be visible, it would be difficult to know the variation accurately in case we are handling close values. For example, if the highest values are, say, 102,101,100, all of them would get identical peaks. Even though the tree-map's colour intensity wouldn't vary that much, its position would give away the measure having the highest value.
+
+Dashboard
+
+Let's say you are trying to understand the sales strategy for a few products for the past 10 years in a certain country. For this endeavour, you are given the required dataset that contains the necessary variables. Design a strategy using tableau dashboards on how your final presentation should be.
+
+For creating dashboard you need to create separate worksheets which contain the data that is to be compared for each of the years. Assuming that you have the geographical location you need to create an area map for the products to know which places are more suitable for a particular product. Then other analyses like percent difference pie-chart, hierarchical division of sales as per the quarters/years to know how the product has fared over the years, etc. can be done. Once each of the analysis has been done, you need to pull them out to a dashboard, normalize the view so that the difference becomes apparent as per the requirement of the presentation.
+
+
+Aggregation
+
+Why is data aggregation or disaggregation necessary for creating charts in Tableau?
+
+Data aggregation is necessary in cases when you need to work on summarized data values. For example like you need to calculate the average time taken for completing a job for a particular group of technicians This is useful in almost every visualisation in Tableau like bar-chart, histogram, etc. 
+
+Disaggregation, on the other hand, allows each data point to be handled independently in order to know the spread and trend of how the data is in the actual table. Scatter plots utilise this feature to compare 2 quantitative variables or measures in Tableau.
+
+Dual Axes
+
+Explain the significance of dual axes over scatter plots using a suitable example
+
+
+Dual axes is a vital visualisation skill embedded in Tableau that helps in comparing two quantitative variables that have a significant difference in magnitude. Scatter-plots also operate on similar variables, but if there is a disparity in the order of the data that is being analysed, the visualisation will fail to showcase a comparison/contrast effectively. Dual axes take care of this problem by showing both the quantitative variables side by side, allowing for a decent analysis to take place. For example, when comparing the sales and profits of a product, a scatter plot would be sufficient to show the difference. Whereas in the case of comparing gross profits with the price of the product, a dual axes plot would give a better idea of how the data is behaving.
+
+
+Discrete and Continuous Values
+
+Explain using an example, the effect of discrete and continuous values on drill-down and hierarchical order in Tableau.
+
+During a drill-down on a variable like a date, we get divisions on the basis of year, quarter, month, day and so on. Now if the data is used as a discrete variable, then separate drill downs will be created for different quarters. However, using a continuous variable enables us to do the drill down on the same graph.
+
