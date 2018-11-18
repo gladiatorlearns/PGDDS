@@ -1,0 +1,39 @@
+Introduction
+About This Session
+
+You have probably heard the following age-old adage a number of times - a picture is worth a thousand words. You can describe data and its properties verbally in as much eloquent detail as you like, but a picture is always more valuable. Humans learn and understand through visual cues, and there is nothing better than an image to explain a concept or an idea.
+
+ 
+
+In the analysis of data, the ability to effectively visualise your analyses is an invaluable one. While communicating certain results and insights with different stakeholders, there is nothing like a visualisation to sum up your insights.
+
+ 
+
+At the end of this module, you will be comfortable with several types of plots, each with different objectives. The videos you will see in this module will be driven by demonstrations and examples. Also, you will be able to perform all the demonstrations on your own machine. Let's look at the course material used in this session.
+
+ 
+Pre-requisite for this Module
+
+The students are expected to have gone through "Intro to Python" & "Python for Data Science" modules before beginning with this module.
+
+ 
+Course Material
+
+In this session, you will go through some videos where we have demonstrated data visualisation techniques on a Jupyter notebook. For your benefit, we have placed the Jupyter notebooks and the data that we have used in the following downloadable link:
+
+ 
+Basics of Plotting - Jupyter Notebook + Data
+file_downloadDownload
+
+ 
+
+These notebooks are a great sandbox for you to practice code. Using the code that is already written, make some modifications in the types of variables, values of numbers etc. and watch how the output changes accordingly. Download the file, unzip it, and use the enclosed notebook to try out the commands we will teach in this session.
+
+ 
+People You Will Hear From In This Session
+
+Subject Matter Expert
+
+Prof. G. Srinivasaraghavan
+Professor, IIIT-B
+Rated as one of the top 10 academicians in the field of Data Science in India, Prof. Raghavan is an authoritative figure and a delight to learn from.
