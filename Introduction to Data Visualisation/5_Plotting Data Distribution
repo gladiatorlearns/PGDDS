@@ -32,3 +32,29 @@ To recap, you learnt to create the following types of univariate plots using sea
     Density plots
 
 These plots give you detailed information on the spectrum of values that your data spread across. In the example of shipping cost, a histogram or a density plot will show the spread of shipping costs across all purchases. You may do the same for attributes like sales, profit, etc.
+
+
+Specifying number of bins with seaborn
+
+While using seaborn to plot the Sales column, say you want to specify the number of bins as 50 while making the function call. What function call will you use?
+
+Here is the seaborn documentation for your reference.
+Ref -https://seaborn.pydata.org/api.html
+
+Suggested Answer
+
+sns.distplot(df['Sales'], bins = 50)
+
+Univariate Distributions - Rug Plots
+
+In the previous page, you were introduced to univariate distributions, and plotting them as histograms and probability distribution plots.
+
+ 
+
+Let's look at more ways to plot univariate distributions using matplotlib and seaborn. In this lecture, we start with a rug plot,
+
+To recap, rug plot places small sticks for each data point within a certain level of granularity. Only one stick is placed for each value. The density of sticks is a telling sign of the proportion of data in that region.
+
+ 
+
+Let's try a few questions about rug plots.a graph that visually shows you regions of the data where values are concentrated.
