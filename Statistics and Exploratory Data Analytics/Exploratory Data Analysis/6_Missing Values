@@ -1,0 +1,70 @@
+Missing Values
+
+In the previous lecture, you learnt how to fix rows and columns. Let’s now study another common data quality issue — how to treat missing values.
+
+ 
+
+You have already learnt how to treat missing values in Python. In the following lecture, Anand will walk you through some important points you should keep in mind while treating missing values.
+
+The most important takeaway from this lecture is - good methods add information, bad methods exaggerate information.
+
+ 
+
+In case you can add information from reliable external sources, you should use it to replace missing values. But often, it is better to let missing values be and continue with the analysis rather than extrapolate the available information.
+
+
+Let us summarise how to deal with missing values:
+
+    Set values as missing values: Identify values that indicate missing data, and yet are not recognised by the software as such, e.g treat blank strings, "NA", "XX", "999", etc. as missing.
+
+    Adding is good, exaggerating is bad: You should try to get information from reliable external sources as much as possible, but if you can’t, then it is better to keep missing values as such rather than exaggerating the existing rows/columns.
+
+    Delete rows, columns: Rows could be deleted if the number of missing values are insignificant in number, as this would not impact the analysis. Columns could be removed if the missing values are quite significant in number.
+
+    Fill partial missing values using business judgement: Missing time zone, century, etc. These values are easily identifiable.
+    
+    Questions:1/1
+ 
+Missing Values
+
+What is correct in regards to missing values?
+It is always safe to replace the missing values with the mean or median values and then continue with the analysis
+Feedback :
+Missing values can also indicate that the information was genuinely not available, or was too sensitive for people to answer. Missing values should not be replaced without understanding why they exist. At times, it is better to do the analysis by ignoring the missing values, instead of replacing the missing values by other values.
+Incorrect
+Missing values are always due to human error in the data gathering and recording process
+None of the above
+Feedback :
+Values may be missing for multiple reasons such as non-response due to sensitivity of information, data entry error, censoring, etc. Without understanding the reason, replacing missing values might lead to a faulty analysis.
+Correct
+Both of the above
+
+Questions:1/1
+
+Missing Values removal
+Description
+Count the number of missing values in each column of the dataset 'marks'.
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+marks = pd.read_csv('https://query.data.world/s/HqjNNadqEnwSq1qnoV_JqyRJkc7o6O')
+print(marks.isnull().sum())
+
+Questions
+Removing rows with missing values
+Description
+Remove all the rows in the dataset 'marks' having 5 missing values and then print the number of missing values in each column.
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/HqjNNadqEnwSq1qnoV_JqyRJkc7o6O')
+
+df = df[df.isnull().sum(axis=1) != 5]
+print(df.isnull().sum())
+
+
+https://pandas.pydata.org/pandas-docs/stable/missing_data.html
