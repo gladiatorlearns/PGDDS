@@ -1,0 +1,67 @@
+Filtering Data
+
+In the previous segment, you learnt how to go about fixing invalid values. Now, let’s learn how to filter data.
+
+ 
+
+After you have fixed the missing values, standardised the existing values, and fixed the invalid values, you would get to the last stage of data cleaning. Though you have a largely accurate data set by now, you might not need the entire data set for your analysis. It is important to understand what you need to infer from the data and then choose the relevant parts of the data set for your analysis. Thus, you need to filter the data to get what you need for your analysis.
+
+ 
+
+Let’s summarise what you learnt about filtering data. You could use this as a checklist for future data cleaning exercises.
+
+    Deduplicate data: Remove identical rows, remove rows where some columns are identical
+    Filter rows: Filter by segment, filter by date period to get only the rows relevant to the analysis
+    Filter columns: Pick columns relevant to the analysis
+    Aggregate data: Group by required keys, aggregate the rest
+
+ 
+
+Comprehension
+
+You have two data sets, each containing different columns of information regarding the employees of a company. The two data sets have a varying number of rows/observations. Dataset-1 contains information on Name, Age, and Salary against Employee ID. Dataset-2 contains information on Education and Experience against EmployeeID. It is unknown why the data sets have varying rows, i.e. why some employees were missed while collecting the data for each of the data sets. Employee ID is the identifier and thus the common column in both the data sets.
+
+Questions:1/2
+ 
+ 
+Merge1
+
+You are required to merge the two datasets such that only the employees common in both the data sets are a part of the new combined data set.
+
+What operation would you use to get the desired result?
+Inner Join
+Feedback :
+Inner join is used to merge the data sets, only keeping the rows corresponding to employee IDs that are common to both the data sets while removing the rest. Outer join, on the other hand, is used when you want to display all the rows from both the tables (even if the rows do not have a common key in both the tables)
+Correct
+Left outer join
+Right outer join
+Cross join
+
+
+Questions:2/2
+ 
+ 
+Merge2
+
+Which operation would you use to combine the two data sets such that it would list all employees common to both the datasets, while also having the employees unique to both the data sets., even if complete data is not available for each of them.
+Right Outer join
+Cross join
+Full outer join
+Feedback :
+Full outer join is used to merge the data sets such that, apart from keeping the common Employee IDs, it also includes the Employee IDs unique to both the data sets.
+Correct
+
+Duplicated Rows
+Description
+The given Dataframe 'rating' has repeated rows. You need to remove the duplicated rows. 
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+rating = pd.read_csv('https://query.data.world/s/EX0EpmqwfA2UYGz1Xtd_zi4R0dQpog')
+
+rating_update = rating.drop_duplicates()
+
+print(rating.shape)
+print(rating_update.shape)
