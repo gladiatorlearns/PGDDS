@@ -89,3 +89,11 @@ Unordered categorical
 Feedback :
 Don't get confused by the numeric values for StateofMind. There is no order between the categories.
 
+
+After getting a basic feel for the variables in the dataset, the next step is to gain insights from the data. In the next few lectures, you will learn to do univariate analysis on the following types of variables:
+
+    Categorical Variables
+        Unordered categorical
+        Ordered categorical
+    Quantitative variables
+
