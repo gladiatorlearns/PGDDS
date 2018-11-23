@@ -1,0 +1,130 @@
+Quantitative Variables - Univariate Analysis
+
+You have seen how to conduct univariate analysis on categorical variables. Now, let's look at quantitative or numeric variables.
+
+ 
+
+Prerequisites
+
+In this segment, Anand will take you through various summary metrics. In case you are not familiar with the basics of descriptive statistics such as mean, median, mode, and standard deviation, you are recommended to go through the study material provided on the resources page. Knowledge of these concepts is essential for this topic and the forthcoming topics in other modules, so make sure you make yourself familiar before moving on. 
+
+https://learn.upgrad.com/v/course/208/session/22060/segment/113056
+
+Recommended Additional Content
+
+Although, these are not mandatory readings, but going through these will make it easier for you to grasp the new topics.
+
+    Mean and median: The basics
+    Mean and median: Advanced
+    Range, Interquartile range (IQR), Mean absolute deviation (MAD)
+    Population variance and standard deviation
+    Sample variance and standard deviation
+    Basic probability
+    Random variables
+
+
+Let’s now learn how to analyse quantitative variables.
+
+Mean and median are single values that broadly give a representation of the entire data. As Anand stated very clearly, it is very important to understand when to use these metrics to avoid doing inaccurate analysis.
+
+
+While mean gives an average of all the values, median gives a typical value that could be used to represent the entire group. As a simple rule of thumb, always question someone if someone uses the mean, since median is almost always a better measure of ‘representativeness’.
+
+ 
+
+Let’s now look at some other summary descriptive statistics such as mode, interquartile distance, standard deviation, etc.
+
+
+Standard deviation and interquartile difference are both used to represent the spread of the data.
+
+ 
+
+Interquartile difference is a much better metric than standard deviation if there are outliers in the data. This is because the standard deviation will be influenced by outliers while the interquartile difference will simply ignore them.
+
+ 
+
+You also saw how box plots are used to understand the spread of data.
+
+
+Questions:1/1
+ 
+Numeric and Ordered Categorical Variables
+
+Anand mentioned that you can treat numeric variables as ordered categorical variables. For analysis, you can deliberately convert numeric variables into ordered categorical, for example, if you have incomes of a few thousand people ranging from $5,000 to $100,000, you can categorise them into bins such as [5000, 10000], [10000,15000] and [15000, 20000].
+
+This is called 'binning'. 
+
+Which of the following variables can be binned into ordered categorical variables? Mark all the correct options.
+The temperature in a city over a certain time period
+Feedback : You can bin the temperatures as [0, 10 degrees], [10, 20 degrees] etc.
+Correct
+The revenue generated per day of a company
+Feedback : This can also be binned e.g. [0, 10k], [10k, 20k] etc.
+Correct
+Randomly generated unique customer IDs of customers such as 17913, 1282, 2380 etc.
+
+
+Questions:1/1
+ 
+Which metric to use
+
+Which of the following metrics can be used in case of unordered categorical data?
+Median
+Mode
+Feedback :
+Mode is the value with the maximum frequency. In unordered categorical variables, any order or difference between values is not defined. So, using median and mean make no sense here.
+Correct
+Mean
+All of the above
+Feedback :
+In unordered categorical variables, any order or difference between values is not defined. So, using median and mean make no sense here.
+
+Questions:1/1
+ 
+Which metric to use
+
+Consider the example Anand is discussing — there are a group of middle-class IT employees and Bill Gates in a room. If you want to get a rough sense of the income made by a typical IT employee, which metric would you choose?
+Mean
+Feedback :
+The average, calculated taking Bill Gates’ income into account, would be an overwhelmingly large number far from the income of any other IT employee in the room.
+Incorrect
+Median
+Feedback :
+The average, calculated taking Bill Gates’ income into account, would be an overwhelmingly large number far from the income of any other IT employee in the room. On the other hand, the median will not consider Bill Gates’ income and would be more representative.
+Correct
+
+
+Questions:1/1
+ 
+Median
+
+Let’s consider a sample which contains the ages of the students in this program: 36, 42, 32, NA, 22, NA, 25. The median age of this set is:
+36
+NA
+32
+Feedback :
+After removing the NA values and ordering, there are 5 quantities left. Thus, the median is the third value, i.e. 32.
+Correct
+25
+
+
+Questions:1/1
+ 
+Quantiles
+
+Look at the following marks for a course exam (out of 100).
+Quantiles	min	10%	25%	50%	75%	90%	max
+Final Marks	10	48	55	66	78	87	93
+
+ 
+
+Which of the following statements is FALSE?
+About 1/4 of the class received a score of 55 or less
+About 3/4 of the class received a score of 78 or less
+About 50% of the class received grades between 55 and 78
+About 1/30 of the class received a score of 48 or less
+Feedback :
+About 10% of the class received a score of 48 or less
+
+
+
