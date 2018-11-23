@@ -65,3 +65,27 @@ rating_update = rating.drop_duplicates()
 
 print(rating.shape)
 print(rating_update.shape)
+
+Summary
+
+After you get the specific parts of the data set that you need, the data is ready for analysis. In the next session, you will learn how to use the data you have prepared to get the desired insights.
+
+ 
+
+We will begin with univariate analysis, i.e. analysis of a single variable, and then move on to bivariate analysis and data metrics.
+
+It is important to note that what you learnt in this session are just common cases. There could be more beyond these and you have to use your business judgement or domain knowledge in such cases.
+Questions:1/1
+ 
+ Data Cleaning
+
+What are your top three takeaways from this session? (Word limit:200)
+
+Key Points are - 
+Missing, Invalid Values
+Standard Values.  
+Applying Filters
+
+
+
+
