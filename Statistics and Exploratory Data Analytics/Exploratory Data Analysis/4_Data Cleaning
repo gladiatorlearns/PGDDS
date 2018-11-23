@@ -1,0 +1,56 @@
+Introduction
+
+Welcome to the session on ‘Data Cleaning’.
+
+ 
+
+In the previous session, you learnt about various sources of data. Once you have procured the data, the next step is to clean it to get rid of data quality issues.
+
+ 
+
+There are various types of quality issues when it comes to data, and that’s why data cleaning is one of the most time-consuming steps of data analysis. For example, there could be formatting errors (e.g. rows and columns are ill-formatted, unclearly named etc.), missing values, repeated rows, spelling inconsistencies etc. These issues could make it difficult to analyse data and could lead to errors or irrelevant results. Thus, these issues need to be corrected before data is analysed.
+
+​​​​​
+In this session
+
+You will learn how to identify the various quality issues and techniques to clean data.
+
+ 
+
+Though data cleaning is often done in a somewhat haphazard way and it is too difficult to define a ‘single structured process’, we will study data cleaning in the following steps:
+
+    Fix rows and columns
+    Fix missing values
+    Standardise values
+    Fix invalid values
+    Filter data
+
+ 
+Guidelines for In Module-Questions
+
+The in-video and in-content questions for this session are not graded.
+
+ 
+Guidelines for coding console questions
+
+The lectures are interspersed with coding consoles to help you practise writing Python code. You will be given a brief problem statement and some pre-written code. You can write the code in the provided space, verify your answer using test cases, and submit when you are confident about the answer.
+
+ 
+
+Note that the coding console questions are non-graded. Some instructions for these questions are as follows:
+
+    Ignore the pre-written code on the console. Please don't change it.
+    Write your answer where you're asked to write it.
+
+    You may run and verify your codes any number of times.
+
+
+People you will hear from in this session:
+
+Subject Matter Expert:
+
+S Anand
+
+CEO, Gramener
+
+Gramener is one of the most prominent data analytics and visualisation companies in India. Anand, currently the CEO, was previously the Chief Data Scientist at Gramener and has extensive experience in management consulting and equity research.
