@@ -1,0 +1,69 @@
+Introduction
+
+Welcome to the session on ‘Univariate Analysis’. In the previous sessions, you learnt how to source data and how to clean it for analysis.
+
+ 
+In this session
+
+As the term “univariate” suggests, this session deals with analysing variables one at a time. It is important to separately understand each variable before moving on to analysing multiple variables together.
+
+ 
+
+The broad agenda for this session is as follows:
+
+    Metadata description
+
+    Data distribution plots
+
+    Summary metrics
+
+
+Data Description
+
+Given a data set, the first step is to understand what it contains. Information about a data set can be gained simply by looking at its metadata. Metadata, in simple terms, is the data that describes the each variable in detail. Information such as the size of the data set, how and when the data set was created, what the rows and variables represent, etc. are captured in metadata.  
+
+In this lecture, you learnt about metadata description.
+
+ 
+
+Types of Variables
+
+ 
+
+You learnt the difference between ordered and unordered categorical variables -
+
+    Ordered ones have some kind of ordering. Some examples are
+        Salary = High-Medium-low
+        Month = Jan-Feb-Mar etc.
+    Unordered ones do not have the notion of high-low, more-less etc. Example:
+        Type of loan taken by a person = home, personal, auto etc.
+        Organisation of a person = Sales, marketing, HR etc.
+
+Apart from the two types of categorical variables, the other most common type is quantitative variables. These are simply numeric variables which can be added up, multiplied, divided etc. For example, salary, number of bank accounts, runs scored by a batsman, the mileage of a car etc.
+
+ 
+
+So far, we have discussed the following types of variables:
+
+    Categorical variables
+        Unordered 
+        Ordered
+    Quantitative / numeric variables
+    
+    
+    Questions:1/1
+ 
+Ordered and Unordered Categorical Variables
+
+Categorical variables can be of two types - ordered categorical and unordered categorical. In unordered, it is not possible to say that a certain category is 'more or less' or 'higher or lower' than others. For example, color is such a variable (red is not greater or more than green etc.)
+
+On the other hand, ordered categories have a notion of 'higher-lower', 'before-after', 'more-less' etc. For e.g. the age-group variable having three values - child, adult and old is ordered categorical because an old person is 'more aged' than an adult etc. In general, it is possible to define some kind of ordering.
+
+Which of the following variables are ordered categorical?
+Types of loan taken by a person - home loan, education loan, personal loan
+The country of a person
+The months in a year - Jan, Feb, March etc.
+Feedback :
+Months have an element of ordering - Jan comes before April, Dec comes after everything else etc. In general, all dates are ordered categorical variables (day 23 comes after day 11 of the month etc.)
+Correct
+The organisation of a person - HR, marketing, analytics etc.
