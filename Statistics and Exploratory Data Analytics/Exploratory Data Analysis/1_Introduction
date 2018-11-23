@@ -42,6 +42,29 @@ Note that the coding console questions are non-graded. Some instructions for the
 
     You may run and verify your codes any number of times.
 
+Welcome to the session on "Data sourcing".
+
+ 
+In this session:
+
+To solve a business problem using analytics, you need to have historical data. Data is the key — the better the data, the more insights you can get out of it.
+
+
+Typically, data comes from various sources and your first job as a data analyst is to procure the data from them. In this session, you will learn about various sources of data and how to source data from public and private sources. The broad agenda for this session is as follows:
+
+    Private Data
+    Public Data
+
+Guidelines for in-session questions:
+
+The in-video and in-content questions for this session are not graded. 
+
+ 
+Downloads
+
+You can download the dataset used in the lectures from below.
+Data Sourcing Datasets
+file_downloadDownload
 People you will hear from in this session:
 
 Subject Matter Expert:
@@ -51,3 +74,4 @@ S Anand
 CEO, Gramener
 
 Gramener is one of the most prominent data analytics and visualisation companies in India. Anand, currently the CEO, was previously the Chief Data Scientist at Gramener and has extensive experience in management consulting and equity research.
+
