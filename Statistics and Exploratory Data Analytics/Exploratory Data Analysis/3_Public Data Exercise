@@ -1,0 +1,19 @@
+Public Data Exercise
+
+Census in India is a massive data collection exercise conducted every 10 years by the Registrar General and Census Commissioner of India (https://en.wikipedia.org/wiki/Registrar_General_and_Census_Commissioner_of_India) under the Ministry of Home Affairs (https://en.wikipedia.org/wiki/Ministry_of_Home_Affairs_(India)), Government of India (https://en.wikipedia.org/wiki/Government_of_India).
+
+ 
+
+The latest Census was conducted in 2011 under two phases — house listing and population enumeration. The Indian Population Census, 2011 covers population characteristics such as gender, religion, education and age among other important parameters. When this data is analysed at a macro level, such as a district or a state, it presents a bigger picture which helps the government make important decisions and frame the requisite policies.
+
+ 
+
+Census Data for 'Educational Level By Age And Sex For Population Age 7 And Above - 2011' is available here. Please download the file in column C-08 in the row corresponding to India. (http://www.censusindia.gov.in/2011census/C-series/C08.html)
+
+ 
+
+Let’s say you are working with a central government body and want to compare the literacy rates of states in India. 
+
+ 
+
+Your task is to understand the data (i.e. what do the rows and the attributes represent) and find the number of literates, illiterates, literacy rate etc as guided in the questions below. 
