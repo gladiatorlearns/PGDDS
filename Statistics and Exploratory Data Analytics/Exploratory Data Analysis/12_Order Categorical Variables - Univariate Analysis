@@ -1,0 +1,120 @@
+Ordered Categorical Variables - Univariate Analysis
+
+In the previous lecture, you saw how to conduct univariate analysis on unordered categorical variables. Let's now see how to do the same on ordered categorical variables.
+
+ 
+
+Before that, think about the type of analysis you would do on ordered categorical variables.
+
+Questions:1/2
+ 
+ 
+Ordered Categorical Variables
+
+You have already worked with ordered categorical variables before - there is a certain order or notion of 'high-low', 'before-after' etc. among the categories. For e.g. days of the week (Monday comes before Tuesday), grades of students (A is better than B), number of overs bowled by a bowler (3, 4, 9) etc.
+
+Which of the following are other examples of ordered categorical variables? Choose all the correct options.
+Dates in a year e.g. Jan 2, Mar 15 etc.
+Feedback : Dates are ordered - each day comes before or after other days.
+Correct
+Star rating of a restaurant on Zomato on a scale of 1-5
+Feedback : A rating of 5 is better than 4, 3, 2, 1.
+Correct
+Type of education board - ICSE, CBSE, Maharashtra board etc.
+Country names
+ 
+ You may have had some experience taking power meter readings at least once. It would be interesting to see how meter readings vary across households. Let us look at a case study that Anand did for a power company.
+ 
+ 
+ You saw an example of how a simple histogram can reveal interesting insights. This is an extremely important takeaway — whenever you have a continuous or an ordered categorical variable, make sure you plot a histogram or a bar chart and observe any unexpected trends in it.
+
+ 
+
+Let’s look at a few more examples of univariate analysis revealing hidden patterns.
+
+ 
+
+I’m sure you remember the sleepless nights exams gave you. For a student, the examiner is an antagonist most of the times, who prevents you from getting the scores you deserve. You might also have been intrigued by questions such as: how many students obtained marks similar to yours, how many students were ahead, or how many lagged behind. And everyone has an opinion on when and where grace marks are justified.
+
+ 
+
+So, let’s use this typical student experience to help you learn univariate analysis. Let us now look at an interesting analysis that Anand conducted on class X student marks across Tamilnadu.
+
+
+Tendulkar Batting - Univariate Analysis
+
+ 
+
+The dataset given below contains Sachin Tendulkar's ODI batting statistics from about 1989 to 2012. Download the dataset given below to attempt the following questions.
+
+ 
+
+The variables 'Runs' and 'X4s' respectively represent the number of runs scored and number of 4s hit by him in each match. These are two ordered categorical variables you'll analyse in this exercise. 
+
+ 
+
+'Runs', which should ideally be a numeric variable, contains some entries such as DNB (Did Not Bat), 8* (Not out at 8 runs) etc. You'll need to clean these quality issues. 
+
+ 
+
+Similarly, in 'X4s', there are some missing entries represented by "-". You will need to clean them as well.
+
+ 
+
+Download the data set below to answer the following questions.
+
+Tendulkar ODI Batting
+file_downloadDownload
+
+
+Questions:1/3
+ 
+ 
+ 
+Runs Scored by Tendulkar
+
+Plot a bar chart showing runs scored on the x-axis and frequency/count on the y-axis. In which bucket has he scored runs the most often?
+0-10 runs
+Feedback :
+You'll note that the highest bars are around 2-3 runs.
+Correct
+10-20 runs
+20-30 runs
+30-40 runs
+
+Questions:2/3
+ 
+ 
+ 
+Number of Fours
+
+Plot a histogram of the number of 4s hit by Tendulkar. What is the most common value of the variable X, where X represents the number of 4s hit by him?
+0
+Feedback :
+The bar chart clearly shows that he has hit 0 fours most often.
+Correct
+1
+2
+3
+
+Questions:3/3
+ 
+ 
+ 
+Data Quality Issues in 'Runs'
+
+In the 'Runs' column of the given dataset, identify all the data quality issues. Choose all the correct options. 
+Some values contain a "*", such as 8*
+Feedback : Some values are not numeric since he did not get out in that innings and thus contain a "*".
+Correct
+Some values are 'DNB'
+Feedback : These value correspond to matches when he did not bat.
+Correct
+Some values are 'TDNB'
+Feedback : There is one value 'TDNB' which needs to be replaced or deleted.
+Correct
+Some values are extremely large and represent an anomaly (may be a data entry issue)
+
+
+You have seen how to conduct univariate analysis on categorical variables. Next, you will learn to conduct univariate analysis on quantitative (or numeric) variables.
+
