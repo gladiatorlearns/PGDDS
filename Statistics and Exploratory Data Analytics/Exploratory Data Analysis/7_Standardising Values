@@ -1,0 +1,58 @@
+Standardising Values
+
+In the previous lecture, you learnt how to fix missing values. You will now learn how to standardise values.
+
+ 
+
+Let’s see how to go about standardising quantitative values in a data set. 
+
+caling ensures that the values have a common scale, which makes analysis easier. E.g. let's take a data set containing the grades of students studying at different universities. Some of the universities give grades on a scale of 4, while others give grades on a scale of 10. Therefore, you cannot assume that a GPA of 3 on a scale of 4 is equal to a GPA of 3 on a scale of 10, even though they are same quantitatively. Thus, for the purpose of analysis, these values need to be brought to a common scale, such as the percentage scale.
+
+
+One of the concepts that surely caught your attention is outliers. Removing outliers is an important step in data cleaning. An outlier may disproportionately affect the results of your analysis. This may lead to faulty interpretations. It is also important to understand that there is no fixed definition of an outlier. It is left up to the judgment of the analyst to decide the criteria on which data would be categorised as abnormal or an outlier. We will look into one such method in the next session.
+
+
+Let’s summarise what you learnt about standardising variables. You could use this as a checklist for future data cleaning exercises.
+
+    Standardise units: Ensure all observations under a variable have a common and consistent unit, e.g. convert lbs to kgs, miles/hr to km/hr, etc.
+
+    Scale values if required:  Make sure the observations under a variable have a common scale
+
+    Standardise precision for better presentation of data, e.g. 4.5312341 kgs to 4.53 kgs.
+
+    Remove outliers: Remove high and low values that would disproportionately affect the results of your analysis.
+
+ 
+
+Now that you have learned how to standardise numeric values, let us see how standardising text values is equally important.
+
+Let us summarise what you learnt about standardising text. You could use this as a checklist for future data cleaning exercises.
+
+    Remove extra characters like such as common prefix/suffix, leading/trailing/multiple spaces, etc. These are irrelevant to analysis.
+
+    Standardise case: There are various cases that string variables may take, e.g. UPPERCASE, lowercase, Title Case, Sentence case, etc.
+
+    Standardise format: E.g. 23/10/16 to 2016/10/20, “Modi, Narendra" to “Narendra Modi", etc.
+    
+    Removing extra characters from a column
+Description
+The given data frame 'customer' has a column 'Cust_id' which has values Cust_1, Cust_2 and so on.
+Remove the repeated 'Cust_' from the column Cust_id so that the output column Cust_id have just numbers like 1, 2, 3 and so on.
+Print the first 10 rows of the dataset  'customer' after processing.
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+customer = pd.read_csv('https://query.data.world/s/y9rxL9mGdP6AXPiDaIL4yYm6DsfTV2')
+customer.Cust_id =customer.Cust_id.str.slice(5,)
+print(customer.head(10))
+
+import pandas as pd
+customer = pd.read_csv('https://query.data.world/s/y9rxL9mGdP6AXPiDaIL4yYm6DsfTV2')
+
+customer['Cust_id'] = customer['Cust_id'].map(lambda x: x.strip('Cust_'))
+print(customer.head(10))
+
+
+referemce - https://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html
