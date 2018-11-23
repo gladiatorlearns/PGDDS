@@ -1,0 +1,100 @@
+Let’s now move to the most interesting part of EDA — getting useful insights from the data. So far, you have seen two types of variables - categorical (ordered / unordered) and quantitative (or numeric). In this segment, you will learn how to conduct univariate analysis on unordered categorical variables. 
+
+ 
+
+But before studying that, think a bit about how you would conduct analysis on such a variable.
+
+ Questions:1/1
+ 
+Unordered Categorical Variables - Univariate Analysis
+
+You have worked with some unordered categorical variables in the past, for example:
+
+    The Prodcut_Category in the retail sales dataset
+    The Customer_Segment in the retail sales dataset
+    The name of a batsman in any of the cricket datasets
+
+Now imagine someone (say a client) gives you only an unordered categorical variable (and nothing else!), such as a column of size 4000 named 'country_of_person' with 130 unique countries and asks you 'can you extract anything useful from just this one variable?'. 
+
+Write down what how you would analyse just that variable to get something meaning out of it. Note that you have only one column to analyse.
+
+Suggested Answer
+
+The onlt thing you can do with an unordered categorical variable is to count the frequency of each category in the column. For example, you could observe that the product category 'furniture' appears 1000 times, 'technology' appears 810 times and so on. 
+Turns out that, in some datasets, this simple analysis can also reveal interesting insights.
+
+You saw how one can use plots to extract meaningful information from unordered categorical variables. Compare the answer you had given to the question before the lecture - how would your approach of analysing unordered categorical variables change after studying this?
+
+ 
+
+It is important to note that rank-frequency plots enable you to extract meaning even from seemingly trivial unordered categorical variables such as country, name of an artist, name of a github user etc.
+
+ 
+
+The objective here is not to put excessive focus on power laws or rank-frequency plots, but rather to understand that non-trivial analysis is possible even on unordered categorical variables, and that plots can help you out in that process.
+
+ 
+
+Let us now see how a power law distribution is created in Excel.
+
+ 
+
+Download the data set used in the lecture here. - Employement Data excel
+
+
+Why plotting on a log-log scale helps
+
+ 
+
+The objective of using a log scale is to make the plot readable by changing the scale. For example, the first ranked item had a frequency of 29000, the second-ranked had 3500, the seventh had 700 and most others had very low frequencies such as 100, 80, 21 etc.  The range of frequencies is too large to fit on the plot.
+
+ 
+
+Plotting on a log scale compresses the values to a smaller scale which makes the plot easy to read.
+
+ 
+
+This happens because log(x) is a much smaller number than x. For example, log(10) = 1, log(100) = 2, log(1000) = 3 and so on. Thus, log(29000) is now approx. 4.5, log(3500) is approx. 3.5 and so on. What was earlier varying from 29000 to 1 is now compressed between 4.5 and 0, making the values easier to read on a plot.
+
+ 
+
+We will not get deeper into power law and what causes it, though you can access the additional material on 'what causes the power law' by Anand here.
+--https://learn.upgrad.com/v/course/208/session/22060/segment/113055
+
+Power Law
+
+Please Note: This is an additional resource. The link for this session has been integrated at an appropriate place in the main EDA module.
+
+ 
+
+You learnt that many data sets follow the phenomenon of power law. There are many real-life examples where you may find power laws being followed, such as frequency of earthquakes vs intensity of earthquakes, number of people with an income vs the income itself, etc.
+
+
+Additional Readings
+
+Anand talks about the Enron scandal in the video. To know more -  Click here --https://www.investopedia.com/updates/enron-scandal-summary/
+
+Recommended Additional Content
+
+Although, these are not mandatory readings, but going through these will make it easier for you to grasp the new topics.
+
+    Mean and median: The basics -https://www.khanacademy.org/math/in-in-class-7th-math-cbse/in-in-7th-data-handling/in-in-7th-data-handling-mean-median-basics/v/statistics-the-average
+    Mean and median: Advanced -https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-data-statistics/mean-and-median/e/calculating-the-mean-from-various-data-displays
+    Range, Interquartile range (IQR), Mean absolute deviation (MAD) -https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/v/range-and-mid-range
+    Population variance and standard deviation -https://www.khanacademy.org/math/probability/data-distributions-a1/summarizing-spread-distributions/v/range-variance-and-standard-deviation-as-measures-of-dispersion
+    Sample variance and standard deviation -https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-spread-quantitative/v/sample-variance
+    Basic probability -https://www.khanacademy.org/math/statistics-probability/probability-library
+    Random variables -https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library
+ 
+
+To summarise, the major takeaways from this lecture are:
+
+    Plots are immensely helpful in identifying hidden patterns in the data 
+    It is possible to extract meaningful insights from unordered categorical variables using rank-frequency plots
+    Rank-frequency plots of unordered categorical variables, when plotted on a log-log scale, typically result in a power law distribution
+
+ 
+
+In the next lecture, you will study how to conduct univariate analysis on ordered categorical variables.
+
+ 
