@@ -1,0 +1,52 @@
+Invalid Values
+
+In the previous segment, you learnt how to standardise values. When standardising values, you do not really pay attention to the validity of the actual values of the variables. This is what we will discuss now as you learn to fix invalid values.
+
+ 
+
+A data set can contain invalid values in various forms. Some of the values could be truly invalid, e.g. a string “tr8ml” in a variable containing mobile numbers would make no sense and hence would be better removed. Similarly, a height of 11 ft would be an invalid value in a set containing heights of children.
+
+ 
+
+On the other hand, some invalid values can be corrected. E.g. a numeric value with a data type of string could be converted to its original numeric type. Issues might arise due to python misinterpreting the encoding of a file, thus showing junk characters where there were valid characters. This could be corrected by correctly specifying the encoding or converting the data set to the accurate format before importing.
+
+ 
+
+Let us gain more insight into fixing invalid values.  
+
+
+If you have an invalid value problem, and you do not know what accurate values could replace the invalid values, it is recommended to treat these values as missing. E.g. in the case of a string “tr8ml” in a Contact column, it is recommended to remove the invalid value and treat it as a missing value.
+
+ 
+
+Let’s summarise what you learnt about fixing invalid values. You could use this as a checklist for future data cleaning exercises.
+
+     Encode unicode properly: In case the data is being read as junk characters, try to change encoding, E.g. CP1252 instead of UTF-8.
+    Convert incorrect data types: Correct the incorrect data types to the correct data types for ease of analysis. E.g. if numeric values are stored as strings, it would not be possible to calculate metrics such as mean, median, etc. Some of the common data type corrections are — string to number: "12,300" to “12300”; string to date: "2013-Aug" to “2013/08”; number to string: “PIN Code 110001” to "110001"; etc.
+    Correct values that go beyond range: If some of the values are beyond logical range, e.g. temperature less than -273° C (0° K), you would need to correct them as required. A close look would help you check if there is scope for correction, or if the value needs to be removed.
+    Correct values not in the list: Remove values that don’t belong to a list. E.g. In a data set containing blood groups of individuals, strings “E” or “F” are invalid values and can be removed.
+    Correct wrong structure: Values that don’t follow a defined structure can be removed. E.g. In a data set containing pin codes of Indian cities, a pin code of 12 digits would be an invalid value and needs to be removed. Similarly, a phone number of 12 digits would be an invalid value.
+    Validate internal rules: If there are internal rules such as a date of a product’s delivery must definitely be after the date of the order, they should be correct and consistent.
+
+In next lecture, you will learn about filtering data for the ease of analysis.
+
+ Rounding decimal places of a column
+Description
+The given dataframe 'sleepstudy' has a column 'Reaction' with floating integer values up to 4 decimal places. Round off the decimal places to 1.
+Execution time limit
+
+20 seconds
+
+from pydataset import data
+sleepstudy =data('sleepstudy')
+
+sleepstudy['Reaction'] = round(sleepstudy['Reaction'],1)
+
+print(sleepstudy.head(10))
+
+from pydataset import data
+sleepstudy =data('sleepstudy')
+
+sleepstudy['Reaction'] = sleepstudy['Reaction'].round(decimals=1)
+
+print(sleepstudy.head(10))
