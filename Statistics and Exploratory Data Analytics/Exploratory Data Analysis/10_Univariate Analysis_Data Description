@@ -67,3 +67,25 @@ Feedback :
 Months have an element of ordering - Jan comes before April, Dec comes after everything else etc. In general, all dates are ordered categorical variables (day 23 comes after day 11 of the month etc.)
 Correct
 The organisation of a person - HR, marketing, analytics etc.
+
+
+Questions:1/1
+ 
+Categorical Variables
+
+A survey variable called “StateofMind” contains values 1 to 4 denoting the different states of mind of the respondents.
+ StateofMind	Meaning
+1	Confused
+2	Happy
+3	Depressed
+4	Confident
+
+ 
+
+Which of the following categories would the variable “StateofMind” fall into?
+Ordered categorical
+Incorrect
+Unordered categorical
+Feedback :
+Don't get confused by the numeric values for StateofMind. There is no order between the categories.
+
