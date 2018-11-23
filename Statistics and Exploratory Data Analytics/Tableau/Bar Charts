@@ -1,0 +1,78 @@
+Bar Charts
+
+Visualisations are created based on the type of data you have. If you have only dimensions or only measures in your data set, then you may find it difficult to create meaningful visualisations. Ideally, you must have both dimensions and measures in your dataset. Apart from that, you must know which combination of features (dimensions and measures) you can plot together to create the type of visualisations you want.
+
+ 
+
+Tableau automatically selects the best visualisation technique based on the features you have selected, but it can always be changed manually.  In the following lecture, Prof. RC will explain more about the options available to you to create visually pleasing graphics and the semantics behind a bar chart. 
+
+The only limitation you have while creating visualisations is the 2-D space available to you. However, you can leverage various other elements of Tableau, such as colour, size and shape to create interactive visualisations.  
+
+ 
+
+To create a visualisation for a categorical and a numeric feature, a bar chart is the most preferred option. You can also create a stacked bar chart or a grouped bar chart if you want to visualise a dimension having different categories with a common quantitative variable.
+
+ 
+
+You can also create a grouped bar chart for two quantitative and one categorical variable. A bar chart is most useful when you want to compare data across dimensions. Please watch the following lecture to learn how to create bar charts in Tableau.
+
+You can download the Tableau worksheet used in the lecture from below:
+Bar Chart Worksheet
+file_downloadDownload
+
+Use Bank Marketing dataset to answer the following qustions.
+
+Questions:1/5
+Bar Chart - Average Salary
+
+Plot a bar chart in Tableau using the features ‘education’ and salary.  Using the bar chart find the average salary for each level of education and select the correct option
+Primary - 30000 , Secondary - 49000, Tertiary - 62844 , Unknown - 54008
+Primary - 24272 , Secondary - 38942, Tertiary - 89898 , Unknown - 66997
+Primary - 34212 , Secondary - 49744, Tertiary - 82874 , Unknown - 46558
+Correct
+Primary - 40693 , Secondary - 59984, Tertiary - 69096 , Unknown - 41000
+
+Questions:2/5
+Bar Chart - Jobs
+
+Use the variables job and count of records to report the category of job where the maximum people work.
+
+Blue-Collar
+Correct
+
+Admin
+
+Management
+
+Technician
+
+Questions:3/5
+Bar Chart - Average Salary
+
+Use the variables job and salary to plot a bar chart and report the category of job which provides the maximum average salary.
+Blue-Collar
+Entrepreneur
+Correct
+Management
+Admin
+
+Questions:4/5
+Bar Chart - Response
+
+In which category of education do the people respond yes to the campaign and have the lowest average balance.
+Primary
+Secondary
+Correct
+Tertiary
+Unknown
+
+Questions:5/5
+Bar Chart - Response
+
+In which category of jobs do the people take maximum average duration to respond yes to the campaign.
+Blue Collar
+Correct
+Services
+Entrepreneur
+Management
+

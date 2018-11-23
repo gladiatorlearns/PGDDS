@@ -1,0 +1,49 @@
+Introduction
+About This Session
+
+Data is often divided into categories. In most data involving sales of products, there is information about what category a particular product belongs to. As another example, while looking at transactions on credit cards, there is information on which tier a certain credit card belongs to (regular, premium, gold, etc.). 
+
+ 
+
+More often than not, insights require to be divided according to the categories, since different categories usually carry different business goals. In this session, you will see how you can use your recently learnt visualisation skills to find insights about categories.
+
+ 
+
+Also, we will cover time-series data in this session.
+
+ 
+Course Material
+
+In this session, you will go through some videos where we have demonstrated data visualisation techniques on a Jupyter notebook. For your benefit, we have placed the Jupyter notebooks along with the datasets that we have used in the following downloadable link:
+
+Plotting Distributions Across Categories
+
+In the previous pages, you saw how to visualise distributions of one or two variables. Now, let's move on to data that involves categories.
+
+ 
+
+For example, while working with data of sales from an e-commerce website, the products are usually divided into various categories of purchase (e.g., Home Appliances, Furniture, Kitchen Items, etc.). Let's see how we can visualise this data to get a better understanding of it. 
+
+(Note: in the above video, the professor says the category with most loss making component is 'Technology'. This is an error - it should actually be 'Furniture')
+
+ 
+
+In this video, you saw how you can visually drill down into a product category, and then further into a sub-category. Through plots of sales and profit across product categories, we can observe patterns and thereby get insights into the performance of different categories.
+
+ 
+
+Now, let's look at some more visualisations. Here, along with categories, we also look at profitability across customer segments.
+
+In this video, we saw how we can find further insights by including customer segments along with product category. First, you created box plots for just customer segments. Then, you included a hue argument in the boxplot call, to further divide each customer segment into its respective product categories.
+
+Using the 'hue' argument
+
+In the video, you saw data across customer segments, and for each segment, the boxplots were further divided into product categories.
+
+Now, say you want to do this the other way round - different sub-plots for each categories, and divisions for customer segments inside each sub-plot.
+
+What would be the code to write this? Just write the one line used to create the plot. Use the Jupyter notebook as reference code.
+Suggested Answer-
+sns.boxplot(x='Product_Category', y='Profit', hue="Customer_Segment", data=df) plt.show()
+
+Here, we visualised distribution of data across categories. In the upcoming page, we will see more visualisations across categories, but this time we will use statistical aggregate values.

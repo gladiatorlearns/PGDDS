@@ -1,0 +1,54 @@
+Time Series Data
+
+In the last couple of pages, you learnt various ways of visualising categorical data. Through grouping by categories or customer segments, we are able to find insights about these categories.
+
+ 
+
+In this page, you will learn how to visualise a type of data that you will often encounter while performing data analysis - time-series data. As the name suggests, time-series data involves chronological information of one or more variables - one of the attributes in time-series data is always time.
+
+ 
+
+Let's look at Prof. Srinivasaraghavan's demonstration on how we can deal with time-series data.
+
+To recap, time-series data comes with a timestamp, with different values at each timestamp. First, you group by order date, and get total sales for each day. Once you convert the time field into a "datetime" data-type, seaborn and matplotlib can effectively visualise this data. Also, with some derived metrics, we can visualise sales for each year-month combination. Here is the main command you learnt in this video:
+
+    sns.tsplot()  - Creates a time-series plot
+
+ 
+
+Another useful type of visualisation is one that provides insights at a month-by-month level. Using time-series data and pivot tables, we can create this type of visualisation. First, we'll use the pivot_table function from pandas, and then visualise using matplotlib. In this video, we are creating a heat map, which we have learnt about in a previous lecture.
+
+To summarise, you learnt two ways of plotting time series data:  1. Plotting time on the x-axis and the value (usually aggregated using mean, median etc.) of a variable on the y-axis, and 2. Plotting a heat map with year/ month/day along the axes and the values denoted by colour.
+
+ 
+
+Here is the main command you learnt in this video:
+
+    sns.heatmap() - Creates a heat map.
+
+ 
+
+Each method has its own advantages. If you simply want to observe the trend of a variable, a simple line plot should suffice. But if you want to spot interesting, hidden trends in a variable, heat maps are extremely useful.
+
+ 
+
+Apart from matplotlib and seaborn, there's another package in Python called 'Bokeh' that is very useful for creating interactive plots. You can learn about Bokeh plots from the tutorial section in the link provided below:
+
+    Plotting with Bokeh --https://bokeh.pydata.org/en/latest/
+
+ 
+
+In the next page, we will summarise this session.
+
+
+Summary
+
+This brings us to the end of the module on data visualisation. You are now equipped with a visual language to express insights found in your data.
+
+ 
+
+In this session, you learnt how to visualise the distribution of data across categories. You also learnt how to create certain aggregates, and visualise those aggregates across categories. You added multiple categories to a plot.
+
+ 
+
+Finally, you learnt how to deal with time-series data, and create different plots that inform you how a certain attribute has changed over time.

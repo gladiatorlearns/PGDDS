@@ -1,0 +1,17 @@
+Hierarchies and Drill Down
+
+The more informative a visualisation is, the better. However, a visualisation can become cluttered if there is too much information in it. Therefore, it is a good idea to create graphics which can be drilled down for more details in the visualisation. This can be done by creating a hierarchy of features, for example - product category, product sub-category and item. The hierarchy can then be plotted with the numeric data and can be drilled down to add more information to the visualisation. In the following lecture, you will learn more about hierarchies and drill down.
+
+Tableau will create a hierarchy on its own if the column names are intuitive enough. Otherwise, you will have to specify the hierarchy, for example, geographical hierarchies.  Now that you know how the theory behind creating hierarchies, watch the lecture given below to learn how to create hierarchies in Tableau.
+
+ 
+
+Hierarchies and Drill Down
+
+ 
+
+Sometimes you want to display the visualisation in a particular format for it to be more apparent. For example, while creating a bar chart of months vs. profit, you might want to arrange the bars in ascending order of profit. This is known as sorting. Watch the following lecture to understand how to carry out sorting in Tableau.
+
+ 
+
+Sorting

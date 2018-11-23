@@ -1,0 +1,30 @@
+Scatter Plots and Pie Charts
+
+If you want to plot two quantitative variables against each other or two quantitative variables on a categorical variable, then scatter plot is a very good option. In the following lecture, Prof RC will explain why.
+
+A scatter plot gives you the freedom to compare the values of the two quantitative variables you have plotted, for every available point on the graph. You will typically use a scatter plot when you want to investigate relationships between quantitative variables, like age and income.
+
+ 
+
+You can also add categorical variables to the shape and size options in the Marks Card, to make a scatter plot more informative and interactive. Sometimes, when the number of points being displayed in a scatter plot is too large, the plot becomes too cluttered and a different visualisation technique (such as a stacked bar chart) should be used. Watch the following lecture to understand how to create scatter plots in Tableau.
+
+You can download the Tableau worksheet used in the lecture from below:
+Scatterplot Worksheet
+file_downloadDownload
+
+Another powerful charting option available to you in Tableau is a pie chart. Pie charts are very useful for summarising categorical variables or dimensions. They give you the freedom to look at the counts and summarise grouped data. For example, a pie chart would be good to visualise the count of products sold from each category or the count of products sold from each store in the city. A pie chart represents a dimension variable, and the size of each pie represents the count of each category. To learn more about how to create a pie chart in Tableau watch the following lecture:
+
+You can download the Tableau worksheet used in the lecture from below:
+Pie Chart Worksheet
+file_downloadDownload
+
+Use Bank Marketing dataset to answer the following qustions.
+
+Questions:1/1
+Scatterplot
+
+For what salary, is the average balance of response = yes lower than the average balance of response = no? Plot a scatterplot to answer the question.
+4000
+8000
+16000
+55000

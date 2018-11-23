@@ -1,0 +1,24 @@
+Dashboard and Stories
+
+Dashboards are an intuitive way of deriving insights from various sheets portraying the relationship between variables. Creating dashboards in Tableau is quite easy, it only requires dragging the sheets you have already created. Stories, however, are a great way to communicate the analysis to the recipient. Stories have slides in them where you can put in various sheets and also dashboards. Also, you can annotate certain points or areas to highlight.  
+
+Please watch the following official tableau lectures to learn how to create dashboards and stories.
+
+ 
+
+Building a Dashboard  -  https://www.tableau.com/learn/tutorials/on-demand/building-dashboard
+
+ 
+
+Layouts and Formatting of a Dashboard  -https://www.tableau.com/learn/tutorials/on-demand/dashboard-layouts-and-formatting
+
+ 
+
+Dashboard Interactivity -https://www.tableau.com/learn/tutorials/on-demand/dashboard-interactivity-using-actions
+
+ 
+
+Story Points - https://www.tableau.com/learn/tutorials/on-demand/story-points?product=tableau_desktop&version=tableau_desktop_2018_2&topic=dashboardsstories
+
+
+Refer dashboard interaction sample workbooks

@@ -1,7 +1,0 @@
-Calculations in Tableau
-
-While visualising data, there could arise a case where you would want to perform some mathematical operations on the data to get it in the desirable format. For example, you might want to convert monthly data into quarterly monthly data, or even want to perform a complex calculation such as computing interest. In the following lecture, prof Rc will elaborate more on how to do this in Tableau:
-
-https://www.tableau.com/learn/tutorials/on-demand/getting-started-calculations
-
-https://www.tableau.com/learn/tutorials/on-demand/calculation-syntax

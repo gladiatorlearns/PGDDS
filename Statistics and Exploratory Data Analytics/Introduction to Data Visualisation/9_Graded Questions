@@ -1,0 +1,78 @@
+Questions:1/3
+ 
+ 
+ 
+Scaling the Box Plot
+
+Suppose you got the following plot when you plotted the boxplot in matplotlib for a given feature. As you can see, the boxplot is not readable clearly because of high values of outliers. What can be done to get a better boxplot for the same feature?
+
+Refer Box plot graded question png in the same folder.
+
+Transform the x-axis into the logarithmic scale
+
+Transform the y-axis into the logarithmic scale
+Feedback :
+
+Transforming the y-axis to a logarithmic scale will make the plot much more readable.
+Correct
+
+Remove the outliers from the dataset
+
+We cannot get a more readable plot
+
+
+Questions:2/3
+ 
+ 
+ 
+Scatter plot
+
+The following scatter plot was plotted using seaborn for 'Sales' vs 'Profit' from the dataset 'df'. Suppose that you want to find out the data points for which the sales were less than 15,000 and that made a loss. Which of the following codes will achieve this?
+
+ Refer - Scatter Plot graded question png
+
+df = df[(df.Profit < 0) & (df.Sales < 15000)]
+
+sns.jointplot('Sales', 'Profit', df)
+plt.show()
+Feedback :
+
+We want the data points that made a loss and for which the sales were less than 15,000. The above command with an '&' between the two conditions achieves this. 
+Correct
+
+df = df[(df.Profit < 0) | (df.Sales < 15000)]
+
+sns.jointplot('Sales', 'Profit', df)
+plt.show()
+
+df = df[(df.Profit > 0) & (df.Sales < 15000)]
+
+sns.jointplot('Sales', 'Profit', df)
+plt.show()
+
+df = df[(df.Profit < 0) | (df.Sales > 15000)]
+
+sns.jointplot('Sales', 'Profit', df)
+plt.show()
+
+Questions:3/3
+ 
+Ref - Heat map plot graded question png
+ 
+Correlation using heatmap
+
+What is the highest value of correlation between two variables as observed from the following heatmap?
+
+ 
+
+1
+
+0.79
+Feedback :
+
+As we can see from the heatmap, 'Close_qt' and 'Close_et' are most correlated with the value 0.79.
+Correct
+
+0.73
+
+0.38

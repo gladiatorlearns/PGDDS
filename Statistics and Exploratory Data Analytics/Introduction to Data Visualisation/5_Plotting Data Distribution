@@ -1,0 +1,136 @@
+Introduction
+About This Session
+
+As the name suggests, distributions tell us how the data is distributed across values of different attributes of the data. These distributions could be across one variable, or more than one variable too. As an example, while looking at social media data, you can find the number of users distributed across different amounts of time spent per month on the website. 
+
+ 
+
+In this session, you will learn how to visualise distributions of data. Through these examples, you will also understand why visualising distributions is useful and adds value to your analysis.
+
+ 
+Course Material
+
+In this session, you will go through some videos where we have demonstrated data visualisation techniques on a Jupyter notebook. For your benefit, we have placed the Jupyter notebooks along with the datasets that we have used in the following downloadable link:
+
+Univariate Distributions
+
+ 
+
+A univariate distribution shows how data points of one variable are distributed. As an example, a frequency distribution of sales is a univariate distribution. Another example is number of users distributed across time spent on website per week.
+
+ 
+
+Prof. Raghavan will take you through some basics about univariate distributions, and common plots used with this type of distributions. In this lecture, we'll be using the seaborn library for plotting. However, as you will see, matplotlib works well in conjunction with seaborn, and you may continue using matplotlib even while using seaborn.
+
+ 
+
+In this video, we will use some sales data. The main attributes that we will work with in this data set are sales, profit, order quantity and shipping costs. 
+
+To recap, you learnt to create the following types of univariate plots using seaborn:
+
+    Histograms
+    Density plots
+
+These plots give you detailed information on the spectrum of values that your data spread across. In the example of shipping cost, a histogram or a density plot will show the spread of shipping costs across all purchases. You may do the same for attributes like sales, profit, etc.
+
+
+Specifying number of bins with seaborn
+
+While using seaborn to plot the Sales column, say you want to specify the number of bins as 50 while making the function call. What function call will you use?
+
+Here is the seaborn documentation for your reference.
+Ref -https://seaborn.pydata.org/api.html
+
+Suggested Answer
+
+sns.distplot(df['Sales'], bins = 50)
+
+Univariate Distributions - Rug Plots
+
+In the previous page, you were introduced to univariate distributions, and plotting them as histograms and probability distribution plots.
+
+ 
+
+Let's look at more ways to plot univariate distributions using matplotlib and seaborn. In this lecture, we start with a rug plot,
+
+To recap, rug plot places small sticks for each data point within a certain level of granularity. Only one stick is placed for each value. The density of sticks is a telling sign of the proportion of data in that region.
+
+ 
+
+Let's try a few questions about rug plots.a graph that visually shows you regions of the data where values are concentrated.
+
+Creating Rug Plots
+
+Let's say you want to create a rug plot of the first 1000 Sales values using the distplot() function of seaborn. What code will you use for it?
+
+Suggested Answer
+
+import seaborn as sns import pandas as pd import matplotlib.pyplot as plt df = pd.read_csv("./global_sales_data/market_fact.csv") sns.distplot(df['Sales'][:1000], rug=True) plt.show()
+
+Observations from a Rug Plot
+
+Observe the rug plot of the first 1000 rows of Sales that you created in the previous question. Which of these ranges has not a single data point present between it?
+10,000 - 20,000
+20,000 - 30,000
+30,000 - 40,000
+Feedback :
+There are no sticks present between 30,000 and 40,000
+
+
+Bivariate Distributions
+
+In the previous lectures, you learnt about visualising univariate distributions, that is, distributions in a single variable. You studied how to make histograms, density plots, rug plots and box plots on univariate distributions.
+
+ 
+
+Now, let's move to visualising two variables. These distributions are called bivariate distributions.
+
+ 
+
+Let's look at a demonstration by Prof. Srinivasaraghavan. In this video, some basic plots that you earlier learnt with univariate distributions, are now created with bivariate distributions.
+
+To recap, in a bivariate distribution, you have two variables interacting with each other. You are looking at combinations of these two variables, and you are then associating a probabilities and frequencies with each of those.
+
+Plotting a Range in a Bivariate Distribution
+
+Questions
+In the video above, you observed a scatter plot where we removed outliers by specifying limits on Profit and Sales (code present in Jupyter notebook). Now, say you want to only display points that make a profit. That is, you want to remove data points where a loss has been incurred. What code will achieve this?
+
+df = df[(df.Profit < 10000) & (df.Profit > 0) & (df.Sales < 20000)] sns.jointplot('Sales', 'Profit', df) plt.show()
+
+Bivariate Distributions - Plotting Pairwise Relationships
+
+On the previous page, you learnt to visualise the relationship between two numeric variables, i.e. plotting bivariate distributions. In this segment, you will learn to visualise pairwise relationships between multiple variables.
+
+ 
+
+We will use a dataset containing prices of various cryptocurrencies and visualise how pairs of currencies are related. After doing some basic data merging, we have a data frame containing the prices of currencies such as Bitcoin, Litecoin, Ethereum, Neo, Monero etc. As an analyst, you are interested in finding pairs of currencies which have a significant influence on each other.
+
+ 
+
+One common way of quantifying the relationship between two variables is the correlation coefficient, which is a number between -1 and 1. A correlation of 1 between variables x and y denotes that x and y are perfectly linearly related, i.e. if x goes up or down, y follows in the same direction. You can read more about correlation here. --https://en.wikipedia.org/wiki/Correlation_coefficient
+
+ 
+
+Let's now see how the correlation between pairs of currencies can be computed and plotted on a heat map.
+
+To summarise, you first computed the pairwise correlations between the currencies and stored them in a matrix. Then, you plotted the correlation values on a heat map.
+
+ 
+
+Heat maps are useful because they help you identify areas of high and low values easily. In this example, you can spot the highly (positively or negatively) correlated pairs of cryptocurrencies on the heat map.
+
+ 
+
+Now, let's quickly summarise what we've learnt in this session.
+
+
+Summary
+
+This session was all about distributions. You started with univariate distributions, and different ways you can plot frequency and count of these distributions. You learnt to create histograms, density plots and rug plots.
+
+ 
+
+Further, you saw bivariate distributions, where the plotting is slightly different, and we find insights that relate to the interaction of two variables. A useful way to envision this interaction is through a heat map.
+
+
