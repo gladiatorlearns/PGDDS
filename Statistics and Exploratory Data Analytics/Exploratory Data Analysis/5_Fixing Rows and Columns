@@ -1,0 +1,97 @@
+Fixing Rows and Columns
+
+Before going through this session, you may go through an additional (optional) session by Anand on getting the Election Commission of India (ECI) data from the ECI Website.
+
+ 
+
+In the previous lecture, you saw some of the issues in raw data and understood the need for data cleaning. Let us learn how to correct some of these issues at the level of rows and columns.
+
+Let’s summarise what you learnt in the form of a checklist. Make sure you correctly identify these issues and resolve them before moving on to the next stage of data cleaning.
+
+ 
+
+Checklist for Fixing Rows
+
+    Delete summary rows: Total, Subtotal rows
+
+    Delete incorrect rows: Header rows, Footer rows
+
+    Delete extra rows: Column number, indicators, Blank rows, Page No.
+
+ 
+
+Checklist for Fixing Columns
+
+    Merge columns for creating unique identifiers if needed: E.g. Merge State, City into Full address
+    Split columns for more data: Split address to get State and City to analyse each separately
+
+    Add column names: Add column names if missing
+
+    Rename columns consistently: Abbreviations, encoded columns
+
+    Delete columns: Delete unnecessary columns
+    Align misaligned columns: Dataset may have shifted columns
+
+Save this checklist for future reference:
+Data Cleaning Checklist
+file_downloadDownload
+
+Comprehension: Cleaning Census Data - Fixing Rows and Columns:
+
+ 
+
+You downloaded the census 2011 literacy data in the previous session. In case you did not, you may download it from this page.
+
+MLAs
+
+In a database “MLA” containing the details of MLAs throughout India, you have a city named Rampur in Himachal Pradesh, UP and Chhattisgarh. The city names are stored in the “City” column while state names are stored in the “State” column. What is the best way to represent the cities in this case? 
+Keeping the most relevant Rampur, removing the other two
+Merging the City, State columns to get a unique identifier
+Feedback :
+The city and state columns need to be merged so that each city is uniquely identifiable for further analysis.
+Correct
+Randomly choosing which Rampur to keep in the data set, to make the data set simpler
+
+Refer india.xlsx for below questions
+
+Questions:1/3
+ 
+ 
+ 
+Census
+
+Which of the following information could be obtained from the data set.
+The information about individuals such as age, literacy, etc.
+The information about an age group at a district level such as the total number of literates in Chennai.
+The information about an age group in the entire country such as the total number of literates in India
+Feedback :
+If you browse through the top, middle and bottom of the data set, you will see that information is available at the state level for each age group. Also, each row is not a person, it is the total number of literates, below primary education level in each age group in each state, etc.
+
+Questions:2/3
+ 
+ 
+ 
+Rows
+
+Mark the correct statements about rows in the data set.
+There are no empty rows in the data set
+There are header rows in the data set
+Feedback : Rows 1-5 are header rows
+Correct
+There are footer rows in the data set
+There are rows having column numbers
+Feedback : Row 6 contains column numbers, which is unnecessary.
+
+Questions:3/3
+ 
+ 
+ 
+Invalid Columns
+
+Mark the correct statement about columns in the data set.
+There are no merged columns in the data set, i,e each column represents one variable.
+There are merged column name headers in the data set which should be broken down into separate column names
+Feedback :
+Ideally, all columns should have a separate unique name. There are merged column name headers, e.g. ‘Total’, ‘Illiterate’, ‘Literate’ etc. These should be broken down into separate column names for analysis i.e "Total" should be broken down into "Total_Persons", "Total_Males" & "Total_Females".
+Correct
+There is at least one empty column in the data set
