@@ -1,0 +1,173 @@
+Graded Questions
+
+For this exercise, we will use the news popularity data set again which is a set of articles published by the digital media website Mashable over a period of two years.
+
+ 
+
+You can download the data set below.
+Popularity Dataset
+file_downloadDownload
+
+
+Popularity Dataset
+file_downloadDownload
+
+You can access the data dictionary of the news popularity dataset (to understand the variables in detail) here. --https://archive.ics.uci.edu/ml/datasets/Online+News+Popularity
+
+ 
+
+There are more than 60 attributes in the data set which describe the articles, such as the total number of words, the number of positive and negative words, the length of the title, the article genre (e.g. business, travel or entertainment) and, more importantly, the output variable, i.e. the number of shares.
+
+ 
+
+In the following questions, you will attempt to understand the distribution of shares (the number of times an article was shared on the internet) using measures of spread. Suppose you work for a content marketing company as an analyst and want to understand the ‘distribution of shares’. Based on your understanding, you will share with your peers some rough metrics such as the representative number of shares, the spread of shares, etc.
+
+
+The following functions and concepts will be helpful for the questions below:
+
+ 
+
+The describe() function is used to obtain the percentile distribution in Python. You may learn more about this function here.
+--http://pandas.pydata.org/pandas-docs/version/0.15.1/generated/pandas.DataFrame.describe.html
+ 
+
+The df[‘column_name’].mean() function is used to obtain mean of a particular column.(Note: The ' shares' column has space before the first s).
+
+
+Questions:1/3
+ 
+ 
+ 
+Summary metrics
+
+Compare the summary metrics of shares and choose the correct statement:
+
+The mean is comparable to the median
+
+The maximum number of shares is 843300
+Feedback :
+
+The mean, median and max values respectively are 3395, 1400 and 843300.
+Correct
+
+The mean number of shares is lower than the median
+
+
+Questions:2/3
+ 
+ 
+ 
+Percentile
+
+What number of shares falls at the 78th percentile?
+doneCorrect
+Feedback :
+
+78% articles were shared 3100 times or less.
+
+Questions:3/3
+ 
+ 
+ 
+Mean
+
+The mean number of shares lies between:
+
+The 30th and 40th percentiles
+
+The 40th and 50th percentiles
+
+The 60th and 70th percentiles
+
+The 70th and 80th percentiles
+Feedback :
+
+Use percentiles = [0.1, 0.9, 0.1] and you’ll get the number of shares at the 10th, 20th,...90th percentiles. The mean 3395 lies between the 70th and 80th percentiles (2300 and 3400).
+
+
+Outliers
+
+ 
+
+Roughly speaking, outliers are abnormally large or small values. There is no one fixed rule in deciding outliers. However, you would have noticed that going from the 99th to the 100th percentile, there is an approximately 25x increase in the number of shares.
+
+ 
+
+You may have also noted that in the lower quartiles, there is only about 5% increase in the number of shares per percentile. This increases to about 10% per percentile in the higher quartiles and 20% beyond the 95th percentile. In this case, some articles in the top quartiles are clearly outliers.
+
+ 
+
+To classify some articles as outliers, you may need to consult your client or the business to understand the reasons behind abnormal values. In some cases, they are justifiable, whereas in others they cannot be explained and are thus labelled as outliers.
+
+ 
+
+For example, let’s say that you decide to label all the articles beyond the 95th percentile as outliers since you observe a roughly 20% increase in the number of shares beyond that. Thus, the last article you include will be the one at the 95th percentile. You remove every article beyond that point from the data set.
+
+Here is a short explanation to remove outliers in Python ( https://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html ) (this method uses the concept of standard deviation). Also, you can take a look at this StackOverflow answer ( https://stackoverflow.com/questions/35827863/remove-outliers-in-pandas-dataframe-using-percentiles )(this uses the concept of percentiles which is required for solving the question below). And if you want to get a general idea about using percentiles in Python, take a look here and here.
+- https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.percentile.html#numpy.percentile
+- https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.quantile.html#numpy.quantile
+
+Questions:1/3
+ 
+ 
+ 
+Mean of shares
+
+What is the mean number of shares after removing the outliers?
+
+200
+
+2074
+Feedback :
+
+On removing all articles having more that 10800 number of shares, the mean number of shares is 2074. This is now comparable to the median.
+Correct
+
+1487
+
+1678
+
+ 
+
+After treating the outliers using this method, answer the following questions.
+
+Questions:2/3
+ 
+ 
+ 
+Standard Deviation
+
+What is the approximate standard deviation of the shares after removing the outliers?
+
+1348
+
+2398
+
+1872
+Feedback :
+
+Using describe(), you will get Standard deviation as 1871.8. Note that the standard deviation earlier was about 11627, which has now come down to 1872, after removing the outliers.
+Correct
+
+2657
+
+
+Questions:3/3
+ 
+ 
+ 
+Percentile
+
+While removing outliers, it is important to understand the percentage of data points you are removing. In case you remove a large number of data points, the business may not approve of it. With the criteria that you have used to remove outliers, what is the approximate percentage of data points you have removed?
+
+1%
+
+0.5%
+
+5%
+Feedback :
+
+Since you have removed all the articles beyond the 95th percentile, you are removing 5% data points.
+Correct
+
+2%
