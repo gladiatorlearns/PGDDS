@@ -1,0 +1,161 @@
+Quantitative Variables - Summary Metrics
+
+Let's take some time to understand why summary metrics such as mean and standard deviation are not representative of the data in some cases. 
+
+News Popularity Data Set - Reading Box Plots 
+
+ 
+
+You saw that quartiles are a better measure of the spread than the standard deviation. A good way to visualise quartiles is to use a box plot. The 25th percentile is represented by the bottom horizontal line of the box, the 75th is the top line of the box, and the median is the line between them.   
+
+ 
+
+In the following questions, let us use the news popularity data set to understand the measures of the deviation of the number of shares of a news article across the days of the week, weekends, and types of articles. 
+
+ 
+
+You can access the data dictionary of the news popularity data set (to understand the variables in detail) here. - https://archive.ics.uci.edu/ml/datasets/Online+News+Popularity
+
+ 
+
+You can download the data set below:
+EDA News Popularity
+file_downloadDownload
+
+ 
+
+The box plots given below show the variation of the number of shares of a news article (on the y-axis) against three variables — weekend (1 implies weekend), weekday (0 implies weekday), and the channel type. Read the charts carefully and answer the questions that follow. 
+
+Refer Weekday/Day/Channel png files uploaded
+
+Questions:1/3
+ 
+ 
+ 
+Shares vs Weekend
+
+The variation in the number of shares is larger for:
+Weekends
+Feedback :
+The width of the box, i.e. the difference between the 75th and the 25th percentiles is larger for weekends.
+Correct
+Weekdays
+Feedback :
+Look at the difference between the 75th and the 25th percentiles. 
+
+
+Questions:2/3
+ 
+ 
+ 
+Shares across Weekdays
+
+Say you want to compare the number of shares of articles across weekdays. Select the correct statement.
+There is a significant difference in the spread of the number of shares across weekdays
+Articles published on Mondays get significantly more popular than those on other days
+There is no significant difference in either the median or the spread of the number of shares across weekdays
+Feedback :
+The median and both the 25th and 75th percentiles are almost similar across weekdays, indicating that there is no significant difference in either the median or the amount of spread. Note that the means may be significantly different because of some high values, but that is a deceptive measure to look at.
+
+
+Questions:3/3
+ 
+ 
+ 
+Shares across Channel Types
+
+Which types of articles are most likely to reach 2500 shares?
+Social Media
+Feedback :
+Social media articles are clearly shared more than others - approximately 60% articles on social media reach 2500 shares, whereas even the 75th percentile of other channels barely reaches 2,500 shares.
+Correct
+Technology
+Lifestyle
+World
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Mode
+
+The mode of a categorical variable is the value (category) that occurs the most often.
+
+What is the mode of the num_keywords variable in the News Popularity data set?
+7
+Feedback :
+Articles with 7 keywords are more in number than articles with any other number of keywords. 7322 articles have 7 keywords.
+Correct
+6
+10
+8
+Feedback :
+num_keywords is a categorical variable. You could convert it to a factor variable and identify the number of values under each level
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Mean
+
+What is the average number of times the articles in the data set were shared, i.e what is the mean of the shares?
+2427
+7322
+3395
+Feedback :
+The articles were shared approx. 3395 times on average.
+Correct
+5000
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Median
+
+What is the median value of the shares?
+1500
+1400
+Feedback :
+The median value of the shares is 1400.
+Correct
+7322
+3598
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Median vs Mean
+
+Why do you think there is a huge difference between the mean and median of the shares? Which of these metrics is more representative of the shares? Write your answer in the text box below. (Word limit: 200)
+
+Mean gives the average distribution where as median gives the middle value.  As there are minimal entires ( shares with more thank 5k), we see a lot of difference between mean and median..  
+Median is more preferred in this regard as more than 34.5k entries are shares less than 5k
+
+
+Summary
+
+In this session, you learnt about the various elements of univariate analysis such as data distribution plots and summary metrics.
+
+ 
+
+Let’s quickly recap what you learnt. 
+
+Let's summarise what you learnt:
+
+    Metadata description describes the data in a structured way. You should make it a habit of creating a metadata description for whatever data set you are working on. Not only will it serve as a reference point for you, it will also help other people understand the data better and save time.
+
+    Distribution plots reveal interesting insights about the data. You can observe various visible patterns in the plots and try to understand how they came to be.
+    Summary metrics are used to obtain a quantitative summary of the data. Not all metrics can be used everywhere. Thus, it is important to understand the data and then choose what metric to use to summarise the data.
+
+In the next session, you will learn segmented univariate analysis.
+
+
+
+
+
