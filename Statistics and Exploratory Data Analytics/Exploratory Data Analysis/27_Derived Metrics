@@ -1,0 +1,56 @@
+Introduction
+
+Welcome to the session on ‘Derived Metrics’.
+
+In this session, you will learn how to create new variables using existing ones and get meaningful information by analysing them. In other words, we will discuss some methods to derive new metrics from the existing ones. The agenda for the session is as follows:
+
+    Type-driven metrics
+
+    Business-driven metrics
+    Data-driven metrics
+    
+    What are Derived Metrics?
+
+Sometimes, you would not get the most valuable insights by analysing the data available to you. You often need to create new variables using the existing ones to get meaningful insights.
+
+
+New variables could be created based on your business understanding or they can be suggested by your clients. Let’s understand how business understanding plays an important role in deriving new variables.
+
+
+To summarise, you saw two examples of different problems — analysing restaurant sales and understanding the marks distribution of class VIII students.
+
+ 
+
+In the first example, the ‘day of the week’ was a derived variable which was not provided in the original data set (only the date was provided). Using this new variable (day of the week), you can ‘drill down’ to compare the total sales on each day of the week and present the results on the calendar, as shown in figure 1 below.
+
+Questions:1/1
+ 
+Derived Metrics
+
+Why would you want to derive new data from existing data as part of the EDA process?
+Deriving new data from existing data would help you extract additional information from the data set, which may help you see the data in a different perspective and help you uncover hidden insights
+Correct
+Deriving new data from existing data will surely help you extract relevant information from the data set, which would surely always help you see the data in a different perspective and help you uncover hidden insights
+New variables can only be derived from quantitative variables
+
+
+To summarise, you saw two examples of different problems — analysing restaurant sales and understanding the marks distribution of class VIII students.
+
+ 
+
+In the first example, the ‘day of the week’ was a derived variable which was not provided in the original data set (only the date was provided). Using this new variable (day of the week), you can ‘drill down’ to compare the total sales on each day of the week and present the results on the calendar, as shown in figure 1 below.
+
+
+In the second example, by plotting the marks against the ‘month of birth’ (derived variable), it was observed that the children who were born after June would have missed the cutoff by a few days and gotten admission at the age of 5. The ones born after June (e.g. July, August, etc) were intellectually and emotionally more mature than their peers because of their higher age, resulting in better performance.
+
+
+This is a classic example of how derived metrics can help you discover unexpected insights.
+
+ 
+
+So far, we have discussed only how to derive a new variable from the date variable. Are there other types of derived metrics as well? And is there a process of deriving new metrics?
+
+
+In the next lecture, you will learn some new types of derived metrics.
+
+ 
