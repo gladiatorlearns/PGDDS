@@ -1,0 +1,189 @@
+Types of Derived Metrics: Type Driven Metrics
+
+In the last lecture, you saw some examples of derived metrics. Now, let’s understand the various types of derived metrics. Watch the following lecture to get an idea of the different types of derived metrics.
+
+Broadly, there are three different types of derived metrics:
+
+1.    Type-driven metrics
+
+2.    Business-driven metrics
+
+3.    Data-driven metrics
+
+ 
+
+Type-Driven Metrics
+
+ 
+
+These metrics can be derived by understanding the variable’s typology. You have already learnt one simple way of classifying variables/attributes — categorical (ordered, unordered) and quantitative or numeric. Similarly, there are various other ways of classification, one of which is Steven's typology.
+
+ 
+
+Steven’s typology classifies variables into four types — nominal, ordinal, interval and ratio:
+
+    Nominal variables: Categorical variables, where the categories differ only by their names; there is no order among categories, e.g. colour (red, blue, green), gender (male, female), department (HR, analytics, sales)
+
+        These are the most basic form of categorical variables
+
+    Ordinal variables: Categories follow a certain order, but the mathematical difference between categories is not meaningful, e.g. education level (primary school, high school, college), height (high, medium, low), performance (bad, good, excellent), etc.
+
+        Ordinal variables are nominal as well
+
+    Interval variables: Categories follow a certain order, and the mathematical difference between categories is meaningful but division or multiplication is not, e.g. temperature in degrees celsius ( the difference between 40 and 30 degrees C is meaningful, but 30 degrees x 40 degrees is not), dates (the difference between two dates is the number of days between them, but 25th May / 5th June is meaningless), etc.
+
+        Interval variables are both nominal and ordinal
+
+    Ratio variables: Apart from the mathematical difference, the ratio (division/multiplication) is possible, e.g. sales in dollars ($100 is twice $50), marks of students (50 is half of 100), etc.
+
+        Ratio variables are nominal, ordinal and interval type
+        
+        
+        Questions:1/5
+ 
+ 
+ 
+ 
+ 
+Ordinal Variables
+
+Which of the following is an ordinal variable (but not interval or ratio)?
+The name of a party e.g. BJP, INC, SP
+The number of centuries scored by a batsman e.g. 10, 14, 19
+The grades of children e.g. A+. A, B+ B, C+, C
+Feedback :
+This is an ordinal but not interval variable (since B - A is meaningless) or ratio variable (B/A is meaningless). This is also a nominal one since all ordinal variables are nominal.
+Correct
+The type of loan taken by a person e.g. home, auto, personal, education
+
+
+Questions:2/5
+ 
+ 
+ 
+ 
+ 
+Interval Type Variables
+
+Which of the following is an interval type variable (but not ratio)?
+The name of a module in an UpGrad program e.g. module 1, 2, 3, 4, 5
+Feedback :
+The difference between modules is meaningful (i.e. module 5 - module 2 tells you that there are 3 more modules to go), but not the ratio (there's no meaning in module 5/module 2).
+Correct
+The speed of cars in kilometres per hour
+The grades of children e.g. A+. A, B+ B, C+, C
+The designation of employees in a team e.g. junior analyst, senior analyst, team lead, partner
+
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+Types of Attributes
+
+Which of the following data would come under the nominal category? Only one option is correct.
+Ratings e.g. VERY_SATISFIED, SATISFIED, NOT_SATISFIED
+Length expressed in centimeters
+Date of birth
+Educational degree names such as M.Tech, M.Com, MBA, MSc
+Feedback :
+Nominal variables are categorical variables where the categories differ only by their names, and there is no order among the categories. E.g. education degrees such as M.tech, M.com, MBA are names of master degrees after the bachelor degree, which can be differentiated by degree names. Thus, educational degree is a nominal variable whereas “Ratings” such as “Very_Satisfied”, “Satisfied” and “Not_satisfied” are distinguished by labels, but these can be ordered. But “Length” is a continuous variable. It can be expressed in ratio, for which you can perform the mathematical operation on it. On the other hand, “Date of birth” can be shown in intervals. It follows a particular order, for which the measurable difference between categories is meaningful.
+Correct
+
+
+Questions:4/5
+ 
+ 
+ 
+ 
+ 
+Interval Variables
+
+Interval variables can be ordered and their difference (or the distance between them) is meaningful. Which of the following are ordinal variables but NOT interval variables? More than one option may be correct.
+Heights of 4 people classified as high, medium and low
+Feedback : Height is an ordinal variable. It can be ordered by levels as high, medium and low.
+Correct
+Amount of pain experienced by 3 patients — low, bearable, severe
+Feedback : It is an ordinal variable. It can be ordered by levels as low, bearable and severe.
+CorrectYou missed this!
+Pressures of 3 gases: 4 bars, 5 bars and 5.4 bars
+Feedback : Pressure is a continuous variable.It cannot be easily explained in terms of one another. Thus, this is an interval type attribute.
+
+
+
+Questions:5/5
+ 
+ 
+ 
+ 
+ 
+Types of Variables
+
+Ordinal variables have a notion of ordering, i.e. you can say that one occurs after the other. One example is the number of stars given as review on TripAdvisor or Zomato. Can you think of another ordinal attribute? Write your answer in the text box below. (Word limit: 200)
+
+1star. 2 star, 3 star 5 star
+
+
+
+Understanding types of variables enables you to derive new metrics of types different from the same column.
+
+ 
+
+For example, age in years is a ratio attribute, but you can convert it into an ordinal type by binning it into categories such as children (< 13 years), teenagers (13-19 years), young adults (20-25 years), etc. This enables you to ask questions, e.g. do teenagers do X better than children, are young adults more likely to do X than the other two types, etc. Here, X is an action you are interested in measuring. 
+
+ 
+
+Let’s look at some more examples of type driven derived metrics.
+
+In the next lecture, you will learn the second type of derived metrics - business-driven metrics.
+
+ 
+
+Additional reading
+
+    Difference between ordinal, interval and ratio variables  - https://www.graphpad.com/support/faqid/1089/
+
+
+Questions:2/3
+ 
+ 
+ 
+Deriving metrics from text
+
+Let's say you have a column having 'customer feedback' given on websites such as Amazon, Zomato etc. 
+
+Using a certain logic such as the number of 'positive or negative words' in a feedback, you can derive another metric - the sentiment of customer with categories such as negative, neutral, positive. This is a variable of type:
+Nominal but not ordinal
+Ordinal but not interval
+Feedback :
+There's a certain order here - positive is 'better than' negative and neutral, though the mathematical difference is meaningless.
+Correct
+Interval but not ratio
+Ratio
+
+Questions:3/3
+ 
+ 
+ 
+Deriving metrics from text
+
+Anand mentioned that you can derive several types of columns from text. Let's say you have a column having 'customer feedback' given on websites such as Amazon, Zomato etc. 
+
+One metric you can derive from this is the 'length of the feedback' measured in number of words. Length of feedback is a variable of type:
+Nominal
+Ordinal but not interval
+Interval but not ratio
+Ratio
+Feedback :
+Length is a ratio type attribute - 30 words is twice that of 15 words. 
+
+
+In the next lecture, you will learn the second type of derived metrics - business-driven metrics.
+
+ 
+
+Additional reading
+
+    Difference between ordinal, interval and ratio variables  -https://www.graphpad.com/support/faqid/1089/
