@@ -1,0 +1,53 @@
+Graded Questions
+
+Comprehension: National Achievement Survey
+
+
+To answer these questions, please download the attached data set. It contains information related to the performance of class VIII students of Maharashtra state. You may use either Python or Excel.
+National Achievement Survey Dataset
+file_downloadDownload
+
+
+Note that the answer should be given on the basis of the above data set. You are not supposed to solve the following questions from the website app.
+
+Questions:1/2
+ 
+ 
+Bivariate Analysis
+
+You want to understand the distribution of two variables — mother’s education and the number of siblings. Complete the following statement:
+
+ 
+
+Most children whose mothers are illiterate have:
+No sibling
+One sibling
+Two siblings
+Feedback :
+Create a pivot table with the mother’s education in rows and the number of siblings in columns and the values (or vice versa). You’ll note that, for illiterate mothers, the most frequent sibling number is two siblings.
+Correct
+Three siblings
+Four or more siblings
+
+Questions:2/2
+ 
+ 
+Bivariate Analysis
+
+You also want to understand how the average science marks vary with the father’s education level and age. Neglect the age group of 11 years since there are very few children in that segment. Mark the correct statement:
+
+Children whose fathers have a degree and above perform significantly better than average in science irrespective of the age
+Feedback :
+
+Compare the science percentage in a pivot table with the father’s education and age in rows and columns (in any order).
+Incorrect
+
+Children whose fathers have a degree and above perform significantly better than average for the age groups 12, 13 and 14 years only
+Feedback :
+
+You will see that children whose fathers have a degree and above perform better in science only in the age groups 12, 13 and 14 years.
+Correct
+
+Children whose fathers have a degree and above perform significantly better than average for the age groups 15 and 16+ years only
+
+Children whose fathers have a degree and above perform significantly better than average for the age groups 12 and 13 years only
