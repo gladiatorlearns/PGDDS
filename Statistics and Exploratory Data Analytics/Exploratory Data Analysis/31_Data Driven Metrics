@@ -1,0 +1,23 @@
+Types of Derived Metrics: Data Driven Metrics
+
+In the last lecture, you learnt to create business-driven metrics. Apart from the type-driven and business-driven metrics, there is a third type of metric called data-driven metrics.     
+
+ 
+
+Let see how the data-driven metrics can be created from existing data.
+
+To summarise, data-driven metrics can be created based on the variables present in the existing data set. For example, if you have two variables in your data set such as "weight" and "height" which shows a high correlation. So, instead of analysing "weight" and "height" variables separately, you can think of deriving a new metric "Body Mass Index (BMI)". Once you get the BMI, you can easily categorise people based on their fitness, e.g. a BMI below 18.5 should be considered as an underweight category, while BMI above 30.0 is considered as obese, by standard norms. This is how data-driven metrics can help you discover hidden patterns out of the data.
+
+Summary
+
+So far in this session, you have learnt three different types of derived metrics. You also understood the use case of deriving new variables out of existing variables. Let’s see a quick summary of the session.
+
+Questions:1/1
+ 
+Derived Metrics
+
+You have gone through the exercises of extracting additional data and metrics from the class VIII marks (National Achievement Survey) case study using type-driven, business domain-driven, and data-driven methods. Therefore, you must be familiar with all three methods now.
+
+Now, imagine that you are teaching your colleague about derived metrics. How would you describe the similarities and differences between these three methods to a colleague who understands EDA but has never heard of derived metrics before? Write your answer in the text box below.
+
+Data driven metrics are deriving new metrics based on currently available data columns (measure) such as weight and height gives BMI column
