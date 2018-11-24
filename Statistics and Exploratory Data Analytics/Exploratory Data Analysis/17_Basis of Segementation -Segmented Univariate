@@ -1,0 +1,100 @@
+Basis of Segmentation
+
+In the last lecture, you have seen some glimpses of segmented univariate analysis. Now, let’s go deeper into the segmentation process. The entire segmentation process can be divided into four parts:
+
+    Take raw data
+
+    Group by dimensions
+
+    Summarise using a relevant metric such as mean, median, etc.
+    Compare the aggregated metric across groups/categories
+
+Let's see how Anand explains the process of segmentation:
+
+To summarise, the standard process of segmented univariate analysis is as follows:
+
+    Take raw data
+
+    Group by dimensions
+
+    Summarise using a relevant metric like mean, median, etc.
+
+    Compare the aggregated metric across groups/categories
+
+So with this, you have now performed segmented univariate analysis on a few variables, but what if you have a large number of variables in your data set? How would you go about analysing and explaining the results of hundreds of categorical variables to your client? Let’s see what such a table would look like in the next lecture.
+
+ 
+
+Comprehension: National Achievement Survey
+
+ 
+
+In the examples you just saw, the variables used for grouping were gender, the number of siblings, handicap status, etc. The metric for comparison was the average marks in mathematics. Using this process, you can ask interesting questions by choosing various grouping variables and summary metrics, some of which you will see in the following questions.
+
+ 
+
+Note: This data set is subsetted only for the state of Maharashtra. You can download the data from the link below:
+
+
+National Achievement Survey Dataset
+file_downloadDownload
+
+Analyse the NAS data set to find answers to the following questions.
+
+Questions:1/3
+ 
+ 
+ 
+Segmented Analysis
+
+What is the impact of the variable 'Watch.TV' on Science marks?
+
+Students who watch TV daily get significantly better marks than others
+
+Students who watch TV once a week get significantly better marks than others
+
+The Watch.TV variable doesn’t distinguish the students significantly in terms of Science marks
+Feedback :
+
+The average marks of students in Science in the all the labels are the same, i.e. around 36% marks.
+Correct
+
+Students who never watch TV get significantly better marks than others
+
+Questions:2/3
+ 
+ 
+ 
+Segmented Analysis
+
+What is the impact of the father’s education on the student’s Maths marks?
+
+Students whose fathers have a degree and above get better marks on an average
+Feedback :
+
+Students whose fathers come under the label “degree & above” get the highest average marks among the labels, i.e. 34.87%
+Correct
+
+Students whose fathers are uneducated get better marks on an average
+
+The father’s education does not have a significant impact on the student’s average maths marks
+
+Questions:3/3
+ 
+ 
+ 
+Segmented Analysis
+
+What is the impact of 'Play.Games' on Reading marks?
+
+Students who play games daily score high in Reading on an average
+
+Students who play games once a week score high in Reading on an average
+Feedback :
+
+Students who play games once a week score 59.62% average marks in reading.
+Correct
+
+Students who never play games score high in Reading on an average
+
+Students who plays games once a month score high in Reading on an average
