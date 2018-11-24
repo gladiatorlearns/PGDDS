@@ -1,0 +1,125 @@
+Practice Questions
+
+Analysing ODI cricket data is always exciting. The following data set contains the performance information of each player who played between 1971 - 2011. Based on the data, answer the questions that follow.
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Cricket Analysis
+
+Choose the correct option/s.
+Business-driven metrics can be created from the ‘Runs’ column
+Feedback : A business-driven metrics could be creating a new column which gives information on whether a player scored a century or not.
+Correct
+Type-driven metrics can be created from the ‘Match Date’ column
+Feedback : A type-driven metric could be extracting years from the date column.
+Correct
+Data-driven metrics can be created from the combination of ‘Runs’ and ‘Balls’ columns
+Feedback : Strike rate can be a created from the ‘Runs’ and ‘Balls’” variables.
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Cricket Analysis
+
+Which player scored the highest number of centuries?
+
+Sachin R Tendulkar - 48 centuries
+Feedback :
+
+Create a new column which contains 1 if the player scores more than 100 runs and 0 otherwise. Once you create the new column, sum up all the 1s grouped by the player name. 
+Correct
+
+Sachin R Tendulkar - 49 centuries
+
+Ricky T Ponting - 30 centuries
+
+Ricky T Ponting - 35 centuries
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Cricket Analysis
+
+The ‘strike rate’ of a batsman is defined as the (number of runs scored / number of 100 balls faced). It is a measure of ‘how fast a batsman has played’.For example, if a batsman scores 40 runs in 50 balls, the strike rate is 80 runs/100 balls.
+
+Among all the innings where a century was scored by a batsman, which one has the highest strike rate?
+
+Shahid Afridi - 255 runs / 100 balls
+Feedback :
+
+You need to calculate the strike rate from the “run” and “balls” columns and then subset the data to include all the centuries scored.
+Correct
+
+Mark V Boucher - 221.74 runs / 100 balls
+
+Sanath T Jayasuriya - 206 runs / 100 balls
+
+Shane R Watson - 192 / 100 balls
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Cricket Analysis
+
+In which year were the maximum number of centuries scored by Indian players?
+
+1992
+
+2011
+
+1999
+
+1998
+Feedback :
+
+Create a new metric from the date column — “year”. Then, subset your data with country = ‘India’ and aggregate the number of centuries by year. In Excel, you can use the YEAR() function to extract the year from the date and then use a pivot table to cross-tabulate the year and number of centuries for Indian players.
+
+Let's say you are analysing the sales of a restaurant (daily, monthly and yearly sales). In your dataset, a date column is given from which you want to extract a column so that you can aggregate the sales based on that column (a day, a month or a year). The date column is present in this format “dd-mm-yy" for example, "12-04-2014".
+
+ 
+
+Now your task is to complete the functions given below which take the date column as the input and replace them with date, month and year respectively. For example, the date "12-04-2014" should be replaced with "12" in the first question.
+
+ 
+
+Refer to the resources given here --> https://stackoverflow.com/questions/30405413/python-pandas-extract-year-from-datetime-dfyear-dfdate-year-is-not  - to attempt the coding console below:
+
+Questions:1/1
+
+Extracting Day From a Date
+Description
+The given dataset 'order' has a variable 'Order_Date' with the dates of purchase.
+Create a new variable 'day' which will contain the day from the date at variable Order_Date.
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+order = pd.read_csv('https://query.data.world/s/3hIAtsCE7vYkPEL-O5DyWJAeS5Af-7')
+order['Order_Date'] = pd.to_datetime(order['Order_Date'])
+
+order['day'] = order['Order_Date'].dt.day
+
+print(order.head(10))
+
+Alternatively - 
+import pandas as pd
+order = pd.read_csv('https://query.data.world/s/3hIAtsCE7vYkPEL-O5DyWJAeS5Af-7')
+order['Order_Date'] = pd.to_datetime(order['Order_Date'])
+
+order['day'] = order['Order_Date'].apply(lambda x: x.day)
+
+print(order.head(10))
+
+
