@@ -1,0 +1,74 @@
+Business Problems Involving Correlation
+
+In the last lecture, you learnt the concept of correlation and its interpretation. But it also important to understand how correlation is used in the industry. Let’s see how correlation is used through a real example of stock market analysis.
+
+There are two things which you would have noticed from the lecture:
+
+    The correlation matrix of stock prices of different countries gives a real sense of the relationship between many variables.
+
+    The correlated variables are grouped by similarities, and correlation can also be calculated for ‘groups of variables’. This is called ‘clustering’ which you will study in detail later in the machine learning course, but the idea is to form a hierarchy of similar groups of variables.
+
+ 
+
+If you are confused about the correlation matrix used above and its interpretation, you can visit this https://gramener.com/retail/clothing-sales, where a similar case study has been explained. Basically, the top-right half represents the correlation coefficient and the left bottom half has the scatter plot between the 2 variables.
+
+ 
+
+You can also see how you can interpret the extent of correlation among the variables from their scatter plot at this https://www.youtube.com/watch?v=jf-SIOFUuEo. 
+
+​​
+
+Let’s take one more example to understand how clustering helps in understanding customer behaviour of ordering food at restaurants.
+
+Comprehension- Correlation Matrix
+
+ 
+
+You saw the correlation metrics of food items in the above lecture. Using the image given below, attempt the following questions.
+
+ 
+In the next lecture, you will learn how to find the relationship between pairs of categorical variables and the relationship between categorical and continuous variables.
+
+Correlation
+
+As Anand mentioned, "ContainerBIG" is neutrally correlated with “Mineral water1L bottle”. So what does neutral imply for defining the relationship between these variables?
+Significantly high correlated
+Low correlated
+Feedback :
+The correlation between these variables is 5% which is a significantly low correlation.
+Correct
+Negatively correlated
+
+
+Questions:1/2
+ 
+ 
+Correlation Matrix
+
+Which category would be considered an evergreen one, one which would result in a sales increase in every other category?
+
+Tiffin
+
+Meals
+
+Dessert
+Feedback :
+
+Positive correlation between desserts and, say, tiffin implies that if a person orders desserts, it increases the likelihood of her/him ordering tiffin. Now, if a category is positively correlated with every other category, that would basically imply that it increases the likelihood of selling the other categories. The only such category is “Desserts” since it has a positive correlation with all the categories.
+Correct
+
+Breads
+Feedback :
+
+Positive correlation between desserts and, say, tiffins implies that if a person orders desserts, it increases the likelihood of her/him ordering tiffins. Now, if a category increases the likelihood of every other category’s purchase, what can you say about its correlation?
+
+Questions:2/2
+ 
+ 
+Correlation Matrix
+
+The restaurant has asked you to recommend 4 products that the restaurant should sell together as a prepackaged meal. Which 4 products would you recommend that the restaurant package together given the data in the correlation matrix? Why did you choose these 4 items?
+
+Beverage, Tiffin, Bread, Starter are 4 products
+
+
