@@ -1,0 +1,51 @@
+Comparison of Averages
+
+In the previous lectures, you learnt the process of segmented univariate analysis. Let’s now move on to the next step of segmented univariate analysis — the comparison of averages.
+
+
+By now, you know how to group the data by categorical variables and compare the averages. But you should be careful while comparing averages, especially if the difference in average values is small. Let’s see why this is important.
+
+You would have noticed that both the data sets created by Anand have different distributions of the scores of boys and girls. In the first data set, it shows that every girl scored higher marks than every other boy. The difference in means is still 1, but in this case, you can say that girls score higher than boys.
+
+Review comparison of averages.png
+
+Review comparison of averages 2.png
+
+
+You would have noticed that both the data sets created by Anand have different distributions of the scores of boys and girls. In the first data set, it shows that every girl scored higher marks than every other boy. The difference in means is still 1, but in this case, you can say that girls score higher than boys.
+Fig-1: Averages
+
+ 
+
+ 
+
+On the other hand, in the second data set, the difference in averages was 1 again, but it is difficult to conclude that girls score higher than boys since the range of scores is much wider. The difference is now not as significant as the previous case, since the variation in scores may cause small differences in the mean due to randomness as well.
+
+ 
+Averages
+
+ 
+
+ 
+
+Tip-1
+
+“Don’t blindly believe in the averages of the buckets — you need to observe the distribution of each bucket closely and ask yourself if the difference in means is significant enough to draw a conclusion. If the difference in means is small, you may not be able to draw inferences. In such cases, a technique called hypothesis testing is used to ascertain whether the difference in means is significant or due to randomness.“ Don’t worry if you do not get the concept of hypothesis correctly, It will be dealt separately in hypothesis module.
+
+ 
+
+ 
+
+In case, if you have not downloaded the national achievement survey dataset yet. You can download the dataset from the link below: 
+National Achievement Analysis Dataset
+file_downloadDownload
+
+Questions:1/1
+ 
+Segmented Analysis
+
+You are supposed to use the above-attached sample data set of class VIII students of Maharashtra state to attempt the following questions.
+
+The variable ‘Solve.Maths’ has three levels - agree, disagree, neither which indicates whether the child solves math problems regularly.
+
+Is there any significant difference in the mean of percentage maths marks among the students who agree or disagree on ‘Solve.Maths’? Write your answer in the text box below.
