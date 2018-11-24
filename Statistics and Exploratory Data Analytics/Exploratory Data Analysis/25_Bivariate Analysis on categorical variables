@@ -1,0 +1,63 @@
+Bivariate Analysis on categorical variables
+
+So far, you have learnt how to analyse the relationship between two continuous variables. You will now learn how to quantify and understand the relationship between pairs of categorical and continuous variables.
+
+ 
+
+Let’s understand this from Anand.
+
+The categorical bivariate analysis is essentially an extension of the segmented univariate analysis to another categorical variable. In segmented univariate analysis, you compare metrics such as ‘mean of X’ across various segments of a categorical variable, e.g. mean marks of a student are higher for ‘degree and above’ than other levels of the mother’s education; or the median income of educated parents is higher than that of uneducated ones, etc.
+
+ 
+
+In the categorical bivariate analysis, you extend this comparison to other categorical variables and ask — is this true for all categories of another variable, say, men and women? Take another categorical variable, such as state, and ask — is the median income of educated parents higher than that of uneducated ones in all states?
+
+ 
+
+Thus, you are drilling down into another categorical variable and getting closer to the true patterns in the data. In fact, you may also go to the next level and ask — is the median income of educated parents higher than that of uneducated ones (variable 1)  in all states (variable 2) for all age groups (variable 3)? This is what you may call ‘trivariate analysis’, and though it gives you a more granular version of the truth, it gets a bit complex to make sense of and explain to others (and hence it is not usually done in EDA).
+
+Thus, remember that doing only conducting segmented univariate analysis may deceive you into thinking that a certain phenomenon is true without asking the question — is it true for all sub-populations or is it true only when you aggregate information across the entire population?
+
+ 
+
+So in general, there are two fundamental aspects of analysing categorical variables:
+
+    To see the distribution of two categorical variables. For example, if you want to compare the number of boys and girls who play games, you can make a ‘cross table’ as given below:
+    
+    From this table, firstly, you can compare boys and girls across a fixed level of ‘play games’, e.g. a higher number of boys play games every day than girls, a higher number of girls never play games than boys, etc. And secondly, you can compare the levels of ‘play games’ across a fixed value of gender, e.g. most boys play every day and very few play once a month or never.
+
+ 
+
+    To see the distribution of two categorical variables with one continuous variable. For example, you saw how a student’s percentage in science is distributed based on the father’s occupation (categorical variable 1) and the poverty level (categorical variable 2).
+
+ 
+
+Usually, you do not analyse more than two variables at a time, though there are ways to do that. Machine learning models are essentially a way to do that, some of which you will learn in the next course.
+
+Questions:1/1
+ 
+Bivariate Analysis
+
+Now that you’ve learnt categorical bivariate analysis, how would you explain the difference between continuous bivariate analysis vs categorical bivariate analysis to your colleague? For example, what are the similarities or differences between each method?
+
+Continous - correlation between 2 variables
+Categorical - extension of segmentated univariate where compares another variable based on average
+
+Summary
+
+In bivariate analysis, there are broadly two types of analysis that you learnt:  
+
+    Bivariate analysis on continuous variables
+
+    Bivariate analysis on categorical variables
+    
+    Questions:1/1
+ 
+Bivariate Analysis
+
+Now you’ve learnt about bivariate analysis in more depth and applied this analysis technique to multiple scenarios and data sets.
+
+
+How would you explain bivariate analysis to a fellow colleague, if the colleague has never learnt about bivariate analysis?
+
+Let us say we have review scroring trends of virat kolhi in various cricket grounds and different seasons, bivariate analysis needs to be done.  Here we categorical values such as stadiums and seasons and plot sum/avg runs againsts these parameters
