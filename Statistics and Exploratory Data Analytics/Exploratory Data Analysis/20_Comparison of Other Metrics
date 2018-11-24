@@ -1,0 +1,57 @@
+Comparison of Other Metrics
+
+Once you have identified the variables based on the business problem for analysing the segments, the next step is to know the distribution of segments and compare the average of each segment. But this is not the only way of comparing segments. There are various metrics which you can use to understand and explain your data easily.
+
+Let's see how Anand compares the other metrics:
+
+ 
+
+So far in this session, you have learnt new metrics, concepts and techniques for performing segmented univariate analysis on the variables based on the business understanding. In conclusion, the three steps of segmented univariate analysis are as follows:
+
+    Basis of segmentation
+
+    Comparison of averages
+
+    Comparison of other metrics
+
+ 
+
+Besides finding the segments and comparing the metrics, your primary focus should be on understanding the results arising from the segments.
+
+Comprehension: VIII Class Scores
+
+In continuation of the earlier example of class VIII marks, answer the following questions. The boxplot represents the variation in ‘Reading’ percentage with Mother’s education level. The code to generate the box plot is provided here: Box Plot  (https://plot.ly/python/box-plots/) 
+
+ 
+ Questions:1/3
+ 
+ 
+ 
+Segmented Analysis
+
+Choose the correct option/s:
+Children whose mothers have a degree or above are more likely to get better marks in reading than others
+Feedback : It is clearly visible that the bottom horizontal line (which represents 25th percentile), the median and the 75th percentile of the category “Degree & above” mother’s education level are significantly higher than other categories.
+Correct
+Across categories of mother's education level, the 25th percentile varies more than the 75th percentile
+Feedback : It can be clearly seen that the 25th percentile across the different levels of the mother’s education varies largely than the 75th percentile.
+CorrectYou missed this!
+Children whose mothers have a degree or above are less likely to get better marks in reading than others
+Feedback : It is clearly visible that the bottom horizontal line (which represents 25th percentile), the median and the 75th percentile of the category “Degree & above” mother’s education level are significantly higher than other categories.
+Incorrect
+Across categories of mother's education level, the 75th percentile varies more than the 25th percentile
+
+Questions:2/3
+ 
+ 
+ 
+Segmented Analysis
+
+The average variation in marks is the least for children whose mothers have an education level of:
+Primary education
+Secondary education
+Degree and above
+Feedback :
+The marks of students whose mothers have a “degree and above” are more consistent since the difference between the 25th and the 75th percentile is the least.
+Correct
+Blanks
