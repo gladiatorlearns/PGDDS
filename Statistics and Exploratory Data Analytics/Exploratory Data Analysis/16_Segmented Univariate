@@ -1,0 +1,90 @@
+Introduction
+
+Welcome to the session on 'Segmented univariate analysis'.
+
+ 
+
+In the previous session, you learnt to conduct univariate analysis on categorical and quantitative variables. In the segmented univariate analysis, you will learn how to extract useful insights by conducting univariate analysis on segments on data.
+
+We will extend univariate analysis and learn to conduct univariate analysis across ‘segments’. The broad agenda for this session is as follows:
+
+    Basis of segmentation
+
+    Comparison of averages
+    Comparison of other metrics
+    
+    Introduction to Segmented Univariate Analysis
+
+In segmented univariate analysis, we segment the categorical variables and then conduct univariate analysis across its categories. Let’s see how this simple technique can help you unveil powerful insights.
+
+You have already done some segmented univariate analysis in the previous lectures, such as in the news popularity example, where you wanted to test the following three hypotheses:
+
+    On average, a higher number of articles are shared on weekdays than weekends
+
+    Among the weekdays, articles published on Wednesdays get shared more than on any other weekday
+
+    Articles of the type (or channel) 'lifestyle' and 'social media' are shared more than the other types on average
+
+In this case, the categorical variables used for grouping were ‘channel type’, ‘day of week’, etc.  Across these categories or groups, you had then conducted segmented univariate analysis to compare the average number of shares across days, channel types etc.
+
+ 
+
+In the next few lectures, we will take multiple examples and conduct segmented univariate analysis in detail.
+
+
+
+
+Questions:1/1
+ 
+Segmented Analysis
+
+How is segmented univariate analysis different from classic univariate analysis that you learnt in the previous session?
+Segmented univariate analysis allows you to compare subsets of data, which is a powerful technique because it helps you understand how a relevant metric varies across different segments
+Correct
+Apart from observing summary statistics, segmented univariate analysis also helps you observe the variables visually
+Segmented univariate analysis also considers unordered categorical variables whereas simple univariate analysis is conducted only on continuous/numeric or ordered categorical variables
+
+Questions:1/1
+ 
+Basis of Segmentation
+
+Anand mentioned any categorical data can serve as the basis of segmentation, but you’ll need to use your best business judgement to choose the right data to analyse.
+
+Now imagine you are the director of scouting for the T-20 Indian cricket team. You are using a data-driven approach to identify the best cricket players of your team based on the IPL performance of players, and you plan to use segmented univariate analysis as part of this data-driven approach.
+
+
+What cricket related variables will you use for this segmented univariate analysis? Why did you choose these variables?
+
+Best Batting Average
+Strike Rate
+Bowling Economy
+Highest Wickets
+
+
+Questions:1/1
+ 
+Segmented Analysis
+
+Using the general rule of thumb that Anand mentioned, which of the following cricket variables can be used as a basis of segmentation without making any changes to the original variables?
+Opposition team
+Feedback :
+Without making any changes to the original variables, you can always segment categorical variable based on its labels such as the opposition team which can be labelled by countries name(Australia, England,India etc.). But all the other variables are continuous.
+Correct
+Runs scored by a batsman
+Balls faced by a batsman
+Total number of boundaries scored by the batsmen of a team
+
+
+Class Opinion
+
+Anand mentioned any categorical data can serve as basis of segmentation, but you’ll need to use your best business judgement to choose the right data to analyze.
+
+ 
+
+Now imagine you are working as an analyst for the BCCI (the governing body of cricket in India) .You are using a data-driven approach to identify the best cricket players for the Indian T20 team based on the IPL performance of players, and you plan to use segmented univariate analysis as part of this data-driven approach.
+
+
+What cricket related variables will you use for this segmented univariate analysis? Why did you choose these variables?
+
+Number of runs scored, How fast he scored(strike rate), ranking of the opposition , number of 4s and 6s, batting average and number of conversions to big scores (100s)
+
