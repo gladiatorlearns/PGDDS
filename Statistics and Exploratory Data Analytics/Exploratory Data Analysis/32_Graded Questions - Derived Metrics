@@ -1,0 +1,139 @@
+Graded Questions
+
+Let’s say you work as an analyst at UpGrad and you want to find interesting patterns in ‘the typical dates and times when UpGrad students submit their assignments’.
+
+ 
+
+The data set provided below contains information on the dates and times of students’ submissions of an assignment. It has two variables — “submission” (the unique URL of a student’s submission on the platform) and “submit_time” (the date-time of submission).
+EDA_grades
+file_downloadDownload
+
+This was the Association Rule Mining assignment whose submission deadline was Jan 3, 2017 - 11:59:59 PM. The second deadline was Jan 9, 2017 - 11:59 PM. Submissions between the first and the second deadline attract a 30% penalty in marks.
+
+ 
+
+The variable ‘submission’ has several components separated by slashes. The last component contains the submitted filename in the format ‘roll_number.xxx’ where xxx is the file extension (.zip, .R etc.)
+
+ 
+
+You want to understand:
+
+    The typical dates when students submit assignments
+
+    The typical times (hour of the day) of submissions
+
+ 
+
+Extract all the relevant metrics (such as the date, day, month, year, hour, and minutes) of each person’s submission and attempt the following questions.  
+
+ Questions:1/5
+ 
+ 
+ 
+ 
+ 
+Derived Metrics
+
+What percentage of students submitted their solutions in .zip format?
+
+95%
+Feedback :
+
+Take a look at the “submission” column. Try to extract the ‘.zip’ text from the submission column. The answer would come out to be 95%.
+Correct
+
+99%
+
+75%
+
+85%
+
+
+Questions:2/5
+ 
+ 
+ 
+ 
+ 
+Derived Metrics
+
+How many students submitted the assignment after the first deadline (including the students who submitted after the second deadline) ?
+
+40
+
+39
+
+44
+Feedback :
+
+Once you create a date metric out of the “submit_time” column, you can create a new column from the date metric which should assign 1 if the student submitted the assignment after the first deadline.
+Correct
+
+41
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+Derived Metrics
+
+On which date did the most students submit the assignment?
+
+2017-01-04
+
+2017-01-09
+
+2017-01-02
+
+2017-01-03
+Feedback :
+
+Create “date” column from the “submit_time” column and visualise the distribution of “date” column.
+Correct
+
+Questions:4/5
+ 
+ 
+ 
+ 
+ 
+Derived Metrics
+
+In which hour of the day did most students submit the solution?
+
+23:00
+Feedback :
+
+Create a “hours” column from the “submit_time” column and visualise the distribution of the “hours” column.
+Correct
+
+22:00
+
+21:00
+
+01:00
+
+Questions:5/5
+ 
+ 
+ 
+ 
+ 
+Derived Metrics
+
+If you plot the distribution of submissions by the hour, what can you observe?
+
+Most people submit the assignment in the late evening (i.e. after 8 PM)
+Feedback :
+
+On creating a histogram of the hour of day, you will see that most students prefer submitting assignments after 20:00 hours, i.e. after 8 PM.
+Correct
+
+Most people submit the assignment in the afternoon (i.e. 12 noon - 4 PM)
+
+Most people submit the assignment in the morning (i.e. 8 AM -11 AM)
+
+Submissions are distributed evenly across hours of the day
+
