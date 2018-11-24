@@ -1,0 +1,57 @@
+Quick way of Segmentation
+
+In the last lecture, you learnt the process of segmentation. But what if you have a large number of variables in your dataset. It looks very repetitive task to perform the same analysis on the large bunch of variables. One way of solving this problem is to make a table with the categorical variables on one axis and the numeric variables (or measures/facts) on the other. Let’s see what such a table would look like.
+
+Comprehension: National achievement Survey Analysis
+
+You saw how various factors have an impact on a student’s performance and marks. Let’s analyse how segmented univariate analysis can help you understand the factors affecting class VIII marks in the different states. You are required to go to the below website app, play around with the filters (gender, poverty, state, siblings, etc.) and answer the following questions.
+
+ Note that the data used for developing this exercise is different from the dataset provided to you in the previous lectures.
+ 
+ 
+ Questions:1/3
+ 
+ 
+ 
+National Achievement Survey
+
+In Madhya Pradesh, which level of the father’s occupation is most likely to improve percentage in Maths?
+Teacher/Lecturer
+Feedback :
+“Teacher/Lecturer” improves the student’s maths percentage by 8.5%.
+Correct
+Farmer
+Skilled worker
+Professional
+
+Questions:2/3
+ 
+ 
+ 
+National Achievement Survey
+
+In Madhya Pradesh, can you say that the mother’s occupation plays a significant role in improving the total marks in class VIII?
+Yes
+Feedback :
+The mother’s occupation influences the student’s marks by as much as 24.2%, i.e. children whose mothers are working professionals are likely to score 24.2% more marks than those whose mothers are clerks.
+Correct
+No
+
+
+Questions:3/3
+ 
+ 
+ 
+National Achievement Survey
+
+Students across the India, which factor has the highest impact on the total marks?
+Father occupation
+Father edu
+Feedback :
+The father’s education has an impact of more than 11% on the student’s total marks. Children whose fathers have a degree are likely to score 11% more than those whose fathers are illiterate.
+Correct
+Mother edu
+Mother occupation
+
+
+Once you are done with segmentation, the next step is to compare your results within the category. You can either compare the means, or you can go for other descriptive statistics such as median, max, min, etc. We will discuss this in the next lecture.
