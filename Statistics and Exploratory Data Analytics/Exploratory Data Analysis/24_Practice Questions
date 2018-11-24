@@ -1,0 +1,62 @@
+Practice Questions
+
+The data set attached below contains the exchange prices of various currencies in the month of July 2016. We’ve taken this data set from the International Monetary Fund website.
+
+You can download the dataset from the link below:
+Currencies
+file_downloadDownload
+
+Let’s say you work for a trading company and want to analyse the correlations between currencies using this data. The currencies you want to analyse are Euro, Japanese Yen, U.K. Pound Sterling, US Dollar, Australian Dollar, Indian Rupee.
+
+ https://www.imf.org/external/np/fin/data/param_rms_mth.aspx
+
+Plot a correlation matrix for these currencies. You may have to learn how to do this in Python. Below are some useful links which will help you in plotting the correlation matrix.
+ 
+    YouTube Tutorial https://www.youtube.com/watch?v=b0Bd0b6Slzs
+    Stackoverflow - Correlation matrix https://stackoverflow.com/questions/29432629/correlation-matrix-using-pandas
+    
+    
+    Questions:1/2
+ 
+ 
+Correlation
+
+Indian rupee is the most correlated with:
+
+Australian dollar
+Feedback :
+
+Create a correlation matrix in Python. The correlation between INR and Australian Dollar is 0.92.
+Correct
+
+US dollar
+
+Japanese Yen
+
+Euro
+Feedback :
+
+Once you create the correlation matrix, you need to compare the correlation between each pair with the rest and choose the best pair. For example, you would compare the correlation between INR and US Dollar with INR and Euro.
+
+
+Questions:2/2
+ 
+ 
+Correlation Matrix
+
+A good risk mitigation practice in investing is ‘risk diversification’. In this context, it means that you should invest in two currencies such that if one goes up the other is likely to go down, thereby minimising the risk of losing all your money.
+
+Which two currencies, among the given 7 currencies, would you invest in?
+
+Japanese Yen and US dollar
+
+Australian dollar and INR
+
+Japanese Yen and UK Pound Sterling
+Feedback :
+
+The most negative correlation is between Japanese Yen and UK Pound Sterling - -0.97. This means that when Japanese Yen goes up, UK Pound Sterling is likely to go down.
+Correct
+
+Chinese Yuan and Euro
+
