@@ -1,0 +1,111 @@
+Graded Questions
+
+Let’s say you work at a central government body and want to compare the literacy rates of people across all the states in India. Your task is to understand the meanings of the rows and the attributes and find the number of literates, illiterates, literacy rate, etc. You have already downloaded the Census Data for the data sourcing exercise. In case you have not downloaded yet, do so from the link below before attempting the following questions.
+
+2011 Census Data
+file_downloadDownload
+
+Open the file in Excel and try to understand the column names. For this exercise, you will only need the following columns:
+
+    C1-C4: The first four columns are self-explanatory
+
+    C5: Total/Rural/Urban population
+
+    C6: Age group (e.g. age- group = 7 would mean the number of people of age 7 in each column)
+
+    C7-C9: Total population in that row
+
+    C10-C12: Illiterate population in that row
+
+    C13-C15: Literate population in that row
+    
+     
+
+Delete the top few rows to convert it into a standard format with appropriate column names (you may have to rename some columns manually). Then, convert the file into a CSV and import into Python. Answer the following questions.
+
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Segmented Analysis
+
+What percentage of females in the age group 20-24 are illiterate in India, i.e. out of all the females in the age group 20-24, what fraction is illiterate?
+
+28%
+
+23%
+Feedback :
+
+Once you remove the unwanted rows from the data set, take the ratio of the number of illiterate females to the number of total females, i.e. 12212466/53839529 = 0.226.
+Correct
+
+29%
+
+40%
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Segmented Analysis
+
+Compare the literacy rates (i.e. the number of literates / total number of population) in each age group and choose the correct option.
+
+People in the old age group (above 55+) are more literate than other groups
+
+People in the young age group (below 30) are more literate than the old age group (above 55+)
+Feedback :
+
+The young age group (under 30) shows a literacy rate higher than 70% whereas the old age group (above 55+) shows a literacy rate below 40%.
+Correct
+
+The literacy rate increases for each age bucket from 7 years till 80+
+
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Segmented Analysis
+
+Which state shows the highest female literacy rate?
+
+Madhya Pradesh
+
+Kerala
+Feedback :
+
+Kerala is at the top of the list of female literacy rates across the states. The female literacy rate of this state was 0.83 in 2011.
+Correct
+
+Goa
+
+Rajasthan
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Segmented Analysis
+
+Across all the states, which state shows the lowest literacy rate in 2011 (total population)?
+
+Madhya Pradesh
+
+Himachal Pradesh
+
+Bihar
+Feedback :
+
+Bihar shows the lowest literacy rate among all the states. It had a total literacy rate of 0.50 in 2011. 
+Correct
+
+Rajasthan
+Feedback :
+
+Calculate the total literacy rate across all the states and try to visualise this rate across the states.
