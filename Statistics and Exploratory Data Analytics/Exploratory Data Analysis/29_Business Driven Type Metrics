@@ -1,0 +1,59 @@
+Types of Derived Metrics: Business Driven Metrics
+
+So far, you've learnt how to extract meaningful information from existing variables, e.g. extracting a "month" variable from the date variable. But what if you want to extract information that requires business expertise? For example, if you wish to know which students passed based on a list of scores in an exam, you need to know the criteria for passing the exam.
+
+ 
+
+Let’s see how Anand approaches business-driven metrics. 
+
+To summarise, there are three types of derived metrics:
+
+    Type-driven
+    Business-driven
+    Data-driven
+
+ 
+
+Deriving metrics from the business perspective is not an easy task. It requires a decent domain experience. Without understanding the domain correctly, deriving insights becomes difficult and prone to errors. 
+
+ 
+
+Let's try out an exercise. You have been using the National Achievement Survey data set starting since EDA. In case you don't have the data set yet, you can download the National Achievement Survey from the link below to answer the question that follows.
+
+Questions:1/1
+ 
+Business-Driven Metrics: National Achievement Survey
+
+In the class VIII marks (National Achievement Survey) case study that you saw previously, what new data or metrics can you derive from the data set using the business-driven method? (Word limit: 200)
+ANs-
+Economic status
+Family members  are two things that can be thought of
+
+Questions:1/1
+ 
+Derived Variable
+Description
+The given dataset 'cust_rating' has 3 columns i.e 'rating', ' food_rating', 'service_rating'. Create a new variable 'avg_rating'.
+Execution time limit
+
+20 seconds
+
+import pandas as pd
+cust_rating = pd.read_csv('https://query.data.world/s/ILc-P4llUraMaYN6N6Bdw7p6kUvHnj')
+
+cust_rating['avg_rating'] = round(((cust_rating.rating+cust_rating.food_rating+cust_rating.service_rating)/3),0 )
+
+print(cust_rating.head(10))
+
+Alternative -
+
+import pandas as pd
+cust_rating = pd.read_csv('https://query.data.world/s/ILc-P4llUraMaYN6N6Bdw7p6kUvHnj')
+
+cust_rating['avg_rating'] = round((cust_rating['rating']+cust_rating['food_rating']+cust_rating['service_rating'])/3)
+
+print(cust_rating.head(10))
+
+
+So you learnt how type-driven and business-driven metrics are created and used for deriving useful insights from existing variables. In the next lecture, you will learn about the third type of derived metrics - data-driven metrics.
+
