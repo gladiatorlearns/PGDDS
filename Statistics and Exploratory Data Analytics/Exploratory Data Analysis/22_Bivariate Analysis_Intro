@@ -1,0 +1,128 @@
+Introduction
+
+Welcome to the session on ‘Bivariate Analysis’.
+
+ 
+
+You are now familiar with univariate analysis. In univariate analysis, you learnt:
+
+    How to get insights from distribution of individual variables 
+    How to observe the effect of various categorical variables on target variables such as an impact on maths percentage by father's education or mother's education.
+
+In this session
+
+You will learn to understand the ‘relationship between two variables’, which is called Bivariate Analysis. You will learn the following topics:
+
+    Bivariate analysis on continuous variables
+    Bivariate analysis on categorical variables
+    
+    
+    Bivariate Analysis on Continuous Variables
+
+In the last session, you learnt how to perform segmented univariate analysis e.g. how gender or father’s education impacts student’s percentage in science, maths and reading. But what if you want to analyse pairs of continuous variables at a time? For example, how the sales figure depends on the marketing spends? Or, for that matter, how two continuous variables depend on each other? Is there any way or concept to identify the relationship between two variables?
+
+ 
+
+Let’s start with the bivariate analysis on pairs of continuous variable to answer these questions.
+
+To summarise, correlation is a number between -1 and 1 which quantifies the extent to which two variables ‘correlate’ with each other.
+
+    If one increases as the other increases, the correlation is positive
+
+    If one decreases as the other increases, the correlation is negative
+
+    If one stays constant as the other varies, the correlation is zero
+
+ 
+
+In general, a positive correlation means that two variables will increase together and decrease together, e.g. an increase in rain is accompanied by an increase in humidity. A negative correlation means that if one variable increases the other decreases, e.g. in some cases, as the price of a commodity decreases its demand increases.
+
+ 
+
+A perfect positive correlation means that the correlation coefficient is exactly 1. This implies that as one variable moves, either up or down, the other one moves in the same direction. A perfect negative correlation means that two variables move in opposite directions, while a zero correlation implies no relationship at all. 
+
+ 
+
+Comprehension: Correlation
+
+
+Note: The following questions will require you to manipulate dates and time in Python. In case you want to learn how to do that, you can access some quick tutorials here and you may read in detail about date and time here.
+
+https://www.youtube.com/watch?v=eirjjyP2qcQ
+https://docs.python.org/3/library/datetime.html
+ 
+
+Let us take an example of gold and silver prices in Indian currency per troy ounce ( = 31.8 grams). Do you expect gold and silver price to be correlated? Let’s find out. Download the file and import it in Python for analysis. The dataset provided below contains the gold and silver prices across various years and months. 
+EDA - Gold Silver Prices Dataset
+file_downloadDownload
+
+(The dataset provided above may show up an error in Excel due to incorrect settings. Please either open the dataset in Python or change the column settings to date.)
+
+ 
+
+After importing the dataset, check the structure of imported data. You may want to make changes to get the data in a format that could be analysed.
+
+ 
+So now, you have an idea of how correlation is useful for deriving useful insights from continuous variables. Usage of correlation is widely prevalent in industry nowadays, and there are various challenges faced by organisations when it comes to representing the way of calculating the correlation for a large number of variables at a time. And this is what you will learn in the next lecture — basically how industries solve business problems just by using correlation analysis.
+
+ 
+
+Additional Readings:
+
+    You can read about correlation in detail here -https://study.com/academy/lesson/pearson-correlation-coefficient-formula-example-significance.html
+    
+    
+    Questions:1/1
+ 
+Bivariate Analysis
+
+Can you guess which statistical term you can use to explains the relationship between two variables in bivariate analysis?
+Correlation
+Feedback :
+Correlation is a statistical value that defines the degree of relationship between two variables.
+Correct
+Mean
+Median
+
+
+Bivariate Analysis
+
+What is the correlation in Gold and Silver prices (round off the answer to two decimal places)? Also, enter a fraction, not a percentage (e.g. 0.34, not 34.00%).
+doneCorrect
+Feedback : Right Approach
+
+
+Questions:2/3
+ 
+ 
+ 
+Bivariate Analysis
+
+What is the correlation in Gold and Silver prices for the years 2008(nearest two decimal places )?
+closeIncorrectdoneCorrect
+0.01
+
+Bivariate Analysis
+
+After conducting bivariate analysis on Indian gold and silver prices, do you think Indian gold and silver prices are correlated? Why or why not?
+
+Enter your answer in the text box below.
+
+Yes, both the rates are going in same direction. One increases then other does increase
+
+
+
+Questions:1/1
+ 
+Correlation
+
+Which plot shown above in fig-1, suggests a higher correlation between the height and weight variables?
+Plot -1
+Feedback :
+In plot 1, the points follow a linear trend, i.e. as the value of weight increases, the value of height also increases, which shows the positive correlation between the variables.
+Correct
+Plot -2
+Plot -1 and Plot -2 seem to have same correlation
+None
+
+
