@@ -1,0 +1,86 @@
+Python
+
+So, finally, you have reached the end of course 1 – “Introduction to Data Management”. In this module, you came across two of the most popular tools in the world of data science – Python and SQL.
+
+ 
+
+You learnt how powerful, yet simple analysing data in Python is. You started with the basic data structures in Python – Lists, Tuples, Dictionaries and Sets, and explored how each of these structures can be used. Next, we moved on to the control structures and functions in Python. You learnt how to write conditional statements, for and while loops and use comprehensions to make your code more concise and elegant. You also developed the skill to write your own functions using the def command. Other functions that were helpful in performing operations on different data structures were map(), filter() and reduce().
+
+ 
+
+After this you came across two very useful libraries in Python – NumPy and Pandas, which are helpful to conduct data cleaning, analysis and manipulation. These are the most frequently used basic Python constructs used across applications - whether data analysis, development or scientific simulations.
+
+ 
+
+In NumPy, we used arrays, which are the basic data structure in NumPy library. Various operations that you performed on arrays were:
+
+- Creating NumPy arrays from a list or a tuple or using the arange command.
+
+- Analysing the shape and dimension of an array using array.shape, array.ndim and so on.
+
+- Indexing, slicing and sub-setting an array which is very similar to indexing in lists.
+
+- Manipulating arrays which can be done using reshape().
+
+- Stacking and splitting arrays which are similar to merging and appending and can be done using hstack(), vstack().
+
+- Applying user-defined functions on an array to vectorise the code using np.vectorize().
+
+- Performing linear algebra operations on an array like Inverse, Determinant or eigenvalues of a matrix.
+
+ 
+
+We also saw how efficient it is to code in a vectorised form over other approaches. Coming to the other library Pandas, it has series and dataframes as the basic structures which are the most important form to store a dataset for analysis. These are the various operations that you performed using Pandas:
+
+- Indexing, selecting and subsetting a dataframe
+
+- Merging and appending two dataframes using .merge and .concat commands.
+
+- Grouping and summarising dataframes using groupby()
+
+- Using Pivot table function on a dataframe which are similar to pivot tables provided in Excel.
+
+ 
+
+You also learnt how to load  data from various sources into Python for analysis. Now, you can load data from a delimited file, a relational database, websites, APIs and PDF files into the Python database. After you have the dataset inside Python, the first thing you are supposed to do is to treat the dataset for any missing values. We used the isnull() command to identify the missing values in the dataframes and then, after careful examination, took appropriate option of either deleting or imputing the missing values with a meaningful value.
+
+SQL
+
+In this module, you also got an idea about how organisations use the tables inside an RDBMS to organise and store their data efficiently. SQL serves as a great platform to access and manipulate the data from an RDBMS. You used the MySQL Workbench to learn and run various commands in the language.
+
+ 
+
+To sum up the learning in SQL, you were taught how to create a database or schema and store data as tables in SQL. You saw how we used the concept of star schema to link data from multiple tables through primary and foreign keys. Next, the course focused on how to load the data present inside SQL using the ‘select’ command and various attributes attached to it. The ‘order by’ clause helped us to arrange our data based on increasing or decreasing trend of any selected variable. We used the ‘group by’ clause along with different aggregate functions to segregate and analyse our data based on categories. The ‘having’ and ‘where’ clauses provided the functionality of filtering the data with a slight difference. The ‘where’ clause filters on individual rows and the ‘having’ clause filters on the aggregated values, it applies only to groups as a whole.
+
+ 
+
+Further, the course covered the concepts of nested queries and joins, including inner join, outer join, left outer join, right outer join, among others. Later, you learnt how to modify the tables present in the SQL database. You used the ‘alter table’ clause to make changes in the table structure, that is, adding or deleting columns, change constraints, namely the primary and foreign key. The sessions also covered string manipulation using functions like sub_string(), concat(), lower(), etc. We also learnt the concept of windowing using the ‘over’ clause. The over clause is used to specify the window on which the applied function executes.
+
+ 
+
+Lastly, you learnt how to create UDFs and stored procedures using the ‘create’ command. You saw that once created, there is no difference between an in-built SQL function and a User-defined function or a stored procedure. We learnt that a UDF will always return a value, whereas, a procedure need not necessarily return a value. And in case it does return a value, it can very well return multiple values.
+
+Welcome Webinar
+
+You can watch the Welcome Webinar scheduled on 1st October 2018 with Prof. Tricha here.
+
+ https://www.youtube.com/watch?v=PkJi1ZNJF1I&feature=youtu.be
+ 
+ Expert Session on Python- Mr . Avishek Pal
+
+The expert session was conducted on 13th October, 18
+
+ https://videoken.com/embed/7s3mWdhfnvc 
+ 
+ 
+ Q n A session on Python- Mr Avishel Pal
+
+The Q n A session was conducted on 3rd Nov 2018 on DS in Python
+
+
+Prof. session on SQL
+
+This session was conducted on Oct 21 with Prof. RC on SQL
+
+https://youtu.be/I4XwGs6IJiI
+  https://videoken.com/embed/iiDdFwGEsLA?ctasource=upgrad 
