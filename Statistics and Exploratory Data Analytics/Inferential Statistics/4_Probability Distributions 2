@@ -1,0 +1,184 @@
+Probability Distributions - II
+So basically, a probability distribution is ANY form of representation that tells us the probability for all possible values of X. It could be any of the following:
+
+A table - Pic 1
+A chart - Pic 2
+An equation
+
+P(x) = x/21
+
+(for x = 1, 2, 3, 4, 5 and 6)
+
+Questions:1/1
+ 
+Probability Distributions
+Which of the following probability distributions is/are NOT valid, complete probability distribution(s)?
+
+A -
+
+      X      	Probability
+0	0.1
+2	0.2
+3	0.3
+4	0.4
+B -
+
+      X      	Probability
+0	0.15
+0.5	0.15
+1	0.20
+1.5	0.25
+2	0.25
+C -
+
+      X      	Probability
+0	-0.05
+1	0.20
+2	0.25
+3	0.35
+4	0.40
+
+Only Table A is an invalid distribution
+Feedback :
+This is a valid distribution. It’s okay if the table does not contain the probability for X = 1. X = 1 has a probability of 0 and thus has been excluded from the table. Also, the total of all probabilities is 1 and there are no negative values of probabilities.
+Incorrect
+
+Only Table B is an invalid distribution
+
+Only Table C is an invalid distribution
+Feedback :
+This is not a valid distribution. P(X = 0) has been given as -0.05. However, there is no such thing as a negative probability. Also, the total probability is 1.1, which does not make sense. The total of all probabilities in a probability distribution should be equal to 1.
+
+Hence, in a valid, complete probability distribution, there are no negative values, and the total of all probability values adds up to 1. These two conclusions follow from the basic definition of probability.
+
+ 
+
+Also, if you recall, we discussed that the probability distribution and frequency distribution would be exactly similar in shape, just with different scales. You can try it out in this interactive app. The graph on the left shows the frequency distribution and the one on the right shows the probability distribution.
+
+
+R Code- 
+library(shiny)
+library(ggplot2)
+library(ggthemes)
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+  trials = 100
+
+  balls <- c(1, 1, 1, 0, 0)
+  number_of_red_balls <- vector(mode = "integer", length = trials)
+
+  for (n in 1:trials){
+    s = sample(balls, 4, replace = T)
+    number_of_red_balls[n] <- sum(s)
+
+  }
+  # Takes the value of 'action' from input
+  output$redPlot <- renderPlot({
+    t = min(trials, input$action)
+    qplot(number_of_red_balls[1:t], fill="#f98866", binwidth=0.25, col=I("black"))  + xlab("X (Number of red balls)") +
+      ylab("Frequency") +
+      scale_x_continuous(breaks=c(0,1,2,3,4)) +
+      coord_cartesian(xlim = c(0, 5), expand = T) + coord_cartesian(ylim = c(0, 40)) +
+      theme_minimal()+theme(legend.position = "none")+theme(text = element_text(size=14))
+
+  })
+
+  output$probPlot <- renderPlot({
+    t = min(trials, input$action)
+    red = data.frame(number_of_red_balls[1:t])
+    colnames(red) <- "red"
+
+    r = red$red
+    s = summary(factor(r, levels=c(0,1,2,3,4)))
+    agg = sum(s)
+    s = s/agg
+    s = data.frame(s)
+    s$x1 = c(0, 1, 2, 3, 4)
+    ggplot(s, aes(x=factor(x1), y=s, width=0.45)) + geom_bar(stat="identity", fill="#f98866", colour="black") +
+      theme_minimal() +
+      coord_cartesian(ylim = c(0, 1)) + xlab("X (Number of red balls)") +
+      ylab("Probability")+theme(legend.position = "none")+theme(text = element_text(size=14))
+
+  })
+
+  output$value <- renderPrint({
+    number_of_red_balls[1:min(trials,input$action)]
+  })
+})
+
+Ui.R 
+library(shiny)
+
+shinyUI(fluidPage(
+  
+  title = "Discrete Probability Distribution",
+  
+  h3("Instructions"), 
+  hr(),
+  p("Pick 4 balls and compare the frequency and the probability distributions."),
+  actionButton("action", label="Pick 4 balls!", class="btn btn-danger text-center"),
+  br(),
+  
+  br(),
+  
+  fluidRow(
+    p("The number of red balls obtained in each experiment:", class="container-fluid"),
+    column(12,
+           verbatimTextOutput("value"))
+  ),
+  
+  br(),
+  br(),
+  br(),
+  
+  fluidRow(
+    column(6,
+           h5("Frequency distribution", class = "text-center"),
+           br(),
+           plotOutput("redPlot")
+    ),
+    column(6,  
+           h5("Probability distribution", class = "text-center"),
+           br(),
+           plotOutput("probPlot")
+           
+    )
+  )
+))
+
+Now, let’s say that a company’s management is pondering over investing in a certain project. Before doing this, it wants to use probability to find whether it can safely expect to make a profit. Whether the company makes a profit or not will actually depend on which economic cycle is going on, i.e. recession, boom, and so on.
+
+ 
+
+Based on the opinions of some experts, the following table is created:
+
+ 
+
+Economic Cycle	Probability
+Recession	0.1
+Normal	0.7
+Boom	0.2
+ 
+
+Suppose, as an analyst in the investment division, you have been asked to find the answer to the question: “Can the company expect to make a profit or not? Should it invest in this project?”
+
+ 
+
+However, in this form, the table is of no help at all. Hence, let’s quantify it using a random variable. Since you are interested in whether the company will profit or not, let’s define X as X = Net revenue of the project.
+
+
+Now, through some calculations, a fellow analyst of the company has found what the net revenue would be for each of these scenarios. She creates a probability distribution with this data:
+
+ 
+
+X (Net Revenue of Project, in ₹ crores)	    P(x)    
+-305	0.1
++15	0.7
++95	0.2
+ 
+
+Now, you finally have a probability distribution for X, the net revenue of the project. Using this probability distribution, you can find the answer to our original question - “Can the company expect a profit from this project? Or should it expect a loss?” However, to answer it, you will have to learn the concept of expected value, which is what we will cover next.
+
+ 
+
