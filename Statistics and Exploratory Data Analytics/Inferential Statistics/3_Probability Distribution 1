@@ -1,0 +1,103 @@
+Probability Distributions - I
+Recall that, in our UpGrad game example, we need to find out if the game would be profitable for the players or for us (i.e. the house) in the long run. The three-step process for this is:
+
+Find all the possible combinations
+
+Find the probability of each combination
+
+Use the probabilities to estimate the profit/loss per player
+
+ 
+
+So far, we have completed step 1, and are on step 2, i.e. finding the probability of each combination. For this purpose, we defined a random variable X which helped us convert the outcomes of our experiment to something measurable. Now, let’s actually find the probability of each of these combinations.
+
+So, we performed the experiment (i.e. played the game) 75 times, and then made the frequency distribution (histogram). Now, you may be thinking, “Well, I want to try that out too.” Unfortunately, even if you do have a bag with 3 red balls and 2 blue balls, playing the game 300 times would be tedious and difficult. Well, that’s not a problem. You can simulate the whole experiment.
+
+(Note: Please use your laptop browser to view the following distribution if you are unable to do so in the mobile app)
+
+Questions:1/1
+ 
+Probability
+Based on this histogram, can you tell what the probability will be for X = 2?
+
+ Ref image 3 - Invideo in the same folder
+
+
+ 
+
+(Give your answer as a number rounded to 2 digits after the decimal point. For example, instead of 90%, type 0.90)
+
+
+0.35
+doneCorrect
+Feedback :
+The correct answer is 0.35. 
+
+Questions:1/1
+ 
+Probability
+Can you now tell what the probability will be for X = 3?
+
+ 
+
+ 
+
+
+
+ 
+
+(Give your answer as a number rounded to 2 digits after the decimal point.)
+
+
+0.33
+
+
+R program to generate 4 balls 
+
+library(shiny)
+library(ggplot2)
+library(ggthemes)
+
+# Define server logic 
+shinyServer(function(input, output) {
+  trials = 100
+  
+  balls <- c(1, 1, 1, 0, 0)
+  number_of_red_balls <- vector(mode = "integer", length = trials)
+  
+  for (n in 1:trials){
+    s = sample(balls, 4, replace = T)
+    number_of_red_balls[n] <- sum(s)
+    
+  }
+  # Takes the value of 'action' from input
+
+  output$redPlot <- renderPlot({
+    t = min(trials, input$action)
+    red = data.frame(number_of_red_balls[1:t])
+    colnames(red) <- "red"
+    
+    r = red$red
+    s = summary(factor(r, levels=c(0,1,2,3,4)))
+    agg = sum(s)
+    s = data.frame(s)
+    s$x1 = c(0, 1, 2, 3, 4)
+    ggplot(s, aes(x=factor(x1), y=s, width=0.18)) + geom_bar(stat="identity", fill="#f98866", width=0.25) +
+      theme_minimal() +
+      coord_cartesian(ylim = c(0, 40)) + xlab("X (Number of red balls)") +
+      ylab("Frequency") + theme(legend.position = "none") + theme(text = element_text(size=14))
+  })
+
+  output$value <- renderPrint({ 
+    number_of_red_balls[1:min(trials,input$action)] 
+    })
+  
+  output$length <- renderPrint({ 
+    length(number_of_red_balls[1:min(trials, input$action)]) 
+    })
+  
+  output$plot1 <- renderPlot({
+    qplot(sample(1:100, 50))
+  })
+  
+})
