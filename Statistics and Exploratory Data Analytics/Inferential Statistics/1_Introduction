@@ -1,0 +1,434 @@
+Introduction: Inferential Statistics
+Welcome to the module on ‘Inferential Statistics’. In the last module on EDA, you learnt how to explore data and derive insights from its exploration.
+
+ 
+
+In this module
+Exploratory data analysis helped you understand how to discover patterns in data using various techniques and approaches. As you've learnt, EDA is one of the most important parts of the data analysis process. It is also the part on which data analysts spend most of their time.
+
+ 
+
+However, sometimes, you may require a very large amount of data for your analysis which may need too much time and resources to acquire. In such situations, you are forced to work with a smaller sample of the data, instead of having the entire data to work with.
+
+ 
+
+Situations like these arise all the time at big companies like Amazon. For example, say the Amazon QC department wants to know what proportion of the products in its warehouses are defective. Instead of going through all of its products (which would be a lot!), the Amazon QC team can just check a small sample of 1,000 products and then find, for this sample, the defect rate (i.e. the proportion of defective products). Then, based on this sample's defect rate, the team can "infer" what the defect rate is for all the products in the warehouses.
+
+ 
+
+This process of “inferring” insights from sample data is called “Inferential Statistics”.
+
+Note that even after using inferential statistics, you would only be able to estimate the population data from the sample data, but not find the exact values. This is because when you don't have the exact data, you can only make reasonable estimates about it with a limited level of certainty. Therefore, when certainty is limited, we talk in terms of probability.
+
+ 
+
+Prerequisites
+You’ll need to brush up on your concepts of probability before you begin this module, specifically the following concepts:
+
+Basic definition of probability
+
+Multiplication rule of probability
+
+Addition rule of probability
+
+^{n}C^{\; }_{r} (Combinatorics)
+
+You can brush up on these topics using the links given below -
+
+Prerequisites for Session 1
+
+Pre-Reads
+Please Note: This is an additional resource. The link for this session has been integrated at an appropriate place in the main Inferential module.
+
+ 
+
+Before going through this session, you should understand the basic definition of probability. In order to understand that, you can go through the following links -
+
+Math is Fun - Probability - https://www.mathsisfun.com/data/probability.html
+Mathopolis - Probability - http://www.mathopolis.com/questions/q.php?id=700&site=1&ref=/data/probability.html&qs=700_701_702_1475_1476_1477_2175_2176_2177_2178
+
+Prerequisites for Session 2
+You can also solve the practice questions provided in the Resources section.
+
+Optional Questions for Session 1
+Optional Questions for Session 2
+
+Questions:1/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+The probability of an event is equal to the:
+
+
+Number of favourable outcomes / Number of unfavourable outcomes
+
+Number of unfavourable outcomes / Number of total outcomes
+
+Number of favourable outcomes / Number of total outcomes
+Feedback :
+Yes, this is the basic definition of probability.
+Correct
+
+Number of total outcomes / Number of favourable outcomes
+
+Questions:2/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+A regular die is thrown. The probability of getting the number 5 is:
+
+
+5 / 6
+
+1 / 6
+Feedback :
+Number of favourable outcomes = 1 (i.e. the outcome that the die throws 5). Total number of outcomes = 6 (The die could throw 1, 2, 3, 4, 5 or 6). Probability = Number of favourable outcomes / Total number of outcomes = 1 / 6.
+Correct
+
+1 / 3
+
+1 / 2
+
+Questions:3/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+A regular die is thrown. The probability of getting an even number is:
+
+
+2 / 6
+
+3 / 6
+Feedback :
+Number of favourable outcomes = 3 (the die throws 2, 4, 6). Total number of outcomes = 6 ( the die could throw 1, 2, 3, 4, 5 or 6). Probability = Number of favourable outcomes / Total number of outcomes = 3 / 6
+Correct
+
+1 / 6
+
+4 / 6
+
+Questions:4/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+Out of the following values, which is/are the possible value(s) of probability?
+
+
+0.1
+Feedback :
+The probability of an event can only be between 0 and 1
+Correct
+
+-0.1
+
+1.0
+Feedback :
+The probability of an event can only be between 0 and 1
+Correct
+
+10
+
+Questions:5/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+The probability of all possible events adds up to:
+
+
+1
+Feedback :
+The probability of all possible events adds up to 1, as the number of favourable events becomes the total number of events.
+Correct
+
+0
+
+Infinity
+
+More information needed
+
+
+Questions:6/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basic Definition of Probability
+A regular die is thrown. The probability of getting the number 7 is:
+
+
+1 / 6
+
+0
+Feedback :
+Number of favourable outcomes = 0 (you can never get a 7 by throwing a regular die). Total number of outcomes = 6 (the die could throw 1, 2, 3, 4, 5 or 6). Probability = Number of favourable outcomes / Total number of outcomes = 0.
+Correct
+
+7 / 6
+
+1 / 7
+
+
+Pre-Reads
+Please Note: This is an additional resource. The link for this session has been integrated at an appropriate place in the main Inferential module.
+
+ 
+
+Before going through this session, you should understand the following topics -
+
+Addition rule of probability for mutually exclusive events - https://www.mathgoodies.com//lessons/vol6/addition_rules
+Multiplication rule of probability for independent events - https://www.mathgoodies.com//lessons/vol6/independent_events
+n
+C
+r
+(Combinatorics) -https://www.calculatorsoup.com/calculators/discretemathematics/combinations.php
+
+
+Questions:1/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A regular die is thrown. The probability of getting the number 4 or 5 in this throw is:
+
+
+0
+
+1 / 6
+
+1 / 3
+Feedback :
+Define X as the number achieved after throwing the die. You know that P(X = 4) = 1 / 6 and P(X = 5) = 1 / 6. Now, using addition rule of probability, you will get that P(X = 4 or 5) = P(X = 4) + P(X = 5) = 1 / 6 + 1 / 6 = 1 / 3.
+Correct
+
+1 / 2
+
+Questions:2/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A regular die is thrown. The probability of getting the number 4 and 5 in this throw is:
+
+
+0
+Feedback :
+It is impossible to get two numbers in one throw of the die.
+Correct
+
+1 / 6
+
+1 / 3
+
+1 / 2 
+
+
+Questions:3/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A regular die is thrown. The probability of getting the number 4 in the first throw and 5 in the second throw is:
+
+
+2 / 6
+
+1 / 36
+Feedback :
+Again, P(getting the number 4) = 1 / 6 and P(getting the number 5) = 1 / 6. Now, using multiplication rule, you get that P(getting the number 4 in the 1st trial AND the number 5 in the 2nd trial) = P(getting the number 4 in the 1st trial)*P(getting the number 5 in the second trial) = 1 / 6 * 1 / 6 = 1 / 36.
+Correct
+
+20 / 36
+
+9 / 36
+
+Questions:4/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A fair coin is tossed. The probability of getting a head or a tail is?
+
+
+1
+Feedback :
+P(heads) = 0.5, P(tails) = 0.5, Using addition rule, you have P(heads OR tails) = 0.5 + 0.5 = 1.
+Correct
+
+0.25
+
+0.5
+
+0
+
+
+Questions:5/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A fair coin is tossed. The probability of getting a head and a tail is?
+
+
+1
+
+0.25
+
+0.5
+
+0
+Feedback :
+It is impossible to get heads and tails in one toss of the coin.
+
+Questions:6/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+A fair coin is tossed. The probability of getting a head in the 1st toss and a tail in the 2nd toss is?
+
+
+1
+
+0.25
+Feedback :
+P(heads) = 0.5, P(tails) = 0.5, Using multiplication rule, you have P(heads in 1st toss AND tails in 2nd toss) = P(heads in 1st toss)*P(tails in 2nd toss) = 0.5*0.5 = 0.25.
+Correct
+
+0.5
+
+0
+
+
+Questions:7/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Concepts in Probability
+MS Dhoni is selecting the Indian cricket team, and has selected 8 players. For the remaining 3 players, he has 5 options to choose from -
+
+Jasprit Bumrah
+Amit Mishra
+Axar Patel
+Ravindra Jadeja
+Bhubaneshwar Kumar
+He could select this combination -
+
+Jasprit Bumrah
+Bhubaneshwar Kumar
+Ravindra Jadeja
+Or this one -
+
+Amit Mishra
+Axar Patel
+Ravindra Jadeja
+In total, how many different combinations of 3 players can he pick for the team?
+
+
+3
+C
+5
+ 
+5
+C
+3
+Feedback :
+Let’s say we have n distinct objects, from which we are to select r of them. The number of different combinations in which this selection can be done, is given by 
+n
+C
+r
+. For example, here, we have 5 players, out of which, 3 are to be selected. The number of combinations in which 3 players can be selected, thus, is given by 
+5
+C
+3
+ (10).
+Correct
+
+8
+C
+3
+ 
+8
+C
+5
+
+Power Law
+Please Note: This is an additional resource. The link for this session has been integrated at an appropriate place in the main EDA module.
+
+ 
+
+You learnt that many data sets follow the phenomenon of power law. There are many real-life examples where you may find power laws being followed, such as frequency of earthquakes vs intensity of earthquakes, number of people with an income vs the income itself, etc.
+
+ 
+
+Let us understand what causes power law.
+
+https://www.investopedia.com/updates/enron-scandal-summary/
+
+
+Reference Ebook
+Statistical Inference for Data Science by Brian Caffo.
+
+ 
+
+Note:  In this module, some interactive graphics have been sourced from the Seeing Theory project of Brown University.  
+
+ 
+
+Seeing Theory is a project designed and created by Daniel Kunin with support from Brown University's Royce Fellowship Program. The goal of the project is to make statistics more accessible to a wider range of students through interactive visualisations. 
+
+https://leanpub.com/LittleInferenceBook
+
+http://daniel-kunin.com/
+
+https://www.brown.edu/academics/college/swearer/programs/royce-fellowship/48
+ 
