@@ -1,0 +1,131 @@
+Introduction: Basics of Probability
+Welcome to the session on ‘Basics of Probability’.
+
+ 
+
+In this session
+In this session, you will learn a few basic concepts of probability through a specific example. The broad agenda for this session is as follows:
+
+Random variables
+
+Probability distributions
+
+Expected value
+
+ 
+
+Prerequisites
+It has been assumed in this session that you have knowledge of the basic definition of probability. If you need to brush up on your knowledge, you can go through the reading links given in the Resources section. You can also practise some optional questions given in the Resources section for this module.
+
+ Random Variables
+Welcome to the first session on inferential statistics! This will be a very interactive session, with a lot of questions that will compel you to think about a concept, helping you explore it more actively.
+
+ 
+
+So, let’s get started.
+
+Recall the original question: In the long run (i.e. if it is played a lot of times), is this game profitable for the players or for the house? Or will everybody break even in the long run?
+
+ 
+
+Recall that we established a three-step process for answering this question:
+
+Find all the possible combinations
+
+Find the probability of each combination
+
+Use the probabilities to estimate the profit/loss per player
+
+ 
+
+We have completed step 1, i.e. finding all the possible combinations. Now, let’s proceed to step 2, i.e. finding the probability of each combination. What are the steps involved in finding the probability? Let’s hear more from Professor Tricha on this:
+
+So, the random variable X basically converts outcomes of experiments to something measurable.
+
+
+For example, let’s say as a Data analyst at a bank, you are trying to find out which of the customers will default on their loan, i.e. stop paying their loans. Based on some data, you have been able to make the following predictions:
+
+ 
+
+Customer No.	Yearly Income (in rupees)	Amount of Loan Due (in rupees)	Number of Dependents	Default Prediction (Yes/No)
+1	₹10 lakh	₹75 lakh	3	Yes
+2	₹15 lakh	₹50 lakh	2	No
+3	₹20 lakh	₹40 lakh	1	No
+ 
+
+Now, instead of processing the yes/no response, it will be much easier if you define a random variable X, indicating whether the customer is predicted to default or not. The values will be assigned according to this rule:
+
+ 
+
+X = 1, if the customer defaults
+
+X = 0, if the customer does not default
+
+
+Now, the data changes to the following:
+
+ 
+
+Customer No.	Yearly Income (in rupees)	Amount of Loan Due (in rupees)	Number of Dependents	X (random variable)
+1	₹10 lakh	₹75 lakh	3	1
+2	₹15 lakh	₹50 lakh	2	0
+3	₹20 lakh	₹40 lakh	1	0
+ 
+
+Now, in this form, the table is entirely quantified, i.e. converted to numbers. Now that the data is entirely in quantitative terms, it becomes possible to perform a number of different kinds of statistical analyses on it.
+
+
+Questions:1/1
+ 
+UpGrad Game
+How has the game been set up? In the long run (i.e. if it is played a lot of times), is this game profitable for the players or for the house (the people that set up the game)? Or will everybody break even in the long run?
+
+The game is profitable for the players4%
+The game is profitable for the house94%
+Everybody will break even2%
+Only 496 people have taken this poll from your cohort. The results would be updated as we get more responses.
+
+Questions:1/1
+ 
+Possible Outcomes
+As we discussed, there are at least two different possible outcomes for this experiment:
+
+ 
+
+ 
+
+
+
+ 
+
+Clearly, there are even more outcomes that are possible. Can you try and list down all of them?
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+
+! Note: Once submitted, answer is not editable.
+
+two reds two blue, three red one blue all red, 
+lightbulb_outline
+Suggested Answer
+
+There are a total of 16 outcomes. Let's listen to Prof. Tricha as she lists them all down.
+
+
+Questions:1/1
+ 
+Different Definitions of X
+Let's redefine the random variable X, as X = 1.5 * Number of red balls the player got after playing the game. For example, if the player gets 1 red ball out of the 4 total balls, X = 1 * 1.5 = 1.5.
+
+Out of the 16 possible outcomes of this game, how many outcomes will result in X equal to 3?
+
+
+6
+Feedback :
+If X = 3, then the number of red balls = 2, as 1.5 * 2 = 3. Recall that there were 6 outcomes in our game where we could get 2 red balls.
+Correct
+
+4
+
+1
+
+0
