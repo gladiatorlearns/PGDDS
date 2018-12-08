@@ -1,0 +1,85 @@
+Probability Without Experiment - I
+
+In the last session, we found the probability for certain events by conducting experiments.
+
+ 
+
+Specifically, we asked 75 people to play the UpGrad red ball game. Based on the data of these people, we created a histogram or, in other words, a frequency distribution. Then, using this histogram, we created the probability distribution.
+
+ 
+
+However, this is a lengthy process. Is there a shorter process for finding the probabilities, perhaps one that doesn’t need repeated experiments? Let’s see.
+
+Questions:1/1
+ 
+Probability Without Experiment
+
+What is the probability of getting a red ball if you draw only one ball from the bag containing 3 red balls and 2 blue balls?
+doneCorrect
+Feedback : The correct answer is 0.6. Let's listen to Prof. Tricha as she tells us why.
+
+Probability Without Experiment
+
+What is the probability of getting two red balls in 2 trials? (One trial = taking out a ball, noting its colour, and putting it back in the bag.)
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+close
+Incorrect
+0.36
+Feedback : The correct answer is 0.36. Let's listen to Prof. Tricha as she tells us why.
+
+Questions:1/2
+ 
+ 
+Probability Without Experiment
+
+What is the probability that you would get this combination of balls after 4 trials? (One trial = taking out a ball, noting its colour, and putting it back in the bag.)
+
+Note that the bag contains 2 blue and 3 red balls.
+
+ 
+
+i.e., the combination Blue-Red-Red-Red.
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+
+0.4*0.4*0.4*0.4
+
+0.6*0.6*0.6*0.6
+
+0.4*0.6*0.6*0.6
+Feedback :
+
+The probability of getting a blue ball in 1 trial is 0.4. The probability of getting a red ball, as you saw earlier, is 0.6. Now, if you use the multiplication rule of probability to find the probability for the given combination, you’ll get: P(blue ball in first trial)*P(red ball in second trial)*P(red ball in third trial)*P(red ball in fourth trial) = 0.4*0.6*0.6*0.6 = 0.0864.
+Correct
+
+0.4*0.4*0.6*0.6
+
+Questions:2/2
+ 
+ 
+Probability Without Experiment
+
+What is the probability that you will get 3 red balls after 4 trials? (One trial = taking out a ball, noting its colour, and putting it back in the bag.)
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+0.4*0.6*0.6*0.6
+2*(0.4*0.6*0.6*0.6)
+3*(0.4*0.6*0.6*0.6)
+4*(0.4*0.6*0.6*0.6)
+Feedback :
+Recall that there are four combinations in which you could get three red balls. All these four combinations have the same probability, i.e. 0.4*0.6*0.6*0.6. So, the total probability of getting 3 red balls is 4*(0.4*0.6*0.6*0.6).
+
+Questions:1/1
+ 
+Theoretical Distribution vs Observed Distribution
+
+If our calculations are correct, the two distributions (calculated and experimental) should look similar, as they do. However, they don’t look exactly the same and their values are slightly different from each other. Can you tell why that is the case? (Word Limit: 150)
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+
+Suggested Answer
+
+The distribution is not exactly the same, as the number of experiments done is very small (75). Had we done a lot more experiments, i.e., played a lot more games, we would have got an even closer estimate.
+
+Hence, we have gone through the exercise of finding the probability without conducting any experiment. You saw that these theoretical (calculated) values of probability are actually quite close to the experimental values that we got. The small differences that you can notice exist because of the low number of experiments done.
