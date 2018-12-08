@@ -1,0 +1,113 @@
+Practice Questions
+
+These questions are not graded.
+
+ 
+
+Let's say that Rajya Laxmi Bank has given student loans to 10,000 people. However, the government wants to ensure that the bank is not giving away very risky loans and, hence, wants to know the “Expected Loss” of the bank’s student loan portfolio.
+
+ 
+
+The expected loss is basically the expected value of the money lost by the bank due to people defaulting on their loans, i.e. not paying their EMIs.
+
+ 
+
+The data that the bank uses to calculate the expected loss, looks like this -
+
+ 
+Customer No.	Exposure at Default (in ₹ lakh)	Recovery (%)	Probability of Default
+00001	11.50	20%	0.007
+
+ 
+
+Here,
+
+    Exposure at default (EAD) is the total money owed by the customer in case of default
+
+    Recovery (R) is the percentage of the exposed money that the bank would be able to recover.
+
+        For example, in the above example, the bank would recover 20% of the exposed money, i.e. 20%*11.5 = ₹2.3 lakh.
+
+    Probability of default (PD) is the probability that the customer will default. This is calculated for each customer using a number of factors such as family income, university attended, etc.
+    
+    Questions:1/4
+ 
+ 
+ 
+ 
+Expected Loss
+
+Now, to find the expected loss, the bank has created the following table. As you already know, the probability of customer 1 being a defaulter is 0.007 and that of the customer not being a defaulter is 0.993. Now, in the case of default, what would be the value of X, i.e. the money lost by the bank?
+Defaulter/Non-defaulter	   Probability   	X (Money Lost by Bank)
+Defaulter	0.007	-
+Non-defaulter	0.993	0
+₹2.3 lakh
+₹9.2 lakh
+Feedback :
+The amount recovered would be equal to 20% of 11.5 lakh, i.e. ₹2.3 lakh. However, X is defined as the money lost by the bank. So, the amount lost would be equal to the total money exposed, i.e. ₹11.5 lakh, minus the money recovered, i.e. ₹2.3 lakh. That would mean that the money lost = 11.5 - 2.3 = ₹9.2 lakh.
+Correct
+₹11.5 lakh
+₹57.5 lakh
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Expected Loss
+
+Now, the bank has the following data -
+Defaulter/Non-defaulter	   Probability   	X (Money Lost by Bank)
+Defaulter	0.007	₹9.2 lakh
+Non-defaulter	0.993	0
+
+What would be the expected loss (expected value of the money lost by the bank)?
+₹6440
+Feedback :
+The random variable X has two possible values, 9.2 lakh for when the customer defaults, and 0 for when the customer doesn’t. So, the Expected value = 9.2 lakh*P(X = 9.2 lakh) + 0*P(X=0) = 9,20,000*(0.007) + 0*(0.993) = 6,440
+Correct
+₹9.2 lakh
+₹9,200
+
+Questions:3/4
+ 
+ Questions:4/4
+ 
+ 
+ 
+ 
+Expected Loss
+
+Now, the bank wants to find the total expected loss. This is done by calculating the expected losses for each of the 10,000 customers and then adding them up.
+
+The data for all the customers of the bank is given in the file Inferential Statistics - Student Loan.csv. What would be the value of the total expected loss?
+₹1.25 crores
+₹4.93 crores
+Feedback :
+As you saw in the previous question, expected loss because of the first customer is ₹6,440. In general, it is given by PD*EAD*(1-R) for each customer. Using R or Excel, you can find the expected loss for each customer using this formula. Adding up all of these 10,000 customers' expected losses, we get that the total expected loss = ₹4.93 crores.
+Correct
+₹6.18 crores
+₹3.09 crores
+
+ 
+ 
+Expected Loss
+
+So, in general, what would be the expected loss?
+PD*EAD*R
+PD*EAD*(1-R)
+Feedback :
+X can take two values. When the customer defaults, X = EAD - (EAD*R) = EAD*(1-R). When she/he doesn’t, X = 0. So, the Expected value = EAD(1-R)*P(X = EAD(1-R)) + 0*P(X=0) = EAD*(1-R)*PD + 0
+Correct
+(1-PD)*EAD*R
+
+
+
+
+Inferential Statistics - Student Loan
+file_downloadDownload
+
+In fact, banks are also required to report the unexpected loss. If you want to read more on how the expected loss and unexpected loss are calculated, you can find that here.
+₹6.44 lakh
+
+http://riskarticles.com/credit-risk-how-to-calculate-expected-loss-unexpected-loss/
