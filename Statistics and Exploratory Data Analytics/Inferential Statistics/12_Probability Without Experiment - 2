@@ -1,0 +1,164 @@
+Hence, we have gone through the exercise of finding the probability without conducting any experiment. You saw that these theoretical (calculated) values of probability are actually quite close to the experimental values that we got. The small differences that you can notice exist because of the low number of experiments done.
+
+Binomial Distribution 
+
+Server.R
+
+
+
+library(shiny)
+library(ggplot2)
+library(ggthemes)
+
+# Define server logic 
+shinyServer(function(input, output) {
+  max_games = 200
+  n = 50 #number of games on one click
+  
+  balls <- c(1, 1, 1, 0, 0)
+  number_of_red_balls <- vector(mode = "integer", length = n*max_games)
+  
+  for (k in 1:(n*max_games)){
+    s = sample(balls, 4, replace = T)
+    number_of_red_balls[k] <- sum(s)
+  }
+
+  output$redPlot <- renderPlot({
+    t = min(n*max_games, n*input$action)
+    red = data.frame(number_of_red_balls[1:t])
+    
+    red = data.frame(number_of_red_balls[1:t])
+    colnames(red) <- "red"
+    
+    r = red$red
+    s = summary(factor(r, levels=c(0,1,2,3,4)))
+    agg = sum(s)
+    s = s/agg
+    s = data.frame(s)
+    s$x1 = c(0, 1, 2, 3, 4)
+    ggplot(s, aes(x=factor(x1), y=s, width=0.45)) + geom_bar(stat="identity", colour="black",fill="#f98866") +
+      theme_minimal() +
+      coord_cartesian(ylim = c(0, 1)) + xlab("X (Number of red balls)") +
+      ylab("Probability") + theme(legend.position = "none") + theme(text = element_text(size=14))
+    
+  })
+  
+  output$binomialPlot <- renderPlot({
+    b = data.frame(x=c(0,1,2,3,4), prob=c(0.0256, 0.1536, 0.3456, 0.3456, 0.1296))
+    ggplot(b, aes(x, prob, width=0.45)) + geom_bar(stat = "identity", colour="black", fill="#f98866") +
+      coord_cartesian(ylim = c(0, 1)) + theme_minimal() + 
+      xlab("X (Number of red balls)")+ ylab("Probability") + 
+      theme(text = element_text(size=14))
+  })
+  
+  output$num_red_balls <- renderTable({ 
+    t = min(n*max_games, n*input$action)
+    m = matrix(as.integer(number_of_red_balls[1:t]), ncol=10, byrow = T)
+
+    })
+  
+  output$length <- renderPrint({ 
+    input$action*n
+    })
+  
+  output$mean <- renderPrint({ 
+    t = min(n*max_games, n*input$action)
+    c(avg_red_balls = round(mean(number_of_red_balls[1:t]), 2), expected_value= 2.38)
+  })
+})
+
+ui.R
+
+
+
+library(shiny)
+
+shinyUI(fluidPage(
+  
+  title = "Binomial Distribution",
+  
+  h3("Instructions"), 
+  hr(),
+  p("Click the button to play the game 50 times. After a sufficiently large number of games, 
+    the observed distribution should be similar to the binomial distribution."),
+  p("Note: Max 200 x 50 games are allowed"),
+  actionButton("action", label="Play 50 times!", class="btn btn-danger text-center"),
+  br(),
+  
+  hr(),
+  
+  fluidRow(
+    column(12,
+           p("The average and expected number of red balls:"),
+           verbatimTextOutput("mean")
+           
+    )
+  ),
+  br(),
+  
+  fluidRow(
+    column(6,
+           h5("Observed Distribution", class="text-center"),
+           br(),
+           plotOutput("redPlot")
+    ),
+    column(6,  
+           h5("Binomial Distribution", class="text-center"),
+           br(),
+           plotOutput("binomialPlot")
+    )
+  )
+  
+  
+))
+
+As you can see, after playing the game a lot of times (~500 times), the experimental probability distribution starts to look similar to the theoretical one.
+
+Similarly, you can simulate a coin flip and compare the theoretical distribution with the experimental one.
+
+Likelihood
+
+Probability is the measure of the likelihood that an event will occur. It is quantified as a number between 0 and 1, where 0 indicates impossibility and 1 indicates certainty. A simple example is the tossing of a coin that has two sides: head and tail. We can describe the probability of this event in terms of the observed outcomes or the expected results.
+
+For a "fair" coin, the probability of head equals the probability of tail. However, for an "unfair" or "weighted" coin the two outcomes are not equally likely. Change the "weight" of the coin by dragging and dropping the expected probability and see how this affects the observed outcomes.
+
+Now that you know how to find the probability without an experiment, you can calculate the probability for various combinations without much effort. For example, what if the bag for our game had, say, 4 red balls and only 1 blue ball? You don’t need to do the experiment 100 times or 500 times to find the answer. You can find it using a small calculator, the concepts of probability and, of course, your brain!
+Questions:1/2
+ 
+ 
+Probability Without Experiment
+
+What is the probability that you would get the combination of balls shown below after 4 trials? (One trial = taking out a ball, noting its colour, and putting it back in the bag).
+
+ 
+
+Note that we have changed the contents of the bag — now it has 4 red balls and 1 blue ball.
+
+0.4*0.6*0.6*0.6
+
+0.2*0.2*0.2*0.2
+
+0.8*0.8*0.8*0.8
+
+0.2*0.8*0.8*0.8
+Feedback :
+
+Since there are 4 red balls and 1 blue ball in the bag now, the probability of getting a blue ball in 1 trial is 0.2. The probability of getting a red ball is 0.8. Now, if you use the multiplication rule of probability to find the probability for the given combination, you’ll get: P(blue ball in first trial)*P(red ball in second trial)*P(red ball in third trial)*P(red ball in fourth trial) = 0.2*0.8*0.8*0.8 = 0.1024.
+
+Questions:2/2
+ 
+ 
+Probability Without Experiment
+
+What is the probability that you would get exactly 3 red balls after 4 trials? (One trial = taking out a ball, noting its colour, and putting it back in the bag.)
+
+0.2*0.8*0.8*0.8
+
+2*(0.2*0.8*0.8*0.8)
+
+3*(0.2*0.8*0.8*0.8)
+
+4*(0.2*0.8*0.8*0.8)
+Feedback :
+
+Recall that there are four combinations in which you could get three red balls. All these four combinations have the same probability, i.e. 0.2*0.8*0.8*0.8. So, the total probability of getting 3 red balls is 4*(0.2*0.8*0.8*0.8).
