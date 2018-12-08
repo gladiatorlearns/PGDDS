@@ -1,0 +1,60 @@
+Properties of Sampling Distributions
+
+We’ve been saying that the sampling distribution has some interesting properties that will later help you estimate the error in your samples. Let’s finally see what these properties are.
+
+Questions:1/1
+ 
+Mean of Sampling Distributions
+
+Recall the sampling distribution we made in the last lecture for the random variable X, number of red balls. At the end of the lecture, you found by calculation that the value of the sampling distribution’s mean (μ¯X) = 2.348. This is very close to the original population’s mean (µ) = 2.385. Is this just a coincidence? Why or why not? (Word Limit: 150)
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+
+
+Suggested Answer
+
+It is actually not a coincidence. Let's listen to Prof. Tricha as she tells us why.
+
+Questions:1/2
+ 
+ 
+Standard Deviation of Sampling Distributions
+
+So, we have these two graphs, which give us the sampling distribution for n = 5 and n = 20. As Prof. Tricha said, the one with n = 20 is more narrow. What does this imply about the standard deviation of the two graphs?
+Standard deviation of first distribution (n=5) > Standard deviation of second distribution (n=20)
+Feedback :
+Between any two given graphs, the graph that is narrower always has a lower standard deviation. This will happen because, for the narrow graph, most of its values are concentrated around the centre, which would lead to a low sum of squared errors. Hence, the standard deviation of the first distribution > standard deviation of the second distribution.
+Correct
+Standard deviation of 1st distribution (n=5) < Standard deviation of 2nd distribution (n=20)
+Standard deviation of 1st distribution (n=5) = Standard deviation of 2nd distribution (n=20)
+Can't say
+
+Questions:2/2
+ 
+ 
+Standard Deviation of Sampling Distributions
+
+In general, let’s say you have two sampling distributions for the same population, with different sample size, n1 and n2, such that n1 > n2.
+
+Which one of them would have a lower standard deviation?
+The distribution with the higher sample size (n1) would have a lower standard deviation
+Feedback :
+Let's talk in terms of the two sampling distributions in the video, where one has n = 5 and the other has n =20. The distribution with n = 5 has 100 samples of size 5. For a sample of size this small, even 1 or 2 extreme values will cause the sample mean to take an extreme value. So, the 100 values in the distribution would be more spread out, as it has a lot of extreme values. However, the distribution with n = 20 will have a lot less extreme values because for a sample of size 20, 1 or 2 extreme values would not have much effect on the sample mean. So, in general, you can expect the standard deviation of the sampling distribution to decrease with an increase in n. But what is the exact formula for it? Let’s see.
+Correct
+The distribution with the lower sample size (n2) would have a lower standard deviation
+Can't say
+
+
+Again, to recap, let’s see what the notations and formulae are for populations, samples and sampling distributions.
+
+Figure 3 - Notations and Formulae Related to Sampling Distributions
+
+So, there are two important properties for a sampling distribution of the mean:
+
+    Sampling distribution’s mean (μ¯X) = Population mean (μ)
+
+    Sampling distribution’s standard deviation (Standard error) = σ√n, where σ is the population’s standard deviation and n is the sample size
+
+ 
+
+Recall that, in the last video, we created a sampling distribution and found the value of its mean and standard deviation, which turned out to be 2.348 and 0.4248, respectively. These values were very close to the values suggested by the formula, i.e. 2.385 and 0.44.
