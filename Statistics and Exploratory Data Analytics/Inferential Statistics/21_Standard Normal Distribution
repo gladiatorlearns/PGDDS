@@ -1,0 +1,109 @@
+Standard Normal Distribution
+
+As you learnt in the previous question, it doesn’t matter what the value of µ and σ is. All you need to know, if you want to find the probability, is how far the value of X is from µ — specifically, what multiple of σ is the difference between X and µ.
+
+Questions:1/1
+ 
+Standardised Random Variable
+
+A normally distributed random variable X is converted to Z. Find P(-2<Z<3). (Report the answer as a number rounded to two digits after the decimal point.)
+
+0.97
+Feedback : The correct answer is 0.97. Let's listen to Prof. Tricha as she tells us why.
+ 
+Questions:1/1
+ 
+Standardised Normal Distribution
+
+A normally distributed random variable X is converted to Z. Find P(Z<1). (Report the answer as a number rounded to two digits after the decimal point.)
+
+0.84
+Feedback : The correct answer is 0.84. Let's listen to Prof. Tricha as she tells us why.
+
+Questions:1/1
+ 
+Standardised Normal Variable
+
+What is the probability that an employee has a daily commute time between 25.2 and 44.8? Recall that the employee time is normally distributed, with mean (μ) = 35 and standard deviation (σ) = 5. (Report the answer as a number rounded to two digits after the decimal point.)
+
+
+0.95
+Feedback : The correct answer is 0.95. Let's listen to Prof. Tricha as she tells us why.
+ 
+ As you just learnt, the standardised random variable is an important parameter. It is given by:
+
+ 
+
+Z=X−μσ
+
+ 
+
+Basically, it tells you how many standard deviations away from the mean your random variable is. As you just saw, you can find the cumulative probability corresponding to a given value of Z, using the Z table:
+Figure 11 - Z Table
+
+Alternatively, you can use the following equation to find the cumulative probability:
+
+ 
+
+F(Z)=1√2π∫Z−∞e−t22dt
+
+ 
+
+However, I’ve a feeling that you will prefer the table! :-)
+
+ 
+
+Not only that, you can also use Excel to find the cumulative probability for Z. For example, let’s say you want to find the cumulative probability for Z = 1.5. In Excel, you would type:
+
+ 
+
+= NORM.S.DIST(1.5, TRUE)
+
+Basically, the syntax is:
+
+= NORM.S.DIST(z, TRUE)
+
+ 
+
+Here, z is the value of the Z score for which you want to find the cumulative probability. TRUE = find cumulative probability, FALSE = find probability density.
+
+ 
+
+Also, you can find the probability without standardising. Let’s say that X is normally distributed, with mean (μ) = 35 and standard deviation (σ) = 5. Now, if you want to find the cumulative probability for X = 30, you would type:
+
+ 
+
+= NORM.DIST(30, 35, 5, TRUE)
+
+Basically, the syntax is:
+
+= NORM.DIST(x, mean, standard_dev, TRUE)
+
+ Questions:1/1
+ 
+Normal Variables
+
+What is the probability of a normally distributed random variable lying within 1.65 standard deviations of the mean?
+
+[You can use the Z table here.]
+95%
+90%
+Feedback :
+You have to find the probability of the variable lying between μ-1.65σ and μ+1.65σ. i.e. P(μ-1.65σ < X < μ+1.65σ). In terms of Z, this becomes P(-1.65 < Z < +1.65). This would be equal to P(1.65) - P(-1.65) = 0.95 - 0.05 = 0.90.
+Correct
+85%
+80%
+
+
+Now, a fun thing to see would be how the value of σ affects the shape of the normal distribution. Use the slider for σ to adjust its value.
+
+
+As you can see, the value of σ is an indicator of how wide the graph is. This will be true for any graph, not just the normal distribution. A low value of σ means that the graph is narrow, while a high value implies that the graph is wider. This will happen because the wider graph will clearly have more values away from the mean, resulting in a high standard deviation.
+
+ 
+
+Again, there are some more probability distributions that are commonly seen among continuous random variables. They are not covered in this course, but if you want to go through some of them, you can use the links below -
+
+    Exponential Distribution -https://onlinecourses.science.psu.edu/stat414/node/138/
+    Gamma Distribution -https://onlinecourses.science.psu.edu/stat414/node/141/
+    Chi-Squared Distribution -https://onlinecourses.science.psu.edu/stat414/node/148/
