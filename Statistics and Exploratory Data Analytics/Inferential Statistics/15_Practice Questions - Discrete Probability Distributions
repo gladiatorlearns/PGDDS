@@ -1,0 +1,72 @@
+Practice Questions
+
+These questions are NOT graded.
+
+ 
+
+Let’s say you get a job as a senior analyst at a food regulatory body such as the FSSAI. One of your tasks is to check if the amount of lead content in certain food products is within the permissible limit.
+
+ 
+
+Recently, the company Kwick Foods filed a complaint against Sunshine, its competitor, that Sunshine’s ready-to-cook pasta contains excess quantities of lead.
+
+
+Suppose you take 10 random pasta packets from the market and get it tested for the amount of lead. It just so happens that you have picked out packets from a very defective batch, and there is a 5% (or 0.05) probability that any pasta packet you select is going to be defective.
+
+Combination Calculator - https://www.calculatorsoup.com/calculators/discretemathematics/combinations.php
+Online google calc - https://www.google.com/search?q=online+calculator&ie=utf-8&oe=utf-8&client=firefox-b-ab
+
+Questions:1/3
+ 
+ 
+ 
+Discrete Probability Distributions
+
+What is the probability that 2 of the 10 packets tested would turn out to be defective?
+
+(Use this nCr calculator.)
+1.66%
+7.46%
+Feedback :
+Let’s define X as the number of pasta packets found to be defective after testing 10 packets. Then, X would follow a binomial distribution with n = 10 and p = 0.05, the probability of finding a defective packet. Now, the probability asked in the question becomes P(X=2)= 10C2(0.05)2(0.95)8 = 0.0746, or 07.46%.
+Correct
+10%
+15.92%
+
+Questions:2/3
+ 
+ 
+ 
+Discrete Probability Distributions
+
+What is the probability that, after testing these 10 packets, not more than 2 packets would turn out to be defective?
+
+(Use this nCr calculator.)
+98.84%
+Feedback :
+If X is defined as the number of pasta packets found to be defective after testing 10 packets, then X would follow a binomial distribution with n = 10 and p = 0.05. So, the probability asked in the question becomes P(X<=2) = P(X=0) + P(X=1) + P(X=2) = 10C0(0.95)10+ 10C1(0.05)1(0.95)9+ 10C2(0.05)2(0.95)8 = 0.5987 + 0.3151 + 0.0746 = 0.9884, or 98.84%.
+Correct
+75.42%
+82.68%
+90.65%
+
+
+Questions:3/3
+ 
+ 
+ 
+Discrete Probability Distributions
+
+Let’s define X as the number of packets found to be defective after the 10 packets have been tested. What will be the expected value of X?
+
+(Hint: You can Use Excel or R for the calculations for this part. Use "COMBIN(n,r)" in Excel and "choose(n,r)" in R to find nCr)
+1
+0.5
+Feedback :
+If X is defined as the number of pasta packets found to be defective after testing 10 packets, then X would follow a binomial distribution with n = 10 and p = 0.05. Now, you want to find the expected value, which would be equal to EV(X) = 0*P(X=0) + 1*P(X=1) + 2*P(X=2) + 3*P(X=3) + 4*P(X=4) + 5*P(X=5) + 6*P(X=6) + 7*P(X=7) + 8*P(X=8) + 9*P(X=9) + 10*P(X=10). Using a spreadsheet to calculate the individual probabilities, you can find that the expected value EV(X) = 0.5
+Correct
+55
+2
+
+If you wish to go through the solution for question 3, you can go through the following Excel:
+Expected Value for Binomial Distribution.xlsx or csv
