@@ -1,0 +1,15 @@
+Introduction: Discrete Probability Distributions
+
+Welcome to the session on ‘Discrete Probability Distributions’. In the last session, you learnt some basic concepts of probability, such as random variables, probability distributions, and expected value. Let’s now learn some slightly more advanced concepts.
+
+In this session
+
+In this session, you will learn about some probability distributions that are commonly used for discrete random variables, such as the binomial probability distribution and the uniform probability distribution. Also, you will learn the concept of cumulative probability which will be very useful in our next session on continuous probability distributions.
+
+ Prerequisites
+
+It has been assumed in this session that you have knowledge of some basic rules of probability, i.e. multiplication rule and addition rule. Also, it is assumed that you have read upon combinatorics and know what the expression nCr represents.
+
+ 
+
+If you need to brush upon these concepts, you can go through the reading links given in the resources section. You can also practise some optional questions given under the Resources section for this module. Make sure you go through these concepts if you don’t remember them, otherwise you will find the session hard to follow.
