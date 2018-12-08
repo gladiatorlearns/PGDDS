@@ -1,0 +1,14 @@
+Graded Questions
+
+A roulette wheel is a game found in many casinos. Let’s go through it and understand how the roulette wheel's design ensures that, in the long run, the player always loses and the house always wins.
+
+
+This is a European roulette wheel.
+
+Figure 7 - European Roulette Wheel
+
+
+It contains the numbers 0 to 36 written in an irregular sequence. The players can bet on any number from 0 to 36. For example, let’s say that Kriti bets £100 on the number 5. Now, a ball would be dropped into the wheel, which is then given a spin. If the ball lands on the pocket marked 5, Kriti would win (£100)*36 = £3,600, resulting in net winnings of £3,600 - £100 = £3,500. However, if the ball lands on any other pocket, Kriti would not win anything, resulting in net winnings of £0 - £100 = - £100.
+
+
+Let’s see what the expected value is for Kriti’s net winnings if she plays this game and bets £100 on the number 5.
