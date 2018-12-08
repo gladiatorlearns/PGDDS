@@ -1,0 +1,64 @@
+Graded Questions
+
+A roulette wheel is a game found in many casinos. Let’s go through it and understand how the roulette wheel's design ensures that, in the long run, the player always loses and the house always wins.
+
+
+This is a European roulette wheel.
+
+Figure 7 - European Roulette Wheel
+
+
+It contains the numbers 0 to 36 written in an irregular sequence. The players can bet on any number from 0 to 36. For example, let’s say that Kriti bets £100 on the number 5. Now, a ball would be dropped into the wheel, which is then given a spin. If the ball lands on the pocket marked 5, Kriti would win (£100)*36 = £3,600, resulting in net winnings of £3,600 - £100 = £3,500. However, if the ball lands on any other pocket, Kriti would not win anything, resulting in net winnings of £0 - £100 = - £100.
+
+
+Let’s see what the expected value is for Kriti’s net winnings if she plays this game and bets £100 on the number 5.
+
+Questions:1/2
+ 
+ 
+European Roulette Wheel
+
+First of all, what is the probability of Kriti winning the game if she bets on the number 5?
+1/36
+1/37
+Feedback :
+There are a total of 37 equally likely possibilities (0 to 36). However, there is only one possibility in which Kriti will win, i.e. the one in which the ball would land on the pocket marked 5. Hence, the probability of her winning the game is 1/37.
+Correct
+5/36
+5/37
+
+Questions:2/2
+ 
+ 
+European Roulette Wheel
+
+Now, let’s say that we define the random variable X as Kriti’s net winnings if she plays this game and bets £100 on the number 5. What is the expected value of X?
+£97.30
+-£2.70
+Feedback :
+There are two possible values of X, 3,500 and -100. The probability of Kriti’s net winnings being 3,500 is basically the probability of her winning the game, which, as we saw in a previous question, is 1/37. The probability of her net winnings being equal to -100 is basically the probability of her losing the game, which is 36/37. So, the expected value of X = P(X=-100)*(-100) + P(X=3500)*3500 = (36/37)*(-100)+(1/37)*(3500) = -2.70.
+Correct
+£98.15
+-£1.85
+
+This is an American roulette wheel.​​ - Double zero roulette.png
+
+The only difference between the American roulette wheel and the one you saw before, i.e. the European roulette wheel, is that, in addition to the numbers 0 to 36, it contains a number ‘00’. The player can bet on any number from 1 to 36.
+
+Questions:1/1
+ 
+American Roulette Wheel
+
+Now, again, let’s define the random variable X as Kriti’s net winnings if she plays this game and bets £100 on the number 5. What is the expected value of X this time?
+£97.30
+-£2.70
+£94.74
+-£5.26
+Feedback :
+Again, there are two possible values of X, 3,500 and -100. However, this time, the probability of Kriti’s net winnings being 3,500 is 1/38, as there are a total of 38 possible outcomes. The probability of her net winnings being equal to -100, basically the probability of her losing the game, is now 37/38. So, the expected value of X = P(X=-100)*(-100) + P(X=3500)*3500 = (37/38)*(-100)+(1/38)*(3500) = -5.26.
+
+
+
+If you want to read more on this topic, specifically, how other games' designs ensure a negative expected value, go through this link.
+
+http://www.dehn.wustl.edu/~blake/courses/WU-Ed6021-2012-Summer/handouts/Expected_Value.pdf
