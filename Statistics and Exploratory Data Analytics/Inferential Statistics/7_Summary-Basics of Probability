@@ -1,0 +1,46 @@
+Summary: Basics of Probability
+
+In the first section, you learnt how to quantify the outcomes of events by using random variables.
+
+ 
+
+For example, recall that we quantified the colours of the balls we would get after playing our game by assigning a value of X to each outcome. We did so by defining X as the number of red balls we would get after playing the game once.
+
+View Image - 7 Summary1.png
+
+Next, we found the probability distribution, which was a distribution giving us the probability for all possible values of X.
+
+We created this distribution in a tabular form:
+
+View Image - 7 Summary2.png
+
+
+We also created it in a bar chart form:  View Image - 7 Summary3.png
+
+You saw that, in the bar chart form, we were able to visualise the probability in a much better way., Thus, this form is used more widely as it helps you see trends easily.
+
+ 
+
+Then, we went on to find the expected value for X, the money won by a player after playing the game once. The expected value (EV) for X was calculated using the formula:
+
+ 
+
+EV (X) = x_{1}*P(X=x_{1})+x_{2}*P(X=x_{2})+....................+x_{n}*P(X=x_{n})
+
+ 
+
+Another way of writing this is
+
+ 
+
+EV(X) = \sum_{i=1}^{i=n}x_{i}*P(X=x_{i})
+
+ 
+
+Calculating the answer this way, we found the expected value to be +11.28.
+
+
+In other words, if we conduct the experiment (play the game) infinite times, the average money won by a player would be ₹11.28. Hence, we decided that we should either decrease the prize money or increase the penalty to make the expected value of X negative. A negative expected value would imply that, on average, a player would be expected to lose money and the house would profit.
+
+
+
