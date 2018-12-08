@@ -1,0 +1,63 @@
+Practice Questions
+
+These questions are NOT graded.
+
+ 
+
+Let’s say you work as an analyst at a pharma company which manufactures an antipyretic drug (tablet form) with paracetamol as the active ingredient. The amount of paracetamol specified by the drug regulatory authorities is 500 mg with a permissible error of 10%. Anything below 450 mg would be a quality issue for your company since the drug will be ineffective, while above 550 mg would be a serious regulatory issue.
+
+
+Questions:1/3
+ 
+ 
+ 
+Cumulative Probability Distributions
+
+The regulatory authority selects a random tablet from Batch Z2. Based on previous knowledge, you know that Batch Z2 has a mean paracetamol level of 510 mg, and its standard deviation is 20 mg.
+
+What is the probability that the tablet that has been selected by the authority has a paracetamol level below 550 mg?
+48%
+95%
+98%
+Feedback :
+Let’s define X as the amount of paracetamol in the selected tablet. Now, X is a normally distributed random variable, with mean μ = 510 mg and standard deviation σ = 20 mg. Now, you have to find the probability of X being less than 550, i.e. P(X<550). Converting this to Z, you get P(X<550) = P(Z<{550-510}/20) = P(Z<2) = 0.977, or 97.7%.
+Correct
+93%
+
+Questions:2/3
+ 
+ 
+ 
+Continuous Probability Distributions
+
+Now, the company’s QC (Quality Control) department comes and selects a tablet at random from Batch Z2. It is interested in finding if the paracetamol level is above 450 mg or not.
+
+What is the probability that the tablet selected by QC has a paracetamol level above 450 mg?
+99.87%
+Feedback :
+Let’s define X as the amount of paracetamol in the selected tablet. Now, X is a normally distributed random variable, with mean μ = 510 mg and standard deviation σ = 20 mg. Now, you have to find the probability of X being more than 450, i.e. P(X>450). Converting this to Z, you get P(X>450) = P(Z>{450-510}/20) = P(Z>-3) = 1 - P(Z<-3) = 0.9987, or 99.87%.
+Correct
+99.74%
+49.87%
+99.61%
+Questions:3/3
+ 
+ 
+ 
+Continuous Probability Distributions
+
+Now, let’s say that QC decides to sample one more tablet. This time, it selects a tablet from Batch Y4. Based on previous knowledge, you know that Batch Y4 has a mean paracetamol level of 505 mg, and its standard deviation is 25 mg. This time, QC wants to check both the upper limit and the lower limit for the paracetamol level.
+
+What is the probability that the tablet selected by QC has a paracetamol level between 450 mg and 550 mg?
+
+91%
+
+93%
+
+95%
+Feedback :
+
+Let’s define X as the amount of paracetamol in the selected tablet. Now, X is a normally distributed random variable, with mean μ = 505 mg and standard deviation σ = 25 mg. Now, you have to find the probability of X being more than 450 and less than 550, i.e. P(450 < X < 550). Converting this to Z, you get P(450 < X < 550) = P({450-505}/25 < Z < {550-505}/25) = P(-2.2 < Z < 1.8) = P(Z < 1.8) - P(Z  < -2.2) = 0.9641 - 0.0139 = 0.9502, or 95%.
+Correct
+
+97%
