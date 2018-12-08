@@ -1,0 +1,111 @@
+Cumulative Probability
+
+In the previous example, we only discussed the probability of getting an exact value. For example, we know the probability of X = 4 (4 red balls). But what if the house wants to know the probability of getting < 3 red balls, as the house knows that for < 3 red balls, the players will lose and they will make money?
+
+ 
+
+Sometimes, talking in less than is more useful, for example — how many employees can get to work in less than 40 minutes? Let’s explore how you can find the probability for such cases.
+
+Questions:1/1
+ 
+"Less than" Probability
+
+Recall the UpGrad game with the red and blue balls? For this game, can you find the probability of getting 3 or fewer red balls i.e. P(X<3)?
+
+The original probability distribution is given here -
+x (Number of Red Balls)	P(x)
+0	0.0256
+1	0.1536
+2	0.3456
+3	0.3456
+4	0.1296
+0.8704
+Feedback :
+P(X<=3) = the probability of getting less than 3 red balls, i.e. 0, 1, 2, or 3 red balls . So, the required probability = P(X=0) + P(X=1) + P(X=2) + P(X=3), which evaluates to 0.0256 + 0.1536 + 0.3456 + 0.3456 = 0.8704.
+Correct
+0.1296
+0.7408
+
+Questions:1/1
+ 
+ 
+Cumulative Probability
+
+In the table below, you can see the cumulative probability distribution for the weights of a company’s employees. Based on this distribution, can you find out the probability of an employee having a weight between 60 and 65 kilograms?(Assume that P(X=60) and P(X=65) are both 0.)
+x(Weight)	F(x) = P(X<x)
+50	0.167
+55	0.250
+60	0.367
+65	0.467
+70	0.550
+75	0.650
+80	0.733
+85	0.833
+90	0.933
+95	0.967
+100	1.000
+
+Correct-
+0.1
+Clarification - The cumulative probability distribution table, shown in the above video (02:22 to 03:11) should be - 
+x	F(x) = P(X<x)
+0	0.0256
+1	0.1792
+2	0.5248
+3	0.8704
+4	1.0000
+
+ 
+
+(Side Note:  In the question for calculating the probability of weights between 60 and 65, you might have noticed one thing that we calculated P(X ≤ 65)-P(X ≤ 60) to find P(60 ≤ X  ≤ 65). 
+However, this is not entirely correct if you consider discrete distributions, because P(X=60) would also get subtracted from the value P(X<=65) when we evaluate P(X ≤ 65)-P(X ≤ 60)
+The assumption that we took that both P(X=60) and P(X=65) would be equal to 0 is necessary for the calculation to hold true. However, one important concept which you'll learn further
+is that the "weight" variable is generally considered as continuous and not discrete and for continuous variables, the value of P(X=x) where X is a random variable and x is a value, is always 0. Hence the logic shown in the video holds. So for cumulative distribution tables where the probabilities of individual values are not given, you can just use a similar analogy to
+calculate the probability between the two values.)
+
+ 
+
+So, the cumulative probability of X, denoted by F(x), is defined as the probability of the variable being less than or equal to x.
+
+ 
+
+In mathematical terms, you would write cumulative probability F(x) = P(X<x). For example, F(4) = P(X<4), F(3) = P(X<3).
+
+Questions:1/1
+ 
+Cumulative Probability
+
+Let’s define X as the number of wickets Ishant Sharma would take in the next T20 match he plays. Also, the following is an incomplete table for cumulative probability based on previous experience:
+x(Number of wickets taken by Ishant Sharma in a T20 Match)	  F(x)  
+0	0.35
+1	0.55
+2	0.75
+
+ 
+
+What is the probability that he would take more than 2 wickets in the next  T20 match he plays?
+0.75
+0.25
+Feedback :
+You know that F(2) i.e. P(X<=2) is 0.75. Now, you have to find the probability of X being higher than 2, i.e. P(X>2). Notice that the sum of P(X<=2) and P(X>2) would be equal to 1, because their sum will cover all possible outcomes. Hence, P(X<=2) + P(X>2) = 1, which gives 0.75 + P(X>2) = 1. Hence, P(X>2) = 0.25.
+Correct
+0.5
+1
+
+Binomial Distribution
+
+The binomial distribution describes the result of n
+independent trials with probability p
+
+. It is frequently used to model the number of successes in a specific number of identical binary experiments, such as the number of heads in five coin tosses.
+PMF 	Mean
+(nx)px(1−p)n−x
+	
+np
+n
+= 5.00
+
+p
+= 0.50
+
+This concept of cumulative probability will be used extensively in the next session, where we will talk about continuous random variables.
