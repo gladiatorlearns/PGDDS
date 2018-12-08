@@ -1,0 +1,207 @@
+Binomial Distribution
+
+Previously, we found the theoretical probability for our game and compared it with the experimental one. Finding the probability without conducting an experiment means that we can find the probability using just pen and paper and with minimal effort.
+
+ 
+
+Now, let’s try to generalise it — let’s say that the probability of getting one red ball in one trial is equal to p. In that case, what would be the probability of all 4 balls being red? Let’s see that in the following video.
+
+So, now we have this probability distribution for X (the number of red balls drawn after 4 trials), if the probability of getting a red ball in 1 trial is p:
+
+
+Questions:1/1
+ 
+Generalised Probability
+
+What is the probability that you would get 4 red balls after 4 trials (One trial = taking out a ball, noting its colour, and putting it back in the bag), if the probability of getting a red ball in one trial is equal to p?
+4p
+p4
+Feedback :
+You know that the probability of getting a red ball in one trial is equal to p. Now, for getting 4 red balls in 4 trials, you would want to get a red ball in the first trial, another one in the second trial, yet another one in the third trial, and one final red ball in the fourth trial. Hence, the probability would be equal to p*p*p*p = p^4.
+Correct
+4p3
+p3(1−p) 
+
+
+Questions:1/1
+ 
+Generalised Probability
+
+Now, let’s say you draw a ball from the bag, note its colour, and put it back in the bag. Let’s say you perform this activity n times. What is the probability that you would get a red ball r times out of n? In other words, what will be P(X=r)? (Word Limit: 150)
+
+[Hint: You will need to know the number of combinations in which you could get r red balls and n-r blue balls.]
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+
+Suggested Answer
+
+The number of combinations in which you could get r red balls and n-r blue balls is equal to ​nCr​. So, the final probability will be ​nCr(p)r(1−p)n−r​. 
+
+
+So, the formula for finding binomial probability is given by -
+
+ 
+
+P(X=r)= nCr(p)r(1−p)n−r
+
+ 
+
+Where n is no. of trials, p is probability of success and r is no. of successes after n trials.
+
+ 
+
+However, as Prof. Tricha said, there are some conditions that need to be followed in order for us to be able to apply the formula.
+
+    Total number of trials is fixed at n
+
+    Each trial is binary, i.e., has only two possible outcomes - success or failure
+
+    Probability of success is same in all trials, denoted by p
+    
+    
+    Binomial Distribution (Examples)
+
+In the previous section, we listed down some conditions that are to be fulfilled for the binomial distribution to be applicable. Let’s take a few examples to understand these conditions in detail.
+
+ 
+Binomial Distribution Applicable	-
+
+Tossing a coin 20 times to see how many tails occur	
+Asking 200 randomly selected people if they are older than 21 or not	
+Drawing 4 red balls from a bag, putting each ball back after drawing it	
+
+Binomial Distribution Not Applicable-
+
+Tossing a coin until a heads occurs
+Asking 200 randomly selected people how old they are
+Drawing 4 red balls from a bag, not putting each ball back after drawing it
+
+
+If you toss a coin 20 times to see how many tails occur, you are following all the conditions required for a binomial distribution. The total number of trials is fixed (20), and you can only have two outcomes, i.e. a tails or a heads. The probability of getting a tails is equal to 0.5 each time you toss the coin.
+
+ 
+
+In a way, this is similar to drawing 20 balls out of a bag, replacing each ball after drawing it, and seeing how many of the balls are red. Here, the probability of getting a red ball in one trial is 0.5.
+
+ 
+
+When you toss a coin until a heads occurs, the total number of trials is not fixed. This is similar to taking out balls from the bag repeatedly until you draw a red ball. You can still find the probability of getting a heads in 1 trial, in 2 trials, in 3 trials etc. and so on, but you cannot use binomial distribution to find that probability.
+
+ 
+
+In the second example, where binomial distribution is not applicable, the experiment does not have only two outcomes, but many. It is similar to taking out balls from a bag that contains red, blue, black, orange, and other colours of balls. The probability distribution for this experiment cannot be made using binomial distribution.
+
+ 
+
+In the final example, the probability of the trials is not equal to each other. For example, the probability of drawing a red ball in the first trial is 35. Now, in the second trial, the probability of drawing a red ball would be equal to 24 not 35, as the red ball taken out in the first trial was not put back. Hence, the probability of getting the combination Red-Red-Red-Blue, for example, would be 35*24*13*22, which is not the value we got while deriving binomial distribution (35*35*35*25). Again, you cannot use binomial distribution to find the probability in this case.
+
+ 
+
+In other words, binomial distribution is applicable in situations where there are a fixed number of yes or no questions, with the probability of a yes or a no remaining the same in all the questions.
+
+So, you now understand that the binomial distribution is a very powerful distribution. To get an idea of what this probability distribution looks like, you can use the interactive app given below. This app shows you the probability distribution for a binomial distribution with n = 5 and p = 0.5. However, you can play around with the value of n and p to see how that changes the probability distribution. Don’t forget to zoom out or in as needed.
+
+Binomial Distribution
+
+The binomial distribution describes the result of n
+independent trials with probability p
+
+. It is frequently used to model the number of successes in a specific number of identical binary experiments, such as the number of heads in five coin tosses.
+PMF 	Mean
+(nx)px(1−p)n−x
+	
+np
+
+Questions:1/2
+ 
+ 
+Binomial Distribution
+
+A student attempts a test with 10 multiple choice questions, where each question has 4 possible options. She does not know the correct answer to any of the questions and just randomly selects one of the 4 options for each of them. The probability that she would still get 3 questions correct is:
+10C3(1/4)10
+10C3(3/4)3(1/4)7
+10C3(1/4)3(3/4)7
+Feedback :
+There are a total of 4 options. Hence, the probability that the student would randomly select the correct option is 1 / 4. Hence, p = 1 / 4. Now, the probability of getting 3 out of 10 questions correct can be found by using the binomial probability for n = 10, r = 3. Hence, the probability = 10C3(1/4)3(3/4)7 = 0.25.
+Correct
+Binomial probability cannot be used here
+
+Questions:2/2
+ 
+ 
+Binomial Distribution
+
+Now, the test is modified by adding 5 true and false questions to the set of 10 MCQs. The student does not know the answer to the new questions either and randomly selects true or false for each of them too.
+
+Now, according to binomial distribution, the probability that she would still get 5 of the 15 questions (5 true/false Qs, and 10 MCQs with 4 options) correct is:
+15C5(1/4)5(3/4)10
+15C5(1/2)5(1/2)10
+15C5(1/4)3(1/2)2(3/4)10
+Binomial probability cannot be used here
+Feedback :
+For 10 of the questions (MCQs), the probability of success is p = 1 / 4. However, for the remaining 5 questions (T/F questions), the probability of success is p = 1 / 2. Hence, you cannot use binomial probability here, as the probability of success is not the same in all the trials.
+
+
+As mentioned by the professor, there are some more probability distributions that are commonly seen among discrete random variables. They are not covered in this course, but if you want to go through some of them, you can use the links below -
+
+    Poisson Distribution - https://onlinecourses.science.psu.edu/stat414/node/81/
+    Geometric Distribution -https://onlinecourses.science.psu.edu/stat414/node/75/
+    Negative Binomial Distribution -https://onlinecourses.science.psu.edu/stat414/node/78/
+    
+    
+    Poisson Distributions
+Situation
+
+Let the discrete random variable X denote the number of times an event occurs in an interval of time (or space). Then X may be a Poisson random variable with x = 0, 1, 2, ...
+Examples
+
+    Let X equal the number of typos on a printed page. (This is an example of an interval of space — the space being the printed page.)
+    Let X equal the number of cars passing through the intersection of Allen Street and College Avenue in one minute. (This is an example of an interval of time  — the time being one minute.)
+    Let X equal the number of Alaskan salmon caught in a squid driftnet. (This is again an example of an interval of space — the space being the squid driftnet.)
+    Let X equal the number of customers at an ATM in 10-minute intervals.
+    Let X equal the number of students arriving during office hours.
+
+Definition. If X is a Poisson random variable, then the probability mass function is:
+
+f(x)=e−λλxx!
+
+for x = 0, 1, 2, ... and λ > 0, where λ will be shown later to be both the mean and the variance of X.
+
+Recall that the mathematical constant e is the unique real number such that the value of the derivative (slope of the tangent line) of the function f(x) = ex at the point x = 0 is equal to 1. It turns out that the constant is irrational, but to five decimal places, it equals:
+
+e = 2.71828
+
+Geometric Distributions
+Printer-friendly versionPrinter-friendly version
+football gameExample
+
+A representative from the National Football League's Marketing Division randomly selects people on a random street in Kansas City, Kansas until he finds a person who attended the last home football game. Let p, the probability that he succeeds in finding such a person, equal 0.20. And, let X denote the number of people he selects until he finds his first success. What is the probability mass function of X?
+
+Definition. Assume Bernoulli trials — that is, (1) there are two possible outcomes, (2) the trials are independent, and (3) p, the probability of success, remains the same from trial to trial. Let X denote the number of trials until the first success. Then, the probability mass function of X is:
+
+f(x)=P(X=x)=(1−p)x−1p
+
+for x = 1, 2, ... In this case, we say that X follows a geometric distribution.
+
+Note that there are (theoretically) an infinite number of geometric distributions. Any specific geometric distribution depends on the value of the parameter p.
+
+Also, note that there are (theoretically) an infinite number of possible Poisson distributions. Any specific Poisson distribution depends on the parameter λ.
+
+
+Negative Binomial Distributions
+Printer-friendly versionPrinter-friendly version
+football gameExample (continued again!)
+
+(Are you growing weary of this example yet? Undecided) A representative from the National Football League's Marketing Division randomly selects people on a random street in Kansas City, Kansas until he finds a person who attended the last home football game. Let p, the probability that he succeeds in finding such a person, equal 0.20. Now, let X denote the number of people he selects until he finds r = 3 who attended the last home football game. What is the probability that X = 10?
+
+Definition. Assume Bernoulli trials — that is, (1) there are two possible outcomes, (2) the trials are independent, and (3) p, the probability of success, remains the same from trial to trial. Let X denote the number of trials until the rth success. Then, the probability mass function of X is:
+
+f(x)=P(X=x)=(x−1r−1)(1−p)x−rpr
+
+for x = r, r + 1, r + 2, ... In this case, we say that X follows a negative binomial distribution.
+
+Note two things:
+
+(1) There are (theoretically) an infinite number of negative binomial distributions. Any specific negative binomial distribution depends on the value of the parameter p.
+
+(2) A geometric distribution is a special case of a negative binomial distribution with r = 1.
