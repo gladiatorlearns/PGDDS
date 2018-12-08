@@ -1,0 +1,55 @@
+Summary: Discrete Probability Distributions
+
+We started with learning how to find probability without experiment, using basic concepts such as the addition and the multiplication rule of probability.
+
+ 
+
+As a demonstration, we calculated the probability of getting 0, 1, 2, 3 and 4 red balls for our UpGrad red ball game. Then, we compared the values we got by theoretical calculations with the ones we got after the experiments in the first session. Recall that the values were quite similar.
+
+Ref 14 - Observed vs Theoretical Probability Distribution.png
+
+However, they were not exactly the same, due to the low number of experiments we conducted (75). If we had done more experiments, the values would have been exactly the same (the values are exactly the same if the number of experiments approaches infinity).
+
+ 
+
+Next, we generalised this probability. Specifically, we talked out the probability of getting r red balls after drawing n balls from a bag. Here, the probability of drawing a red ball in 1 trial was equal to p.
+
+ 
+
+The probability distribution for this case is given by the following table (X = number of red balls drawn after playing the game once).
+Ref - 14 -Binomial Distribution.png
+
+In general,
+
+ 
+
+P(X=r)=  nCr(p)r(1−p)n−r
+
+ 
+
+This distribution is called the binomial distribution. It can be used to find the probability of any kind of event, if that event is a series of yes or no questions, with the probability of yes being the same for all questions.
+
+ 
+
+Phrasing the conditions more formally, the binomial distribution can be used if, for an experiment:
+
+    The total number of trials is fixed
+
+    Each trial is binary, i.e. has only two possible outcomes, success and failure
+
+    The probability of success is the same for all the trials
+
+ 
+
+Next, we discussed the cumulative probability of x, denoted by F(x), which is the probability that the random variable X takes a value less than or equal to x.
+
+ 
+
+For example, we found F(2), the probability of getting 2 or fewer red balls in our UpGrad game. It was calculated as:
+
+ 
+
+F(2) = P(X < 2) = P(X = 0) + P(X = 1) + P(X = 2) = 0.0256 + 0.1536 + 0.3456 = 0.5248
+
+
+Cumulative probability is a concept that we will use extensively in our next session on continuous random variables.
