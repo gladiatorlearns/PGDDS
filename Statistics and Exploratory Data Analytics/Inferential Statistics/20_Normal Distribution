@@ -1,0 +1,94 @@
+Normal Distribution
+
+You’ve seen how the probability distributions of continuous random variables differ from those of discrete random variables.
+
+
+But can you think of some examples of continuous distributions? Which is the most commonly used continuous probability distribution? Which distribution occurs most commonly in nature? Let’s hear from Prof. Tricha on this.
+
+All data that is normally distributed follows the 1-2-3 rule. This rule states that there is a -
+
+    68% probability of the variable lying within 1 standard deviation of the mean
+
+    95% probability of the variable lying within 2 standard deviations of the mean
+
+    99.7% probability of the variable lying within 3 standard deviations of the mean
+
+ 
+Figure 9 - 1-2-3 Rule for a Normal Distribution
+
+This is actually like saying that, if you buy a loaf of bread everyday and measure it, then - (mean weight = 100 g, standard deviation = 1 g)
+
+    For 5 days every week, the weight of the loaf you bought that day will be within 99 g (100-1) and 101 g (100+1).
+
+    For 20 days every 3 weeks, the weight of the loaf you bought that day will be within 98 g (100-2) and 102 g (100+2).
+
+    For 364 days every year, the weight of the loaf you bought that day will be within 97 g (100-3) and 103 g (100+3).
+
+A lot of naturally occurring variables are normally distributed. For example, the heights of a group of adult men would be normally distributed. To try this out, we asked 50 male employees at the UpGrad office for their height and then plotted the probability density function using that data.
+Figure 10 - PDF Generated in R, for X (Height in inches)
+
+As you can see, the data is roughly normal.
+
+ 
+
+You can visualise the PDF and CDF for different normal distributions by using the interactive app given below. From the various options in the drop-down menu, select “Normal”. You will then get to see the probability distribution for a normal distribution with µ = 0 and σ = 1. In fact, you can play around with the value of µ and σ to see how that changes the distribution. Using the green slider below the distribution, you can visualise the distribution’s cumulative probability.
+
+In fact, you can select “Uniform” in the drop-down menu and visualise the CDF and PDF for the uniform distribution too. Be sure to play around with a and b, which give the lowest and highest possible values, respectively, for the random variable.
+
+
+A continuous random variable is a random variable with a set of possible values that is infinite and uncountable, such as all real numbers. Choose one of the following major continuous distributions to explore.
+
+The normal (or Gaussian) distribution is used in the natural and social sciences to represent real-valued random variables whose distributions are not known. For example the normal distribution might be used to model people's height, where it is assumed most people are around the same height.
+PMF 	Mean 	Variance
+12σ2π−−−−√e−(x−μ)22σ2
+	
+μ
+	
+σ2
+μ
+= 0.00
+
+σ
+= 1.00
+
+
+
+The uniform distribution is a continuous distribution such that all intervals of the same length on the distribution's support are equally probable. For example this distribution might be used to model people's birth dates, where it is assumed all times are equally likely.
+PMF 	Mean 	Variance
+⎧⎩⎨1b−a for x∈[a,b]0 otherwise 
+	
+a+b2
+	
+(b−a)212
+a
+= -5.00
+
+b
+= 5.00
+
+Normal Distribution
+
+Consider again the random variable X which is normally distributed with mean (µ) = 35 and standard deviation (σ) = 5. Can you find P(X<40), i.e., the probability of the variable taking a value less than 40?
+
+(Report the answer as a number rounded to two digits after the decimal point.)
+
+0.84
+Feedback :
+
+The correct answer is 0.84. Let's listen to Prof. Tricha as she tells us why.
+
+Questions:1/1
+ 
+Probability of Normal Random Variables
+
+Let’s say that you have to find the cumulative probability for a random variable X which is normally distributed.You do not know what the value of X is or, for that matter, what the value of µ and σ is. You only know that X = µ + σ. Can you find the cumulative probability, i.e. the probability of the variable being less than µ + σ?
+
+Yes
+Feedback :
+
+You can still find the cumulative probability. If the variable is normally distributed, then it doesn’t matter what the value of µ and σ is, there is a 34% probability that X lies between µ and µ + σ, i.e. P(µ < X < µ + σ = 34%). Similarly, there is a 50% probability that X is less than µ, i.e. P(X < µ = 50%). Again, this would happen regardless of what the value of µ and σ is. Hence, you can say that P(X < µ + σ) = 84% for every normal variable, no matter what the value of µ and σ is.
+Correct
+
+No
+ 
+
