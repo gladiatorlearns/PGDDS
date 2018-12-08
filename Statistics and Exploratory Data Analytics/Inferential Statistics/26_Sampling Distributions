@@ -1,0 +1,43 @@
+Sampling Distributions
+
+Now, let's move on to sampling distributions, whose properties, as we said earlier, will help you estimate the population mean from the sample mean.
+
+So, the sampling distribution, specifically the sampling distribution of the sample means, is a probability density function for the sample means of a population.
+
+ 
+
+This distribution has some very interesting properties, which will later help you estimate the sampling error. Let's take a look at these properties.
+
+
+The sampling distribution’s mean is denoted by μ¯X, as it is the mean of the sampling means. Let’s see what it is for this sampling distribution.
+
+Questions:1/2
+ 
+ 
+Sampling Distribution
+
+What is μ¯X for our sampling distribution? (The data for the 100 sample means is given in the CSV file upgrad_samples.csv).
+2.812
+2.014
+2.348
+Feedback :
+The sampling distribution’s mean would be equal to the sum of all the sample means, divided by 100. This comes out to be 2.348.
+Correct
+2.686
+
+Questions:2/2
+ 
+ 
+Sampling Distribution
+
+What is the standard deviation of our sampling distribution? (The data for the 100 sample means is given in the CSV file upgrad_samples.csv).
+0.4248
+Feedback :
+Using the mean from the previous question, you can find the standard deviation using the formula - (StandardDeviation)2=∑(Xi−¯X)2n. Note that you would divide by n and not n-1 as you have the data for all 100 entries of the distribution and you don't need to sample the distribution. Now, using the formula, you get that the value of the standard deviation of the distribution is 0.4248.
+Correct
+0.4270
+0.4512
+0.3986
+
+Use the file given below for the above questions.
+Inferential Statistics - UpGrad Samples.csv
