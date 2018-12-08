@@ -1,0 +1,83 @@
+Probability Density Functions - II
+
+A commonly observed type of distribution among continuous variables is the uniform distribution. For a continuous random variable following a uniform distribution, the value of probability density is equal for all possible values. Let’s explore this distribution a little more.
+Questions:1/1
+ 
+Uniform Distribution
+
+In a uniform PDF, all the possible values have the same probability density. The figure below shows such a uniform PDF, where the possible values are 0 to 10.
+
+ 
+
+
+For this graph, what is the value of the probability density from X = 0 to X = 10?
+doneCorrect
+Feedback :
+
+The correct answer is 0.1. Let's see why, in the text below.
+doneYour answer is Correct.
+Attempt 2 of 2
+
+Since all possible values are between 0 and 10, the area under the curve between 0 and 10 is equal to 1.
+
+ 
+Figure 5 - Uniform PDF
+
+Clearly, this area is the area of a rectangle with length 10 and unknown height h. Hence, you can say that 10*h = 1, which gives us h = 0.1. So, the value of the PDF for all values between 0 and 10 is 0.1.
+Questions:1/1
+ 
+Uniform Distribution
+
+For the uniform PDF from the previous question, find the cumulative probability for X = 0.5.
+closeIncorrectdoneCorrect
+0.05
+Feedback : The correct answer is 0.05. Let's see why, in the text below.
+closeYour answer is Incorrect.
+Attempt 2 of 2
+
+The cumulative probability for X = 0.5 is equal to the area under the curve between X = 0, the lowest possible value, and X = 0.5.
+Figure 6 - Uniform PDF
+
+This area = 0.1*0.5 = 0.05.
+
+ 
+
+Now, I’m sure you are wondering, when to use PDFs and when to use CDFs? They are both good for continuous variables, but which one is used more in real life analysis?
+
+ 
+
+Well, PDFs are more commonly used in real life. The reason is that it is much easier to see patterns in PDFs as compared to CDFs. For example, here are the PDF and the CDF of a uniformly distributed continuous random variable:
+Figure 7 - PDF and CDF for a Uniformly Distributed Variable
+
+The PDF clearly shows uniformity, as the probability density’s value remains constant for all possible values. However, the CDF does not show any trends that help you identify quickly that the variable is uniformly distributed.
+
+ 
+
+Now, let’s see the PDF and the CDF of a symmetrically distributed continuous random variable:
+
+ 
+Figure 8 - PDF vs CDF for a Symmetrically Distributed Variable
+
+Again, it is clear that the symmetrical nature of the variable is much more apparent in the PDF than in the CDF.
+
+
+Hence, generally, PDFs are used more commonly that CDFs.
+
+Questions:1/1
+ 
+Cumulative Probability of Continuous Variables
+
+Suppose you work at a sports analysis company and you want to analyse the effect a bowler’s height has on his/her performance. So, you create a list of all 5 wicket hauls in the last decade. Based on this data, they created a cumulative probability distribution for X, where X = height of the bowler who took the 5 wicket haul.
+
+Now, based on the data, you conclude that the cumulative probability, F(175.3 cm) = 0.3. In this case, which of the following statements is correct?
+
+    P(X<175.3 cm) = 0.3
+
+    P(X<175.3 cm) = 0.3
+
+(Remember that height is a continuous variable.)
+Only statement 1 is correct
+Only statement 2 is correct
+Both statements 1 and 2 are correct
+Feedback :
+You can say that P(X ≤ 175.3 cm) = P(X < 175.3 cm) + P(X = 175.3 cm). Now, since X is a continuous variable, you know that the probability of getting an exact value is zero. Hence, P(X=175.3 cm) = 0, which means that P(X ≤ 175.3 cm = P(X < 175.3 cm) + 0.
