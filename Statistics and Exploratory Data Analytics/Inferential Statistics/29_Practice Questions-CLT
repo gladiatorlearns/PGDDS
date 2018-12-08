@@ -1,0 +1,85 @@
+Practice Questions - Part I
+
+Let’s say that you work for a news agency, which is conducting an exit poll for the MCD (Municipal Corporation of Delhi) elections. You have been tasked with predicting the winner for ward 75N (Ashok Vihar). You asked 100 randomly selected voters from this ward to name the party they had voted for.
+
+ 
+
+The data thus collected is as given in the following table.
+
+ 
+Contesting Party	Number of Voters
+BJP	58
+INC	42
+
+ 
+
+From this sample, you have to estimate the percentage of voters that might have voted for BJP.
+
+ 
+
+So, you define X as the proportion of people that voted for BJP. Then, the frequency distribution for X would be:
+
+ 
+    X    	Frequency
+1	58
+0	42
+
+ 
+
+Now, you have to find the mean for X, which is equal to (0+0+0+...... 42 times) + (1+1+1+......... 58 times), divided by the total frequency, i.e. 100. So, the mean = \frac{(0*42)+(1*58)}{100} = 0.58 or 58%.
+
+
+Also, you would have to find the standard deviation for this sample of 100 voters. Since the mean is 0.58, the sample’s variance = \frac{((0-0.58)^{2}*42)+((1-0.58)^{2}*58)}{100-1} = 0.2461. So, the standard deviation is equal to its square root, i.e. 0.496 or 49.6%.
+
+Questions:1/3
+ 
+ 
+ 
+Voter Sample
+
+Now, let’s say you define Y as the proportion of people that voted for the INC party. Clearly, the mean of Y will be 0.42. What would be the standard deviation of Y?
+24.61%
+49.6%
+Feedback :
+There would be 42 people for whom Y would be equal to 1, and 58 people for whom Y would be equal to 0. Hence, the sample’s variance = (1−0.42)2∗42+(0−0.42)2∗58100−1=0.2461. So, the standard deviation is equal to its square root, i.e. 0.496 or 49.6%
+Correct
+50.4%
+75.39%
+
+Questions:2/3
+ 
+ 
+ 
+Voter Sample
+
+Let’s say you actually took some more samples, each of size 100, and made a sampling distribution for X, the proportion of people that voted for BJP.
+
+The mean of this sampling distribution is μ¯X = 0.50 and the standard error = 0.052.
+
+So, for the whole survey population, i.e. all the voters in ward 75N, the proportion of people that voted for BJP is approximately equal to:
+50%
+Feedback :
+You have to find the mean for all the people or, in other words, the population mean. Using CLT, you can say that the mean of the sampling distribution = the population mean. As the question says that the sampling distribution’s mean = 0.5, the population mean also = 0.5 or 50%
+Correct
+55.8%
+44.2%
+10.2%
+
+Questions:3/3
+ 
+ 
+ 
+Voter Sample
+
+Similarly, let’s say you made a sampling distribution for Y, the proportion of people that voted for INC.
+
+The mean of this sampling distribution is μ¯X = 0.50 and the standard error is equal to 0.048.
+
+Now, for the whole survey population, i.e. all the voters in ward 75N, the standard deviation of Y is equal to:
+50%
+4.8%
+48%
+Feedback :
+You have to find the standard deviation for all people or, in other words, the population standard deviation σ. Using CLT, you can say that (σ/√n) = SE. Hence, (σ/√100) = 0.048, which gives σ = .48 or 48%
+Correct
+10.4%
