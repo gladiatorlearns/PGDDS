@@ -1,0 +1,67 @@
+Summary: Continuous Probability Distributions
+
+You started this session by learning that, for a continuous random variable, the probability of getting an exact value is very low, almost zero. Hence, when talking about the probability of continuous random variables, you can only talk in terms of intervals. For example, for a particular company, the probability of an employee’s commute time being exactly equal to 35 minutes was zero, but the probability of an employee having a commute time between 35 and 40 minutes was 0.2.
+
+ 
+
+Hence, for continuous random variables, probability density functions (PDFs) and cumulative distribution functions (CDFs) are used, instead of the bar chart type of distribution used for the probability of discrete random variables. These functions are preferred because they talk about probability in terms of intervals.
+
+ 
+
+Then, you understood that the major difference between a PDF and a CDF is that in a CDF, you can find the cumulative probability directly by checking the value at x. However, for a PDF, you need to find the area under the curve between the lowest value and x to find the cumulative probability.
+
+Figure 12 - PDFs vs CDFs
+
+However, you also learnt that PDFs are still more commonly used, mainly because it is very easy to see patterns in them. For example, for a uniformly distributed variable, the PDF and CDF look like this:
+Figure 13 - PDF and CDF for a Uniformly Distributed Variable
+
+While the fact that the variable is uniformly distributed is clear from the PDF, the CDF does not offer any such quick insights.
+
+ 
+
+Next, you learnt about a very famous probability density function — the normal distribution. You saw that it is symmetric and its mean, median and mode lie at the centre.
+Figure 14 - Normal Distribution
+
+You also learnt the 1-2-3 rule, which states that there is a -
+
+    68% probability of the variable lying within 1 standard deviation of the mean
+
+    95% probability of the variable lying within 2 standard deviations of the mean
+
+    99.7% probability of the variable lying within 3 standard deviations of the mean
+
+Figure 15 - 1-2-3 Rule for the Normal Distribution
+
+However, you saw that, to find the probability, you do not need to know the value of the mean or the standard deviation — it is enough to know the number of standard deviations away from the mean your random variable is. That is given by:
+
+Z=(X−μσ)
+
+ 
+
+This is called the Z score, or the standard normal variable.
+
+ 
+
+Finally, you learnt how to find the cumulative probability for various values of Z, using the Z table. For example, you found the cumulative probability for Z = 0.68 by using the Z table.
+Figure 16 - Z Table
+
+The intersection of row “0.6” and column “0.08”, i.e. 0.7517, is your answer.
+
+ 
+
+Also, you learnt how to use Excel to find this probability. For example, cumulative probability for Z =1.5 can be found using Excel by typing:
+
+ 
+
+= NORM.S.DIST(1.5, TRUE)
+
+ 
+
+Also, you can find the probability without standardising. The syntax for that is:
+
+ 
+
+= NORM.DIST(x, mean, standard_dev, TRUE)
+
+
+The normal distribution finds use in many statistical analyses. In our module, it finds use in the next session, central limit theorem, which is then useful for understanding the next module on hypothesis testing.
