@@ -1,0 +1,102 @@
+Expected Value - II
+
+Let’s try it for a different activity. Let’s say that you’re throwing a die. You’ve defined X as the number obtained upon throwing it once. By calculations, you would find that the expected value for this is 3.5. Let’s see what our simulations show:
+
+Expectation
+
+The expected value of an experiment is the probability-weighted average of all possible values. It is defined mathematically as the following:
+$$E[X] = \sum_{x \in X}xP(x)$$
+
+The law of large numbers states that the average result from a series of trials will converge to the expected value. Roll the die to see convergence to its expected value.
+
+Now, you may recall that the expected value of a player’s winnings after playing our game once was ₹11.28. We said that reducing the prize money and/or increasing the penalty for our game might make the expected value negative. Let’s see how much we need to reduce or increase the prize money.
+
+Questions:1/2
+ 
+ 
+Expected Value of Player's Winnings
+
+So, the expected value of a player’s winnings is positive, but we want to make it negative. Which of the following changes to the game would make the expected value negative?
+Increase the penalty to ₹25
+Feedback :
+Keeping the prize money as ₹150 and increasing the penalty to ₹25 would make the expected value (0.133 * 150) + (0.867 * -25) = -1.725, which is a negative value.
+Correct
+Decrease the prize money to ₹90
+
+Expected Value of Player's Winnings
+
+Suppose we change the game’s rules to the following:
+Outcome	Prize
+4 red balls	+150
+4 blue balls	-150
+Any other outcome	-10
+
+What will be the expected value now for X (the amount of money won by a player after playing the game once)?
+-2.5
+-5
++2.5
++7.5
+Feedback :
+Recall that the expected value of a random variable is given by x1 *P(X= x1 ) + x2*P(X=x2) + x3*P(X=x3) + ……. + xn*P(X=xn), where x1, x2, x3 ….. xn are all the different possible values of X. So, the expected value here would be 150*P(X = 150) + (-150)*P(X = -150) + (-10)*P(X = -10). Now, P(X = 150) = P(getting 4 red balls) = 0.133. Also, P(X = -150) = P(getting 4 blue balls) = 0.027 and P(X = -10) = P(getting 1, 2 or 3 red balls) = 0.840. Putting in those values, we get EV(X) = (150*0.133) + (-150*0.027) + (-10*0.840) = +7.5.
+Correct
+
+Recall the problem you saw earlier, where we were asked by a company to suggest whether it should invest in a given project or not. We had made this probability distribution for X, the net revenue of the project.
+
+ 
+X (Net Revenue of Project, in ₹ crores)	    P(x)    
+-305	0.1
++15	0.7
++95	0.2
+
+ 
+
+Now, we are in a position to find the expected value for X, the return of the project. This is called the expected return. If it comes out to be negative, we can say that the project is not worth investing in.
+
+Questions:1/1
+ 
+Expected Return
+
+Find the expected value of X if its probability distribution is as given in the table above. (Answer in terms of crores.)
+closeIncorrectdoneCorrect
+-1
+Feedback : The correct answer is -1. Let's see why, in the text below.
+
+The expected value of X, which is also called the expected return, is equal to
+
+ 
+
+(-305)*P(X=-305) + (+15)*P(X=+15) + (+95)*P(X=+95) = (-305)*0.1 + (+15)*0.7 + (+95)*0.2 = -1 crore rupees.
+
+ 
+
+So, the expected return of the project is -1 crore rupees. Hence, we can conclude that the project is not worth investing in.
+
+ 
+
+You can find more examples of expected returns here.
+
+Expected Return
+
+The future is uncertain. Investors do not know with certainty whether the economy will be growing rapidly or be in recession. As such, they do not know what rate of return their investments will yield. Therefore, they base their decisions on their expectations concerning the future.
+
+The expected rate of return on a stock represents the mean of a probabilty distribution of possible future returns on the stock. The table below provides a probability distribution for the returns on stocks A and B.
+State 	Probability 	Return on
+Stock A 	Return on
+Stock B
+1 	20% 	5% 	50%
+2 	30% 	10% 	30%
+3 	30% 	15% 	10%
+3 	20% 	20% 	-10%
+
+In this probability distribution, there are four possible states of the world one period into the future. For example, state 1 may correspond to a recession. A probability is assigned to each state. The probability reflects how likely it is that the state will ocurr. The sum of the probabilities must equal 100%, indicating that something must happen. The last two columns present the returns or outcomes for stocks A and B that will occur in the four states.
+
+Given a probability distribution of returns, the expected return can be calculated using the following equation:
+
+where
+
+    E[R] = the expected return on the stock,
+    N = the number of states,
+    pi = the probability of state i, and
+    Ri = the return on the stock in state i. 
+    
+    http://www.zenwealth.com/businessfinanceonline/RR/ExpectedReturn.html
