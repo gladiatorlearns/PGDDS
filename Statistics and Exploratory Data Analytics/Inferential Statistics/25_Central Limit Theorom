@@ -1,0 +1,123 @@
+Introduction: Central Limit Theorem
+
+Welcome to the session on 'Central Limit Theorem'. In the last session, you learnt about probability density functions, specifically the normal and standard normal distributions.
+
+ 
+In this session
+
+In this session, you will learn what a sample is and why it is so error prone. You will then learn how to quantify this error made in sampling, using a very popular theorem in statistics, called the central limit theorem.
+
+Samples
+
+So far, you have conducted analysis for data on 75 people, 3,000 people, and so on. But what if you need to analyse a very large amount of data, e.g. data on 300,000 people? Or what if you need to do this for, say, the entire Indian population?
+
+
+Let’s say that, for a business application, you want to find out the average number of times people in urban India visited malls last year. That’s 400 million (40 crore) people! You can't possibly go and ask every single person how many times they visited the mall. That’s a costly and time-consuming process. How can you reduce the time and money spent on finding this number?
+
+Questions:1/1
+ 
+Population and Sample Mean
+
+For our sampling activity, what is the sample mean (¯X) equal to? What is the population mean (μ) equal to?
+¯X=36.6,μ=36.6
+¯X=36.6,μ=unknown
+Feedback :
+Recall that the mean commute time for our sample (100 randomly selected employees) = 36.6 minutes. Also, recall that we did not know what the mean of the population (30,000 employees) was. So, the population mean is unknown.
+Correct
+¯X=unknown,μ=36.6
+
+
+To reiterate, these are the notations and formulae related to populations and their samples:
+Figure 1 - Notations and Formulae Related to Populations and Their Samples
+
+The reason for dividing by n-1 and not n is not covered in this course. If you are still curious as to why that is the case, please refer to this link.
+https://web.ma.utexas.edu/users/mks/M358KInstr/SampleSDPf.pdf
+ 
+
+For an upcoming government project, you want to find the average height of the students in Class VIII of a given school. Instead of asking each student, suppose you took a few students as your sample and wrote the data down:
+
+ 
+Roll Number	Height
+8012	121.92 cm
+8045	133.21 cm
+8053	141.34 cm
+8099	126.23 cm
+8125	175.74 cm
+
+Questions:1/3
+ 
+ 
+ 
+School Kids Sample
+
+What is the sample size for this sample?
+5
+Feedback :
+In this sample, you have data on 5 students. Hence, the sample size is equal to 5.
+Correct
+40334
+698.44
+10
+
+Questions:2/3
+ 
+ 
+ 
+School Kids Sample
+
+What is the sample mean (¯X)?
+133.21
+139.69
+Feedback :
+The sample mean (¯X) = (121.92 + 133.21 + 141.34 + 126.23 + 175.74)/5 = 139.69.
+Correct
+146.76
+141.34
+
+Questions:3/3
+ 
+ 
+ 
+School Kids Sample
+
+What will be the sample's standard deviation (S)?
+22.84
+23.67
+19.19
+21.45
+Feedback :
+We found in the previous question that the sample mean (¯X) = 139.69. Now, we can find ∑(Xi−¯X)2, which turns out to be 1841.26. Dividing this by n-1, i.e, 4, we get the value of S^2 as 460.315. The value of S, thus, will be equal to √(460.315) = 21.45 
+
+Let's go through another example of sampling.
+
+ 
+
+In order to counter fake news, let’s say Facebook is planning to include a new feature in its timeline. Below each post, a fact-checking warning will be provided, like this:
+Figure 2 - Facebook Fact Checking Tool Demo
+
+In case you want to read more about this feature, you can do so by going through this link.
+http://fortune.com/2017/03/22/facebook-fact-checking-tool/
+
+ 
+
+Before changing the timelines of all Facebook users to include this feature, Facebook first wants to evaluate how its users would react to this new feature.
+
+ 
+
+So, it lets a small sample (~10,000 users) try out the new timeline. Then, it asks the 10,000 users whether they prefer the new timeline (Feature B) or the old timeline (Feature A).
+
+ 
+
+Let’s say that one such survey shows that 50.5% of the people prefer feature B over feature A. Based on this, Facebook can say that feature B is preferred by more people than feature A, and hence should replace it.
+
+ 
+
+Hence, by sampling, Facebook found that feature B is preferred by more people than feature A. By conducting the exercise on a sample and not the population, it saved time, money and avoided risks that would come if it would have rolled out an untested feature.
+
+ 
+
+But hold on! How can you be sure that the insights inferred for the sample hold true for the population as well? In other words, just because 50.5% of the people in the sample preferred feature B, is it fair to infer that 50.5% of the people in the population (1.86 billion Facebook users) will also prefer feature B over A?
+
+
+You cannot answer this question with the information you have right now. However, after the next few lectures, which will cover sampling distributions, central limit theorem and confidence intervals, you will be in a situation to answer this question.
+
