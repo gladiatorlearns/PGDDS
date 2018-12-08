@@ -1,0 +1,90 @@
+Practice Questions - Part II
+
+Let’s say you work as a data analyst at a pharma company which manufactures an antipyretic drug (tablet form) with paracetamol as the active ingredient. The amount of paracetamol specified by the drug regulatory authorities is 500 mg with an allowed error of 10%. Anything below 450 mg would be a quality issue for your company since the drug would become ineffective, while anything above 550 mg would be a serious regulatory issue.
+
+ 
+
+There are 10 identical manufacturing lines in the plant, each of which produces approximately 10,000 tablets per hour.
+
+ 
+
+You want to take some samples, measure the amount of paracetamol, and test if the manufacturing process is running successfully. You have the resources and time to take a sample of 100 tablets and measure the paracetamol content in each.
+
+ 
+
+For the 100 tablets sampled by you, you find that the mean paracetamol content is 530 mg and the standard deviation is 100 mg.
+
+
+Now, you want to know what the average content is for all the tablets in the plant. You are thinking of reporting the average as a confidence interval, for which you are 95% confident.
+
+ 
+
+With this information, answer the questions given below.
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Paracetamol Content
+
+What is the MOE (margin of error) for 95% confidence level?
+9.8 mg
+19.6 mg
+Feedback :
+If X is the defined as the paracetamol content, then for this sample of X, sample mean ¯X = 530 mg, sample standard deviation S = 100 mg and sample size n = 100. Also, for 95% confidence interval, Z* is 1.96. Now, you know that the margin of error = Z∗S√n=1.96∗100√100 = 19.6
+Correct
+39.2 mg
+Feedback :
+If X is the defined as the paracetamol content, then for this sample of X, sample mean ¯X = 530 mg, sample standard deviation S = 100 mg and sample size n = 100. Also, for 95% confidence interval, Z* is 1.96. Now, can you find the margin of error?
+Incorrect
+49 mg
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Paracetamol Content
+
+What is the confidence interval for 95% confidence level?
+510.4 to 530
+530 to 549.6
+510.4 to 549.6
+Feedback :
+As you know, sample mean ¯X = 530 and Z∗S√n = 19.6. Now, you know the confidence interval is (¯X−Z∗S√n,¯X+Z∗S√n). Putting in the values, you can calculate the confidence interval as (510.4, 549.6).
+Correct
+512.1 to 547.9
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Paracetamol Content
+
+What is the confidence interval for 90% confidence level?
+514.7 to 545.3
+511.3 to 548.7
+513.5 to 546.5
+Feedback :
+As you know, sample mean ¯X = 530, S = 100 and n = 100. Also, for 90% confidence interval, Z* is 1.65. Now, you know the confidence interval is (¯X−Z∗S√n,¯X+Z∗S√n). Putting in the values, you can calculate the confidence interval as (513.5, 546.5). 
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Paracetamol Content
+
+Now, you claim that the tablet is fit to consume and effective, i.e., its Paracetamol content is less than 550 mg  and more than 450 mg. Can you make this claim at -
+
+    95% confidence level?
+
+    90% confidence level?
+
+Why or why not? (Word Limit: 125)
+
+Can be claimed at 95% confidence level as tablets are related to health , it is extremely necessary to be sure of variations before it is released in market
+
