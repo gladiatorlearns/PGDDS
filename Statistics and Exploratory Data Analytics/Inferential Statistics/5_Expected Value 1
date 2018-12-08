@@ -7,3 +7,215 @@ Find the probability of each combination
 Use the probabilities to estimate the profit/loss per player
 
 Now that we have completed steps 1 and 2, let’s move on to step 3 where we will use the probabilities we calculated to estimate the profit/loss per player.
+
+Questions:1/1
+ 
+Number of People Drawing 1 Red Ball
+
+Suppose 1,000 people play the game. How many people are expected to draw 1 red ball (i.e. get 1 red ball after playing the game)?
+
+(Recall that P(1 red ball) = 0.16)
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+doneCorrect
+Feedback : The correct answer is 160. Let's listen to Prof. Tricha as she tells us why.
+
+Total Number of Red Balls Drawn From The Bag
+
+Suppose 1,000 people play this game. What is the total number of red balls that you can expect them to take out?
+Number of balls	Probability
+0	0.027
+1	0.160
+2	0.347
+3	0.333
+4	0.133
+
+ 
+
+You can use this probability distribution to find the answer.
+3,521
+1,000
+2,385
+Feedback :
+As you saw earlier, we expect 27 people to get 0 red balls, 160 people to get 1 red ball, 347 people to get 2 red balls, 333 people to get 3 red balls, and 133 people to get 4 red balls. So, the total number of red balls we can “expect” to get after 1,000 people play our game would be (0 x 27) + (1 x 160) + (2 x 347) + (3 x 333) + (4 x 133) = 2,385
+Correct
+Not enough information
+
+
+Questions:2/2
+ 
+ 
+Average Number of Red Balls Drawn From the Bag
+
+On average, how many red balls would you expect a player to take out?
+2
+2.385
+Feedback :
+Recall that, after 1,000 players played the game, they got a total of 2,385 red balls. So, on average, we would expect one player to get 2,385/1,000 = 2.385 red balls.
+Correct
+3
+
+So, the expected value for a variable X is the value of X we would “expect” to get after performing the experiment once. It is also called the expectation, average, and mean value. Mathematically speaking, for a random variable X that can take values x1,x2,x3,...........,xn, the expected value (EV) is given by:
+
+ 
+
+EV(X)=x1∗P(X=x1)+x2∗P(X=x2)+x3∗P(X=x3)+...........+xn∗P(X=xn)
+
+ 
+
+As you may recall, for our red ball game, the expected value came out to be 2.385. What does that mean? How does that even help us with our original question, which was how much money, on average, are the players expected to make?
+Expected Value
+
+Now, can you calculate the expected value of X (where X is the money won by the player after playing the game once)?
+X (Money won after playing once)	Probability
++150	0.133
+-10	0.867
+
+ 
+
+You can use this probability distribution to find the answer.
+closeIncorrectdoneCorrect
+11.28
+Feedback : The correct answer is 11.28. Let's listen to Prof. Tricha as she tells us why.
+
+
+SERVER.R 
+
+
+
+library(shiny)
+library(ggplot2)
+library(ggthemes)
+
+nodata <- data.frame(avg_red_balls= numeric(0), exp_value= numeric(0), num_games = integer(0))
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+  max_games = 50
+  n = 30 #number of games on one click
+  
+  balls <- c(1, 1, 1, 0, 0)
+  number_of_red_balls <- vector(mode = "integer", length = n*max_games)
+  
+  for (k in 1:(n*max_games)){
+    s = sample(balls, 4, replace = T)
+    number_of_red_balls[k] <- sum(s)
+  }
+  
+
+  # Takes the value of 'action' from input 
+  
+  output$redPlot <- renderPlot({
+    t = min(n*max_games, n*input$action)
+    
+    red = data.frame(number_of_red_balls[1:t])
+    colnames(red) <- "red"
+    
+    
+    r = red$red
+    s = summary(factor(r, levels=c(0,1,2,3,4)))
+    agg = sum(s)
+    s = s/agg
+    s = data.frame(s)
+    s$x1 = c(0, 1, 2, 3, 4)
+    ggplot(s, aes(x=factor(x1), y=s, width=0.32)) + geom_bar(stat="identity", fill="#f98866", colour="black") +
+      theme_minimal() +
+      coord_cartesian(ylim = c(0, 1)) + xlab("X (Number of red balls)") +
+      ylab("Probability")+theme(legend.position = "none")+theme(text = element_text(size=14))
+  })
+  
+  output$num_red_balls <- renderTable({ 
+    t = min(n*max_games, n*input$action)
+    m = matrix(as.integer(number_of_red_balls[1:t]), ncol=10, byrow = T)
+
+    })
+  
+  output$length <- renderPrint({ 
+    input$action*n
+    })
+  
+  
+  output$mean <- renderPrint({ 
+    t = min(n*max_games, n*input$action)
+    c(avg_red_balls = round(mean(number_of_red_balls[1:t]), 2), expected_value= 2.38)
+  })
+  
+  output$length <- renderPrint({
+    t = min(n*max_games, n*input$action)
+    c(num_games=t)
+  })
+  
+  output$exp_plot <- renderPlot({ 
+    t = min(n*max_games, n*input$action)
+    
+    num_games <- seq(0, t, n)
+    avg <- vector(mode = "numeric",length=length(num_games))
+    
+    for (i in 1:length(avg)){
+      avg[i] <- mean(number_of_red_balls[1:(i*n)])
+    }
+    
+    exp_value <- rep(2.38, length(avg))
+    
+    data <- data.frame(num_games, avg, exp_value)
+    ggplot(data, aes(x=num_games)) + 
+      geom_line(aes(y = avg, colour = "Average value")) + 
+      geom_line(aes(y = exp_value, colour = "Expected value"))+
+      coord_cartesian(xlim = c(0, 1200)) + coord_cartesian(ylim = c(1.5, 3)) +
+      theme_classic()+theme(text = element_text(size=14))+
+      scale_x_continuous(breaks=seq(0, 1200, 100)) + xlab("Number of games")+ylab("Average and Expected value")
+  })
+})
+ UI,R
+ 
+
+library(shiny)
+
+shinyUI(fluidPage(
+  
+  title = "Expected Value",
+  
+  h3("Instructions"), 
+  hr(),
+  p("Click the button to play the game 30 times."),
+  actionButton("action", label="Play 30 times!", class="btn btn-danger text-center"),
+  br(),
+  
+  hr(),
+  
+  fluidRow(
+    column(6,
+           p("The average number of red balls is:"),
+           verbatimTextOutput("mean")
+           
+    ), 
+    column(6,
+           p("The number of games played is:")),
+           verbatimTextOutput("length")
+  ),
+  
+  fluidRow(
+    column(6,
+           h5("Frequency distribution"),
+           br(),
+           plotOutput("redPlot")
+    ),
+    
+    column(6, 
+           h5("Expected Value"),
+           br(), 
+           plotOutput("exp_plot")
+           )
+    )
+))
+
+
+
+
+
+
+
+The expected value should be interpreted as the average value you get after the experiment has been conducted an infinite number of times. For example, the expected value for the number of red balls is 2.385. This means that if we conduct the experiment (play the game) infinite times, the average number of red balls per game would end up being 2.385. You can try it out in this interactive app.
+
+
+
