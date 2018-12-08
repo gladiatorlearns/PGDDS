@@ -1,0 +1,101 @@
+Graded Questions
+Figure 17 - Uniformly Distributed Variable (p = 0.1)
+
+The graph you see above represents the PDF of a uniformly distributed random variable X. As you can see, the probability density is equal for all the possible values of X (-5 to +5).
+
+
+Questions:1/1
+ 
+Uniform Distribution
+
+What is the probability of the random variable X lying between -1.5 and +2.5, i.e. P(-1.5<X<2.5)?
+
+0.1
+
+0.4
+Feedback :
+
+The probability of the variable lying between -1.5 and 2.5 would be equal to the area under the PDF, between X = -1.5 and X = 2.5. This would be equal to the area of a rectangle, with breadth 0.1 and length 2.5 - (-1.5) = 4. Multiplying the two, you get the area of the rectangle, which is equal to 0.1*4 = 0.4.
+Correct
+
+4.0
+
+0.6
+
+
+The normal distribution, aka the Gaussian distribution, was discovered by Carl Friedrich Gauss in 1809. Gauss was trying to create a probability distribution for astronomical errors. Astronomical errors are the errors that were made by astronomers while observing phenomena such as distances in space.
+
+
+For example, Gauss found that an astronomer trying to estimate the distance between Earth and Uranus always makes an error. This error is normally distributed, with µ = 0 km and σ = 1,000 km.
+
+http://users.stat.ufl.edu/~athienit/Tables/Ztable.pdf
+
+Questions:1/2
+ 
+ 
+Astronomical Error
+
+Based on the information above, what is the probability of the astronomer overestimating the distance by 2,330 km or more?
+
+(You can use the Z table here.)
+1%
+Feedback :
+Let’s define X as the astronomical error, which is normally distributed with mean 0 km and standard deviation 1,000 km. Now, you have to find the probability that X > 2330, i.e. P(X>2330). Converting this to Z, it becomes P(Z>2.33). Since P(Z<=2.33) + P(Z>2.33) = 1, P(Z>2.33) = 1 - P(Z<2.33) = 1 - 0.9901 = 0.0099 or 0.99%, which is approximately 1%.
+Correct
+2%
+1.5%
+0.5%
+
+
+Questions:2/2
+ 
+ 
+Astronomical Error
+
+Hence, what is the probability that the astronomer under- or over-estimates the distance by less than 500 km?
+
+
+In the light of the heavy rains and the accompanying floods in Kerala, the state government decides to know how probable these types of rainfalls are during the month of August so that they can redesign the current state infrastructure and prepare themselves for such future events.
+
+From the historical data, it was found that the average rainfall received by Kerala in the month of August was  1600 mm with a standard deviation of 400 mm. Assuming that the rainfall data follows a normal distribution answer the following questions.
+
+Questions:1/2
+ 
+ 
+Rainfall Data
+
+It was calculated that the floods were caused by a rainfall of 2200 mm. From the given information, what would be the probability that the state receives more than 2200 mm of rainfall in this period?
+
+3.5%
+
+4.8%
+
+1.2%
+
+6.7%
+Feedback :
+
+Let X be defined as the rainfall (measured in mm) with μ = 1600 and σ = 400. Now for the given question, we need to calculate  P(X>2200). Converting it to Z we have to find P(Z> (2200-1600)/400) or P(Z>1.5). Now we have P(Z>1.5)= 1 - P(Z<=1.5).From the Z-table we have  P(X<=1.5) = 0.9332. Thus P(X>1.5) = 1 - 0.9332= 0.0668= 6.7%
+
+Questions:2/2
+ 
+ 
+Normal Data
+
+At what cutoff rainfall value should the current infrastructure be redesigned so that there is only a 3% chance that either similar or heavier rains are observed in the future?
+
+2433 mm
+
+2352 mm
+Feedback :
+
+Let X be defined as the rainfall and the cutoff rainfall be denoted by x. Given that μ= 1600 and σ= 400. Thus the Z-value corresponding to x would be (x-1600)/400. Let it be denoted by z. Now as per the question P(Z>=z)= 0.03. This can be written as 1-P(Z<z) =0.03 or P(Z<z)= 0.97. Then from the tables, you get the value of z that satisfies the previous equation as 1.88. Thus you have (x-1600)/400 =1.88 or x =1600+1.88*400 = 2352
+Correct
+
+2295 mm
+
+2330 mm
+Feedback :
+
+Let X be defined as the rainfall and the cutoff rainfall be denoted by x. Given that μ= 1600 and σ= 400. You need to find the corresponding Z-value for x. Let it be denoted by z. Now x needs to chosen such that P(X>=x)=0.03 or in Z terms P(Z>=z) = 0.03.  Can you find a suitable z value that satisfies this condition and then calculate the cutoff rainfall x?
+
