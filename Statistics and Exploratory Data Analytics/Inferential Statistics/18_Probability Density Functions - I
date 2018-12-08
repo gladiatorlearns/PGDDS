@@ -1,0 +1,100 @@
+Probability Density Functions - I
+
+In the last section, you saw how to find the probability of certain events using multiplication and addition rules of probability. Also, for some specific cases, you saw that probability distributions like the binomial distribution and the uniform distribution can be used to find the probability.
+
+
+However, so far we have only been talking about discrete random variables, e.g. number of balls, number of patients, cars, wickets, pasta packets, etc. What happens when we talk about the probability of continuous random variables, such as time, weight etc.? Is there any difference? Let’s see.
+
+Questions:1/1
+ 
+Employee Commute Time
+
+What would be the approximate probability that an employee’s daily commute time to work is exactly 35 minutes?
+
+[You’re not expected to know the right answer at this point. This question is given just to get you thinking in the right direction.]
+Approximately 0%
+Feedback :
+Since time is a continuous variable, the number of possible values is endless. An employee could have a commute time equal to 34.99, 35 or 35.01 minutes. So, there will be at most 1 or 2 employees with a commute time of 35 minutes, resulting in a very low probability.
+Correct
+
+So, now you know what a CDF is and what a PDF is. Since these two functions talk about probabilities in terms of intervals rather than exact values, it is advisable to use them when talking about continuous random variables, and not the bar chart distribution that we used for discrete variables.
+
+ 
+
+Just to recall, a CDF, or a cumulative distribution function, is a distribution which plots the cumulative probability of X against X.
+
+Questions:1/2
+ 
+ 
+Continuous Variables - Probability
+
+From the given probability data, can you find the cumulative probability for X = 20, i.e. P(X<20)?
+x(Commute Time)	Probability
+20 - 25	0.15
+25 - 30	0.20
+30 - 35	0.30
+35 - 40	0.20
+40 - 45	0.15
+0.15
+0
+Feedback :
+Since all the probabilities in the table add up to 1, it implies that there is a 100% probability that the variable X lies between 20 and 45 minutes. Hence, 20 is the lowest possible value of X. Therefore, P(X<=20) = 0.
+Correct
+0.075
+Insufficient information
+
+Questions:2/2
+ 
+ 
+Continuous Variables - Probability
+
+From the given probability data, can you find the cumulative probability for X = 30, i.e. P(X<30)?
+x(Commute Time)	Probability
+20 - 25	0.15
+25 - 30	0.20
+30 - 35	0.30
+35 - 40	0.20
+40 - 45	0.15
+0.20
+0.65
+0.35
+Feedback :
+P(X<=30) = P(0<X<=20) + P(20<X<=25) + P(25<X<=30) = 0+0.15+0.20 = 0.35.
+
+So, now you know what a CDF is and what a PDF is. Since these two functions talk about probabilities in terms of intervals rather than exact values, it is advisable to use them when talking about continuous random variables, and not the bar chart distribution that we used for discrete variables.
+
+ 
+
+Just to recall, a CDF, or a cumulative distribution function, is a distribution which plots the cumulative probability of X against X.
+
+Figure 1
+
+A PDF, or Probability Density Function, however, is a function in which the area under the curve, gives you the cumulative probability.
+
+fig 2
+
+For example, the area under the curve, between 20, the smallest possible value of X and 28, gives the cumulative probability for X = 28.
+
+ 
+
+The main difference between the cumulative probability distribution of a continuous random variable and a discrete one, is the way you plot them. While the continuous variables’ cumulative distribution is a curve, the distribution for discrete variables looks more like a bar chart:
+
+fig3 and fig 4
+
+The reason for showing both of these so differently is that, for discrete variables, the cumulative probability does not change very frequently. In the discrete example, we only care about what the probability is for 0, 1, 2, 3 and 4. This is because the cumulative probability will not change between, say, 3 and 3.999999. For all values between these two, the cumulative probability is equal to 0.8704.
+
+ 
+
+However, for the continuous variable, i.e. the daily commute time, you have a different cumulative probability value for every value of X. For example, the value of cumulative probability at 21 will be different from its value at 21.1, which will again be different from the one at 21.2 and so on. Hence, you would show its cumulative probability as a continuous curve, not a bar chart.
+
+Questions:1/1
+ 
+Cumulative Probability of Continuous Distributions
+
+Recall that, in the above video, we talked about a fictional company with 3,000 employees in a local office. Now, let’s say you went to that office, and asked those 3,000 employees to play our UpGrad red ball game (from the previous sessions 1 and 2). Based on the data on these 3,000 people, if you create the probability distribution for X, then the values of P(X=0), P(X=1), P(X=2), P(X=3) and P(X=4) would all be:
+
+[X = number of red balls drawn by a player after playing the game once]
+zero
+non-zero
+Feedback :
+The probabilities mentioned will not be zero. It doesn’t matter whether the number of people playing the game is 75 or 3,000. X is not a continuous variable, and there are only 5 possible values of X. So, the probability of somebody drawing, say 3 red balls is much higher than zero.
