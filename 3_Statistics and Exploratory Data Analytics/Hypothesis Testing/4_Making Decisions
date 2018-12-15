@@ -1,0 +1,117 @@
+Making a Decision
+Once you have formulated the null and alternate hypotheses, let’s turn our attention to the most important step of hypothesis testing — making the decision to either reject or fail to reject the null hypothesis — through an interesting example of a friend playing archery.
+
+Questions:1/1
+ 
+Null and Alternate Hypotheses
+What would be the null and alternate hypotheses for Apurva’s claim?
+
+
+H₀: μ = 70 and H₁: μ ≠ 70
+Feedback :
+The null hypothesis is always formulated by either = or ≤ or ≥. Here, Apurva’s claim is that her score is equal to 70, so that would become the null hypothesis. And alternate hypothesis would be that her score is not equal to 70.
+Correct
+
+H₀: μ ≠ 70 and H₁: μ = 70
+
+H₀: μ ≤ 70 and H₁: μ > 70
+
+H₀: μ ≥ 70 and H₁: μ < 70
+
+Questions:1/1
+ 
+Population Mean
+Which value can be referred to as the population mean in Apurva’s archery example?
+
+
+70
+Feedback :
+The population mean is the quantity about which you have a hypothesis. Since your hypothesis in this situation is H₀: μ = 70 and H₁: μ ≠ 70, 70 would be the population mean.
+Correct
+
+50
+Feedback :
+The population mean is the quantity about which you have a hypothesis, and the sample mean is the quantity which is used to test out the hypothesis about the population mean. In this case, 50 is the sample mean, which is the average of Apurva’s 5 games.
+
+Questions:1/1
+ 
+Making a decision
+If your sample mean lies in the acceptance region, then:
+
+
+You reject the null hypothesis
+
+You fail to reject the null hypothesis
+Feedback :
+If your sample mean lies in the acceptance region, you fail to reject the null hypothesis because it is not beyond the critical point and you can consider that sample mean is equal to the population mean statistically.
+
+
+So, you learnt about what critical values are and how your decision to reject or fail to reject the null hypothesis is based on the critical values and the position of the sample mean on the distribution.
+
+The formulation of the null and alternate hypotheses determines the type of the test and the position of the critical regions in the normal distribution.
+
+ 
+
+You can tell the type of the test and the position of the critical region on the basis of the ‘sign’ in the alternate hypothesis.
+
+      
+
+       ≠ in H₁    →   Two-tailed test        →     Rejection region on both sides of distribution
+
+       < in H₁    →   Lower-tailed test     →     Rejection region on left side of distribution
+
+       > in H₁    →   Upper-tailed test     →     Rejection region on right side of distribution
+       
+       
+Play
+Mute
+Current Time 
+4:23
+/
+Duration 
+5:05
+ 
+Playback Rate Auto
+Playback Rate1.5x
+Fullscreen
+Questions:1/1
+ 
+Types of tests
+Government regulatory bodies have specified that the maximum permissible amount of lead in any food product is 2.5 parts per million or 2.5 ppm.
+
+If you conduct tests on randomly chosen Maggi Noodles samples from the market to see if its lead content is above the permissible amount of 2.5 ppm, what type of test this would be?
+
+
+Two-tailed test
+Feedback :
+The alternate hypothesis is the opposite of the null hypothesis. Since the null hypothesis is that the average lead content is less than or equal to 2.5 ppm, the alternate hypothesis would be that the average lead content is more than 2.5 ppm. So the critical region would lie on right side of distribution.
+Incorrect
+
+Lower-tailed test
+
+Upper-tailed test
+Feedback :
+The alternate hypothesis in this case would be that the average lead content is more than 2.5 ppm, so the critical region would lie on right side of distribution. So this would be an upper-tailed test. Here, you can notice that alternate hypothesis is formulated with “more than” argument (equivalently > sign), which justifies it being a right-tailed test.
+
+
+Questions:1/1
+ 
+Null and Alternate Hypotheses
+The average commute time for an UpGrad employee to and from office is at least 35 minutes.
+
+If this hypothesis has to be tested, select the type of the test and the location of the critical region.
+
+
+Lower-tailed test, with the rejection region on the right side
+
+Upper-tailed test, with the rejection region on the right side
+
+Lower-tailed test, with the rejection region on the left side
+Feedback :
+For this situation, the hypotheses would be formulated as H₀: μ ≥ 35 minutes and H₁: μ < 35 minutes. As < sign is used in alternate hypothesis, it would be a lower-tailed test and the rejection region would be on the left side of the distribution.
+Correct
+
+Upper-tailed test, with the rejection region on the left side
+
+Does the claim statement directly give the null hypothesis?
+No, you have to check whether the claim statement has an "equal to", "greater than equal to" or "less than equal to" symbol and then on the basis of that decide whether the claim statement or the complement of it would become the null hypothesis.
