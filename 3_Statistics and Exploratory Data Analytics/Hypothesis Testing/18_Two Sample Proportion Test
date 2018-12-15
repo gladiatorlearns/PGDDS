@@ -1,0 +1,33 @@
+Two-Sample Proportion Test
+You can download this file and look at the output and results for the two-sample t-test - Unpaired in the third tab of the sheet.
+
+Two-Sample Mean Test - Solution Filefile_download	Download
+So, you now know how to compare the mean of a sample to a particular value using the one-sample mean test, and the means of two different samples using the two-sample mean test.
+
+ 
+
+One thing you should observe in these tests is that the data from the sample is always numeric in nature. But what would you do if the data is categorical in nature, i.e. 1 or 0; Yes or No, etc.? Let’s take a look.
+
+Two-sample proportion test is used when your sample observations are categorical, with two categories. It could be True/False, 1/0, Yes/No, Male/Female, Success/Failure etc. 
+
+ 
+
+For example, if you are comparing the effectiveness of two drugs, you would define the desired outcome of the drug as the success. So, you would take a sample of patients who consumed the new drug and record the number of successes and compare it with successes in another sample who consumed the standard drug. 
+
+ 
+
+You can download the Excel file given below and play around with the two-sample proportion-test after installing the trial version of the XLSTAT add-in from this link. Later, you will learn to conduct the two-sample proportion test on R as well.
+
+Link - https://www.xlstat.com/en/
+
+Two-sample proportion test is used when your sample observations are categorical, with two categories. It could be True/False, 1/0, Yes/No, Male/Female, Success/Failure etc. 
+
+ 
+
+For example, if you are comparing the effectiveness of two drugs, you would define the desired outcome of the drug as the success. So, you would take a sample of patients who consumed the new drug and record the number of successes and compare it with successes in another sample who consumed the standard drug. 
+
+ 
+
+You can download the Excel file given below and play around with the two-sample proportion-test after installing the trial version of the XLSTAT add-in from this link. Later, you will learn to conduct the two-sample proportion test on R as well.
+
+Two-Sample Proportion Test
