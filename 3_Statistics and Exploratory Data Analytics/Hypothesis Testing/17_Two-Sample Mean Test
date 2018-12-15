@@ -1,0 +1,100 @@
+Two-Sample Mean Test
+Now, let’s see how the different concepts that you learnt in the previous session are applied in real-world industry scenarios.
+
+ 
+
+Deepak will walk you through a demonstration of hypothesis testing on Excel, so download the Excel file given below and perform all the steps along with Deepak for a deeper understanding. You will also be introduced to a new concept called two-sample mean test. 
+
+Two-Sample Mean Test filefile_download	Download
+For MAC users: You need to install the add-in ‘Data Analysis Toolpak’ in Microsoft Excel (this is pre-installed in Windows) from this link to perform the demonstration
+Link- 
+https://support.office.com/en-us/article/load-the-analysis-toolpak-in-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4?ui=en-US&rs=en-US&ad=US
+
+Questions:2/2
+ 
+ 
+Two-sample mean test
+Can you guess, in which of the following situations two-sample mean test would be used?
+
+Analysing Virat Kohli's average performance in 20168%
+Analysing Virat Kohli's average performance in 2016 in home vs international ground92%
+Only 260 people have taken this poll from your cohort. The results would be updated as we get more responses.
+
+Questions:1/1
+ 
+Hypotheses in a Two-Sample Mean Test
+In this two-sample mean test, suppose the null hypothesis is stated as follows: H₀: μ₁ - μ₂ = 0
+
+What would be the alternate hypothesis in this case?
+
+
+H₁: μ₁ + μ₂ = 0
+
+H₁: μ₂ - μ₁ = 0
+
+H₁: μ₁ - μ₂ ≠ 0
+Feedback :
+The alternate hypothesis is the claim which opposes the null hypothesis. If the null hypothesis states that the difference between both the means is zero, then the alternate hypothesis would be that the difference between both the means is not zero, i.e. μ₁ - μ₂ ≠ 0.
+Correct
+
+H₁: μ₁ - μ₂ < 0
+
+Two-sample mean test - paired is used when your sample observations are from the same individual or object. During this test, you are testing the same subject twice. For example, if you are testing a new drug, you would need to compare the sample before and after the drug is taken to see if the results are different.
+
+Questions:1/1
+ 
+Two-Sample Mean Test - Paired
+There is a hypothesis that Virat Kohli performs better or as good in the second innings of a test match as the first innings. This would be a two-sample mean test, where sample 1 would contain his score from the first innings and sample 2 would contain his score from the second innings. This would be a paired test since each row in the data would correspond to the same match.
+
+What would be the null hypothesis in this case?
+
+
+H₀: μ₂ - μ₁ = 0
+
+H₀: μ₂ - μ₁ ≥ 0
+Feedback :
+Here, the assumption is that Virat Kohli performs better or as good as in the second innings, which means his average in the second innings is assumed to be greater than or equal to his average in the first innings. So, the null hypothesis would be: μ₂ ≥ μ₁ or μ₂ - μ₁ ≥ 0
+Correct
+
+H₀: μ₂ - μ₁ ≤ 0
+
+H₀: μ₁ - μ₂ ≠ 0
+
+Let’s now move on to the other type of two-sample mean test, which is unpaired.
+
+Two-sample mean test - unpaired is used when your sample observations are independent. During this test, you are not testing the same subject twice. For example, if you are testing a new drug, you would compare its effectiveness to that of the standard available drug. So, you would take a sample of patients who consumed the new drug and compare it with another sample who consumed the standard drug.
+
+ 
+
+In the Excel file, go to the third tab ‘2-sample mean test - Unpaired’ and perform the required test. Answer the questions below after performing this test, taking a significance level of 5%.
+
+Questions:1/2
+ 
+ 
+Two-Sample Mean Test - Unpaired
+What would be the p-value for this test if you consider it as a two-tailed test?
+
+
+0.0055
+
+0.011
+
+0.022
+Feedback :
+If you perform the steps shown in the demonstration above and look at the second-last row of the output table, you would see that the p-value of a two-tailed test is 0.022.
+Correct
+
+0.044
+
+Questions:2/2
+ 
+ 
+Two-Sample Mean Test - Unpaired
+What can you conclude from this test about the two unpaired samples if you take a significance level of 5%?
+
+
+There is no significant difference between the means of the two samples
+
+There is some significant difference between the means of the two samples
+Feedback :
+The null hypothesis in this test is that the means of the two samples are the same, and there is no significant difference between them. As the p-value (0.022) is less than 0.05 (value of α), you can reject the null hypothesis and conclude that there is some significant difference between the means of the two samples.
