@@ -1,0 +1,186 @@
+Critical Value Method - Examples
+You have learnt how to perform the three steps of the critical value method with the help of the AC sales problem as well as the above product lifecycle comprehension problem, which was a two-tailed test. But what would happen if it were a one-tailed test? Let’s watch the video below to understand.
+
+Questions:1/3
+ 
+ 
+ 
+Critical Value Method
+Consider this problem — H₀: μ ≤ 350 and H₁: μ > 350
+
+In case of a two-tailed test, you find the z-score of 0.975 in the z-table, since 0.975 was cumulative probability of UCV in that case. In this problem, what would be the cumulative probability of critical point in this example for the same significance level of 5%?
+
+
+0.975
+
+0.025
+
+0.950
+Feedback :
+In this problem, the area of the critical region beyond the only critical point, which is on the right side, is 0.05 (in the last problem, it was 0.025). So, the cumulative probability of the critical point (the total area till that point) would be 0.950.
+Correct
+
+0.050
+
+Questions:2/3
+ 
+ 
+ 
+Critical Value Method
+Consider this problem — H₀: μ ≤ 350 and H₁: μ > 350
+
+The next step would be to find the Zc, which would basically be the z-score for the value of 0.950. Look at the z-table and find the value of Zc.
+
+
+1.64
+
+1.645
+Feedback :
+0.950 is not there in the z-table. So, look for the numbers nearest to 0.950. You can see that the z-score for 0.9495 is 1.64 (1.6 on the horizontal bar and 0.04 on the vertical bar), and the z-score for 0.9505 is 1.65. So, taking the average of these two, the z-score for 0.9500 is 1.645.
+Correct
+
+1.65
+
+1.96
+
+Questions:3/3
+ 
+ 
+ 
+Critical Value Method
+Consider this problem, H₀: μ ≤ 350 and H₁: μ > 350
+
+So, the Zc comes out to be 1.645. Now, find the critical value for the given Zc and make the decision to accept or reject the null hypothesis.
+
+μ = 350     σ = 90       N (Sample size) = 36    
+¯
+x
+= 370.16
+
+
+Critical value = 374.67 and Decision = Reject the null hypothesis
+
+Critical value = 326.25 and Decision = Reject the null hypothesis
+
+Critical value = 374.67 and Decision = Fail to reject the null hypothesis
+Feedback :
+The critical value can be calculated from μ + Zc x (σ/
+√
+N
+). 350 + 1.645(90/
+√
+36
+) = 374.67. Since 370.16 (
+¯
+x
+) is less than 374.67, 
+¯
+x
+ lies in the acceptance region and you fail to reject the null hypothesis.
+Correct
+
+Critical value = 326.25 and Decision = Fail to reject the null hypothesis
+
+Government regulatory bodies have specified that the maximum permissible amount of lead in any food product is 2.5 parts per million or 2.5 ppm. Let’s say you are an analyst working at the food regulatory body of India FSSAI. Suppose you take 100 random samples of Sunshine from the market and have them tested for the amount of lead. The mean lead content turns out to be 2.6 ppm with a standard deviation of 0.6.
+
+ 
+
+One thing you can notice here is that the standard deviation of the sample is given as 0.6, instead of the population’s standard deviation. In such a case, you can approximate the population’s standard deviation to the sample’s standard deviation, which is 0.6 in this case.
+
+
+Answer the following questions in order to find out if a regulatory alarm should be raised against Sunshine or not, at 3% significance level.
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Critical Value Method
+Select the correct null and alternate hypotheses in this case.
+
+
+H₀: Average lead content ≤ 2.6 ppm and H₁: Average lead content > 2.6 ppm
+
+H₀: Average lead content ≤ 2.5 ppm and H₁: Average lead content > 2.5 ppm
+Feedback :
+The null hypothesis is your assumption about the population — it is based on the status quo. It always makes an argument about the population using the equality sign. The null hypothesis in this case would be that the average lead content in the food material is less than or equal to 2.5 ppm. And the alternate hypothesis is that the average lead content is greater than 2.5 ppm.
+Correct
+
+H₀: Average lead content ≥ 2.6 ppm and H₁: Average lead content < 2.6 ppm
+
+H₀: Average lead content ≥ 2.5 ppm and H₁: Average lead content < 2.5 ppm
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Critical Value Method
+Calculate the z-critical score for this test at 3% significance level.
+
+
+1.88
+Feedback :
+This is a one-tailed test. So, for 3% significance level, you would have only one critical region on the right side with a total area of 0.03. This means that the area till the critical point (the cumulative probability of that point) would be 1 - 0.030 = 0.970. So, you need to find the z-value of 0.970. The z-score for 0.9699 (~0.970) in the z-table is 1.88.
+Correct
+
+1.555
+
+2.965
+
+2.17
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Critical Value Method
+Now, you need to find out the critical values and make a decision on whether to raise a regulatory alarm against Sunshine or not. Select the correct option.
+
+
+Critical value = 2.61 ppm and Decision: Raise a regulatory alarm
+
+Critical value = 2.63 ppm and Decision: Raise a regulatory alarm
+
+Critical value = 2.61 ppm and Decision: Don’t raise a regulatory alarm
+Feedback :
+The critical value can be calculated from μ + Zc x (σ/​
+√
+N
+​), as 2.5 + 1.88(0.6 /​
+√
+100
+​) = 2.61 ppm . You need to use the + sign since the critical value is on the right-hand side (upper-tailed test). Since the sample mean 2.6 ppm is less than the critical value (2.61 ppm), you fail to reject the null hypothesis and don’t raise a regulatory alarm against Sunshine.
+Correct
+
+Critical value = 2.63 ppm and Decision: Don’t a raise a regulatory alarm
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Critical Value Method
+The critical value for this test at 3% significance level comes out to be 2.61 ppm. If you take more than 100 samples (with the same sample mean and standard deviation), how would the z-score and critical value change?
+
+
+Both the z-score and the critical value would increase
+
+The z-score would remain the same but the critical value would increase
+
+The z-score would remain the same but the critical value would decrease
+Feedback :
+Since Zc is calculated from the given value of α (3%), it remains the same. Critical value is calculated using the formula: μ + Zc x (σ/​
+√
+N
+​), since it is an upper-tailed test. If you increase the value of N, the critical value would decrease according to the formula.
+Correct
+
+Both the z-score and the critical value would remain the same
+
+What exactly is the value of σ/√n?
+This part might seem a bit confusing if you aren't thorough with the concepts of
+
+Sampling distribution from the Inferential Statistics module. This value of σ/√n isn't the standard deviation of the sample or the population but rather it is the standard deviation of the sampling distribution for the given sample. We conduct our hypothesis test on the sampling distribution only. Thus when the standard deviation of the population isn't given, we take the sample's standard deviation to calculate the sampling distribution's standard deviation. This is a very important concept to know and you should be pretty confident in how we are manipulating the values here. We used this same concept in calculating the confidence intervals. In that case we used S/√n  instead which denoted that we can only use the sample's standard deviation in that case.
