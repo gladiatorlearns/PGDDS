@@ -1,0 +1,55 @@
+Questions:1/1
+ 
+p-value Method
+Suppose you are conducting a hypothesis test where the sample size is 49. Now, you wanted to conduct another hypothesis test on a different sample where the sample size is 121. The p-value calculated in the first case came out to be 0.0512. What would happen to the p-value in the second case, if you observe the same values of sample mean and sample standard deviation for both cases.
+
+
+Increase
+
+
+Decrease
+
+Feedback :
+With an increase in the sample size, the denominator of the z-score decreases, and thus the absolute value of Z-score increases, which means that the sample mean would move away from the central tendency towards the tails. This means that the p-value would actually decrease. Conceptually, Increasing the sample size will make the distribution of sample means narrower, and chance of sample mean falling in the critical region increases. So p-value will decrease.
+
+Correct
+
+Stay the same
+
+
+Could not be determined
+
+Questions:1/2
+ 
+ 
+Types of errors
+Consider the null hypothesis that a process produces no more than the maximum permissible rate of defective items. In this situation, a type-II error would be:
+
+
+To conclude that the process does not produce more than the maximum permissible rate of defective items, when it actually does not
+
+To conclude that the process produces more than the maximum permissible rate of defective items, when it actually does
+
+To conclude that the process produces more than the maximum permissible rate of defective items, when it actually does not
+
+To conclude that the process does not produce more than the maximum permissible rate of defective items, when it actually does
+Feedback :
+Type-II error means not rejecting the incorrect null hypothesis. So, a type-II error would signify that the null hypothesis is actually incorrect, i.e. the process actually produces more than the maximum permissible rate of defective items, but you fail to reject it, i.e. you think it does not produce more than the maximum permissible rate of defective items.
+
+Questions:2/2
+ 
+ 
+Types of errors
+A test to screen for a serious but curable disease is similar to hypothesis testing. In this instance, the null hypothesis would be that the person does not have the disease, and the alternate hypothesis would be that the person has the disease. If the null hypothesis is rejected, it means that the disease is detected and treatment will be provided to the particular patient. Otherwise, it will not. Assuming the treatment does not have serious side effects, in this scenario, it is better to increase the probability of:
+
+
+Making a type-I error, i.e. not providing treatment when it is needed
+
+Making a type-I error, i.e. providing treatment when it is not needed
+Feedback :
+Here, type-I error would be providing treatment upon detecting the disease, when the person does not actually have the disease. And type-II error would be not providing treatment upon failing to detect the disease, when the person actually has the disease. Since the treatment has no serious side effects, type-I error poses a lower health risk than type-II error, as not providing treatment to a person who actually has the disease would increase his/her health risk.
+Correct
+
+Making a type-II error, i.e. not providing treatment when it is needed
+
+Making a type-II error, i.e. providing treatment when it is not needed
