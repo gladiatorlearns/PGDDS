@@ -1,0 +1,219 @@
+p-value Method
+Let’s get started with the p-value method of making a decision.
+
+
+Prof Tricha has defined the p-value as the probability of the null hypothesis being accepted (or more aptly, not being rejected). This statement is not technically correct (or formal) definition of p-value, but it is used for better understanding of the p-value.
+
+
+Higher the p-value, higher is the probability of failing to reject a null hypothesis. On the other hand, lower the p-value, higher is the probability of the null hypothesis being rejected.
+
+Questions:1/1
+ 
+Critical Score
+Mark all the options which you think are correct for critical value and p-value method.
+
+
+In the critical value method, the z-score is calculated for the critical points, which is called Zc
+Feedback :
+α is used to calculate the Zc value for the critical points in this method.
+Correct 
+
+In the critical value method, the z-score is calculated for the sample mean, which is called Zc
+
+In the p-value method, the z-score is calculated for the critical points
+
+In the p-value method, the z-score is calculated for the sample mean
+Feedback :
+In the p value method, the z-score is calculated for the sample mean.
+Correct
+
+Questions:1/1
+ 
+p-value
+Smaller p-values indicate more evidence in support of:
+
+
+The null hypothesis
+
+The alternate hypothesis
+Feedback :
+p-value is equivalent to the probability of the null hypothesis being accepted (or more aptly, not being rejected). So, the smaller the p-value, the farther will be the sample mean from the hypothesised population mean, which indicates more evidence that the sample mean lies in the critical region, and the alternate hypothesis is accepted.
+Correct
+
+The quality of the researcher
+
+Further testing
+
+Prof Tricha has defined the p-value as the probability of the null hypothesis being accepted (or more aptly, not being rejected). This statement is not technically correct (or formal) definition of p-value, but it is used for better understanding of the p-value.
+
+
+Higher the p-value, higher is the probability of failing to reject a null hypothesis. On the other hand, lower the p-value, higher is the probability of the null hypothesis being rejected.
+
+
+Figure 1 -Interpretation of p-value
+After formulating the null and alternate hypotheses, the steps to follow in order to make a decision using the p-value method are as follows:
+
+Calculate the value of z-score for the sample mean point on the distribution
+Calculate the p-value from the cumulative probability for the given z-score using the z-table
+
+Make a decision on the basis of the p-value (multiply it by 2 for a two-tailed test) with respect to the given value of α (significance value).
+
+ 
+
+To find the correct p-value from the z-score, first find the cumulative probability by simply looking at the z-table, which gives you the area under the curve till that point.
+
+ 
+
+Situation 1: The sample mean is on the right side of the distribution mean (the z-score is positive)
+
+ 
+
+Example: z-score for sample point = + 3.02
+
+
+Figure 2 - z-table for positive z-scores
+Cumulative probability of sample point = 0.9987
+
+ 
+
+For one-tailed test  →    p = 1 - 0.9987 = 0.0013
+
+For two-tailed test  →    p = 2 (1 - 0.9987) = 2 * 0.0013 = 0.0026
+
+ 
+
+Situation 2: The sample mean is on the left side of the distribution mean (the z-score is negative)
+
+ 
+
+Example: z-score for sample point = -3.02                
+
+
+Figure 3 - z-table for negative z-scores
+ 
+
+Cumulative probability of sample point = 0.0013
+
+ 
+
+For one-tailed test  →    p = 0.0013
+
+For two-tailed test  →    p = 2 * 0.0013 = 0.0026
+
+ 
+
+You can download the z-table from the attachment below. It will be useful in the subsequent questions.
+
+Z-tablefile_download	Download
+Let’s solve the following problem stepwise to consolidate your learning on how to make a decision about any hypothesis using the p-value method.
+
+ 
+
+You are working as a data analyst at an auditing firm. A manufacturer claims that the average life of its product is 36 months. An auditor selects a sample of 49 units of the product, and calculates the average life to be 34.5 months. The population standard deviation is 4 months. Test the manufacturer’s claim at 3% significance level using the p-value method.
+
+ 
+
+First, formulate the hypotheses for this two-tailed test, which would be:
+
+ 
+
+                                   H₀: μ = 36 months and H₁: μ ≠ 36 months
+
+ 
+
+Now, you need to follow the three steps to find the p-value and make a decision.
+
+ 
+
+Try out the three-step process by answering the following questions.
+
+Questions:1/3
+ 
+ 
+ 
+p-value Method
+Step 1: Calculate the value of z-score for the sample mean point on the distribution. Calculate z-score for sample mean (
+¯
+x
+) = 34.5 months.
+
+
+0.86
+
+
+-0.86
+
+
+2.62
+
+
+-2.62
+
+Feedback :
+You can calculate the z-score for sample mean 34.5 months using the formula: (​​
+¯
+x
+​​ - μ) / (σ/​
+√
+n
+​).. This gives you (34.5 - 36) / (4/
+√
+49
+) = (-1.5) * 7/4 = -2.62. Notice that, since the sample mean lies on the left side of the hypothesised mean of 36 months, the z-score comes out to be negative.
+
+Questions:2/3
+ 
+ 
+ 
+p-value Method
+Step 2: Calculate the p-value from the cumulative probability for the given z-score using the z-table.
+
+Find out the p-value for the z-score of -2.62 (corresponding to the sample mean of 34.5 months). 
+
+Hint: The sample mean is on the left side of the distribution and it is a two-tailed test.
+
+
+0.0044
+
+0.9956
+
+0.0088
+Feedback :
+The value in the z-table corresponding to -2.6 on the vertical axis and 0.02 on the horizontal axis is 0.0044. Since the sample mean is on the left side of the distribution and this is a two-tailed test, the p-value would be 2 * 0.0044 = 0.0088.
+Correct
+
+1.9912
+
+
+Questions:3/3
+ 
+ 
+ 
+p-value Method
+Step 3: Make the decision on the basis of the p-value with respect to the given value of α (significance value).
+
+What would be the result of this hypothesis test?
+
+
+Fail to reject the null hypothesis
+
+Feedback :
+The p-value is equivalent to the probability of the null hypothesis being accepted (or more aptly, not being rejected). If the p-value is greater than the significance level, you fail to reject the null hypothesis; otherwise, you reject the null hypothesis.
+
+Incorrect
+
+Reject the null hypothesis
+
+Feedback :
+Here, the p-value comes out to be 2 * 0.0044 = 0.0088. Since the p-value is less than the significance level (0.0088 < 0.03), you reject the null hypothesis that the average lifespan of the manufacturer's product is 36 months.
+
+You have learnt how to perform the three steps of the p-value method with the help of the AC sales problem as well as the above product lifecycle comprehension problem.
+
+FREQUENTLY ASKED QUESTIONS (FAQ)
+arrow
+Does p-value signify a probability for the null hypothesis?
+Even though a higher p-value would show more evidence in favour of the null hypothesis, it does not outrightly mean that the p-value is the probability of the null hypothesis being true and we are failing to reject it. Always remember the technical definition of p-value- the probability of observing a similar or more extreme observation given the null hypothesis is true.
+
+arrow
+I am confused about how to calculate the standard deviation in the case where the sample's standard deviation is already given
+This confusion might be due to the misunderstanding of what exactly we are calculating with the formula of σ/√n. We aren't calculating the sample's standard deviation with the previous formula. Rather we are calculating the sampling distribution's standard deviation. This is the distribution on which we conduct all our hypothesis tests and this is also the case for the critical value method as well. So, in general if the population's standard deviation is not given, the value of  σ is approximated as the sample's standard deviation to calculate the sampling distribution's standard deviation so that we can continue with the hypothesis test. Please go through the segments of Sampling Distribution in Inferential Statistics module to strengthen this concept.
