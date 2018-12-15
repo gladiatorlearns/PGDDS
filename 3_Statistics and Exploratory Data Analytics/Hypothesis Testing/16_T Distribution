@@ -1,0 +1,108 @@
+T Distribution
+As an analyst in the industry, when you would use hypothesis testing, the standard deviation of the population would be unknown most of the times. So how would you proceed in such a scenario? Let us find out.
+
+T Distribution
+As an analyst in the industry, when you would use hypothesis testing, the standard deviation of the population would be unknown most of the times
+
+A t-distribution is also referred to as Student’s T distribution. A t-distribution is similar to the normal distribution in many cases; for example, it is symmetrical about its central tendency. However, it is shorter than the normal distribution and has a flatter tail, which would eventually mean that it has a larger standard deviation.
+
+
+Figure 1 - t-distribution vs standard normal distribution
+At a sample size beyond 30, the t-distribution becomes approximately equal to the normal distribution.
+
+ 
+
+The most important use of the t-distribution is that you can approximate the value of the standard deviation of the population (σ) from the sample standard deviation (s). However, as the sample size increases more than 30, the t-value tends to be equal to the z-value. Thus, if you want to summarise the decision-making in a flowchart, this is what you would get.
+
+
+Figure 2 - Flowchart for deciding the test
+Look at the flowchart above and answer the following questions.
+
+Questions:1/2
+ 
+ 
+Type of tests
+If the sample size is 10 and the standard deviation of the population is known, which distribution should be used to calculate the critical values and make the decision during hypothesis testing?
+
+
+Standard normal distribution (z-distribution)
+Feedback :
+Whenever the standard deviation of the population is known, you have to use z-distribution, irrespective of the value of the sample size (N).
+
+Questions:2/2
+ 
+ 
+Type of tests
+If the sample size is 10 and the standard deviation of the population is unknown, which distribution should be used to calculate the critical values and make the decision during hypothesis testing?
+
+
+Standard normal distribution (z-distribution)
+
+T distribution
+Feedback :
+T distribution is used whenever the standard deviation of the population is unknown and the sample size is less than 30.
+
+Let’s look at how the method of making a decision changes if you are using the sample’s standard deviation instead of the population’s. If you recall the critical value method, the first step is as follows:
+
+Calculate the value of Zc from the given value of α (significance level). Take it as 5% if not specified in the problem.
+
+ 
+
+So, to find Zc, you would use the t-table instead of the z-table. The t-table contains values of Zc for a given degree of freedom and value of α (significance level). Zc, in this case, can also be called as t-statistic (critical).
+
+ 
+
+Download the t-table given below and attempt the following questions to understand how to use the t-table to find Zc.
+
+T-table
+
+Questions:1/2
+ 
+ 
+t-test
+You are given the standard deviation of a sample of size 25 for a two-tailed hypothesis test of a significance level of 5%.
+
+Use the t-table given above to find the value of Zc.
+
+
+1.711
+
+2.064
+Feedback :
+For sample size = 25, your degrees of freedom would become 25 - 1 = 24. So, if you look for the value in the t-table corresponding to d.f. = 24 and α = 0.05 for a two-tailed test, you would get the t-value as 2.064.
+Correct
+
+2.060
+
+1.708
+
+Questions:2/2
+ 
+ 
+t-test
+You are given the standard deviation of a sample of size 32 for a two-tailed hypothesis test of a significance level of 5%.
+
+Use the t-table given above to find the value of Zc.
+
+
+1.711
+
+2.064
+
+1.645
+
+1.96
+Feedback :
+For sample size = 32, your degrees of freedom would become 32 - 1 = 31. So, if you look for the value in the t-table corresponding to d.f. > 29 and α = 0.05 for a two-tailed test, you would get a value of 1.96.
+
+In the second question, you used the t-table to find the value of Zc for sample size = 32 and a significance level of 5%. If you use the z-table for the same, you would get the same value of Zc, since, for sample size ≥ 30, the t-distribution is the same as the z-distribution.
+
+ 
+
+Practically you would not need to refer to the z-table or t-table when doing hypothesis testing in the industry. Going forward when you need to do hypothesis testing in demonstrations of Excel or R, you would use the term t-test since that is mostly performed in the industry. All calculations and results of a t-test are same as the z-test whenever the sample size ≥ 30.
+
+FREQUENTLY ASKED QUESTIONS (FAQ)
+arrow
+The values I get using the formula for t-distribution in excel is different than the values given here.
+It happens because in the above example it has been assumed that for the case of 31 or above the t-distribution can be approximated to a normal distribution. Now if you use a t-distribution specifically, then the values would be different than the above case since both the distributions are different even though the values would be approximately equal.
+ 
