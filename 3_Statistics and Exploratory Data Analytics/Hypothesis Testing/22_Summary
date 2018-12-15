@@ -1,0 +1,42 @@
+Summary
+So what did you learn in this session?
+
+ 
+
+T-distribution:
+A T-distribution is used whenever the standard deviation of the population is unknown
+The degrees of freedom of a T-distribution is equal to sample size n - 1
+For sample size ≥ 30, the T-distribution becomes the same as the normal distribution
+The output values and results of both t-test and z-test are same for sample size ≥ 30
+ 
+Two-sample mean test - paired:
+It is used when your sample observations are from the same individual or object
+During this test, you are testing the same subject twice
+ 
+Two-sample mean test - unpaired:
+During this test, you are not testing the same subject twice
+It is used when your sample observations are independent
+ 
+
+Two-sample proportion test:
+
+It is used when your sample observations are categorical, with two categories
+
+It could be True/False, 1/0, Yes/No, Male/Female, Success/Failure, etc. 
+ 
+
+A/B Testing:
+
+A/B testing is a direct industry application of the two-sample proportion test
+
+It is a widely used process in digital companies in the ecommerce, manufacturing and advertising domains
+
+It provides a way to test two different versions of the same element and see which one performs better
+
+ 
+
+You can download the lecture notes for the module from below. The lecture notes include a summary of the entire module.
+
+(Note: On page 14, the image for positive Z-value mistakenly shows one for a negative Z-value.)
+
+Lecture Notes - Hypothesis Testing
