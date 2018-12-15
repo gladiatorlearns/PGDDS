@@ -1,0 +1,211 @@
+Critical Value Method
+Now, let’s learn how to find the critical values for the critical region in the distribution and make the final decision of rejecting or failing to reject the null hypothesis.
+
+(Note: In the video above, the graph showing the distribution of average sales data at 1:06 incorrectly displays 370.6 as the sample mean instead of 370.16. Also, it would be 
+σ
+¯
+x
+=
+15
+ instead of 
+σ
+=
+15
+at 3:41)
+
+ 
+
+Before you proceed with finding the Zc and finally the critical values, let’s revise the steps performed in this method till now.
+
+First, you define a new quantity called α, which is also known as the significance level for the test. It refers to the proportion of the sample mean lying in the critical region. For this test, α is taken as 0.05 (or 5%).
+
+Then, you calculate the cumulative probability of UCV from the value of α, which is further used to find the z-critical value (Zc) for UCV.
+
+Attempt the following questions before you go ahead and learn the remaining steps in this method.
+
+Questions:1/1
+ 
+Standard deviation
+What will be the standard deviation of the distribution of sample means if the population has a mean of 350 and a standard deviation of 90, a sample mean of 370.16, and a sample size of 36?
+
+
+9.72
+
+2.5
+
+15
+Feedback :
+The standard deviation of a distribution of sample means is obtained by dividing the population standard deviation by the square root of the sample size. So, 90/ ​
+√
+36
+​ = 90/6 = 15.
+Correct
+
+3.88
+
+Questions:1/3
+ 
+ 
+ 
+Area of rejection region
+What will be the area of the critical region on the right-hand side of the distribution if the significance level (α) for a two-tailed test is 3%?
+
+
+0.03
+
+0.97
+
+0.015
+Feedback :
+Here, value of α is 0.03 (of 3%), so the area of the rejection region would be 0.03 and the area of the acceptance region would be 0.97. In addition, since this is a two-tailed test, the area of the critical region on the right-hand side would be half of 0.03, i.e. 0.015.
+Correct
+
+Questions:2/3
+ 
+ 
+ 
+Area of rejection region
+What would be the area of the critical region on the right-hand side of the distribution if the significance level (α) for an upper-tailed test is 3%?
+
+
+0.03
+Feedback :
+Here, the value of α is 0.03 (of 3%), so the area of the critical region would be 0.03 and the area of the acceptance region would be 0.97. Since this is an upper-tailed test, the critical region is only on the right-hand side of the distribution, and the area of the critical region would be 0.03.
+Correct
+
+0.97
+
+0.015
+
+Questions:3/3
+ 
+ 
+ 
+Area of rejection region
+What would be the value of the cumulative probability of UCV if the significance level (α) for an upper-tailed test is 3%?
+
+
+0.03
+
+0.97
+Feedback :
+The area of the critical region in this case would be 0.03 (as calculated in the last question), which would be the area beyond the UCV point in the distribution. So, the area till the UCV point would be 1 - 0.03, i.e. 0.97. This would be the cumulative probability of that point, going by the definition of cumulative probability.
+Correct
+
+0.015
+
+0.985
+
+After formulating the hypothesis, the steps you have to follow to make a decision using the critical value method are as follows:
+
+Calculate the value of Zċ from the given value of α (significance level). Take it a 5% if not specified in the problem.
+
+Calculate the critical values (UCV and LCV) from the value of Zċ.
+
+Make the decision on the basis of the value of the sample mean x with respect to the critical values (UCV AND LCV). 
+
+You can download the z-table from the attachment below. It will be useful in the subsequent questions.
+
+ 
+
+Z-table
+
+Let’s solve the following problem stepwise to consolidate your learning on how to make a decision about any hypothesis.
+
+ 
+
+A manufacturer claims that the average life of its product is 36 months. An auditor selects a sample of 49 units of the product, and calculates the average life to be 34.5 months. The population standard deviation is 4 months. Test the manufacturer’s claim at 3% significance level using the critical value method.
+
+ 
+
+ 
+
+First, you need to formulate the hypotheses for this two-tailed test, which would be:
+
+ 
+
+                                   H₀:μ = 36 months and H₁: μ ≠ 36 months
+
+ 
+
+Now, you need to follow the three steps to find the critical values and make a decision.
+
+ 
+
+Try out the three-step process by answering the following questions.
+
+Questions:1/3
+ 
+ 
+ 
+Critical Value Method
+1st step: Calculate the value of Zc from the given value of α (significance level).
+
+Calculate the z-critical score for the two-tailed test at 3% significance level.
+
+
+1.88
+
+1.04
+
+2.965
+
+2.17
+Feedback :
+For 3% significance level, you would have two critical regions on both sides with a total area of 0.03. So, the area of the critical region on the right side would be 0.015, which means that the area till UCV (cumulative probability of that point) would be 1 - 0.015 = 0.985. So, you need to find the z-value of 0.985. The z-score for 0.9850 in the z-table is 2.17 (2.1 on the horizontal axis and 0.07 on the vertical axis).
+
+Questions:2/3
+ 
+ 
+ 
+Critical Value Method
+2nd step: Calculate the critical values (UCV and LCV) from the value of Zc.
+
+Find out the UCV and LCV values for Zc = 2.17.
+
+μ = 36 months        σ = 4 months       n (Sample size) = 49
+
+
+UCV = 37.24 and LCV = 34.76
+Feedback :
+The critical values can be calculated from μ ± Zc x (σ/​
+√
+N
+​) as 36 ± 2.17(4/​
+√
+49
+​) = 36 ± 1.24 which comes out to be 37.24 and 34.76.
+Correct
+
+UCV = 36.18 and LCV = 35.82
+
+UCV = 44.68 and LCV = 27.32
+
+UCV = 36.31 and LCV = 35.69
+
+Questions:3/3
+ 
+ 
+ 
+Critical Value Method
+3rd step: Make the decision on the basis of the value of the sample mean ​
+¯
+x
+ with respect to the critical values (UCV AND LCV).
+
+What would be the result of this hypothesis test?
+
+UCV = 37.24 months                 LCV = 34.76 months              Sample mean (​
+¯
+x
+) = 34.5 months
+
+
+Fail to reject the null hypothesis
+
+Reject the null hypothesis
+Feedback :
+The UCV and LCV values for this test are 37.24 and 34.76. The sample mean in this case is 34.5 months, which is less than LCV. So, this implies that the sample mean lies in the critical region and you can reject the null hypothesis.
+Correct
+
+Can’t say
