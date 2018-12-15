@@ -1,0 +1,93 @@
+p-value Method - Examples
+Comprehension
+
+ 
+
+Let’s revisit an example we looked at earlier.
+
+ 
+
+Let’s say you work at a pharmaceutical company that manufactures an antipyretic drug in tablet form, with paracetamol as the active ingredient. An antipyretic drug reduces fever. The amount of paracetamol deemed safe by the drug regulatory authorities is 500 mg. If the value of paracetamol is too low, it will make the drug ineffective and become a quality issue for your company. On the other hand, a value that is too high would become a serious regulatory issue.
+
+ 
+
+There are 10 identical manufacturing lines in the pharma plant, each of which produces approximately 10,000 tablets per hour.
+
+ 
+
+Your task is to take a few samples, measure the amount of paracetamol in them, and test the hypothesis that the manufacturing process is running successfully, i.e. the paracetamol content is within regulation. You have the time and resources to take about 900 sample tablets and measure the paracetamol content in each.
+
+ 
+
+Upon sampling 900 tablets, you get an average content of 510 mg with a standard deviation of 110. What does the test suggest, if you set the significance level at 5%? Should you be happy with the manufacturing process or should you ask the production team to alter the process? Is it a regulatory alarm or a quality issue?
+
+ 
+
+Solve the following questions in order to find out the answers to the questions stated above.
+
+ 
+
+One thing you can notice here is that the standard deviation of the sample of 900 is given as 110, instead of the population’s standard deviation. In such a case, you can approximate the population’s standard deviation to the sample’s standard deviation, which is 110 in this case.
+
+Questions:1/3
+ 
+ 
+ 
+p-value Method
+Calculate the z-score for sample mean (
+¯
+x
+) = 510 mg.
+
+
+36.67
+
+-36.67
+
+-2.73
+
+2.73
+Feedback :
+You can calculate the z-score for the sample mean 510 mg using the formula: (​
+¯
+x
+​ - μ) / (σ /​
+√
+N
+​). This gives you (510 - 500) / (110 /
+√
+900
+) = (10) / (110 / 30) = 2.73. Notice that, since the sample mean lies on the right side of the hypothesised mean of 500 mg, the z-score comes out to be positive.
+
+Questions:2/3
+ 
+ 
+ 
+p-value Method
+Find out the p-value for the z-score of 2.73 (corresponding to the sample mean of 510 mg).
+
+
+0.0032
+
+0.0064
+Feedback :
+The value in the z-table corresponding to 2.7 on the vertical axis and 0.03 on the horizontal axis is 0.9968. Since the sample mean is on the right side of the distribution and this is a two-tailed test (because we want to test if the value of the paracetamol is too low or too high), the p-value would be 2 * (1 - 0.9968) = 2 * 0.0032 = 0.0064.
+Correct
+
+0.9968
+
+1.9936
+
+Questions:3/3
+ 
+ 
+ 
+p-value Method
+What decision would you make about the manufacturing process from this hypothesis test?
+
+
+The manufacturing process is completely fine and need not be changed
+
+The manufacturing process is not fine and changes need to be made
+Feedback :
+Here, the p-value comes out to be 0.0064. Since the p-value is less than the significance level (0.0064 < 0.05) and smaller p-value gives you greater evidence against the null hypothesis. So you reject the null hypothesis that the average amount of paracetamol in medicines is 500 mg. So, this is a regulatory alarm for the company and the manufacturing process needs to change.
