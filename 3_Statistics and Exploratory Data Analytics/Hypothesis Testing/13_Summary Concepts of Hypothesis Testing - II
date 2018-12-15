@@ -1,0 +1,21 @@
+Summary
+So what did you learn in this session?
+
+ 
+
+Making a decision - p-value method:
+Calculate the value of Z-score for the sample mean point on the distribution
+
+Calculate the p-value from the cumulative probability for the given z-score using the z-table
+
+Make the decision on the basis of the p-value with respect to the given value of α (significance level)
+
+ 
+
+Types of errors:
+Type-I error    - Occurs when you reject a null hypothesis even when it is true
+                          - Its probability is represented by α
+
+Type-II error   - Occurs when you fail to reject the null hypotheses even though it is false
+
+                                   - Its probability is represented by β
