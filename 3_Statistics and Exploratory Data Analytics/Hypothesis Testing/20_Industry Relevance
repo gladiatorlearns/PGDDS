@@ -1,0 +1,31 @@
+Industry Relevance
+Different industry experts have different views on the applications and usability of hypothesis testing because of different reasons.
+
+ 
+
+Let us first hear from Madhukar about the applications of hypothesis testing in the real world and get some insights into how this will be relevant in the next courses of Predictive Analysis, when you reach the model building stage of the Crisp-DM framework.
+
+Questions:1/1
+ 
+Industry Relevance
+For this example of Domino’s campaign for Peppy Paneer Pizza, test population is considered as it is purchasing that particular pizza because of the campaign and control population is the one which buys that pizza normally.
+
+What would be the null hypothesis in this case?
+
+
+The difference in response rate of control and test population is statistically significant
+Feedback :
+This is a 2-sample proportion test. The null hypothesis would contain the equality parameter.
+Incorrect
+
+The difference in response rate of control and test population is statistically insignificant
+Feedback :
+This is a 2-sample proportion test. The null hypothesis would contain the equality parameter. So you would assume that difference between response rates of both groups is equal to zero, or you can say that the difference is statistically insignificant.
+
+Anand has a very different take on hypothesis testing, as he believes that, nowadays, all the data is available digitally for most industries. This makes the usability of hypothesis testing a little limited in lot of scenarios.
+
+To summarise, hypothesis testing still holds importance in the following two types of industries, even if all the data is available digitally:
+
+Manufacturing processes in the food, pharmaceuticals, chemicals industries, where it is not practically possible to gather information on the entire population.
+
+E-commerce, advertising and digital marketing companies, where the amount of data collected from various samples is so huge that analysing all data becomes very difficult without having big data systems in place.
