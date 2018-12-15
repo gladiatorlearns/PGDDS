@@ -1,0 +1,123 @@
+Null and Alternate Hypotheses
+ 
+
+The first step of hypothesis testing is the formulation of the null and alternate hypotheses for a given situation. Let’s learn how to do this through different examples.
+
+Questions:1/1
+ 
+Null and Alternate Hypotheses
+Flipkart claimed that its total valuation in December 2016 was $14 billion.
+
+What would be the alternate hypothesis for the given situation?
+
+
+H₁: Total valuation = $14 billion
+
+H₁: Total valuation < $14 billion
+
+H₁: Total valuation > $14 billion
+
+H₁: Total valuation ≠ $14 billion
+Feedback :
+The null hypothesis in this case would be that the total valuation is equal to $14 billion. Hence the alternate hypothesis is the opposite of that.
+
+
+You have seen examples where you can write the null hypothesis (or status quo) easily from the claim statement, like in the last question - Flipkart claimed that its total valuation in December 2016 was $14 billion.
+
+ 
+
+But in some instances, if your claim statement has words like “at least”, “at most”, “less than”, or “greater than”, you cannot formulate the null hypothesis just from the claim statement (because it’s not necessary that the claim is always about the status quo).
+
+ 
+
+You can use the following rule to formulate the null and alternate hypotheses:
+
+ 
+
+The null hypothesis always has the following signs:  =  OR   ≤   OR    ≥
+
+ 
+
+The alternate hypothesis always has the following signs:  ≠   OR  >   OR    <
+
+ 
+
+For example:  
+
+ 
+
+Situation 1:  Flipkart claimed that its total valuation in December 2016 was at least $14 billion. Here, the claim contains ≥ sign (i.e. the at least sign), so the null hypothesis is the original claim.
+
+ 
+
+The hypothesis in this case can be formulated as:
+
+
+Figure 1 - Hypotheses for Situation 1
+Situation 2:  Flipkart claimed that its total valuation in December 2016 was greater than $14 billion. Here, the claim contains > sign (i.e. the ‘more than’ sign), so the null hypothesis is the complement of the original claim. The hypothesis in this case can be formulated as:
+
+ 
+
+The hypothesis in this case can be formulated as:
+
+
+Figure 2 - Hypotheses for Situation 2
+Now, answer the following questions to consolidate your learning about the formulation of null and alternate hypotheses.
+
+Questions:1/2
+ 
+ 
+Null and Alternate Hypotheses
+The average commute time for an UpGrad employee to and from office is at least 35 minutes.
+
+What will be the null and alternate hypotheses in this case if the average time is represented by μ?
+
+
+H₀: μ ≤ 35 minutes and H₁: μ > 35 minutes
+
+
+H₀: μ > 35 minutes and H₁: μ ≤ 35 minutes
+
+
+H₀: μ ≥ 35 minutes and H₁: μ < 35 minutes
+
+Feedback :
+The null hypothesis is always formulated by either = or ≤ or ≥ whereas the alternate hypothesis is formulated by ≠ or > or <. In this case, the average time taken was greater than or equal to 35 minutes. So, that becomes the null hypothesis. Less than 35 minutes becomes the alternate hypothesis.
+
+Correct
+
+H₀: μ < 35 minutes and H₁: μ ≥ 35 minutes
+
+Questions:2/2
+ 
+ 
+Null and Alternate Hypotheses
+Goodyear claims that each of its tyres can travel more than 7500 miles on average before they need any replacement.
+
+Assuming that the average travel distance is given by μ, what would be the null and the alternate hypothesis in this case?
+
+
+H₀: μ>7500 miles and H₁: μ ≤ 7500 miles
+
+Feedback :
+The null hypothesis is always formulated by either = or ≤ or ≥ whereas the alternate hypothesis is formulated by ≠ or > or <. Check which sign is being demonstrated by the claim statement and then proceed to find the null and the alternate hypothesis for this case.
+
+Incorrect
+
+H₀: μ  ≥ 7500 miles and H₁: μ < 7500 miles
+
+
+H₀: μ < 7500 miles and H₁: μ  ≥  7500 miles
+
+
+H₀: μ  ≤  7500 miles and H₁: μ > 7500 miles
+
+Feedback :
+The null hypothesis is always formulated by either = or ≤ or ≥ whereas the alternate hypothesis is formulated by ≠ or > or <. If you check the claim statement, it has the > sign (i.e. μ> 7500 miles). Hence the null hypothesis would be the complement of the claim statement i.e. μ ≤ 7500 miles, and the alternate hypothesis would be the claim statement itself or μ > 7500 miles.
+
+To summarize this, you cannot decide the status quo or formulate the null hypotheses from the claim statement, you need to take care of signs in writing the null hypothesis. Null Hypothesis never contains ≠ or > or < signs. It always has to be formulated using = or ≤ or ≥ signs.
+
+ 
+
+Before you go ahead and look at some more examples of formulating null and alternate hypothesis, let us hear from Ankit Jain about how he used hypothesis testing during his time at Facebook.
+

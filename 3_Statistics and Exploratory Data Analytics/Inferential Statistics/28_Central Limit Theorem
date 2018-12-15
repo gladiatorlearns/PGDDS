@@ -1,0 +1,83 @@
+Central Limit Theorem
+
+Now, you understand the third property of sampling distributions, which talks about their shape. Basically, it says that for n > 30, the sampling distributions become normally distributed. Let's recall all the three properties you have learnt so far for sampling distributions.
+
+So, the central limit theorem says that, for any kind of data, provided a high number of samples has been taken, the following properties hold true:
+
+    Sampling distribution’s mean (μ¯X) = Population mean (μ)
+
+    Sampling distribution’s standard deviation (Standard error) = σ√n
+
+    For n > 30, the sampling distribution becomes a normal distribution
+
+We made two sampling distributions (UpGrad game and Banking data set) and saw that they follow these three properties.
+
+
+Now, let’s listen to Prof. Tricha as she verifies the central limit theorem for some more population distributions.
+
+Prof. Tricha verified CLT by performing simulations on different kinds of data. In case you want to try out these simulations yourself, you can go to this link and try them out. Press the "Begin" button in the top-right corner to get started.
+
+ Link - http://onlinestatbook.com/stat_sim/sampling_dist/index.html
+
+Recall that, in the first lecture on samples, we found the mean commute time of 30,000 employees of an office by taking a small sample of 100 employees and finding their mean commute time. This sample’s mean was \bar{X} = 36.6 minutes and its standard deviation was S = 10 minutes.
+
+
+We then said that this sample mean cannot be taken as the population mean, as there might be some errors in the sampling process. However, we can say that the population mean, i.e. daily commute time of all 30,000 employees \bar{X} = 36.6 (sample mean) + some margin of error.
+
+ 
+
+Now, you may be thinking that you can use the standard error for the margin of error. But, although the standard error provides a good estimate of this margin of error, you cannot use it in place of the margin of error. To understand why, and how you would find the margin of error in that case, let's move on to the next lecture, where we will use CLT (central limit theorem) to find the aforementioned margin of error.
+
+
+Summary: Central Limit Theorem - Part I
+
+This is a really intense session! Let’s summarise everything that's been taught so far and then you can move on the rest of the session.
+
+ 
+
+First, you saw how, instead of finding the mean and standard deviation for the entire population, it is sometimes beneficial to find the mean and standard deviation for only a small representative sample. You may have to do this because of time and/or money constraints.
+
+ 
+
+For example, for an office of 30,000 employees, we wanted to find the average commute time. So, instead of asking all employees, we asked only 100 of them and collected the data. The mean = 36.6 minutes and the standard deviation = 10 minutes.
+
+ 
+
+However, it would not be fair to infer that the population mean is exactly equal to the sample mean. This is because the flaws of the sampling process must have led to some error. Hence, the sample mean’s value has to be reported with some margin of error.
+
+ 
+
+For example, the mean commute time for the office of 30,000 employees would be equal to 36.6 + 3 minutes, 36.6 + 1 minutes, or 36.6 + 10 minutes, i.e. 36.6  minutes + some margin of error.
+
+ 
+
+However, at this point in time, you do not exactly know how to find what this margin of error is.
+
+ 
+
+Then, we moved on to sampling distributions, which have some properties that would help you find this margin of error.
+
+Figure 4 - Creation of Sampling Distribution
+
+We created a sampling distribution, which was a probability density function for 100 sample means with sample size 5.
+
+ 
+
+The sampling distribution, which is basically the distribution of sample means of a population, has some interesting properties which are collectively called the central limit theorem, which states that no matter how the original population is distributed, the sampling distribution will follow these three properties:
+
+    Sampling distribution’s mean (\mu_{\bar{X}}) = Population mean (\mu)
+
+    Sampling distribution’s standard deviation (Standard error) = \frac{\sigma}{\sqrt{n}}, where \sigma is the population’s standard deviation and n is the sample size
+
+    For n > 30, the sampling distribution becomes a normal distribution
+
+ 
+
+To verify these properties, we performed sampling using the data collected for our UpGrad game from the first session on inferential statistics. The values for the sampling distribution thus created (\mu_{\bar{X}} = 2.348, S.E. = 0.4248) were pretty close to the values predicted by theory (\mu_{\bar{X}} = 2.385, S.E. = 0.44).
+
+
+To summarise, the notations and formulae for populations, samples and sampling distributions are as follows:
+Figure 5 - Commonly Used Notations and Formulae
+
+Now, before moving on to the next lecture, let's spend some time attempting a few practice questions.
+

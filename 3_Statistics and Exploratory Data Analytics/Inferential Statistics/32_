@@ -1,0 +1,37 @@
+Summary: Central Limit Theorem - Part II
+
+First, you learnt how, using your knowledge of CLT, you can infer the population mean from the sample mean.
+
+ 
+
+We estimated the mean commute time of 30,000 employees of an office, by taking a sample of 100 employees, finding their mean commute time, and estimating based on that value. Specifically, you were given a sample with sample mean ¯X = 36.6 minutes, and sample standard deviation S = 10 minutes.
+
+ 
+
+Using CLT, you concluded that the sampling distribution for mean commute time would have:
+
+    Mean = μ {unknown}
+    Standard error = σ√n≈S√n=10√100=1
+    Since n(100) > 30, the sampling distribution is a normal distribution
+
+ 
+
+Using these properties, you were able to claim that the probability that the population mean μ lies between 34.6 (36.6-2) and 38.6 (36.6+2), is 95.4%.
+
+ 
+
+Then, you learnt some terminology related to the claim:
+
+    The probability associated with the claim is called confidence level (here, it is 95.4%)
+    The maximum error made in sample mean is called margin of error (here, it is 2 minutes)
+    Final interval of values is called confidence interval [here, it is the range (34.6, 38.6)]
+
+ 
+
+Then, you generalised the whole process. Let’s say you have a sample with sample size n, mean \\bar{X} and standard deviation S. You learnt that the y% confidence interval (i.e. confidence interval corresponding to y% confidence level) for \\mu will be given by the range:
+
+Confidence interval = (\\bar{X}-\\frac{Z^{*}S}{\\sqrt{n}}, \\bar{X}+\\frac{Z^{*}S}{\\sqrt{n}})
+
+ 
+
+Where, Z* is the Z-score associated with a y% confidence level.

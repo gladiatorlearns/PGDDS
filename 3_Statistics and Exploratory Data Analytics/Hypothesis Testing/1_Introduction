@@ -1,0 +1,17 @@
+Introduction
+Welcome to the module on ‘Hypothesis Testing’.
+
+ In the previous modules, you learnt exploratory data analysis and inferential statistics.
+
+ In this session
+The statistical analyses learnt in Inferential Statistics enable you try to make inferences about population mean from the sample data when you have no idea of population mean. However, sometimes you have some starting assumption about the population mean and you want to confirm those assumptions using the sample data. It is here that hypothesis testing comes into the picture. We will cover the basic concepts of hypothesis testing in this session, which are as follows:
+
+Types of hypotheses
+
+Types of tests
+
+Decision criteria
+
+Critical value method of hypothesis testing
+
+This session covers the concepts of Hypothesis Testing from the theory perspective, since that is very important while performing Hypothesis Testing in industry using tools like Python, Excel etc. The demonstration of Hypothesis Testing on Excel has been done in the last session of this module

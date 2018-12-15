@@ -1,0 +1,146 @@
+
+Understanding Hypothesis Testing
+In the last two modules, you learned about the following topics:
+
+Exploratory data analysis: Exploring data for insights and patterns
+
+Inferential statistics: Making inferences about the population using the sample data
+
+ 
+
+Now, these methods help you formulate a basic idea or conclusion about the population. Such assumptions are called “hypotheses”. But how do you really confirm these conclusions or hypotheses?
+
+Let’s understand the basic difference between inferential statistics and hypothesis testing.
+
+ 
+
+Inferential statistics is used to find some population parameter (mostly population mean) when you have no initial number to start with. So, you start with the sampling activity and find out the sample mean. Then, you estimate the population mean from the sample mean using the confidence interval.
+
+ 
+
+Hypothesis testing is used to confirm your conclusion (or hypothesis) about the population parameter (which you know from EDA or your intuition). Through hypothesis testing, you can determine whether there is enough evidence to conclude if the hypothesis about the population parameter is true or not.
+
+ 
+
+Both these modules have a few similar concepts, so don’t confuse terminology used in hypothesis testing with inferential statistics.
+
+Questions:1/1
+ 
+Nature of hypotheses
+Which of the following is true about the two hypotheses that were just stated?
+
+
+Exactly one hypothesis must be true
+Feedback :
+Both the hypotheses oppose each other, so only one of the two can be true.
+Correct
+
+Both hypotheses must be true
+
+It is possible for neither hypothesis to be true
+
+It is possible for both hypotheses to be true
+
+
+
+Play
+Mute
+Current Time 
+2:11
+/
+Duration 
+5:59
+ 
+Playback Rate Auto
+Playback Rate1.25x
+Fullscreen
+Questions:1/1
+ 
+Null and Alternate Hypotheses
+The hypothesis you are trying to prove during hypothesis testing is the:
+
+
+Null Hypothesis
+Incorrect
+
+Alternate Hypothesis
+Feedback :
+The null hypothesis is the status quo, i.e. the already existing situation. The alternate hypothesis is what you are trying to prove.
+
+Questions:1/2
+ 
+ 
+Null and Alternate Hypotheses
+Government regulatory bodies have specified that the maximum permissible amount of lead in any food product is 2.5 parts per million or 2.5 ppm.
+
+If you conduct tests on randomly chosen Maggi Noodles samples from the market, what would be the null hypothesis in this case?
+
+
+The average lead content is equal to 2.5 ppm
+
+The average lead content is less than or equal to 2.5 ppm
+Feedback :
+The null hypothesis is the status quo, i.e. the average lead content is within the allowed limit of 2.5 ppm.
+Correct
+
+The average lead content is more than or equal to 2.5 ppm
+
+Questions:2/2
+ 
+ 
+Null and Alternate Hypotheses
+Government regulatory bodies have specified that the maximum permissible amount of lead in any food product is 2.5 parts per million or 2.5 ppm.
+
+What would be the alternate hypothesis in the same case, when you conduct tests on randomly chosen Maggi Noodles samples from the market?
+
+
+The average lead content is equal to 2.5 ppm
+
+The average lead content is more than 2.5 ppm
+Feedback :
+The alternate hypothesis is the opposite of the null hypothesis. Since the null hypothesis is that the average lead content is less than or equal to 2.5 ppm, the alternate hypothesis would be that the average lead content is more than 2.5 ppm.
+Correct
+
+The average lead content is more than or equal to 2.5 ppm
+ 
+
+Let’s get started by understanding the basics of hypothesis testing.
+
+Hypothesis Testing starts with the formulation of these two hypotheses:
+
+Null hypothesis (H₀): The status quo
+
+Alternate hypothesis (H₁): The challenge to the status quo
+
+Questions:1/2
+ 
+ 
+Null and Alternate Hypotheses
+In the Maggi Noodles example, if you fail to reject the null hypothesis, what can you conclude from this statement?
+
+
+Maggi Noodles contain excess lead
+
+Maggi Noodles do not contain excess lead
+Feedback :
+The null hypothesis is that the average lead content is less than or equal to 2.5 ppm. Since you fail to reject the null hypothesis, you can conclude that Maggi Noodles do not contain excess lead. Please note than you can only fail to reject the null hypothesis, you can never accept the null hypothesis.
+
+Questions:2/2
+ 
+ 
+Types of Hypotheses
+The null and alternative hypotheses divide all possibilities into:
+
+
+2 sets that overlap
+
+2 non-overlapping sets
+Feedback :
+Both the null and alternate hypotheses can’t be true at the same time. Only one of them will be true.
+Correct
+
+2 sets that may or may not overlap
+
+As many sets as necessary to cover all possibilities
+
+
