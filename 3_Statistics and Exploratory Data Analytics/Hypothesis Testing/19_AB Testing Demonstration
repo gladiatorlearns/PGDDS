@@ -1,0 +1,67 @@
+A/B Testing Demonstration
+Let’s now learn from Ankit Jain about a process that is widely used in digital and online companies — A/B testing. A/B testing is a direct industry application of the two-sample proportion test sample you have just studied.
+
+While developing an e-commerce website, there could be different opinions about the choices of various elements, such as the shape of buttons, the text on the call-to-action buttons, the colour of various UI elements, the copy on the website, or numerous other such things.
+
+ 
+
+Often, the choice of these elements is very subjective and is difficult to predict which option would perform better. To resolve such conflicts, you can use A/B testing. A/B testing provides a way for you to test two different versions of the same element and see which one performs better. You can read more about A/B testing from this link. 
+https://www.optimizely.com/optimization-glossary/ab-testing/
+
+ 
+
+You can see a few more case studies and applications of A/B testing in the real world here.
+https://blog.optimizely.com/2015/06/04/ecommerce-conversion-optimization-case-studies/
+ 
+
+The two-sample proportion test is used when you want to compare the proportions of two different samples. Let’s now see how A/B testing is entirely based on the two-sample proportion test, and go through an Excel demonstration of A/B testing with Deepak.
+
+You can use various other tools also to conduct A/B testing, like R, Optimizely etc.
+https://www.optimizely.com/
+
+Questions:1/1
+ 
+A/B Testing
+Of the 2 options, which one do you think attracted more form completion?
+
+Option A30%
+Option B
+
+Questions:1/1
+ 
+A/B Testing Demonstration
+618 out of 2,620 people filled the application using the old feature, which makes it 23.59% conversions in the control group. 601 out of 2,380 people filled the application using the new feature, which makes it 25.25% conversions in the variation group.
+
+ 
+
+What can you conclude about the new feature through this data of A/B testing?
+
+
+The new feature is better than the old feature
+
+
+The new feature is better or as good as the old feature
+
+
+The new feature is not better than the old feature
+
+
+Nothing can be concluded by just looking at this data
+Correct
+Feedback :
+The number of conversions is more in case of the new feature. But there needs to be some statistical difference between the two values to arrive at a conclusion about this test, which would depend upon the significance level you choose. So, you cannot conclude anything just from this data.
+
+Questions:1/1
+ 
+A/B Testing Demonstration
+The p-value you get for this one-tailed A/B testing data is 0.091. What can you conclude about this test at a 5% significance level?
+
+
+Reject the null hypothesis (the new feature is better than the old feature)
+
+Fail to reject the null hypothesis (the old feature is better or as good as the new feature)
+Feedback :
+You can make a decision on a test based on the p-value and the significance level of the test. As the p-value (0.091) is greater than the significance level (0.05), you fail to reject the null hypothesis. In this example of A/B testing, the null hypothesis is that the old feature is better or as good as the new feature.
+Correct
+
+Nothing can be concluded just from this data alone
