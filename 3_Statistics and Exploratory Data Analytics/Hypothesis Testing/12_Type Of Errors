@@ -1,0 +1,80 @@
+Types of Errors
+While doing hypothesis testing, there is always the possibility of making the wrong decision about your hypothesis. These instances of a wrong decision being made are referred to as errors. Let’s learn about the different types of errors during hypothesis testing.
+
+Questions:1/1
+ 
+Significance Level (α)
+Which of these two cases do you think needs to have a very low value of α?
+
+A criminal trial where a person is accused of a murder67%
+A civil trial where a person is accused of filing fraudulent claims33%
+Only 344 people have taken this poll from your cohort. The results would be updated as we get more responses.
+
+There are two types of errors that can result during the hypothesis testing process — type-I error and type-II error.
+
+
+Figure 1 - Types of errors
+A type I-error represented by α occurs when you reject a true null hypothesis.
+
+A type-II error represented by β occurs when you fail to reject a false null hypothesis.
+
+ 
+
+The power of any hypothesis test is defined by 1 - β. Power of the test or calculation of β is beyond the scope of this course. You can study more about power of a test from this link.
+
+ 
+
+If go back to the analogy of the criminal trial example, you would find that the probability of making a type-I error would be more if the jury convicts the accused even on less substantial evidence. The probability of a type-I error can be reduced if the jury adopts more stringent criteria to convict an accused party.
+
+ 
+
+However, reducing the probability of a type-I error may increase the probability of making a type-II error. If the jury becomes very liberal in acquitting the people on trial, there would be a higher probability that an actual criminal is able to walk free.
+
+
+Figure 2 -Two types of errors in criminal trial example
+
+Questions:1/2
+ 
+ 
+Errors in Hypothesis Testing
+Mark all the correct options.
+
+
+Type-I error occurs when the null hypothesis is rejected when it is in fact correct
+Feedback :
+Type-I error occurs when the null hypothesis is true (i.e. the sample mean lies in the acceptance region) but you incorrectly reject it.
+CorrectYou missed this!
+
+Type-I error occurs when the null hypothesis is not rejected when it is in fact incorrect
+Feedback :
+This is a situation of type-II error.
+Incorrect
+
+Type-II error occurs when the null hypothesis is rejected when it is in fact correct
+Feedback :
+This is a situation of type-I error.
+Incorrect
+
+Type II error occurs when the null hypothesis is not rejected when it is in fact incorrect
+Feedback :
+Type-II error occurs when the null hypothesis is not true (i.e. the sample mean lies in the critical region) but you incorrectly fail to reject the null hypothesis.
+
+
+Questions:2/2
+ 
+ 
+Types of errors
+Suppose the null hypothesis is that a particular new process is as good as or better than the old one. A type-I error is to conclude that:
+
+
+The old process is as good as or better than the new one, when it is not
+
+The old process is better than the new one, when it is
+
+The old process is better than the new one, when it is not
+Feedback :
+Type-I error means incorrectly rejecting a true null hypothesis. So, type-1 error means that the null hypothesis is true, i.e. the new process is as good as or better than the old one, but you reject it, i.e. you conclude that the old process is better.
+Correct
+
+The new process is as good as or better than the new one, when it is
+
