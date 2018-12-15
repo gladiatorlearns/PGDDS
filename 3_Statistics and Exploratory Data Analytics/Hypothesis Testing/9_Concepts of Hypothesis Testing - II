@@ -1,0 +1,12 @@
+Introduction
+In the previous session, you learnt how to formulate the hypotheses for any situation and then make a decision through the critical value method. In that method, you learnt to find the critical values and then compare the sample mean with the critical values to make your decision or rejecting or failing to reject the null hypothesis.
+
+In this session
+There are various methods similar to the critical value method to statistically make your decision about the hypothesis. In this session, you will study one such method, which is called the p-value method. This is an important method and is used more frequently in the industry.
+
+The broad agenda for this session is as follows:
+
+The p-value method of hypothesis testing
+Types of errors in hypothesis testing
+
+This session also covers some additional concepts of Hypothesis Testing from the theory perspective, since that is very important while performing Hypothesis Testing in industry using tools like R, Excel etc. The demonstration of Hypothesis Testing on Excel and R has been done in the last session of this module. 
