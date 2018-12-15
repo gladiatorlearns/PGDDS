@@ -1,0 +1,191 @@
+Graded Questions
+Questions:1/3
+ 
+ 
+ 
+Types of hypotheses
+The null and alternative hypotheses are statements about:
+
+
+Population parameters
+Feedback :
+The hypothesis is always made about the population parameters. The sample parameters are only used as evidence to test the hypothesis.
+Correct
+
+Sample parameters
+
+Population parameters or sample parameters
+
+Questions:2/3
+ 
+ 
+ 
+Null and Alternate Hypotheses
+A house owner claims that the current market value of his house is at least Rs.40,00,000.  60 real estate agents are asked independently to estimate the house's value. The hypothesis test that is conducted ends with the decision of "reject H₀".  Which of the following statements accurately states the conclusion?
+
+
+The house owner is right, the house is worth Rs. 40,00,000
+
+The house owner is right, the house is worth less than Rs. 40,00,000
+
+The house owner is wrong, the house is worth less than Rs. 40,00,000
+Feedback :
+Rejection of the null hypothesis means rejection of the status quo or the earlier assumption of the house owner that his house is worth at least Rs. 40,00,000. As the null hypothesis is H₀: House market value ≥ 40,00,000, the alternate hypothesis would be opposite of that.
+Correct
+
+The house owner is wrong, the house is worth more than Rs. 40,00,000
+
+Questions:3/3
+ 
+ 
+ 
+Null and Alternate Hypotheses
+Which of the following options hold true for null hypothesis?
+
+More than one option may be correct.
+
+
+The claim with only the “less than” sign
+
+The claim with the “less than or equal to” sign
+Feedback :
+The null hypothesis is always written with the “equal to” or “less than or equal to” or “more than or equal to” sign.
+Correct
+
+The claim with the “equal to” sign
+Feedback :
+The null hypothesis is always written with the “equal to” or “less than or equal to” or “more than or equal to” sign.
+Correct
+
+The claim with the “not equal to” sign
+
+
+
+Cadbury states that the average weight of one of its chocolate products ‘Dairy Milk Silk’ is 60 g. As an analyst on the internal Quality Assurance team, you would like to test whether, at the 2% significance level, the average weight is 60 g or not. A sample of 100 chocolates is collected and the sample mean size is calculated to be 62.6 g. The sample deviation, as calculated from the sample, is 10.7 g.
+
+ 
+
+Answer the following questions in order to draw a conclusion from the test.
+
+Questions:1/2
+ 
+ 
+Critical Value Method
+What would be the Zc for the critical point/s in this case?
+
+
+2.33
+Feedback :
+For a 2% significance level, you would have two critical regions on both sides with a total area of 0.02 (because you want to test if the average weight of the chocolate is greater than or less than 60 g). So, the area of the critical region on the right side would be 0.01, which means that the area till UCV (cumulative probability of that point) would be 1 - 0.01 = 0.99. So, you need to find the z-value of 0.99. The z-score for 0.9901 in the z-table is 2.33 (2.3 on the horizontal axis and 0.03 on the vertical axis). So, you can take the z-score for either 0.9901 for 0.99.
+Correct
+
+1.28
+
+3.30
+
+3.10
+
+Questions:2/2
+ 
+ 
+Critical Value Method
+Find out the critical values for this test and conclude whether the QA team can safely pass this test or not.
+
+
+UCV = 62.49 g, LCV = 57.51 g and Result = Pass the test
+
+UCV = 62.49 g, LCV = 57.51 g and Result = Don’t pass the test
+Feedback :
+The critical values can be calculated from μ ± Zc x (σ/​
+√
+N
+​) as 60g ± 2.33(10.7 /
+√
+100
+) = 60g ± 2.49g which comes out to be 62.49 g and 57.51 g. Since 62.6 g is greater than the UVC of 62.49, which means the sample mean lies outside the range of the critical values, you reject the null hypothesis that the average weight of the chocolate is 60 g. So, the QA would not pass this test.
+Correct
+
+UCV = 62.18 g, LCV = 57.82 g and Result = Pass the test
+
+UCV = 62.18 g, LCV = 57.82 g and Result = Don’t pass the test
+
+
+The water purifier company Kent claims that the total hardness of the water after being treated and filtered by its product Kent RO is less than 300 ppm on an average. To test the claim, a water inspector takes a sample of 400 purifiers and calculates the mean total hardness of water being filtered out, which comes out to be 296 ppm, with a standard deviation of 25 ppm. The hypothesis test is to be conducted at a significance level of 3%.
+
+ 
+
+Now answer the following questions.
+
+Questions:1/3
+ 
+ 
+ 
+Hypothesis Definition and Critical Region
+What would be the null/alternate hypotheses in this case and where would the critical region lie?
+
+
+H₀: μ ≥ 300 ppm and H₁: μ < 300 ppm; Critical region lies on the left side of the tail
+
+Feedback :
+Observe that the claim statement has a less than sign associated with it. Thus the null hypothesis would be the complement of it. And the alternate hypothesis would be the claim statement itself.  Once you formulate the null and alternate hypothesis,i.e. H₀: μ ≥ 300 ppm and H₁: μ < 300 ppm, it is easy to see that the critical region would lie on the left side of the tail since the alternate hypothesis has a  < sign associated with it.
+
+Correct
+
+H₀: μ < 300 ppm and H₁: μ ≥ 300 ppm;  Critical region lies on the left side of the tail
+
+
+H₀: μ ≤ 300 ppm and H₁: μ > 300 ppm;  Critical region lies on the left side of the tail
+
+
+H₀: μ > 300 ppm and H₁: μ ≤ 300 ppm;  Critical region lies on the right side of the tail
+
+
+Questions:2/3
+ 
+ 
+ 
+Critical Value and Final Decision
+What would be the Zc for this case?
+
+
+-1.65
+
+
+-1.96
+
+
+-1.88
+
+Feedback :
+From the significance level = 3 % we get the area of the critical region to be 0.03. Now this region would lie on the left side of the tail. Thus we have P(Z<Zc)= 0.03. From the table, we get the value of Zc = -1.88
+
+Correct
+
+1.88
+
+Feedback :
+From the significance level = 3 % we get the area of the critical region to be 0.03. Now this region would lie on the left side of the tail. What would be its Zc?
+
+
+Questions:3/3
+ 
+ 
+ 
+Critical Value and Final Decision
+What would be the critical value and the final decision to be made here?
+
+
+292.33; Reject the null hypothesis
+
+
+297.65; Reject the null hypothesis
+
+Feedback :
+You need to calculate the critical value from the Zc calculated in the previous question. Here you get the value of Zc as -1.88. Now critical value is 300 - 1.88*1.25 = 297.65 runs. Observe that 296 falls in the critical region. Hence you need to reject the null hypothesis in this case.
+
+Correct
+
+298.75; Fail to reject the null hypothesis
+
+
+301.22; Fail to reject the null hypothesis
