@@ -1,0 +1,82 @@
+Best Fit Line
+
+In regression, there is a notion of a best-fit line — the line which fits the given scatter-plot in the best way. Let’s look at how you can define the notion of a best-fit line.
+
+
+Let’s reiterate what you have learnt till now:
+
+    You started with a scatter plot to check the relationship between sales and marketing budget.
+
+    You found residuals and RSS for any given line passing through the scatter plot.
+
+    Then you found the equation of the best-fit line by minimising the RSS and found the optimal value of β₀ and β₁.
+    
+    Questions:1/2
+ 
+ 
+Least Squares Regression Line
+
+The coefficients of the least squares regression line are determined by the Ordinary Least Squares method — which basically means minimising the sum of the squares of the:
+x-coordinates
+y-coordinates of actual data
+y-coordinates of predicted data
+y-coordinates of actual data - y-coordinates of predicted data
+Feedback :
+The Ordinary Least Squares method has the criterion of the minimisation of the sum of squares of residuals. Residuals are defined as the difference between the y-coordinates of actual data and the y-coordinates of predicted data.
+
+
+Questions:2/2
+ 
+ 
+Best Fit Regression Line
+
+What is the main criterion used to determine the best-fitting regression line?
+
+The line that goes through the most number of points
+
+The line that has an equal number of points above it or below it
+
+The line that minimises the sum of squares of distances of points from the regression line
+Feedback :
+
+The criterion is given by the Ordinary Least Squares (OLS) method, which states that the sum of squares of residuals should be minimum. This is explained by this option.
+Correct
+
+Either B or C (they are same criterion)
+
+
+Questions:2/2
+ 
+ 
+Best Fit Regression Line
+
+What is the main criterion used to determine the best-fitting regression line?
+
+The line that goes through the most number of points
+
+The line that has an equal number of points above it or below it
+
+The line that minimises the sum of squares of distances of points from the regression line
+Feedback :
+
+The criterion is given by the Ordinary Least Squares (OLS) method, which states that the sum of squares of residuals should be minimum. This is explained by this option.
+Correct
+
+Either B or C (they are same criterion)
+
+Since now you know that the best-fit line is obtained by minimising a quantity called Residual Sum of Squares (RSS), this is the best time to be introduced to what is known as the cost function.
+
+ 
+Gradient Descent
+
+Gradient Descent is an optimisation algorithm which optimises the objective function (for linear regression it's cost function) to reach to the optimal solution.
+
+ https://learn.upgrad.com/v/course/208/session/25287/segment/129935
+
+You can learn about the cost function and ways to optimise the cost function (minimisation or maximisation). The topic is covered in detail as the part of the optional session; you may access the content using this link. Since the session is optional, you may visit this as per your convenience, but we strongly suggest you go through it as Gradient Descent will also be used for Logistic Regression and even Neural Networks.
+
+You can download the Excel file from below and look at the analysis performed by the professor.
+SLR - Excel Demonstration - 1
+file_downloadDownload
+ 
+
