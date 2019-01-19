@@ -1,0 +1,18 @@
+Reading and Understanding the Data
+
+Before building a linear regression model, let's first understand and visualise the dataset.
+
+ 
+
+Please download the following dataset and the python code and run it in the jupyter notebook as you watch the video.
+Advertising Dataset
+file_downloadDownload
+Simple Linear Regression Python Notebok
+file_downloadDownload
+
+You read the data and visualised it using 'seaborn'. You also looked at the correlations between the target variable ‘Sales’ and the different predictor variables and saw that ‘TV’ has the strongest correlation with ‘Sales’. Sales and TV are linearly correlated. 
+
+ 
+Coming up
+
+Now that you have interpreted the data, let's start building a simple linear regression model on top of it, in the next segment.
