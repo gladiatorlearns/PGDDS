@@ -1,0 +1,14 @@
+Introduction
+
+Welcome to the session on Multiple Linear Regression. So far, we have discussed the simple linear regression, where the model is built using one independent variable only. But, what if you have multiple independent variables? How do you make a predictive model in such a case? Build a multiple linear regression on top of such a data is one such solution.
+
+
+In this session
+
+You will use the example of sales prediction using the TV marketing budget that you saw in the previous session to build a multiple linear regression model. But now, instead of just one variable, you will have three variables to deal with. The marketing budget will be split into three marketing channels — TV marketing, radio marketing, and newspaper marketing. You will see how adding more variables brings in many new problems and how do you approach them. In the end, you will learn about feature selection and feature elimination to build the most optimal model.
+
+This session is almost completely a theoretical session on multiple linear regression and its various aspects. So don't worry much if you don't get everything in the first go as you will also see each of these aspects in action in the next session as well which is a Python demonstration on multiple linear regression where things will become clearer.
+
+ Motivation: When One Variable isn't Enough
+
+The term ‘multiple' in multiple linear regression gives you a fair idea in itself. It represents the relationship between two or more independent input variables and a response variable. Multiple linear regression is needed when one variable might not be sufficient to create a good model and make accurate predictions.
