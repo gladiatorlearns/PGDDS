@@ -1,0 +1,83 @@
+Residual Analysis and Predictions
+
+Now that you have built the linear model, you can move ahead with the next steps. Now, building the model on the train set has two parts - fitting a line and validating the assumptions of regression.
+
+ 
+
+Recall that one of the assumptions that you studied was that the error terms should be normally distributed with mean equal to 0. So once you have built the model, you'd need to verify if your model is not violating this assumption. And doing this is fairly simple - you just plot a histogram of the error terms to check whether they are normally distributed. And another assumption was that the error terms should be independent of each other. Again for this, you need to plot the error terms, this time with either of X or y to check for any patterns.
+
+The residuals are normally distributed, and there are no visible patterns in the error terms (except for the fact that the variance seems to be increasing a little for the higher values). So, this model fit looks good. Let's go ahead and make predictions on the test set.
+
+ 
+
+You will use the 'predict()' function present in 'statsmodels.api' for the same.
+
+Questions:1/3
+ 
+ 
+ 
+Residual Analysis
+
+Plotting a histogram of the residuals helps you determine: (More than one option may be correct.).
+
+If the error terms are normally distributed
+Feedback :
+
+Correct! A histogram of the error terms is plotted to check if the error terms are normally distributed.
+Correct
+
+If the error terms are centred around zero
+Feedback :
+
+Correct! While the histogram tells you whether the error terms are normally distributed or not, it also helps you check if they are centred around zero which is quite crucial.
+Correct
+
+If there are any visible patterns in the error terms
+
+Questions:2/3
+ 
+ 
+ 
+Model Comparison using RMSE
+
+You fit two linear regression models for the same data, where the first one gives an RMSE value of 3.78, and the second returns a value of 6.33. Which of these is a better model?
+
+The first one
+Feedback :
+
+Yes! Recall that RMSE (Root Mean Squared Error) is a metric that tells you the deviation of the predicted values by a model from the actual observed values. So, since it is a sort of error term, it is better to have a low RMSE.
+
+Notice that the RMSE for the first model is lesser than the second model. So naturally, this model would be better than the other.
+Correct
+
+The second one
+
+Both are the same
+
+Can’t say
+
+
+Questions:3/3
+ 
+ 
+ 
+Model Comparison using R-squared
+
+For the two linear regression models mentioned in the last question, the R-squared values in the train and test sets are as follows:
+Model	R-squared (on train set)	R-squared (on test set)
+First Model	0.85	0.61
+Second Model	0.74	0.72
+
+ 
+
+Which of these do you think is a better model?
+
+The first model
+
+The second model
+Feedback :
+
+The second model seems to be a better one because even though the R-squared for the first model is quite good on the train set, but it drops tremendously in the test set. This simply means that the first model is not generalising well whereas in the case of the second model we have decent and close values of R-squared for both the train and test sets.
+Correct
+
+Both are the same
