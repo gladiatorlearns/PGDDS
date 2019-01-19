@@ -1,0 +1,118 @@
+Regression Line
+
+Let’s now go deeper into linear regression.
+
+Read this link to revise the physical significance of an equation of a straight line, and also to understand how to find the slope and intercept of a straight line from its graph.
+
+ https://www.mathsisfun.com/equation_of_line.html
+
+Answer the following questions in the context of the straight-line plot given below.
+Figure 2 - Straight Line graph
+keyboard_arrow_leftkeyboard_arrow_rightQuestions:1/3
+ 
+ 
+ 
+Intercept of a Straight Line
+
+Since you now know about the equation of a straight line, let’s look at the general equation of a straight line which is fitted during simple linear regression.
+
+A simple linear regression model attempts to explain the relationship between a dependent and an independent variable using a straight line.
+
+ 
+
+The independent variable is also known as the predictor variable. And the dependent variables are also known as the output variables.
+
+Questions:1/3
+ 
+ 
+ 
+Intercept of a Straight Line
+
+What is the intercept of the given line? Use the graph given above to answer this question.
+0
+3
+Feedback :
+The value of y when x = 0 in the given straight line is 3. So, 3 would be the intercept in this case.
+Correct
+4
+1/2
+
+Questions:2/3
+ 
+ 
+ 
+Slope of a Straight Line
+
+What is the slope of the given line? Use the graph given above to answer this question.
+1/2
+Feedback :
+The slope of any straight line can be calculated by (y₂ - y₁)/(x₂ - x₁), where (x₁, y₁) and (x₂, y₂) are any two points through which the given line passes. This line passes (0,3) and (2, 4); so the slope of this line would be (4-3/2-0) = ½.
+Correct
+1/3
+1
+2
+
+
+Questions:3/3
+ 
+ 
+ 
+Equation of a Straight Line
+
+What would be the equation of the given line?
+Y = X/2 + 3
+Feedback :
+The standard equation of a straight line is y = mx + c, where m is the slope and c is the intercept. In this case, m = ½ and c = 3, so equation would be Y = X/2 + 3.
+Correct
+Y = 2X + 3
+Y = X/3 + ½
+Y = 3X + ½
+
+
+Coefficients of Regression Line
+
+Which statement explains the physical interpretation of the slope of the regression line Y = β₀ + β₁.X, where Y is the sales amount in crores and X is the marketing spend in lakhs?
+
+For each additional β₁ lakh spent on marketing, the predicted sales increases by 1 crore
+
+For each additional β₁ lakh spent on marketing, the predicted sales increases by β₀ crore
+Feedback :
+
+For this regression line, β₀ is the intercept and β₁ is the slope. For a unit increase in the quantity of X (marketing spend), what would be the increase in Y (sales amount)?
+Incorrect
+
+For each additional 1 lakh spent on marketing, the predicted sales increases by β₁ crore
+Feedback :
+
+For this regression line, β₀ is the intercept and β₁ is the slope. For a unit increase in the quantity of X (marketing spend), Y (sales amount) increases by β₁.1 = β₁ units.
+Correct
+
+For each additional β₀ lakh spent on marketing, the predicted sales increases by β₁ crore
+
+
+Questions:2/2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Coefficients of Regression Line
+
+Which statement explains the physical interpretation of the intercept of the regression line Y = β₀ + β₁.X, where Y is the sales amount in crores and X is the marketing spend in lakhs?
+
+When the amount spent on marketing is Rs. 0, the sales amount = β₀ crore
+Feedback :
+
+For this regression line, β₀ is the intercept and β₁ is the slope. The value of Y (sales amount) is β₀ crore when the value of X (marketing spend) is Rs. 0.
+Correct
+
+When the amount spent on marketing is Rs. 0, the sales amount = β₁ crore
+
+When the amount spent on marketing is Rs. β₀ lakh, the sales amount = 0 crore
+
+When the amount spent on marketing is Rs. β₁ lakh, the sales amount = 0 crore
+
+
