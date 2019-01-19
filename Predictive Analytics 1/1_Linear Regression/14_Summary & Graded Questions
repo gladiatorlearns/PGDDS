@@ -1,0 +1,120 @@
+Summary
+
+In this session, you build a simple linear regression model in Python using the advertising dataset. You also saw some more theoretical aspects in between. Here's a brief of what you learnt in this session.
+
+    A quick recap of simple linear regression
+    Assumptions of simple linear regression
+        Linear relationship between X and y.
+        Normal distribution of error terms.
+        Independence of error terms.
+        Constant variance of error terms.
+    Hypothesis testing in linear regression
+        To determine the significance of beta coefficients.
+        H0:β1=0;HA:β1≠0. 
+        T-test on the beta coefficient.
+        t score=^βiSE(^βi).
+    Building a linear model
+        OLS (Ordinary Least Squares) method in statsmodels to fit a line.
+        Summary statistics
+            F-statistic, r-squared, coefficients and their p-values.
+    Residual Analysis
+        Histogram of the error terms to check normality.
+        Plot of the error terms with X or y to check independence.
+    Predictions
+        Making predictions on the test set using the 'predict()' function.
+    Linear Regression using SKLearn
+        A second package apart from statsmodels for linear regression.
+        A more hassle-free package to just fit a line without any inferences.
+        
+  Common Doubts In Simple Linear Regression --      https://learn.upgrad.com/v/course/208/session/25297/segment/126220
+  
+  Graded Questions - 
+  
+  Questions:1/4
+ 
+ 
+ 
+ 
+Strength of Relationship
+
+Which of the following is indicative of a strong relationship between X and y?
+
+The value of β1 as obtained after fitting the model is 0.95
+
+The correlation coefficient between X and y is 0.95
+Feedback :
+
+The correlation coefficient specifies how strong is the relationship between two variables. And in this case, the value is 0.95 which is quite high indicating a strong relationship between X and y.
+Correct
+
+The p-value for the coefficient is 0.95
+
+Both A and B
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Hypothesis Testing for Betas
+
+In order to determine whether the coefficient in a simple linear regression model is significant or not, which Null Hypothesis do we propose?
+
+β0=0
+
+β0≠0
+
+β1=0
+Feedback :
+
+Correct! The Null Hypothesis in the case of simple linear regression is indeed:
+
+β1=0
+
+This is kept so because in case that the Null hypothesis is rejected, you can conclude that β1 is not zero and the coefficient is significant, but if we fail to reject the Null Hypothesis, the coefficient is deemed insignificant.
+Correct
+
+β1≠0
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Overall Model Fit
+
+Which metric is used to determine the significance of the overall model fit?
+
+T-statistic
+
+R-squared
+
+F-statistic
+Feedback :
+
+Correct! The F-statistic tells whether the overall model fit is significant or not.
+Correct
+
+Both B & C
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Fitting a line using statsmodels
+
+Why do you add a constant to the train set using the sm.add_constant() command, when you’re fitting a line using statsmodels?
+
+The library requires the X_train to be a 2D dataset.
+
+statsmodels fits a line passing through the origin by default.
+Feedback :
+
+Correct! By default, statsmodels fits a line passing through the origin, i.e. it doesn't fit an intercept. Hence, you need to use the command 'add_constant' so that it also fits an intercept.
+Correct
+
+statsmodels cannot fit a line through the data without this command.
+
