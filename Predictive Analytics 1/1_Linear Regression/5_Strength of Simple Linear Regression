@@ -1,0 +1,107 @@
+Strength of Simple Linear Regression
+
+After determining the best fit line, there are a few critical questions you need to answer, such as:
+
+    How well does the best-fit line represent the scatter-plot?
+
+    How well does the best-fit line predict the new data?
+
+Are the above questions answered well by the RSS? Attempt these two questions on your own before getting the answers from the professor in the following lecture.
+
+Questions:1/2
+ 
+ 
+RSS - Residual Sum of Squares
+
+In the previous example of marketing spend (in lakhs) and sales amount (in crores), let’s assume you get the same data in different units — marketing spend (in lakhs) and sales amount (in dollars). Do you think there will be any change in the value of RSS due to change in units in this case (as compared to the value calculated in the Excel demonstration)?
+Yes, value of RSS would change because units are changing.
+Feedback :
+The RSS for any regression line is given by this expression: ∑(yi−yipred)2. RSS is the sum of the squared difference between the actual and the predicted values, and its value will change if the units change since it has units of ​y2​. For example, (140 rupees - 70 rupees)^2 = 4900, whereas (2 USD - 1 USD)^2 = 1. So value of RSS is different in both the cases because of different units.
+Correct
+No, value won’t change
+Can’t say
+
+
+Questions:2/2
+ 
+ 
+RSS - Residual Sum of Squares
+
+Based on the property of RSS as mentioned in the previous question, do you think RSS is a good parameter to interpret how well the regression line represents the given data?
+
+You will get an explanation for this soon from Prof Dinesh.
+Yes
+59%
+No
+
+You can play with the interactive graphic below and look at how the position of the regression line and the values of RSS and TSS change with a change in the values of β₀ and β₁.
+
+You can download the Excel sheet used in the demonstration for your reference.
+SLR - Excel Demonstration - 2
+file_downloadDownload
+
+Comprehension
+
+ 
+
+The plot below represents a scatter-plot of 2 variables X and Y, with the Y variable being dependent on X. Let’s assume the line with the equation Y = X/2 + 3 plotted in the graph represents the best-fit line. This is the same line whose equation you found earlier.
+
+ 
+
+You can find the value of the residual for each point, e.g. for x = 2, the residual would be 5 - 4 = 1.
+
+ 
+
+Answer the following questions in order to consolidate your learning about RSS and R².
+
+Figure 3 - Scatter Plot and Regression Line
+
+Questions:1/3
+ 
+ 
+ 
+Residual Sum of Squares (RSS)
+
+Find the value of RSS for this regression line.
+0.25
+6.25
+Feedback :
+The residuals for all 5 points are -0.5, 1, 0, -2, 1. The sum of squares of all 5 residuals would be 0.25 + 1 + 0 + 4 + 1 = 6.25
+Correct
+6.5
+-0.5
+
+Questions:2/3
+ 
+ 
+ 
+Total Sum of Errors (TSS)
+
+Find the value of TSS for this regression line.
+11.5
+7.5
+0
+14
+Feedback :
+The average of y-value for all data points (3 + 5 + 5 + 4 + 8)/5 = 25/5 = 5. So y−¯y term for each data point would be -2, 0, 0, -1, 3. So, the squared sum of these terms would be 4 + 0 + 0 + 1 + 9 = 14. 
+
+
+Questions:3/3
+ 
+ 
+ 
+R²
+
+The RSS for this example comes out to be 6.25 and the TSS comes out to be 14.
+
+What would be the R² for this regression line?
+1 - (14/6.25)
+(1 - 14)/6.25
+1 - (6.25/14)
+Feedback :
+R² value is given by 1 - (RSS / TSS). So, in this case, R² value would be 1 - (6.25 / 14).
+Correct
+(1 - 6.25)/14
+
+
+
