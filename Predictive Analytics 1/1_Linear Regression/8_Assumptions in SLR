@@ -1,0 +1,122 @@
+Assumptions of Simple Linear Regression
+
+Before moving to the Python code, there is an important aspect of linear regression that needs to be addressed, i.e. the assumptions of linear regression.
+
+ 
+
+While building a linear model, you assume that the target variable and the input variables are linearly dependent. But do you need any assumptions other than this?
+
+
+Let’s hear what Rahim has to say.
+
+You are making inferences on the 'population' using a 'sample'. The assumption that variables are linearly dependent is not enough to generalise the results you obtain on a sample to the population, which is much larger in size than the sample. Thus, you need to have certain assumptions in place in order to make inferences.
+
+ 
+
+Let's understand the importance of each assumption one by one:
+
+ 
+
+There is a linear relationship between X and Y
+
+    X and Y should display some sort of a linear relationship, otherwise, there is no use of fitting a linear model between them.
+
+ Error terms are normally distributed with mean zero(not X, Y)
+
+    There is no problem if the error terms are not normally distributed if you just wish to fit a line and not make any further interpretations.
+    But if you're willing to make some inferences on the model you've built (you'll see this in further segments), you need to have a notion of distribution of the error terms. One particular repercussion of the error terms not being normally distributed is that the p-values obtained during the hypothesis test to determine the significance of the coefficients become unreliable (you'll see this in a later segment.).
+    The assumption of normality is taken since it has been observed that the error terms generally follow a normal distribution with mean equal to zero in most of the cases.
+
+
+
+Error terms are independent of each other
+
+    The error terms should not be dependent on one another (like in a time-series data wherein the next value is dependent on the previous one).
+
+ 
+
+Error terms have constant variance (homoscedasticity)
+
+    The variance shouldn't increase (or decrease) as the error values change.
+    Also, the variance shouldn't follow any pattern as the error terms change.
+
+ 
+
+You'll look at each of these assumptions in more detail later and you'll also validate these while building the model.
+
+ 
+
+You can also go through the following link to see what happens when the assumptions are violated. But things will anyway get clearer once we keep moving ahead.
+keyboard_arrow_leftkeyboard_arrow_right
+
+Questions:1/3
+ 
+ 
+ 
+Assumptions of Simple Linear Regression
+
+What will be the effect of the error terms not being homoscedastic in nature?
+
+You will not be able to fit a straight line through the data.
+
+The error terms will not be normally distributed.
+ 
+
+The inferences made on the model would be unreliable.
+Feedback :
+
+Yes! Even if you fit a line through the data, you cannot make inferences on the model. The parameters used to make inferences (which you will study in later segments) will become highly unreliable.
+
+
+
+Questions:2/3
+ 
+ 
+ 
+Assumptions of Simple Linear Regression
+
+Which of the assumptions of linear regression is the following image shown to be violating?
+
+ 
+
+Linear relationship between X and y.
+
+Error terms independent of each other.
+
+Error terms normally distributed.
+
+Error terms have constant variance.
+Feedback :
+
+Correct! As is evident from the graph, the error terms seem to be reducing as the value of X increases. This is clearly a violation of the assumption that the error terms have constant variance.
+
+ Questions:3/3
+ 
+ 
+ 
+Assumptions of Simple Linear Regression
+
+You saw the following image in the lecture. What all assumptions on the error terms is this image referring to?
+
+ 
+
+The error terms are normally distributed.
+
+The mean in the distribution of the error terms is zero.
+
+The error terms have constant variance.
+
+All of the above.
+Feedback :
+
+Correct!
+
+From the image, it is evident that the error terms are normally distributed.
+
+Also, if you look at the image carefully, you'll see that the two bell curves which are shown actually have the mean zero. 
+
+
+
+Image sources:
+
+    Assumptions of Simple Linear Regression- http://reliawiki.org/index.php/Simple_Linear_Regression_Analysis
