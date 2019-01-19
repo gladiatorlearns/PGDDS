@@ -1,0 +1,196 @@
+Hypothesis Testing in Linear Regression
+
+Before you move on to the model building part, there is still one theoretical aspect left to be addressed - the significance of the derived beta coefficient. When you fit a straight line through the data, you'll obviously get the two parameters of the straight line, i.e. the intercept (β0) and the slope (β1). Now, while β0 is not of much importance right now, but there are a few aspects surrounding β1 which need to be checked and verified.
+
+ 
+
+The first question we ask is, "Is the beta coefficient significant?" What does this mean?
+
+ 
+
+Suppose you have a dataset for which the scatter plot looks like the following:
+
+ 
+
+ 
+
+Now, if you run a linear regression on this dataset in Python, Python will fit a line on the data which, say, looks like the following:
+
+ 
+
+ 
+
+Now, you can clearly see that the data in randomly scattered and doesn't seem tofollow a linear trend or any trend, in general. But Python will anyway fit a line through the data using the least squared method. But you can see that the fitted line is of no use in this case. 
+
+ 
+
+Hence, every time you perform a linear regression, you need to test whether the fitted line is a significant one or not or to simply put it, you need to test whether β1 is significant or not. And in comes the idea of Hypothesis Testing on β1. Please note that the following text will assume the knowledge of hypothesis testing, which was covered in one of the earlier modules. Please revisit the module on hypothesis testing in case you need to brush up.
+https://learn.upgrad.com/v/course/208/module/6035
+ 
+
+You start by saying that β1 is not significant, i.e. there is no relationship between X and y.
+
+So in order to perform the hypothesis test, we first propose the null hypothesis that β1 is 0. And the alternative hypothesis thus becomes β1 is not zero.
+
+    Null Hypothesis (H0): β1=0
+    Alternate Hypothesis (HA): β1≠0
+
+ 
+
+Let's first discuss the implications of this hypothesis test. If you fail to reject the null hypothesis that would mean that β1 is zero which would simply mean that β1 is insignificant and of no use in the model. Similarly, if you reject the null hypothesis, it would mean that β1 is not zero and the line fitted is a significant one.
+
+ 
+
+Now, how do you perform the hypothesis test? Recall from your hypothesis testing module that you first used to compute the t-score (which is very similar to the Z-score) which is given by X−μs/√n where μ is the population mean and s is the sample standard deviation which when divided by √n is also known as standard error.
+
+ 
+
+Using this, the t-score for ^β1 comes out to be (since the null hypothesis is that β1 is equal to zero):
+
+ 
+
+^β1−0SE(^β1)
+
+ 
+
+Now, in order to perform the hypothesis test, you need to derive the p-value for the given beta. If you're hazy on what p-value is and how it is calculated, it is recommended that you revisit the segment on p-value. Please note that the formula of SE(β1) provided in the t-score above is out of scope of this course.
+
+ 
+
+Let's do a quick recap of how do you calculate p-value anyway:
+
+    Calculate the value of t-score for the mean point (in this case, zero, according to the Null hypothesis that we have stated) on the distribution
+    Calculate the p-value from the cumulative probability for the given t-score using the t-table
+    Make the decision on the basis of the p-value with respect to the given value of β  (significance level)
+
+ t-score -https://learn.upgrad.com/v/course/208/session/18673/segment/95312
+ z-score -https://learn.upgrad.com/v/course/208/session/18673/segment/95311
+ p-value -https://learn.upgrad.com/v/course/208/session/18007/segment/91606
+
+Now, if the p-value turns out to be less than 0.05, you can reject the null hypothesis and state that β1 is indeed significant.
+
+ 
+
+Please note that all of the above steps will be performed by Python automatically, which you'll learn in the very next segment.
+keyboard_arrow_leftkeyboard_arrow_right
+ 
+Questions:1/5
+ 
+ 
+ 
+ 
+ 
+Hypothesis Test
+
+What does it mean if you fail to reject the Null hypothesis in the case of simple linear regression?
+
+β1 and thus, the independent variable it is associated with is significant in the prediction of the dependent variable. 
+
+β1 and thus, the independent variable it is associated with is insignificant in the prediction of the dependent variable. 
+Feedback :
+
+Correct! The Null Hypothesis in simple linear regression is:
+
+β1=0
+
+Thus, if we fail to reject the Null hypothesis, it means that β1 is indeed zero, and thus insignificant for the prediction of the independent variable.
+Correct
+
+β0 and thus, the independent variable it is associated with is significant in the prediction of the dependent variable. 
+
+β0 and thus, the independent variable it is associated with is insignificant in the prediction of the dependent variable. 
+
+
+Questions:2/5
+ 
+ 
+ 
+ 
+ 
+P-value
+
+Which of the following is used to calculate the p-value for a particular beta coefficient?
+
+The standard error of the beta coefficient
+
+The t-statistic of the beta coefficient
+Feedback :
+
+The t-statistic along with the t-distribution table is used to determine the p-value of the coefficient.
+Correct
+
+The null hypothesis for the beta coefficient
+
+None of the above
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+Distribution of the Error Terms
+
+If the sample size is small, i.e. less than 30, which of the following distribution is used to describe the error terms?
+
+Normal distribution
+
+Uniform distribution
+
+T-distribution
+Feedback :
+
+Correct! In case of a small sample size, we use a t-distribution which is very similar to a normal distribution.
+Correct
+
+Both A and C
+
+Questions:4/5
+ 
+ 
+ 
+ 
+ 
+T-score
+
+Suppose that for a linear model, you got β1 as 0.5. Also, the standard error of β1 was found out to be 0.02. What will be the value of t-score for β1?
+
+2.5
+
+25
+Feedback :
+
+Recall that the t-score for β1 is given as β1SE(β1).
+
+Hence, you have:
+
+t-score = 0.50.02=25
+Correct
+
+0.04
+
+0.4
+
+
+Questions:5/5
+ 
+ 
+ 
+ 
+ 
+Significance of Beta
+
+From the t-score you got in the previous question, what can you say about the significance of β1?
+
+β1 is significant.
+Feedback :
+
+Correct! Recall that a t-distribution is very similar to a normal distribution. And a value as big as 25 means a practically zero p-value which in turn means that the variable is significant. You can have a look at the t-table here anyway. And you'll anyway see this in the Python demo in the next segment.
+Correct
+
+β1 is insignificant.
+
+Can't be said.
+Additional Reading
+
+Why does the test statistic for β1 follow a t-distribution instead of a normal distribution? (here) https://www.youtube.com/watch?v=78YNvrsRzVw&t=269s
