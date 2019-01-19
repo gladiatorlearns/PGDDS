@@ -1,0 +1,31 @@
+Linear Regression using SKLearn
+
+So far, you have worked with the 'statsmodels' package. This is a great package if you want to fit a line and draw inferences as well. But many times, you may not be interested in the statistics part of linear regression. You might just want to fit a line through the data and make predictions. In such cases, you can use 'SKLearn', which involves lesser hassle than 'statsmodels'. Also, the industry standard as to what package should be used varies widely. Some companies prefer statsmodels whereas some others prefer SKLearn, so it is better for you if you know about both of these packages.
+ 
+ SKLearn is a ‘lighter’ version of the linear regression packages. The two simple steps to fit a line using SKLearn:
+
+ 
+
+from sklearn.linear_model import LinearRegression
+
+lm = LinearRegression()   # Create a linear regression object
+lm.fit(X_train, y_train)
+
+Questions:1/1
+ 
+Parameters in SKLearn
+
+Which of these commands will give you the value of  slope for the fitted model?
+
+lm.fit
+
+lm.intercept_
+Feedback :
+
+lm.intercept_ will give you the intercept value, i.e. β0.
+Incorrect
+
+lm.coef_
+Feedback :
+
+Correct! lm.coeff_ gives you the value of β1 which is the slope of the fitted line.
