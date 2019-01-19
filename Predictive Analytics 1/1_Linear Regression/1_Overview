@@ -1,0 +1,34 @@
+Introduction
+
+Welcome to the module on ‘Linear Regression’.
+
+ 
+
+In this module, you will start off with a quick introduction to three machine learning techniques — regression, classification, and clustering. Then, you will go deeper into one of the most important regression models in machine learning — Linear Regression.
+
+ 
+
+You will learn primarily about the following two types of linear regression models:
+
+    Simple linear regression
+
+    Multiple linear regression
+
+In this session
+
+You will get a quick introduction to machine learning models. You will also learn about the basics of simple linear regression, how to find the best-fitted line for a model and all the various parameters associated with it.
+
+ 
+
+The broad agenda for this session is as follows:
+
+    Introduction to machine learning
+
+    Supervised and unsupervised learning methods
+
+    The linear regression model
+
+    Residuals
+
+    Residual sum of squares (RSS) and R² (R-squared)
+
