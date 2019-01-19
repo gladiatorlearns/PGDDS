@@ -1,0 +1,37 @@
+Introduction
+
+Welcome to the session on ‘Simple Linear Regression in Python’. So far, we have discussed the theory part of simple linear regression. Now, let’s move on to building a simple linear regression model in Python.
+
+ 
+In this session
+
+You will learn about the generic steps that are required to build a simple linear regression model. You will first read and visualise the dataset. Next, you will split the dataset into train and test sets. After that, you will build the model on the training data and draw inferences. We have used the dataset and example from the ISLR book. You will use the advertising dataset given in ISLR and analyse the relationship between 'TV advertising' and 'sales' using a simple linear regression model. You will learn to make a linear model using two different libraries - statsmodels and SKLearn.
+
+ 
+
+But before you move on to the Python code, let's do a quick recap of what you have learnt so far.
+
+ 
+Guidelines for in-module questions
+
+The in-video and in-content questions for this module are not graded. The graded questions are given in a separate segment at the end of the module. These questions will adhere to the following guidelines:
+
+ 
+ 	First Attempt Marks	Second Attempt Marks
+
+Question
+
+with 2 Attempts
+	10	5
+
+Question
+
+with 1 Attempt
+	10 	0
+
+ 
+People you will hear from in this session
+
+Subject Matter Expert
+Mirza Rahim Baig
+Lead Business Analyst at Flipkart
