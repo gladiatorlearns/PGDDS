@@ -1,0 +1,163 @@
+Building a Linear Model
+
+Since 'TV' is very strongly correlated to 'Sales', let's first build a simple linear regression model with ‘TV’ as the predictor variable.
+ 
+Playback Rate
+Auto
+
+The first important step before building a model is to perform the test-train split. To split the model, you use the train_test_split function.
+
+ 
+
+from sklearn.model_selection import train_test_split
+X_train_lm, X_test_lm, y_train_lm, y_test_lm = train_test_split(X, y, train_size = 0.7, test_size = 0.3, random_state = 100)
+
+From now on, you will always use the SKLearn library to perform a test-train split before fitting a model on any data.
+
+ 
+
+Now that you have done the test-train split, let’s move on to building the model.
+
+After you import the statsmodel.api, you can create a simple linear regression model in just two steps.
+
+ 
+
+import statsmodels.api as sm
+X_train = sm.add_constant(X_train)
+lr = sm.OLS(y_train, X_train).fit()
+
+Here, OLS stands for Ordinary Least Squares, which is the method that 'statsmodels' use to fit the line. You use the command 'add_constant' so that statsmodels also fits an intercept. If you don't use this command, it will fit a line passing through the origin by default.
+
+ 
+
+Now, let's take a look again at the summary statistics that was outputted by the model.
+
+ 
+Summary Statistics
+
+Now, let's take a look at the summary statistics that was outputted by the model again.
+Summary Statistic
+
+F-statistic
+
+You were introduced to a new term named F-statistic and Prob(F-statistic). Now, recall that in the last segment, you did a hypothesis test for beta to determine whether or not the coefficient β1 outputted by the model was significant or not. Now, F-statistic is similar in the sense that now instead of testing the significance of each of the betas, it tells you whether the overall model fit is significant or not. This parameter is examined because many a time it happens that even though all of your betas are significant, but your overall model fit might happen just by chance.
+
+ 
+
+The heuristic is similar to what you learnt in the normal p-value calculation as well. If the 'Prob (F-statistic)' is less than 0.05, you can conclude that the overall model fit is significant. If it is greater than 0.05, you might need to review your model as the fit might be by chance, i.e. the line may have just luckily fit the data. In the image above, you can see that the p-value of the F-statistic is 1.52e-52  which is practically a zero value. This means that the model for which this was calculated is definitely significant since it is less than 0.05.
+
+ 
+
+This will be more appreciable when you study multiple linear regression since there you have a lot of betas for the different predictor variables and thus there it is very helpful in determining if all the predictor variables together as a whole are significant or not or simply put, it tells you whether the model fit as a whole is significant or not. 
+
+ 
+
+R-squared
+
+Like you studied earlier as well, R-squared value tells you exactly how much variance in the data has been explained by the model. In our case, the R-squared is about 0.816 which means that the model is able to explain 81.6% of the variance which is pretty good.
+
+ 
+
+Coefficients and p-values:
+
+The p-values of the coefficients (in this case just one coefficient for TV) tell you whether the coefficient is significant or not. In this case, the coefficient of TV came out to be 0.0545 with a standard error of about 0.002. Thus, you got a t-value of 24.722 which lead to a practically zero p-value. Hence, you can say that your coefficient is indeed significant. 
+
+ 
+
+Apart from this, the summary statistics outputs a few more metrics which are not of any use as of now. But you'll learn about some more of them in multiple linear regression.
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Viewing the coefficients
+
+Which of the following commands can be used to view β0 and β1 once you have fitted the line using statsmodels? The name of your linear regression object is lr. (More than one option(s) may be correct.)
+
+lr.OLS()
+
+lr.params
+Feedback :
+
+Yes! You can view both the parameters using this simple command.
+Correct
+
+lr .summary()
+Feedback :
+
+The summary() function also output the values of coefficients and hence, can be used to view these values as well.
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Summary Statistics
+
+Suppose you built a linear regression model in which the target variable is 'Scaled Pressure' which is being predicted with the help of the feature variable 'Frequency', and you got the following summary statistics of the model that you built.
+
+Looking at the following summary statistic, what can be said about the significance of the overall model fit?
+
+The overall model fit is significant
+Feedback :
+
+Correct! If you look at the summary statistics, you can see that the F-statistic has a value of 270.2 which is a very high value and this, the Prob(F-statistic) is 5.93e-56 (as shown in the table) which is a practically zero value. Hence, the value of less than 0.05 which means that the overall model fit is significant.
+Correct
+
+The overall model fit is not significant
+
+Can't be determined
+
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Summary Statistics
+
+Let's take a look at the summary statistics you saw in the last question again.
+
+ 
+
+What can you say about the significance of the coefficient the variable 'Frequency'?
+
+ 
+
+The p-value of the coefficient for frequency is low and hence, it is insignificant.
+
+The p-value of the coefficient for frequency is low and hence, it is significant.
+Feedback :
+
+Correct! If you look at the table, you can see that the p-value for the coefficient of the variable 'Frequency' is 0 which is a low value and hence, the coefficient is significant.
+
+Correct
+
+The p-value of the coefficient for frequency is high and hence, it is insignificant.
+
+The p-value of the coefficient for frequency is high and hence, it is significant.
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Summary Statistics
+
+Finally, looking at the following summary statistics, what can you say about the extent of fit, i.e. the variance explanatory power of the model?
+
+ 
+
+The R-squared value is high and hence, the model doesn't explain much of the variance.
+
+The R-squared value is high and hence, the model explains a lot of the variance.
+
+The R-squared value is low and hence, the model doesn't explain much of the variance.
+Feedback :
+
+Correct! Look at the summary statistics closely. The value of R-squared is 0.153. Recall that R-squared varies from 0 to 1 wherein a value of 0 implies that none of the variance in the data is explained and a value of 1 implies that all of the variance in the data is explained. Can you answer the question now? Hence, a value of 0.153 is a low value of R-squared which in turn implies that the model doesn't explain much variance present in the data.
+Correct
+
+The R-squared value is low and hence, the model does explains a lot of the variance.
