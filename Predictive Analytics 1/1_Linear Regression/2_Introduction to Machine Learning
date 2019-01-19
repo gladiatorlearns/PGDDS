@@ -1,0 +1,87 @@
+Introduction to Machine Learning
+
+In the previous course, you learnt data preparation, which is the third step of the CRISP-DM framework. Following the same CRISP-DM framework, now let's move to the fourth and the most interesting stage, called modelling.
+
+Machine learning models can be classified into the following three types based on the task performed and the nature of the output:
+
+    Regression: The output variable to be predicted is a continuous variable, e.g. scores of a student
+
+    Classification: The output variable to be predicted is a categorical variable, e.g. classifying incoming emails as spam or ham
+
+    Clustering: No pre-defined notion of a label is allocated to groups/clusters formed, e.g. customer segmentation 
+
+ 
+
+You will get to know about the different types of machine learning models in the coming modules.
+
+ 
+
+Let’s now learn about supervised and unsupervised learning methods.
+Current Time 5:29
+/
+Duration 5:29
+ 
+Playback Rate
+Auto
+1.5x
+
+So you can classify machine learning models into two broad categories:
+
+    Supervised learning methods
+
+        Past data with labels is used for building the model
+
+        Regression and classification algorithms fall under this category
+
+    Unsupervised learning methods
+
+        No pre-defined labels are assigned to past data
+
+        Clustering algorithms fall under this category
+
+Figure 1 - Supervised and Unsupervised Learning Methods
+
+Mentioned below are some of the problems which are addressed either by a supervised or unsupervised learning algorithm. For each problem, identify if the task can be addressed by a supervised learning algorithm or an unsupervised learning algorithm. Assume an appropriate data set is available for your algorithm to learn from.
+
+
+Supervised and Unsupervised Learning
+
+Identify what type of problem this is.
+
+You have the past data of two cricket teams on the performance of the teams based on different parameters and the match results. You have to predict which team will win.
+
+Supervised learning
+Feedback :
+
+You have the data of the past few years to train your model on. Since you know the results of different games based on different performance parameters, it would be a supervised learning problem — more specifically, a classification problem since your output variable (i.e. the name of the team) is categorical.
+Correct
+
+Unsupervised learning
+
+Supervised and Unsupervised Learning
+
+Identify what type of problem this is.
+
+You feed a large collection of spam emails to the learning model to identify the different sub-groups of these spam mails. No labels are presents in the data set.
+Supervised learning
+Feedback :
+This is not a supervised learning problem since you don’t have any labels assigned to your data set to train your model on.
+Incorrect
+Unsupervised learning
+Feedback :
+This can be addressed using unsupervised learning as there are no labels assigned to your data set and they need to be identified.
+
+Questions:3/3
+ 
+ 
+ 
+Supervised and Unsupervised Learning
+
+Identify what type of problem this is.
+
+Consider a large data set of the medical profiles of cancer patients. This data contains no labels for the medical profiles of the cancer patients. The model has to learn whether there might be different groups of such patients for which separate treatments might be tailored.
+Supervised learning
+Unsupervised learning
+Feedback :
+This can be addressed using an unsupervised learning algorithm, in which you group patients into different clusters.
+
