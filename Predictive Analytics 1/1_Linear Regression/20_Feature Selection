@@ -1,0 +1,70 @@
+The one crucial aspect of multiple linear regression that remains to be discussed is feature selection. When building a multiple linear regression model, you might have quite a few potential predictor variables; selecting just the right ones becomes an extremely important exercise.
+
+ To get the optimal model, you can always try all the possible combinations of independent variables and see which model fits the best. But this method is obviously, time-consuming and infeasible. Hence, you need some other method to get a decent model. This is where manual feature elimination comes in, where you:
+
+    Build the model with all the features
+    Drop the features that are least helpful in prediction (high p-value)
+    Drop the features that are redundant (using correlations and VIF)
+    Rebuild model and repeat
+
+Note that, the second and third steps go hand in hand and the choice of which features to eliminate first is very subjective. You'll see this during the hands-on demonstration of multiple linear regression in Python in the next session.
+
+Questions:1/1
+ 
+Model Assessment
+
+After performing inferences on a linear model built with several variables, you concluded that the variable ‘r’ was insignificant. This meant that the variable ‘r’:
+
+Had a high p-value
+Feedback :
+
+A high p-value means that the variable is not significant, and hence, doesn't help much in prediction.
+Correct
+
+Had a low p-value
+
+Had a high VIF
+
+Had a low VIF
+
+Now, manual feature elimination might work when you have a relatively low number of potential predictor variables, say, ten or even twenty. But it is not a practical approach once you have a large number of features, say 100. In such a case, you automate the feature selection (or elimination) process. Let's see how.
+
+Recursive Feature Elimination
+
+Read this document and answer the following question. 
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+Based on your reading, how do you think RFE measures the importance of the variable?
+
+Suggested Answer
+
+Recursive feature elimination is based on the idea of repeatedly constructing a model (for example, an SVM or a regression model) and choosing either the best or worst performing feature (for example, based on coefficients), setting the feature aside and then repeating the process with the rest of the features. This process is applied until all the features in the dataset are exhausted. Features are then ranked according to when they were eliminated. As such, it is a greedy optimisation for finding the best performing subset of features.
+
+
+Questions:2/2
+ 
+ 
+Recursive Feature Elimination
+
+Suppose you have to build five multiple linear regression models for five different datasets. You're planning to use about 10 variables for each of these models. The number of potential variables in each of these datasets are 15, 30, 65, 10, and 100. In which of these cases you would definitely need to use RFE?
+
+1st and 4th cases
+Feedback :
+
+The number of variables in the 1st and 4th cases is very low. RFE is an automated technique which you use to reduce the pool of potential independent variables for building your linear regression model. Do you really need RFE here?
+Incorrect
+
+1st, 2nd, and 4th cases
+
+3rd and 5th cases
+
+2nd, 3rd, and 5th cases
+Feedback :
+
+Correct! Though you might be thinking that while you would definitely need RFE in the 3rd and 5th cases, feature elimination in the 2nd dataset can be performed manually. But please note that while performing a manual elimination, you need to drop features one by one and bringing down the number from 30 to 10 can be very time-consuming. So it might be a good idea a perform an RFE to bring the number down to, say, 15, and then perform a manual feature elimination.
+
+
+You need to combine the manual and the automated approaches in order to get an optimal model relevant to the business. Hence, you first do an automated elimination (coarse tuning), and when you have a small set of potential variables left to work with, you can use your expertise and subjectivity to eliminate a few other features (fine tuning).
+
+ You need to combine the manual and the automated approaches in order to get an optimal model relevant to the business. Hence, you first do an automated elimination (coarse tuning), and when you have a small set of potential variables left to work with, you can use your expertise and subjectivity to eliminate a few other features (fine tuning).
+
+ 
