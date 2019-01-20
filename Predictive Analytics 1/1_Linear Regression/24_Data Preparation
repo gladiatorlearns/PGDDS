@@ -1,0 +1,105 @@
+Data Preparation
+
+Now that you have a sense of what variables are important and that the data is well behaved with very few outliers, let’s move on to preparing the data for multiple linear regression. This involves handling the categorical variables first and then performing dummy encoding.
+
+Questions:1/1
+
+Mapping Variables
+Description
+You're given two lists, the first of which contains the name of some people and the second contains their corresponding 'response'. These lists have been converted to a dataframe.
+Now, the values that the 'response' variable can take are ‘Yes’, ‘No’, and ‘Maybe’. Write a code to map these variables to the values ‘1.0’, ‘0.0’, and ‘0.5’.
+
+Note: It also might happen the the first letter of the three responses are not in uppercase, i.e. you might also have the values 'yes', 'no', and 'maybe' in the dataframe. So make sure you handle that in your code.
+
+Example:
+Input 1:
+['Reetesh', 'Shruti', 'Kaustubh', 'Vikas', 'Mahima', 'Akshay']
+['No', 'Maybe', 'yes', 'Yes', 'maybe', 'Yes']
+Output 1:
+﻿
+﻿
+Execution time limit
+
+5 seconds
+
+# Reading the input
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+# Storing the names in a variable 'name'
+name = input_list[0]
+# Storing the responses in a variable 'repsonse'
+response = input_list[1]
+
+# Importing pandas and converting the read lists to a dataframe. You can print
+# the dataframe and run the code to see what it will look like
+import pandas as pd 
+df = pd.DataFrame({'Name': name,'Response': response})
+
+# Write your code here
+def binary_map(x):
+    diction={"Yes":1,"yes":1,"no":0,"No":0,"Maybe":0.5,"maybe":0.5}
+    return diction[x]
+df['Response']=df['Response'].apply(binary_map)
+# Print the final DataFrame
+print(df)
+
+upgrad solution - 
+
+# Reading the input
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+# Storing the names in a variable 'name'
+name = input_list[0]
+# Storing the responses in a variable 'repsonse'
+response = input_list[1]
+
+# Importing pandas and converting the read lists to a dataframe. You can print
+# the dataframe and run the code to see what it will look like
+import pandas as pd 
+df = pd.DataFrame({'Name': name,'Response': response})
+
+# Define a function to map the categorical variables to appropriate numbers
+def response_map(x):
+    return x.map({'Yes': 1, 'yes': 1, 'No': 0, 'no': 0, 'Maybe': 0.5, 'maybe': 0.5})
+
+# Apply the function to the 'Response' column of the dataframe
+df[['Response']] = df[['Response']].apply(response_map)
+
+# Print the final DataFrame
+print(df)
+
+
+
+Questions:1/2
+ 
+ 
+Mapping Variables
+
+After you performed binary encoding of the variable ‘MaritalStatus’ with, ‘Married’ corresponding to 1 and ‘Unmarried’ corresponding to 0, you found out that the mean of the variable ‘MaritalStatus’ was 0.6. What does this statement indicate?
+
+40% of the people on the list are married.
+
+60% of the people on the list are married.
+Feedback :
+
+Notice that when you perform a binary encoding, the only values present in the variable are 0 and 1. So if you calculate the mean, it is only the 1s which will contribute towards it. Since the value '1' corresponds to 'Married', a mean of 0.6 indicates that 60% of the people in the list are married.
+Correct
+
+Can’t say on the basis of this data.
+
+Questions:2/2
+ 
+ 
+Encoding Variables
+
+Suppose you performed encoding with the variable ‘BloodGroup’ having four levels, ‘A’, ‘B’, ‘AB’, and ‘O’. To perform the encoding, you wish to drop two of the levels, ‘AB’ and ‘O’. Suggest a suitable encoding process that will now represent the four levels.
+
+Suggested Answer
+
+A - 10
+B - 01
+AB - 11
+O - 00
+Note that this encoding is not exactly dummy encoding; it’s just manual encoding that you performed.
