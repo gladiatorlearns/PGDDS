@@ -1,0 +1,16 @@
+Residual Analysis and Predictions
+
+Before making the predictions, you need to be certain that the model is reliable. To that end, you need to first perform a residual analysis of the error terms and then move on to making the predictions on the test set; and finally, evaluate the model based on the predictions.
+
+Questions:1/1
+ 
+Derived Variables
+
+List four derived variables from the housing dataset that you think can be created in order to get a better model. (Note that this is subjective and adding a derived feature does not necessarily improve the model.)
+
+Suggested Answer
+
+1. bathrooms/bedrooms
+2. area/stories
+3. parking/bedrooms
+4. area/bedrooms
