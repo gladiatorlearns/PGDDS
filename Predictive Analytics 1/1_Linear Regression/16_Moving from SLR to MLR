@@ -1,0 +1,33 @@
+When moving from a simple linear regression model to a multiple linear regression model, there are a few things that you have to look at.
+
+ The new aspects to consider when moving from simple to multiple linear regression are:
+
+    Overfitting
+        As you keep adding the variables, the model may become far too complex
+        It may end up memorising the training data and will fail to generalise
+        A model is generally said to overfit when the training accuracy is high while the test accuracy is very low
+    Multicollinearity
+        Associations between predictor variables, which you will study later
+    Feature selection
+        Selecting the optimal set from a pool of given features, many of which might be redundant becomes an important task
+        
+        Questions:1/1
+ 
+Overfitting
+
+Which of these two models would be a better fit to the data?
+
+ fig1 - Linear
+ fig 2 - non linear curvy
+
+ 
+
+The first one
+Feedback :
+
+Correct! The first model seems to be generalising well on the dataset. So if more such similar data is introduced, the accuracy will not drop. But the second model clearly seems to have memorised all the data points in the dataset and hence, is displaying overfitting which might not be good if new data points are introduced.
+Correct
+
+The second one
+
+Both are similar
