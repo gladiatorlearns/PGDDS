@@ -92,3 +92,207 @@ Feedback :
 Past data could be used to predict what the rainfall will be based on the given predictors.
 Correct
 A startup is analysing the data of potential customers. They need to figure out which people they should reach out for a sales pitch.
+
+
+Prediction vs Projection
+
+In the last lecture, you learnt when linear regression modelling can be applied.
+
+ 
+
+You will often hear the terms prediction and projection interchangeably, but in terms of modelling, these are different applications. Let’s learn the difference between them.
+
+Questions:1/1
+ 
+Projection
+
+Which of the following are true in case of projection?
+Projection focuses on the identification of variables that are important in explaining the outcome, rather than how good the final outcome is
+Feedback : The focus is not on the identification of important variables, but getting an accurate final outcome.
+Incorrect
+While making a projection, it is assumed that the conditions in which the model was built continue to be the same
+Feedback : Forecast assumes that conditions remain the same as they were when the model was built.
+CorrectYou missed this!
+It is better to get a simple model with lower accuracy than a complex model with high accuracy
+The accuracy of the final outcome is more important than the identification of the most important driver variables
+Feedback : While making a projection, the aim is accuracy. Thus, a complex model containing a large number of variables, with high accuracy is more valuable than a simple model with lower accuracy.
+
+
+In the previous segment, you got a basic idea of interpolation and extrapolation. Let us now learn more about these in detail.
+
+In this lecture, you learnt that linear regression can be effectively used for interpolation, but extrapolation may not necessarily be effective/accurate.
+
+ 
+
+In the next lecture, you will look at a case study for a media company.
+
+Media Company Case Study
+
+From the business cases we considered for the application of linear regression, you may recall the case of a media company. This case is quite similar.
+
+ 
+
+The problem statement is as follows - A digital media company (similar to Voot, Hotstar, Netflix, etc.) had launched a show. Initially, the show got a good response, but then witnessed a decline in viewership. The company wants to figure out what went wrong.
+
+ 
+
+You can download the dataset, data dictionary & the IPython notebook from below:
+Media Company data set
+file_downloadDownload
+Data Dictionary
+file_downloadDownload
+
+ 
+
+Let’s see how linear regression can be used to identify the root cause of decline in viewership.
+Python Code
+file_downloadDownload
+
+Let us now understand the data that we will use to derive our insights. You should open the Media Company data set that you downloaded above.
+
+You looked at the digital media company data set. You understood the various attributes that could have led to the decline in the new show’s viewership. In the next lecture, you will see exploratory data analysis on the data set.
+
+ 
+Additional Readings:
+
+Read to understand more about Ad Impressions (here https://www.mediapost.com/publications/article/219695/the-definition-of-an-ad-impression.html)
+
+
+Exploratory Data Analysis
+
+Let’s try and see what we can learn from the data before going deeper into it.
+
+
+Model Building I
+
+To arrive at a data-driven solution, you would use a linear regression model with an aim to understand what the predictors/driver KPIs for viewership are. Then, based on the model, you will be able to determine the root cause of the viewership decline.
+
+ 
+
+Let us now dive into model building. Our SME Ujjyaini will illustrate the model building process through the forward selection method, which you learnt about in variable selection. You would have already downloaded the Python notebook for the case study. If not, you can download the same from the link below.
+Python Code
+file_downloadDownload
+
+Our subject matter expert first began the model with variables that seem the most important at the first instance. The model was updated with the change in variables, and the addition of new variables, that help explain the outcome better.
+
+ 
+
+The first question you tried to answer was whether the decline in Visitors to the platform the main reason for the decline in the show viewership. You started with a weekday variable, and then replaced it with weekend variable to help explain the spikes in the graph better. Then you added the Character A variable, which shows the impact of the character's presence in the show Viewership.
+
+ 
+
+Intuitively it appears that the number of views today must be related to the views yesterday, e.g. if you had viewers watching the show yesterday, a large proportion of them are also expected to watch the show today. 
+
+ 
+
+In the code provided, the lag variable has already been created. Run the model including the lag variable along with the Weekend, Visitor and Character A variables and answer the following question.
+
+Questions:1/2
+ 
+ 
+Lag Views
+
+Is Lag_views a significant predictor of Show_views, when modelled along "Weekend", "Visitors" and "Character_A"?
+Yes
+Feedback :
+For Lag_views, p<0.05. Thus, Lag_views is a significant predictor of the viewership of the show.
+Correct
+No
+
+Questions:2/2
+ 
+ 
+Correlation
+
+What is the correlation between Lag_views and Views_show?
+0.74
+Feedback :
+Incorrect. Use cor().
+Incorrect
+0.89
+0.42
+Feedback :
+Correct. The correlation between Lag_views and Views_show is 0.42.
+Correct
+0.2
+
+Model Building II
+
+Let us now look at the subsequent steps in model building.
+
+On the introduction of more variables, the model starts gaining complexity. Some of the variables, which were significant earlier, now become insignificant. Variables which have better alternatives are replaced. You brought back variables which were previously removed to test if they fit the business requirement better. For example, you brought back Visitors as a predictor against Views to the platform, because Visitors could be impacted through marketing actions.
+
+Questions:1/1
+ 
+Finding Correlation
+
+What is the correlation between Views_platform and Visitors?
+
+43
+
+94
+Feedback :
+
+Correct. Since there is such a high correlation between Visitors and Views on the platform, replacing Views_platform with Visitors made no significant difference.
+Correct
+
+78
+
+62
+Feedback :
+
+Try again. Use cor() function.
+
+In the latest version of the model (Model 6), Ujjyaini spotted two major problems -
+
+    The variable ‘Visitors’ has become insignificant with a large p-value and
+    The variable ‘character A’ has changed its sign.
+
+ 
+
+Before proceeding ahead, answer the following questions
+
+Questions:1/2
+ 
+ 
+Visitors
+
+Why do you think Visitor's significance dropped upon the introduction of the Ad Impressions variable? Write your answer in the text box below.
+Suggested Answer-
+There is a significant correlation between Ad Impressions and Visitors. Thus, after the introduction of Ad Impressions, Visitors became an insignificant variable.
+
+CharacterA
+
+Think of some possible reasons that the variable ‘character_A’ has changed its sign. Write your answer in the text box below.
+Suggested Answer-
+CharacterA has a high correlation with Ad impressions. A change of sign upon the introduction of new variables suggests multicollinearity.
+
+Model Building III
+
+Let us continue the process of model building.
+
+In the process of building the model, you checked for multiple variables and then arrived at the variables that best suited the model.
+
+ 
+
+Based on your understanding of the models, answer the following questions :-
+
+
+uestions:1/2
+ 
+ 
+Cricket Match
+
+A cricket match between Australia and India is happening over the weekend. Should the producers be worried about losing show viewers to the match?
+Yes
+No
+Feedback :
+Cricket Matches (featuring India) was found to be insignificant in explaining show viewership. Thus, the cricket match would not impact show viewership.
+
+Now that you have a model, with a fairly high adjusted R-squared, it might seem that the task is done. But you still might be missing out on an important variable. Thus, you need to assess the model. In the following lectures, you will learn some important methods of assessing the model and confirming that the model you arrived at was the best you could have, given the data you have.
+
+
+
+ 
+
+ 
