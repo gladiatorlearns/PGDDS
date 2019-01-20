@@ -1,0 +1,68 @@
+Once the model is built, you would want to assess it in terms of its predictive powers. For multiple linear regression, you may build more than one model, with different combinations of the independent variables. In such a case, you would also need to compare these models with one another to check which one yields optimal results. 
+
+Now, for the assessment, you have a lot of new considerations to make. Besides, selecting the best model to obtain decent predictions becomes quite subjective. You need to maintain a balance between keeping the model simple and explaining the highest variance (which means that you would want to keep as many variables as possible). This can be done using the key idea that a model can be penalised for keeping a large number of predictor variables. 
+
+ 
+
+Hence, there are two new parameters that come into picture:
+
+ 
+
+                                                              Adjusted R2=1−(1−R2)(N−1)N−p−1
+
+
+                                                                  AIC=n×log(RSSn)+2p
+
+ 
+
+Here, n is the sample size meaning the number of rows you'd have in the dataset and p is the number of predictor variables.
+
+Questions:1/2
+ 
+ 
+Calculating Adjusted R-Squared
+
+When a model was built from a dataset with 101 samples and 10 predictor variables, the R-squared value was found to be 0.7. What will the value of the adjusted R-squared be for the same model?
+
+0.46
+
+0.50
+
+0.67
+Feedback :
+
+The formula for adjusted R-squared is given as:
+
+1−(1−R2)(N−1)N−p−1
+
+So, substituting the given values at the appropriate places gives us:
+
+1−(1−0.7)(101−1)101−10−1≈0.67
+Correct
+
+0.73
+Questions:2/2
+ 
+ 
+R-squared vs Adjusted R-squared
+
+Why do you think it is better to use adjusted R-squared in the case of multiple linear regression?
+
+The major difference between R-squared and Adjusted R-squared is that R-squared doesn't penalise the model for having more number of variables. Thus, if you keep on adding variables to the model, the R-squared will always increase (or remain the same in the case when the value of correlation between that variable and the dependent variable is zero). Thus, R-squared assumes that any variable added to the model will increase the predictive power.
+
+Adjusted R-squared on the other hand, penalises models based on the number of variables present in it. So if you add a variable and the Adjusted R-squared drops, you can be certain that that variable is insignificant to the model and shouldn't be used. So in the case of multiple linear regression, you should always look at the adjusted R-squared value in order to keep redundant variables out from your regression model.
+
+
+Coming up
+
+Adjusted R2 adjusts the value of R2 such that a model with a larger number of variables is penalized. In the next segment, Rahim will talk about feature selection.
+
+ 
+
+Additional Reading
+
+    AIC -https://en.wikipedia.org/wiki/Akaike_information_criterion
+    BIC -https://en.wikipedia.org/wiki/Bayesian_information_criterion
+    Mallows' CP -https://en.wikipedia.org/wiki/Mallows%27s_Cp
+
+
