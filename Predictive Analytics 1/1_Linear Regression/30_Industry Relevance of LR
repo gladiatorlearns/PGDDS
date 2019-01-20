@@ -292,7 +292,72 @@ Cricket Matches (featuring India) was found to be insignificant in explaining sh
 Now that you have a model, with a fairly high adjusted R-squared, it might seem that the task is done. But you still might be missing out on an important variable. Thus, you need to assess the model. In the following lectures, you will learn some important methods of assessing the model and confirming that the model you arrived at was the best you could have, given the data you have.
 
 
+Assessing the Model
+
+In the last lecture, you arrived at a model which has a fairly high adjusted-R squared. This means that the model was able to explain the viewership pattern to a large extent.
 
  
+
+Before we finalise the model, let us run some checks to assess if the model we built was right.
+
+You finally have a model that seems good enough to predict why the show viewership fell. You saw that the actual and predicted views overlapped, thus indicating that the model is able to explain the change in viewership very well.
+
+ 
+
+Then, you saw that the errors (the differences between the actual views and the views predicted by the model) were randomly distributed. What this essentially confirms is that there are no variables that could have helped explain the model better. 
+
+ 
+
+A non-random error pattern, on the other hand, would mean that the errors are capturing some patterns, thus indicating that the model could have been better. A non-random error pattern indicates that there are certain systematic unexplained aspects in the outcomes that are being captured in the error. This pattern in the errors could probably have been explained by some explanatory variable which is missing from the model. So, the idea is that a model should explain everything that is possible, such that only the random errors are left.
+
+ 
+
+So, in total, you built 8 models before you arrived at the final model. Let us check if the previous models would have passed the checks.
+
+
+You saw that the plot results for model 5 were clearly not as good as model 9. The views predicted by model 5 were not able to capture the highs and lows that the actual show views had. There was a seasonality pattern in the error plot. This pattern in the errors could probably have been explained by some explanatory variable which is missing from model 5.
+
+ 
+
+A good model tells a good story. It is not important that you base your story entirely on a single model. Drawing insights from the current model (model 9) and previous models, Ujjyaini identified Ad Impressions and Character A as the driver variables that could be used to increase the viewership of the show. Ad impressions are directly proportional to the marketing budget. Thus, by increasing the marketing budget, a better viewership could be achieved. Similarly, Character A’s absence and presence create a significant change in show viewership. Character A’s presence brings viewers to the show. Thus, these two variables can be acted upon to improve the show viewership.
+
+ 
+Additional reading
+
+Read more about the bootstrap method here. 
+http://rstudio-pubs-static.s3.amazonaws.com/24365_2803ab8299934e888a60e7b16113f619.html
+ 
+ 
+ Interpreting the Results
+
+It is not always possible to change the script of the story at a moment’s notice. Character A’s dates might also not be available. Thus, the marketing team can focus on the ad impressions instead.
+
+ 
+
+Let us learn how the model could be used by the marketing team to drive ad impressions.
+ 
+Playback Rate
+Auto
+
+In this lecture, you learnt how to interpret the model so that you can come up with some actionable insights. 
+
+ 
+
+The marketing team wanted to know the additional investment required to increase the ad impressions and thus, increase the viewership of the show. 
+
+ 
+
+Model equation was used to find out the increase in ad impressions required to take show viewership back to the peak levels attained in week 13. The ad impressions figure could then be used the marketing team to calculate the required increase in marketing budget.
+
+Summary
+
+Let’s summarise what you learnt:
+
+    It is important to understand if a linear regression modelling will be applicable to the problem you are trying to solve. E.g. linear regression can’t help you decide if a customer will opt out of a subscription, as this is a classification problem.
+    Linear regression guarantees interpolation but not extrapolation.
+    While linear regression can be used for both projection and prediction, there is a difference between the two. In prediction, the goal is to identify the most important variables that explain the outcome in a simpler way. In projection, the goal is to accurately forecast the outcome, no matter how complex the model gets.
+    The business goal is crucial and will decide what path the modelling process should take.
+    In the industry, variables that are actionable are valued over others. E.g. given two quite similar variables, “Views to the platform” and “Visitors to the platform”, the latter is more actionable, as it is easier to get viewers to the platform than forcing anybody to watch the shows.
+    You don’t end the modelling process until you are sure that no more significant variables could be added to explain the outcome. Thus, you check for randomness of errors, which could indicate if any KPI that could have helped explain the outcome was left out.
 
  
