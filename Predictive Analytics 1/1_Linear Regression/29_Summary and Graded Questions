@@ -1,0 +1,75 @@
+Questions:1/1
+ 
+Major Takeaways
+
+What are your top 3 takeaways from this session?
+
+R is extension of SLR
+HT remains same
+New consideration based on interpretation of variables
+Variables are not correlated with each other---multi collinearity
+Over fitting
+RFE and Feature Selection
+SciKit Learn and Statsmodel API
+
+You can download the lecture notes for the linear regression module from below:
+Linear Regression Complete Lecture Notes
+file_downloadDownload
+
+Graded Questions
+
+Questions:1/1
+ 
+Elimination based on p-values
+
+Suppose you're trying to predict the gross collection of a movie based on the following five factors: 'Budget', 'Average Critic Score', 'Facebook Likes', 'Number of Tweets', and 'Number of Screens'.
+
+You obtained the following p-values for the five variables after fitting a regression line. Assuming you're only using p-value as a criteria to drop the variables and a p-value > 0.05 is not acceptable, which of these variables do you think is not significant in the prediction of gross collections and should be definitely dropped? Only one option is correct.
+Budget	0.03
+Average Critic Review	0.21
+Facebook Likes	0.11
+Number of Tweets	0.32
+Number of Screens	0.01
+
+ 
+
+Number of Tweets
+Feedback :
+
+Yes! As you can see, the p-value of 'Number of Tweets' is very high and thus, this variable is insignificant. Now, there are other variables in the list which also have a high p-value but we don't drop these simultaneously as it might happen that dropping 'Number of Tweets' might reduce the p-value of the other variables and make them significant.
+Correct
+
+Number of Tweets, Average Critic Review
+
+Number of Tweets, Facebook Likes
+
+Number of Screens
+
+
+Questions:1/1
+ 
+Scaling Variables
+
+Which of the following is/are true regarding the scaling of variables? More than one option(s) may be correct.
+
+Scaling should be done before the test-train split.
+
+Scaling should be done after the test-train split.
+Feedback :
+
+Correct! Scaling should always be done after the test-train split since you don't want the test dataset to learn anything from the train data. So if you're performing the test-train split earlier, the test data will then have information regarding the data like the minimum and maximum values, etc.
+Correct
+
+Standardised scaling will affect the values of dummy variables but MinMax scaling will not.
+Feedback :
+
+MinMax scaling scales in such a way that all the values lie between 0 and 1 using the formula:
+
+x−min(x)max(x)−min(x)
+
+So if you have dummy variables, which can only take the values 0 and 1, you can notice that for the case of zero, the variable remains zero and for the case of 1, the variable remains 1.
+
+On the other hand, the standard scaler scales in such a way that the mean of the dataset becomes zero and standard deviation becomes one. So this will clearly distort the values of the dummy variables since some of the variables will become negative.
+Correct
+
+MinMax scaling will affect the values of dummy variables but standardized scaling will not.
