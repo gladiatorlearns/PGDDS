@@ -1,0 +1,35 @@
+Variable Selection using RFE
+
+Even though the housing dataset doesn’t have many variables and you can easily select the relevant features manually, it is important to learn to use certain automated techniques as well.
+
+ 
+
+Let’s see Rahim rebuild another model for the housing dataset using RFE.
+
+ 
+
+Before that please download the python notebook for model building using RFE given below. The dataset used in this case is the same dataset, i.e. the 'Housing' dataset that you had used earlier.
+
+Multiple Linear Regression Using RFE - IPython Notebook
+file_downloadDownload
+
+In order to use RFE, you need to use SKLearn instead of statsmodels. Let’s go ahead and create a linear model using SKLearn to perform RFE.
+
+Now that the features have been selected and the model is built, let's do the residual analysis and make the final predictions.
+
+Questions:1/1
+ 
+Elimination based on RFE
+
+You performed RFE on a dataset to select 10 out of a total of 13 features. Following is the output for the 13 features you get on performing the RFE:
+
+But now, you decided that you want 11 features in the model. Clearly, you need not run the RFE code again; you can simply use the above output. So based on the above output, which of the features will you eliminate?
+
+unfurnished and basement
+
+unfurnished and semi-furnished
+
+basement and semi-furnished
+Feedback :
+
+The numbers beside the variables indicate the importance of that variable. As you can see, 'unfurnished' has the number 2, and 'basement' and 'semifurnished' are 3 and 4 respectively. So if you want to retain 11 features, you will eliminate 'basement' and 'semifurnished'.
