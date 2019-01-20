@@ -1,0 +1,49 @@
+Reading and Understanding the Data
+
+Linear regression is used in various fields such as real estate, telecom, e-commerce, etc. to build predictive models. Let's look at one such example from the real-estate industry. Here, you will predict the price of a house on the basis of some predictor variables, such as floor area, number of bedrooms, parking space, etc.
+
+ 
+
+Problem Statement:
+
+Consider that a real estate company has the data of real-estate prices in Delhi. The company wants to optimise the selling price of the properties, based on important factors such as area, bedrooms, parking, etc.
+
+ 
+
+Essentially, the company wants:
+
+    To identify the variables affecting house prices, e.g., area, number of rooms, bathrooms, etc.
+    To create a linear model that quantitatively relates house prices with variables, such as the number of rooms, area, number of bathrooms, etc.
+    To know the accuracy of the model, i.e. how well do these variables predict the house prices
+
+ 
+
+Please download the dataset from below.
+Housing Dataset
+file_downloadDownload
+
+Please download the python code from below to practice along.
+Multiple Linear Regression IPython Notebook
+file_downloadDownload
+
+Now that you’ve read and inspected the data, let’s move on to visualising it. This will help in interpreting the data well and identifying the variables that can turn out to be useful in building the model.
+
+Questions:1/1
+ 
+Interpreting Box Plots
+
+You obtained the following box plot from the notebook:
+
+What can you say, from the figure above, about the median of the category ‘semi-furnished with airconditioning’?
+
+It lies between 0.8 and 1.0
+
+It lies between 0.6 and 0.8
+
+It lies between 0.4 and 0.6
+Feedback :
+
+The category 'semi-furnished with airconditioning' is the third box plot from the left. Recall what the different lines mean in a boxplot. The upper and lower tails represent the maximum and minimum values. The lower and upper boundary of the box represent the 1st and 3rd quartile respectively, and the line inside the box represents the median. As you can see, for the category - 'semi-furnished with airconditioning', the median lies between 0.4 and 0.6
+Correct
+
+It lies between 0.2 and 0.4
