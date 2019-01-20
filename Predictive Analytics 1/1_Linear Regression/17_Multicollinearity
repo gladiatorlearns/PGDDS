@@ -1,0 +1,142 @@
+In the last segment, you learned about the new considerations that are required to be made when moving to multiple linear regression. Rahim has already talked about overfitting. Let’s now look at the next aspect, i.e., multicollinearity.
+
+Multicollinearity refers to the phenomenon of having related predictor variables in the input dataset. In simple terms, in a model which has been built using several independent variables, some of these variables might be interrelated, due to which the presence of that variable in the model is redundant. You drop some of these related independent variables as a way of dealing with multicollinearity.
+
+ 
+
+Multicollinearity affects:
+
+    Interpretation:
+        Does “change in Y, when all others are held constant” apply?
+    Inference: 
+        Coefficients swing wildly, signs can invert
+        p-values are, therefore, not reliable
+
+ 
+
+Multicollinearity is, thus, a big issue when you are trying to interpret the model. It is essential to detect and deal with the multicollinearity present in the model. Let's see how you can detect multicollinearity in the model.
+
+        variable is explained by all the other independent variables combined
+
+The VIF is given by:
+
+ 
+
+                                                                               VIFi=11−Ri2
+
+ 
+
+where 'i' refers to the i-th variable which is being represented as a linear combination of rest of the independent variables. You'll see VIF in action during the Python demonstration on multiple linear regression.
+
+ 
+
+The common heuristic we follow for the VIF values is:
+
+> 10:  Definitely high VIF value and the variable should be eliminated.
+
+> 5:  Can be okay, but it is worth inspecting.
+
+< 5: Good VIF value. No need to eliminate this variable.
+
+ 
+Questions:1/4
+ 
+ 
+ 
+ 
+Effects of Multicollinearity
+
+Which of the following is not affected by multicollinearity i.e., if you add more variables that turn out to be dependent on already included variables?
+
+p-values
+
+Coefficients
+
+R-squared value
+Feedback :
+
+The predictive power given by the R-squared value is not affected because even though you might have redundant variables in your model, they would play no role in affecting the R-squared. Recall the thought experiment that Rahim had conducted in one of the lectures. So suppose you have two variables, X1 and X2 which are exactly the same. So using any of the following, say, 10X1 or (4X1 + 6X2) will give you the same result. In the second case, even though you have increased one variable, the predictive power remains the same.
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Effects of Multicollinearity
+
+Which of the following is not affected by multicollinearity i.e., if you add more variables that turn out to be dependent on already included variables?
+
+p-values
+
+Coefficients
+
+R-squared value
+Feedback :
+
+The predictive power given by the R-squared value is not affected because even though you might have redundant variables in your model, they would play no role in affecting the R-squared. Recall the thought experiment that Rahim had conducted in one of the lectures. So suppose you have two variables, X1 and X2 which are exactly the same. So using any of the following, say, 10X1 or (4X1 + 6X2) will give you the same result. In the second case, even though you have increased one variable, the predictive power remains the same.
+
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Calculating VIF
+
+When calculating the VIF for one variable using a group of variables, the R2 came up to be 0.75. What will the approximate VIF for this variable be?
+
+1
+
+2
+
+4
+Feedback :
+
+The formula for VIF is given as:
+
+11−Ri2
+
+So, you get:
+
+11−0.75≈4
+Correct
+
+5
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Analysing the VIF value
+
+Is the VIF obtained in the previous case a good VIF value?
+
+Yes
+Feedback :
+
+The common heuristic for VIF values is that if it is greater than 10, it is definitely high. If the value is greater than 5, it is okay but worth inspecting. And anything lesser than 5 is definitely okay.
+Correct
+
+No
+
+It is okay, but still worth inspecting
+
+
+doneYour answer is Correct.
+Attempt 1 of 2
+
+Some methods that can be used to deal with multicollinearity are:
+
+    Dropping variables
+        Drop the variable which is highly correlated with others
+        Pick the business interpretable variable
+    Create new variable using the interactions of the older variables
+        Add interaction features, i.e. features derived using some of the original features
+    Variable transformations
+        Principal Component Analysis (covered in a later module)
+        
+   Additional Reading - http://michaelhaenlein.eu/Publications/Haenlein,%20Michael%20-%20A%20beginner's%20guide%20to%20partial%20least%20squares%20(PLS)%20analysis.pdf
+   
+   or refer included pdf in folder.
