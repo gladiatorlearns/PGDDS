@@ -1,0 +1,8 @@
+Initial Steps
+
+Before model building, you first need to perform the test-train split and scale the features.
+
+ 
+
+Scaling of variables is an important step because, as you may have noticed, the variable ‘area’ is on a different scale with respect to all other numerical variables, which take very small values. Also, the categorical variables that you encoded earlier take either 0 or 1 as their values. Hence, it is important to have everything on the same scale for the model to be easily interpretable.
+
