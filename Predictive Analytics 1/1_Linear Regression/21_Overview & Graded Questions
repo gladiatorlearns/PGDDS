@@ -1,0 +1,157 @@
+Summary
+
+Here’s a brief summary of what you learned in this session:
+
+    When one variable might not be enough
+        A lot of variance isn’t explained by just one feature
+        Inaccurate predictions
+    Formulation of MLR
+    New considerations to be made when moving from SLR to MLR
+        Overfitting
+        Multicollinearity
+        Feature selection
+    Dealing with categorical variables
+        Dummy variables - for fewer levels
+    Feature Scaling
+        Standardisation
+        MinMax scaling
+        Scaling for categorical variables
+    Model Assessment and Comparison
+        Adjusted R-squared
+        AIC, BIC
+    Feature Selection
+        Manual feature selection
+        Automated feature selection
+        Finding a balance between the two
+        
+     
+     Graded Questions
+
+Comprehension:
+
+ 
+
+You are given a multiple linear regression model: Y=β0+β1x1+β2x2+β3x3
+
+ 
+
+Recall that the null hypothesis states that the variable is insignificant. Thus, if we fail to reject the null hypothesis, you can say that the predictor is insignificant.
+
+ 
+
+For e.g. if you fail to reject null hypothesis for x1, you can say that x1 is insignificant. This would also imply that the coefficient for x1 i.e., β1 = 0.
+
+ 
+
+In other words, the null hypothesis tests if the predictor's coefficient, i.e βi = 0. If the null hypothesis is rejected then βi≠0.
+
+Questions:1/2
+ 
+ 
+Comprehension Questions
+
+If  β1=β2=0  holds and β3 = 0 fails to hold, then what can you conclude?
+
+There is high correlation between x1 and x2
+
+There is a linear relationship between the outcome variable(Y) and x3
+Feedback :
+
+Since, β3=0 fails to hold, this means that x3 is a significant variable in this linear regression model. Thus, we can say that there is a linear relationship between the outcome variable(Y) and x3
+Correct
+
+There is a linear relationship between the outcome variable and x1, x2
+
+Questions:2/2
+ 
+ 
+Comprehension Questions
+
+If  β1  = β2 = β3 = 0  holds true, then what can you conclude?
+
+There is no linear relationship between y and any of the 3 independent variables
+Feedback :
+
+If all the coefficients are found insignificant, then there cannot be a linear relationship between Y and any of the variables.
+Correct
+
+There is a linear relationship between y and all of the 3 independent variables
+
+There is linear relationship between x1, x2 and x3
+
+
+Questions:1/1
+ 
+Graded Questions
+
+An analyst observes a positive relationship between digital marketing expenses and online sales for a firm. However, she intuitively feels that she should add an additional predictor variable, one which has a high correlation with marketing expenses.
+
+If the analyst adds this independent variable to the model, which of the following could happen? More than one choices could be correct.
+
+The model’s R-squared will decrease
+
+The model’s adjusted R-squared could decrease
+Feedback :
+
+Adjusted R-squared could decrease if the variable does not add much to the model, to explain Online Sales.
+Correct
+
+The Beta-coefficient for predictor - digital marketing expenses, will remain same
+
+The relationship between marketing expenses and sales can become insignificant
+Feedback :
+
+The relation between marketing expenses and sales can become insignificant with the addition of a new variable.
+
+
+Graded Questions
+
+Suppose you need to build a model on a data set which contains 2 categorical variables with 2 and 4 levels respectively. How many dummy variables should you create for model building?
+
+4
+Feedback :
+
+Since n-1 dummy variables can be used to describe a variable with n levels, you will get 1 dummy variable for the variable with two levels, and 3 dummy variables for the variable with 4 levels.
+Correct
+
+5
+Feedback :
+
+n-1 dummy variables can be used to describe a variable with n levels.
+Incorrect
+
+6
+
+8
+
+Questions:1/1
+ 
+Redundant Variables
+
+If one of the feature variables say, A is being explained well by some of the other feature variables, this would mean that the variable A has:
+
+A high p-value
+
+A low p-value
+
+A high VIF
+Feedback :
+
+Correct! If the feature variable A is being well explained by the other feature variables, this would mean that A has a high VIF. This is also evident from the formula for VIF: 11−R2i.
+
+Now, if A is being explained by some of the other feature variables, this would mean that the R-squared value is pretty high, which would make the denominator which is (1−R2i) very low, which again, in turn, would make the VIF value high. 
+Correct
+
+A low VIF
+Feedback :
+
+Recall that the formula for VIF is given as:
+
+11−R2i
+
+Now, if A is being explained well by some of the other feature variables, this would mean that the R-squared value here is high. Can you answer the question now?
+
+
+
+
+
