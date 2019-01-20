@@ -1,0 +1,72 @@
+So far, you have worked with numerical variables. But many times, you will have non-numeric variables in the datasets. These variables are also known as categorical variables. Obviously, these variables can't be used directly in the model since they are non-numeric.
+
+When you have a categorical variable with say 'n' levels, the idea of dummy variable creation is to build 'n-1' variables, indicating the levels. For a variable say, 'Relationship' with three levels namely, 'Single', 'In a relationship', and 'Married', you would create a dummy table like the following:
+
+ 
+Relationship Status	Single	In a relationship	Married
+Single	1	0	0
+In a relationship	0	1	0
+Married	0	0	1
+
+ 
+
+But you can clearly see that there is no need of defining three different levels. If you drop a level, say 'Single', you would still be able to explain the three levels.
+
+ 
+
+Let's drop the dummy variable 'Single' from the columns and see what the table looks like:
+ 
+Relationship Status	In a relationship	Married
+Single	0	0
+In a relationship	1	0
+Married	0	1
+
+ 
+
+If both the dummy variables namely 'In a relationship' and 'Married' are equal to zero, that means that the person is single. If 'In a relationship' is one and 'Married' is zero, that means that the person is in a relationship and finally, if 'In a relationship' is zero and 'Married' is 1, that means that the person is married.
+
+ Questions:1/1
+ 
+Number of Dummy Variables
+
+The creation of dummy variables to convert a categorical variable into a numeric variable is an important step in data preparation. Consider a case where a categorical variable is a factor with 22 levels. How many dummy variables will be required to represent this categorical variable while developing the linear regression model?
+
+20
+
+21
+Feedback :
+
+N-1 dummy variables can be used to describe a categorical variable with N levels.
+Correct
+
+22
+
+23
+
+Before you move on to the next segment, there’s one concept that needs to be addressed, the concept of scaling the variables. Rahim had addressed scaling when answering a few common doubts surrounding linear regression in this optional segment, but now that you have dummy variables in the picture as well, let’s revisit the different aspects of scaling. 
+
+https://learn.upgrad.com/v/course/208/session/25297/segment/126220
+
+It is important to note that scaling just affects the coefficients and none of the other parameters like t-statistic, F-statistic, p-values, R-squared, etc.
+
+ 
+
+There are two major methods to scale the variables, i.e. standardisation and MinMax scaling. Standardisation basically brings all of the data into a standard normal distribution with mean zero and standard deviation one. MinMax scaling, on the other hand, brings all of the data in the range of 0 and 1. The formulae in the background used for each of these methods are as given below: 
+
+    Standardisation:  x=x−mean(x)sd(x)
+    MinMax Scaling: x=x−min(x)max(x)−min(x)
+
+ 
+Coming up
+
+In the next segment, you will learn to assess and compare models.
+
+ 
+
+Additional Reading
+
+    To know more about dummy variables (here) -https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-dummy-coding/
+    Why it's necessary to create dummy variables (here)- https://stats.stackexchange.com/questions/89533/convert-a-categorical-variable-to-a-numerical-variable-prior-to-regression
+    When to Normalise date and when to standardise? (here)-https://stackoverflow.com/questions/32108179/linear-regression-normalization-vs-standardization
+    Various scaling techniques (here) -https://en.wikipedia.org/wiki/Feature_scaling
+
