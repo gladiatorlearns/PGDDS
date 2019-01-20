@@ -1,0 +1,42 @@
+Building the Model - I
+
+Now that everything is in place, let's build the model. You will follow a bottom-up approach for this, i.e., you will start by building the model with just one variable. Hence, the choice of this variable becomes very crucial. Let’s see which variable turns out to be ‘The Chosen One’.
+
+Even though ‘area’ is the most correlated variable, it could explain only 28% of the variance. Can we do better than this? Let’s start adding more variables to the model and see if the explanation of the variance can be improved.
+
+Building the Model - II
+
+The bottom-up approach was just to give you an idea of how the parameters change when the number of variables is increased. More generally, you first build a model using all  and then try to improve the model by dropping some of them.
+
+ Now that you have used all the parameters, you can see that some of these variables are clearly insignificant for the model. This is where feature elimination comes in.
+
+ 
+
+In the following video, you will use two main parameters to judge the insignificant variables, the p-values and the VIFs.
+
+stions:1/1
+ 
+Elimination based on VIF
+
+Suppose the VIFs obtained for five different variables are as follows:
+X1	7.12
+X2	5.53
+X3	5.01
+X4	3.45
+X5	2.68
+
+  
+
+Assuming that you’re dropping variables only on the basis of VIF and a VIF > 5 is not acceptable, which of these variables will you definitely drop?
+
+X1
+Feedback :
+
+Correct. It is always advisable that you drop variables one by one. Now, this variable definitely has a high VIF and needs to be dropped. The other two variables X2 and X3 also have a VIF > 5, but it might happen that after you drop X1, their VIF values will drop. So never drop more than one variable at a time.
+Correct
+
+X2
+
+X1 and X2
+
+X1, X2, and X3
