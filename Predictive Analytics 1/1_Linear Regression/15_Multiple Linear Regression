@@ -12,3 +12,66 @@ This session is almost completely a theoretical session on multiple linear regre
  Motivation: When One Variable isn't Enough
 
 The term ‘multiple' in multiple linear regression gives you a fair idea in itself. It represents the relationship between two or more independent input variables and a response variable. Multiple linear regression is needed when one variable might not be sufficient to create a good model and make accurate predictions.
+
+Questions:1/1
+ 
+R-squared
+
+In the simple linear regression model between TV and sales, the accuracy, or the 'model fit', as measured by R-squared was about 0.81. But, when you brought in the radio and the newspaper variables along with TV, the R-squared increased to 0.91 and 0.83, respectively. Do you think the R-squared value will always increase (or at least remain the same) when you add more variables?
+
+Yes
+Feedback :
+
+The R-squared will always either increase or remain the same when you add more variables. Because you already have the predictive power of the previous variable so the R-squared value can definitely not go down. And a new variable, no matter how insignificant it might be, cannot decrease the value of R-squared.
+Correct
+
+No
+
+Can't say
+
+You saw that multiple linear regression proved to be useful in creating a better model, as there was a significant change in the value of R-squared. Recall that the R-squared for simple linear regression using 'TV' as the input variable was 0.816. When you have two variables as input - 'Newspaper' and 'TV', the R-squared gets increased to 0.836. Using 'Radio' along with 'TV' increased its value to 0.910. So it seems that adding a new variable helps explain the variance in the data better.
+
+ 
+
+It is recommended that you check the R-squared after adding these variables to see how much has the model improved.
+
+ 
+
+Let’s now look at the formulation of multiple linear regression. The multiple linear regression is just an extension of simple linear regression. Hence, the formulation is largely the same.
+
+Most of the concepts in multiple linear regression are quite similar to those in simple linear regression. The formulation for predicting the response variable now becomes:
+
+ 
+
+Y=β0+β1X1+β2X2+...+βpXp+ϵ
+
+ 
+
+Apart from the formulation, there are some other aspects that still remain the same:
+
+    The model now fits a hyperplane instead of a line
+    Coefficients are still obtained by minimising the sum of squared errors, the least squares criteria
+    For inference, the assumptions from simple linear regression still hold - zero-mean, independent and normally distributed error terms with constant variance
+
+
+Questions:1/1
+ 
+Assumptions of multiple linear regression
+
+Which of the following assumptions changes for multiple linear regression?
+
+The error terms should be normally distributed.
+
+The error terms are centred at zero.
+
+The error terms have constant variance.
+
+None of the above.
+Feedback :
+
+Correct! None of the above assumptions changes when moving from simple to multiple linear regression.
+
+
+    
+
+
