@@ -1,0 +1,10 @@
+Introduction
+
+Welcome to the session on ‘Multiple Linear Regression in Python’. In the last session, you learnt about the various theoretical aspects of multiple linear regression. Now, let’s move on to building a multiple linear regression model in Python.
+
+ 
+In this session
+
+You will learn the generic steps that are required to build a multiple linear regression model. You will build this model for a housing dataset and predict the price of a house using the various potential predictor variables provided. You will first read and visualise your dataset and then prepare your data for building a linear model. This will include dealing with categorical variables, adding dummy variables, and scaling. You will then start building the model with a bottom-up approach, i.e., you will start with one variable and keep on adding more. Once all the variables have been added, you will perform a manual feature elimination and move on to the residual analysis and predictions, as usual. In the end, you will solve the same problem using RFE.
+
+ 
