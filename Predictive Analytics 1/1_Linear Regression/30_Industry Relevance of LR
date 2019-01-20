@@ -1,0 +1,94 @@
+Introduction
+
+Welcome to the session on ‘Linear Regression: Industry Relevance’. While you have learnt the theoretical aspects of linear regression, it is more important to learn how it is implemented in the industry. 
+
+ 
+
+In this module
+
+In this session, you will get an insight into the relevance and use of linear regression modelling in industries. Ujjyaini, our subject matter expert, will take you through a real-life example that will let you assess what you have understood so far, give you an idea of the industry applications of linear regression, and help you get ready for the industry.
+
+Guidelines for in-module questions
+
+The in-video and in-content questions for this module are not graded. 
+
+People you will hear from in this module
+
+Subject Matter Expert
+
+Ujjyani Mitra
+
+Analytics & Data Science Leader & Mentor - Driving Data to Decision (Viacom18, Flipkart, Bharti Airtel, McKinsey & Co)
+
+Linear Regression: Revision
+
+You have already practised linear regression modelling in previous sessions. Let’s revise some of the concepts you learnt.
+
+Here, Ujjyaini mentioned that regression guarantees interpolation of data and not extrapolation.
+
+ 
+
+Interpolation basically means using the model to predict the value of a dependent variable on independent values that lie within the range of data you already have. Extrapolation, on the other hand, means predicting the dependent variable on the independent values that lie outside the range of the data the model was built on.
+
+ 
+
+To understand this better, look at the diagram below. The model is built on values of x between a and b.
+
+
+Figure 1: Interpolation vs Extrapolation
+
+ 
+
+When you wish to predict the Y for X1, which lies between a and b, it is called interpolation. On the other hand, extrapolation would be extending the line to predict Y for X2 which lies outside the range on which the linear model was trained.
+
+ 
+
+For now, you only need to understand what these terms mean. You will learn more about this in the upcoming lectures.
+
+ 
+
+Ujjyaini also mentioned that linear regression is a parametric model, as opposed to non-parametric ones.
+
+ 
+
+A detailed discussion on parametric and non-parametric models is beyond the discussion of this module, though a simple explanation is given below. You may also read up the additional resources given below.
+
+ 
+
+In simple terms, a parametric model can be described using a finite number of parameters. For e.g., a linear regression model built using n independent variables will have exactly n ‘parameters’ (i.e. the n coefficients). The entire model can be described using these n parameters.
+
+ 
+
+In the upcoming modules, you will learn some ‘non-parametric’ models as well, such as decision trees.
+
+They do not have a finite set of parameters which completely describe the model.
+
+ 
+
+To read up on this topic further, here are some useful links:
+
+    Parametric v/s non parametric models in short  https://stats.stackexchange.com/questions/268638/confusion-about-parametric-and-non-parametric-model
+    A detailed explanation on parametric and non-parametric models  https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/
+
+ 
+
+It is very crucial to understand when to apply linear regression modelling. Let us go through some business cases to understand where you can apply linear regression modelling.
+
+ 
+
+You saw various cases and learnt where linear regression modelling can be used and where it can’t. Answer the question below to test your understanding.
+Questions:1/1
+ 
+Using Linear Regression
+
+In which of the following cases can linear regression be used?
+UpGrad is looking to admit new students in its Data Analytics Program. Potential students are asked to fill various parameters such as previous company, grades, experience, etc. They need this data to figure out if an applicant would be a good fit for the program.
+Feedback :
+This is a classification problem.
+Incorrect
+Flipkart is trying to analyse user details and past purchases to identify segments where users can be targeted for advertisements.
+A researcher wishes to find out the amount of rainfall on a given day, given that pressure, temperature and wind conditions are known.
+Feedback :
+Past data could be used to predict what the rainfall will be based on the given predictors.
+Correct
+A startup is analysing the data of potential customers. They need to figure out which people they should reach out for a sales pitch.
