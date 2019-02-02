@@ -1,0 +1,34 @@
+Introduction: Univariate Logistic Regression
+
+Welcome to the session on 'Univariate Logistic Regression'.
+
+ 
+In this session
+
+In this session, you will learn a few basic concepts related to logistic regression. Broadly speaking, the topics that will be covered in this session are:
+
+    Binary classification
+
+    Sigmoid function
+
+    Likelihood function
+
+    Building a logistic regression model in Python
+
+    Odds and log odds
+
+You will learn about all these concepts through a univariate logistic regression example. Also, if these terms sound a little alien to you right now, you don’t need to worry. By the time you are done with this module, you will be well-versed in the terms of odds and log odds!
+
+Binary Classification
+
+The most common use of logistic regression models is in binary classification problems. So, let’s hear from Prof. Dinesh what a binary classification problem is.
+
+You can download the data set for the diabetes example from below.
+
+Diabetes Data
+file_downloadDownload
+
+Now, recall the graph of the diabetes example. Suppose there is another person, with a blood sugar level of 195, and you do not know whether that person has diabetes or not. What would you do then? Would you classify him/her as a diabetic or as a non-diabetic?
+Diabetes Data
+
+Now, based on the boundary, you may be tempted to declare this person a diabetic, but can you really do that? This person’s sugar level (195 mg/dL) is very close to the threshold (200 mg/dL), below which people are declared as non-diabetic. It is, therefore, quite possible that this person was just a non-diabetic with a slightly high blood sugar level. After all, the data does have people with slightly high sugar levels (220 mg/dL), who are not diabetics.
