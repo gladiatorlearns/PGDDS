@@ -1,0 +1,85 @@
+Sigmoid Curve
+
+In the last section, you saw what a binary classification problem is, and then you saw an example of a binary classification problem, where a model is trying to predict whether a person has diabetes or not based on his/her blood sugar level. You saw how using a simple boundary decision method would not work in this case.
+
+ 
+
+Now, let’s hear from Prof. Dinesh on how the primitive binary classification model you saw earlier can be modified to make it more useful.
+
+So, to recap, since the sigmoid curve has all the properties you would want — extremely low values in the start, extremely high values in the end, and intermediate values in the middle — it’s a good choice for modelling the value of the probability of diabetes.
+
+Questions:1/2
+Sigmoid Curve
+
+This is the sigmoid curve equation: y=P(Diabetes)=11+e−(β0+β1x). Here, let’s say you take β0 = -15 and β1 = 0.065. Now, what will be the probability of diabetes for a patient with sugar level 220?
+
+0.33
+Feedback :
+
+Here, the probability of diabetes for a person with sugar level x is given by P(Diabetes)=11+e−(β0+β1x). Now, taking β0=−15 and β1=0.065, the probability of diabetes for a person with sugar level 220 will be given by P(Diabetes)=11+e−(β0+β1x)P=11+e−(−15+0.065∗220)=0.33β1
+
+
+Questions:2/2
+ 
+ 
+Sigmoid Curve
+
+For the sigmoid curve (β0 = -15 and β1 = 0.065), what will be the probability of diabetes for a patient with sugar level 240?
+
+0.645
+
+So now we have verified, with actual values, that the sigmoid curve actually has the properties we discussed earlier, i.e. extremely low values in the start, extremely high values in the end, and intermediate values in the middle.
+
+ 
+
+However, you may be wondering — why can’t you just fit a straight line here? This would also have the same properties — low values in the start, high ones towards the end, and intermediate ones in the middle.
+Diabetes
+
+The main problem with a straight line is that it is not steep enough. In the sigmoid curve, as you can see, you have low values for a lot of points, then the values rise all of a sudden, after which you have a lot of high values. In a straight line though, the values rise from low to high very uniformly, and hence, the “boundary” region, the one where the probabilities transition from high to low is not present.
+
+
+Finding the Best Fit Sigmoid Curve - I
+
+So, in the previous lecture, you saw what a sigmoid function is and why it is a good choice for modelling the probability of a class. Now, in this section, you will learn how you can find the best fit sigmoid curve. In other words, you will learn how to find the combination of β0 and β1 which fits the data best.
+
+So, by varying the values of β0 and β1, you get different sigmoid curves. Now, based on some function that you have to minimise or maximise, you will get the best fit sigmoid curve.
+
+
+Before you move on to that, here’s the interactive app used by Prof. Dinesh in the video. You can use it and see for yourself how the curve changes when the values of β0 and β1 are changed.
+
+So, by varying the values of β0 and β1, you get different sigmoid curves. Now, based on some function that you have to minimise or maximise, you will get the best fit sigmoid curve.
+
+
+Before you move on to that, here’s the interactive app used by Prof. Dinesh in the video. You can use it and see for yourself how the curve changes when the values of β0 and β1 are changed.
+
+Questions:1/1
+ 
+Likelihood
+
+Now, let’s say that for the ten points in our example, the labels are as follows:
+Point no.	1	2	3	4	5	6	7	8	9	10
+Diabetes	no	no	no	yes	no	yes	yes	yes	yes	yes
+
+In this case, the likelihood would be equal to:
+(1−P1)(1−P2)(1−P3)(1−P4)(1−P5)(P6)(P7)(P8)(P9)(P10)
+(1−P1)(1−P2)(1−P3)(1−P5)(P4)(P6)(P7)(P8)(P9)(P10)
+Feedback :
+Recall that likelihood is the product of (1−Pi) for all non-diabetic patients and (Pi) for all diabetic patients. Hence, the likelihood is given by (1−P1)(1−P2)(1−P3)(1−P5), (all non-diabetic patients) multiplied by (P4)(P6)(P7)(P8)(P9)(P10) (all diabetic patients).
+Correct
+(P1)(P2)(P3)(P4)(P5)(1−P6)(1−P7)(1−P8)(1−P9)(1−P10)
+(P1)(P2)(P3)(P5)(1−P4)(1−P6)(1−P7)(1−P8)(1−P9)(1−P10) 
+
+
+Finding the Best Fit Sigmoid Curve - II
+
+In the previous lecture, you understood what a likelihood function is. To recap, the likelihood function for our data is (1−P1)(1−P2)(1−P3)(1−P4)(1−P6)(P5)(P7)(P8)(P9)(P10) . The best fitting sigmoid curve would be the one which maximises the value of this product.
+
+ 
+
+So, let’s hear from Prof. Dinesh on how this best fitting sigmoid curve can be found.
+
+If you had to find β0and β1 for the best fitting sigmoid curve, you would have to try a lot of combinations, unless you arrive at the one which maximises the likelihood. This is similar to linear regression, where you vary  β0 and β1 until you find the combination that minimises the cost function. 
+
+In the interactive app given below, you can try a few combinations yourself and see how the likelihood varies with betas.
+.
+
