@@ -1,0 +1,418 @@
+ROC Curve
+
+So far you have learned about some evaluation metrics and saw why they're important to evaluate a logistic regression model. Now, recall that the sensitivity that you got (~53.768%) was quite low and clearly needs to be dealt with. But what was the cause of such a low sensitivity in the first place?
+
+ 
+
+If you remember, when you assigned 0s and 1s to the customers after building the model, you arbitrarily chose a cut-off of 0.5 wherein if the probability of churning for a customer is greater than 0.5, you classified it as a 'Churn' and if the probability of churning for a customer is less than 0.5, you classified it as a 'Non-churn'. 
+
+ 
+
+Now, this cut-off was chosen at random and there was no particular logic behind it. So it might not be the ideal cut-off point for classification which is why we might be getting such a low sensitivity. So how do you find the ideal cutoff point? Let's start by watching the following video. For a more intuitive understanding, this part has been demonstrated in Excel. You can download the excel file from below and follow along with the lecture.
+ROC Curve - Excel Demo
+file_downloadDownload
+
+So you saw that the predicted labels depend entirely on the cutoff or the threshold that you have chosen. For low values of threshold, you'd have a higher number of customers predicted as a 1 (Churn). This is because if the threshold is low, it basically means that everything above that threshold would be one and everything below that threshold would be zero. So naturally, a lower cutoff would mean a higher number of customers being identified as 'Churn'. Similarly, for high values of threshold, you'd have a higher number of customer predicted as a 0 (Not-Churn) and a lower number of customers predicted as a 1 (Churn).
+
+ 
+
+Now, let's move forward with our discussion on how to choose an optimal threshold point. For that, you'd first need a few basic terminologies (some of which you have seen in earlier sections.). So let's hear what these terminologies are.
+
+
+So you learned about the following two terminologies -
+
+ 
+
+True Positive Rate (TPR)
+
+This value gives you the number of positives correctly predicted divided by the total number of positives. Its formula as shown in the video is:
+
+ 
+
+True Positive Rate (TPR)=True Positives/Total Number of Actual Positives
+
+
+
+ 
+
+Now, recall the labels in the confusion matrix,
+Confusion Matrix Highlighting the Total Number of Actual Positives
+
+
+As you can see, the highlighted portion shows the row containing the total number of actual positives. Therefore, the denominator term, i.e. in the formula for TPR is nothing but -
+
+ 
+
+Total Number of Actual Positives=True Positives+False Negatives
+
+ 
+
+So, the formula for True Positive Rate (TPR) becomes -
+
+ 
+
+True Positive Rate (TPR)=True PositivesTrue Positives+False Negatives=TP/TP+FN
+
+ 
+
+As you might remember, the above formula is nothing but the formula for sensitivity. Hence, the term True Positive Rate that you just learnt about is nothing but sensitivity.
+
+ 
+
+The second term which you saw was -
+
+ 
+
+False Positive Rate (FPR)
+
+This term gives you the number of false positives (0s predicted as 1s) divided by the total number of negatives. The formula was -
+
+ 
+
+False Positive Rate (FPR)=False Positives/Total Number of Actual Negatives
+
+ 
+
+Again, using the confusion matrix, you can easily see that the denominator here is nothing but the first row. Hence, it can be written as -
+
+ 
+
+Total Number of Actual Negatives=True Negatives+False Positives
+
+ 
+
+Therefore, the formula now becomes -
+
+ 
+
+False Positive Rate (FPR)=False Positives/True Negatives+False Positives=FPTN+FP
+
+ 
+
+Again, if you recall the formula for specificity, it is given by - 
+
+ 
+
+Specificity=TN/TN+FP
+
+ 
+
+Hence, you can see that the formula for False Positive Rate (FPR) is nothing but (1 - Specificity). You can easily verify it yourself.
+
+
+Questions:1/2
+ 
+ 
+TPR and FPR
+
+Given the following confusion matrix, calculate the value of True Positive Rate (TPR) and False Positive Rate (FPR).
+Actual/Predicted	Not Churn	Churn
+Not Churn	300	200
+Churn	100	400
+
+TPR = 40%
+
+FPR = 80%
+
+TPR = 40%
+
+FPR = 60%
+
+TPR = 80%
+
+FPR = 40%
+Feedback :
+
+Correct! Recall the formulas for TPR and FPR were:
+
+TPR=TPTP+FN
+
+FPR=FPFP+TN
+
+Here,
+
+TP = 400; FN = 100; FP = 200; TN = 300
+
+Hence, you get -
+
+TPR=400400+100=80%
+
+FPR=200200+300=40%
+Correct
+
+TPR = 60%
+
+FPR = 40%
+
+Questions:2/2
+ 
+ 
+True Positive Rate
+
+You have the following table showcasing the actual 'Churn' labels and the predicted probabilities for 5 customers.
+
+ 
+Customer	Churn	Predicted Churn Probability
+Thulasi	1	0.52
+Aditi	0	0.56
+Jaideep	1	0.78
+Ashok	0	0.45
+Amulya	0	0.22
+
+ 
+
+Calculate the True Positive Rate and False Positive rate for the cutoffs of 0.4 and 0.5. Which of these cutoffs, will give you a better model?
+
+Note: The good model is the one in which TPR is high and FPR is low.
+
+Cutoff of 0.4
+
+Cutoff of 0.5
+Feedback :
+
+Now, at the cutoff of 0.4, you get the following values of predicted probabilities: 
+Customer	Churn	Predicted Churn Probability	Predicted Churn Label
+Thulasi	1	0.52	1
+Aditi	0	0.56	1
+Jaideep	1	0.78	1
+Ashok	0	0.45	1
+Amulya	0	0.22	0
+
+ 
+
+From the above table, you can easily calculate:
+
+True Positives = 2
+
+False Positives = 2
+
+Also, from the original table, you have:
+
+Actual Positives = 2
+
+Actual Negatives = 3
+
+Hence, you get:
+
+TPR=True PositivesTotal Actual Positives=22=100%
+
+FPR=False PositivesTotal Actual Negatives=23≈67%
+
+Performing similar steps for a cutoff of 0.5 will give you -
+
+TPR=100%
+
+FPR≈33%
+
+(Do calculate it yourself to verify)
+
+As you can see, with both the cutoffs, the TPR is 100% but for the cutoff 0f 0.5 you have a lower value of FPR. So clearly, a cutoff of 0.5 gives you a better model.
+
+Please note that 0.5 just gives the better model among 0.4 and 0.5. It might be possible that there is a cutoff point which gives an even better model.
+Correct
+
+Both are the same
+
+So, now that you have understood what these terms are, you'll now learn about ROC Curves which show the tradeoff between the True Positive Rate (TPR) and the False Positive Rate (FPR). And as was established from the formulas above, TPR and FPR are nothing but sensitivity and (1 - specificity), so it can also be looked at as a tradeoff between sensitivity and specificity. 
+
+So you can clearly see that there is a tradeoff between the True Positive Rate and the False Positive Rate, or simply, a tradeoff between sensitivity and specificity. When you plot the true positive rate against the false positive rate, you get a graph which shows the trade-off between them and this curve is known as the ROC curve. The following image shows the ROC curve that you plotted in Excel.
+ROC Curve
+
+As you can see, for higher values of TPR, you will also have higher values of FPR, which might not be good. So it's all about finding a balance between these two metrics and that's what the ROC curve helps you find. You also learnt that a good ROC curve is the one which touches the upper-left corner of the graph; so higher the area under the curve of an ROC curve, the better is your model.
+
+ 
+
+You'll learn more on ROC curves in the coming segments but first, try out some questions.
+Questions:1/3
+ 
+ 
+ 
+Changing the Threshold
+
+You initially chose a threshold of 0.5 wherein a churn probability of greater than 0.5 would result in the customer being identified as 'Churn' and a churn probability of lesser than 0.5 would result in the customer being identified as 'Not Churn'. 
+
+Now, suppose you decreased the threshold to a value of 0.3. What will be its effect on the classification?
+
+More customers would now be classified as 'Churn'.
+Feedback :
+
+Correct! Now since you have decreased the cutoff to 0.3, it would mean that:
+
+Customers with churn probability > 0.3 will be identified as 'Churn'.
+Customers with churn probability < 0.3 will be identified as 'Not Churn'.
+Initially, the threshold was 0.5. Look at the customers in the 0.3-0.5 probability range. They were being identified as 'Not Churn' before, but now, are being identified as 'Churn'. Hence, naturally, the number of people being identified as 'Churn' will increase.
+Correct
+
+More customers would now be classified as 'Not Churn'.
+
+The number of customers in both the classes will be the same as before.
+
+Can't be determined based on this information.
+
+
+Questions:2/3
+ 
+ 
+ 
+TPR and FPR
+
+Fill in the blanks:
+
+When the value of TPR increases, the value of FPR ______. 
+
+increases
+Feedback :
+
+Correct! This can be clearly seen from the ROC curve as well. When the value of TPR (on the Y-axis) is increasing, the value of FPR (on the X-axis) also increases.
+Correct
+
+decreases
+
+remains the same
+
+Questions:3/3
+ 
+ 
+ 
+Area Under the Curve
+
+You have the following five AUCs (Area under the curve) for ROCs plotted for five different models. Which of these models is the best?
+Model	AUC
+A	0.54
+B	0.82
+C	0.79
+D	0.66
+E	0.56
+
+A
+
+B
+Feedback :
+
+Correct!
+
+Recall that when the ROC curve is more towards the top left corner of the graph, the model is deemed to be more accurate. Hence, a greater area under the curve would mean the model is more accurate. Among the five models given, B has the highest AUC and hence is the most accurate model. Also, note that the highest value of AUC can be 1.
+Correct
+
+C
+
+D
+
+E
+ 
+ 
+ ROC Curve in Python
+
+Now that you have learnt the theory of ROC curve, let's plot an ROC curve in Python for our telecom churn case study.
+
+
+Let's first take a look at the ROC curve code that you just saw:
+
+# Defining the function to plot the ROC curve
+def draw_roc( actual, probs ):
+    fpr, tpr, thresholds = metrics.roc_curve( actual, probs,
+                                              drop_intermediate = False )
+    auc_score = metrics.roc_auc_score( actual, probs )
+    plt.figure(figsize=(5, 5))
+    plt.plot( fpr, tpr, label='ROC curve (area = %0.2f)' % auc_score )
+    plt.plot([0, 1], [0, 1], 'k--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate or [1 - True Negative Rate]')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver operating characteristic example')
+    plt.legend(loc="lower right")
+    plt.show()
+
+    return None
+
+# Calling the function
+draw_roc(y_train_pred_final.Churn, y_train_pred_final.Churn_Prob)
+
+ 
+
+Notice that in the last line you're giving the actual Churn values and the respective Churn Probabilities to the curve.
+
+ 
+Interpreting the ROC Curve
+
+Following is the ROC curve that you got. Note that it is the same curve you got in Excel as well but that was using scatter plot to represent the discrete points and here we are using a continuous line.
+ROC Curve
+
+The 450 Diagonal
+
+For a completely random model, the ROC curve will pass through the 45-degree line that has been shown in the graph above and in the best case it passes through the upper left corner of the graph. So the least area that an ROC curve can have is 0.5, and the highest area it can have is 1.
+
+ 
+
+The Sensitivity vs Specificity Trade-off
+
+As you saw in the last segment as well, the ROC curve shows the trade-off between True Positive Rate and False Positive Rate which essentially can also be viewed as a tradeoff between Sensitivity and Specificity. As you can see, on the Y-axis, you have the values of Sensitivity and on the X-axis, you have the value of (1 - Specificity). Notice that in the curve when Sensitivity is increasing, (1 - Specificity), And since, (1 - Specificity) is increasing, it simply means that Specificity is decreasing. 
+
+ 
+
+Area Under the Curve
+
+By determining the Area under the curve (AUC) of a ROC curve, you can determine how good the model is. If the ROC curve is more towards the upper-left corner of the graph, it means that the model is very good and if it is more towards the 45-degree diagonal, it means that the model is almost completely random. So, the larger the AUC, the better will be your model which is something you saw in the last segment as well.
+
+
+Questions:1/2
+ 
+ 
+ROC Curve - ref 10_q1roc.png
+
+Following is the ROC curve that you got.
+
+ 
+
+As you can see, when the 'True Positive Rate' is 0.8, the 'False Positive Rate' is about 0.24. What will be the value of specificity, then?
+
+0.8
+
+0.2
+
+0.76
+Feedback :
+
+Correct!
+
+Recall that the False Postive Rate is nothing but (1 - True Negative Rate) and the True Negative Rate is simply the specificity. Hence, 
+
+False Positive Rate = 1 - Specificity
+
+or, Specificity = 1 - False Postive Rate
+
+Here, the False Positive Rate is 0.24. Therefore, Specificity = (1 - 0.24) = 0.76.
+Correct
+
+0.24
+
+ Questions:2/2
+ 
+ 
+ROC Curve
+
+Which of the following ROC curve represents the best model?
+
+ 
+
+A
+
+B
+
+C
+Feedback :
+
+Yes! Recall that the area under the curve tells you how good a model is. If the curve is more towards the top-left corner, area is more, and hence, the model is better. As you can see, of the three curves, curve 'C' is most towards the top-left corner and thus, has the highest area resulting in it being the best model.
+Correct
+
+All are the same
+
+Coming Up
+
+Now that you've seen that there is clearly a trade-off between sensitivity and specificity, you'll learn how to decide the optimal threshold in the next segment.
+
+ 
+Additional Reading
+
+The following link provides a very interesting insight into the ROC curve.  https://towardsdatascience.com/receiver-operating-characteristic-curves-demystified-in-python-bd531a4364d0
