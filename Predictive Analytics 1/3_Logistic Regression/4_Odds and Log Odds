@@ -1,0 +1,201 @@
+Odds and Log Odds
+
+In the previous segment, you saw that by trying different values of β0 and β1, you can manipulate the shape of the sigmoid curve. At some combination of β0 and β1, the 'likelihood' (length of yellow bars) will be maximised.
+
+ 
+Logistic Regression - Optimisation Methods (Optional)
+
+The question is - how do you find the optimal values of β0 and β1 such that the likelihood function is maximized? The optimisation methods used to do that are an optional part of the course (maximum likelihood estimation, or MLE). You can study the optimisation techniques in detail in a separate optional session here. The following concepts are covered in the optional session: https://learn.upgrad.com/v/course/208/session/25292/segment/129967
+
+
+    Introduction to maximum likelihood estimation (MLE)
+    MLE for continuous (normal) and discrete probability distributions  (Bernoulli distribution and logistic regression)
+    Optimising MLE cost functions using gradient descent 
+    Alternate optimisation methods: Newton-Raphson method 
+
+You may study the optional session either along with this module or sometime later; this will not interrupt your flow of study for this module (there is no deadline for the optional session). There are no prerequisites for the optional session apart from the previous module.
+
+ 
+Logistic Regression in Python
+
+Let's now look at how logistic regression is implemented in python.
+
+ 
+
+In python, logistic regression can be implemented using libraries such as SKLearn and statsmodels, though looking at the coefficients and the model summary is easier using statsmodels. 
+
+ 
+
+You can find the optimum values of β0 and β1 using the python code given below. Please download and run the code and observe the values of the coefficients (you may also want to visualise them on the interactive app on the previous page, though note that β0 can only take integer values in the app, so you can use -13 or -14 approximately).
+
+ 
+
+Please note that you will studya detailed Python code for logistic regression in the next module. This Python code has been run so as to find the optimum values of β0 and β1 so that we can first proceed with the very important concept of Odds and Log Odds.
+
+ 
+Finding Optimum Betas using Python
+file_downloadDownload
+
+The summary of the model is given below:
+
+ 
+
+ 
+
+In the summary shown above, 'const' corresponds to β0 and Blood Sugar Level, i.e. 'x1' corresponds to β1. So, β0 = -13.5 and β1 = 0.06.
+
+ For a given value of x, the log odds are equal to -13.5 + 0.06x. Putting in the value of x here, i.e. 231.5, you get that the log odds = 0.39.
+ 
+ Questions:2/2
+ 
+ 
+Log Odds
+
+So, let’s say that the equation for log odds is:
+
+ln(P1−P)=−13.5+0.06x
+
+For x = 220, the log odds are equal to -0.3 and for x = 231.5, the log odds are equal to 0.39. For x = 243, the log odds are equal to:
+
+ 
+ Feedback : For a given value of x, the log odds are equal to -13.5 + 0.06x. Putting in the value of x here, i.e. 243, you get that the log odds = 1.08. However, you can actually directly guess the answer, without any calculations. The last time you increased x by 11.5, i.e. from 220 to 231.5, the log odds increased by 0.69, i.e. from -0.3 to 0.39. Since the relationship between x and log odds is linear, when you increase x by 11.5 again to make it 243, the log odds will increase by 0.69 again to get to 1.08
+ 
+Odds and Log Odds
+So far, you’ve seen this equation for logistic regression:
+
+ 
+
+P=11+e−(β0+β1x)
+
+ 
+
+Recall that this equation gives the relationship between P, the probability of diabetes and x, the patient’s blood sugar level.
+
+ 
+
+While the equation is correct, it is not very intuitive. In other words, the relationship between P and x is so complex that it is difficult to understand what kind of trend exists between the two. If you increase x by regular intervals of, say, 11.5, how will that affect the probability? Will it also increase by some regular interval? If not, what will happen?
+
+ 
+
+So, clearly, the relationship between P and x is too complex to see any apparent trends. However, if you convert the equation to a slightly different form, you can achieve a much more intuitive relationship. In the next video, let’s hear from Prof. Dinesh on how that can be done.
+
+ 
+
+[Note: By default, for this course, if the base of the logarithm is not specified, take it as e. So,  log(x)=loge(x).]
+
+ 
+
+So, now, instead of probability, you have odds and log odds. Clearly, the relationship between them and x is much more intuitive and easy to understand.
+
+ 
+
+For example, if you increase x by regular intervals of, say, 11.5, how will that affect the log odds?
+keyboard_arrow_leftkeyboard_arrow_rightQuestions:1/2
+ 
+ 
+Log Odds
+
+So, let’s say that the equation for the log odds is:
+
+ln(P1−P)=−13.5+0.06x
+
+For x = 220, the log odds are equal to -13.5+(0.06*220) = -0.3. For x = 231.5, log odds are equal to:
+Attempt 1 of 3
+
+Please note that, in the video above, at 3:05, instead of 2.94, it should have been 2.96
+
+ 
+
+So, the relationship between x and probability is not intuitive, while that between x and odds/log odds is. This has important implications. Suppose you are discussing sugar levels and the probability they correspond to. While talking about 4 patients with sugar levels of 180, 200, 220 and 240, you will not be able to intuitively understand the relation between their probabilities (10%, 28%, 58%, 83%). However, if you are talking about the log odds of these 4 patients, you know that their log odds are in a linearly increasing pattern (-2.18, -0.92, 0.34, 1.60) and that the odds are in a multiplicatively increasing pattern (0.11, 0.40, 1.40, 4.95, increasing by a factor of 3.55).
+
+ 
+
+Hence, many times, it makes more sense to present a logistic regression model’s results in terms of log odds or odds than to talk in terms of probability. This happens especially a lot in industries like finance, banking, etc.
+
+ 
+
+That's the end of this session on univariate logistic regression. You studied logistic regression, specifically, the sigmoid function, which has this equation:
+
+ 
+
+However, this is not the only form of equation for logistic regression. If you wish to learn about what the other forms are, you can go through them https://learn.upgrad.com/v/course/208/session/25289/segment/129948. For this course, you do not need to know about the other forms, as we will not be discussing them anywhere. 
+
+
+Other forms of the Logistic Regression Equation
+
+So, the sigmoid curve a.k.a. the logit equation, is given by this equation -
+
+ 
+
+P=11+e−(β0+β1x)
+
+ 
+
+It is a good choice for modeling probabilites, as its graph has this shape (extremely low values in the start, extremely high values in the end, intermediate ones in the middle):
+Sigmoid Curve
+
+However, it's not the only equation that has this form, there is also the probit form of logistic regression:
+
+ 
+
+P=ϕ−1(β0+β1x)
+
+ 
+
+Also, there is the cloglog form of logistic regression:
+
+ 
+
+P=ln(−ln(1−(β0+β1x)))
+
+ 
+
+Both of these are also equations that can be used in logistic regression, as their graphs also give the same trend.
+
+ 
+
+So, for logit, you would use -
+
+links = sm.families.linkslogm = sm.GLM(y_train,(sm.add_constant(X_train)), family=sm.families.Binomial(link=links.logit))logm.fit().summary()
+
+Also, for probit, the code is -
+
+links = sm.families.linkslogm = sm.GLM(y_train,(sm.add_constant(X_train)), family=sm.families.Binomial(link=links.probit))logm.fit().summary()
+
+Lastly, the code for cloglog equation are -
+
+links = sm.families.linkslogm = sm.GLM(y_train,(sm.add_constant(X_train)), family=sm.families.Binomial(link=links.cloglog))logm.fit().summary()
+
+
+
+Questions:1/1
+ 
+ 
+ 
+ 
+ 
+MCQ
+
+So, now, for a few values of x, you know the value of the odds.
+X	Odds
+220	0.74
+231.5	1.48
+243	2.96
+
+So, the odds for sugar level of 254.5 will be closest to which of the following values?
+
+5
+
+5.44
+
+5.92
+Feedback :
+
+As you can see in the table, and as has been said by the professor, every time the value of x increases by 11.5, the value of the odds approximately doubles. Hence, if you increase x from 243 to 254.5, the odds will approximately double, from 2.94 to approx. 5.88.
+Correct
+
+6.32
+
+
+
+ 
