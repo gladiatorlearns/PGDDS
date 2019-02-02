@@ -1,0 +1,60 @@
+Summary
+
+You first learnt what a binary classification is. Basically, it is a classification problem in which the target variable has only 2 possible values.
+
+ 
+
+You then went through the diabetes example in detail, wherein you tried to predict whether a person has diabetes or not based on that person’s blood sugar level.
+
+ 
+
+You saw why a simple boundary decision approach does not work very well for this example. It would be too risky to decide the class blatantly on the basis of the cutoff because, especially in the middle, the patients could belong to any class — diabetic or non-diabetic.
+Diabetes Data
+
+Hence, you learnt that it is better to talk in terms of probability. One such curve which can model the probability of diabetes very well is the sigmoid curve.
+Sigmoid Curve
+
+Its equation is given by the following expression:
+
+ 
+
+P(Diabetes)=11+e−(β0+β1x)
+
+ 
+
+Then, you learnt that in order to find the best-fit sigmoid curve, you need to vary β0 and β1 until you get the combination of beta values that maximises the likelihood. For the diabetes example, the likelihood is given by the expression:
+
+ 
+Likelihood for Sigmoid Curve
+
+Likelihood=(1−P1)(1−P2)(1−P3)(1−P4)(P5)(1−P6)(P7)(P8)(P9)(P10)
+
+ 
+
+It is the product of:
+
+ 
+
+[(1−Pi)(1−Pi) ------ for all non-diabetics --------] * [(Pi)(Pi) -------- for all diabetics -------]
+
+ 
+
+This process, where you vary the betas until you find the best fit curve for the probability of diabetes, is called logistic regression.
+
+ 
+
+After this, you saw a simpler way of interpreting the equation for logistic regression. You saw that the following linearised equation is much easier to interpret:
+
+ 
+
+ln(P1−P)=β0+β1x
+
+ 
+
+The left-hand side of this equation is what is called log odds. Basically, the odds of having diabetes (P/1-P), indicate how much likelier a person is to have diabetes than to not have it. For example, a person for whom the odds of having diabetes are equal to 3, is 3 times more likely to have diabetes than to not have it. In other words, P(Diabetes) = 3 * P(No diabetes).
+
+ 
+
+You also saw how odds vary with variation in x. Basically, with every linear increase in x, the increase in odds is multiplicative. For example, in the diabetes case, after every increase of 11.5 in the value of x, the odds are approximately doubled, i.e. they increase by a multiplicative factor of about 2.
+
+ 
