@@ -1,0 +1,171 @@
+Questions:1/4
+ 
+ 
+ 
+ 
+Logistic Regression in Python
+
+Which of these methods is used for fitting a logistic regression model using statsmodels?
+
+OLS()
+
+GLM()
+Feedback :
+
+Correct! The GLM() method is used to fit a logistic regression model using statsmodels.
+Correct
+
+RFE()
+
+LogisiticRegression()
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Confusion Matrix
+
+Given the following confusion matrix, calculate the accuracy of the model.
+Actual/Predicted	Nos	Yeses
+Nos	1000	50
+Yeses	250	1200
+
+96%
+
+88%
+Feedback :
+
+Correct! 
+
+Recall that the formula for accuracy is given as - 
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+Here, the number of correctly predicted labels is = 1000 + 1200 = 2200.
+
+And the total number of labels is = 1000 + 250 + 50 + 1200 = 2500
+
+Hence, you have - 
+
+Accuracy=22002500=0.88=88%
+
+Can you find the answer now?
+Correct
+
+83.33%
+
+60%
+
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Diabetic based on Threshold
+
+Suppose you are building a logistic regression model to determine whether a person has diabetes or not. Following are the values of predicted probabilities of 10 patients.
+Patient	Probability(Diabetes)
+A	0.82
+B	0.37
+C	0.04
+D	0.41
+E	0.55
+F	0.62
+G	0.20
+H	0.91
+I	0.74
+J	0.33
+
+ 
+
+Assuming you arbitrarily chose a cut-off of 0.4, wherein if the probability is greater than 0.4, you'd conclude that the patient has diabetes and if it is less than or equal to 0.4, you'd conclude that the patient doesn't have diabetes, how many of these patients would be classified as diabetic based on the table above?
+
+4
+
+5
+
+6
+Feedback :
+
+Yes! The cut-off is given to be 0.4. Hence, for a patient to be classified as diabetic, Probability(Diabetes) needs to be greater than 0.4. As you can see in the table above, there are 6 patients who have Probability(Diabetes) > 0.4. These are:
+
+A: 0.82, D: 0.41, E: 0.55, F: 0.62, H: 0.91, I: 0.74
+Correct
+
+7
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Log Odds
+
+Suppose you are working for a media services company like Netflix. They're launching a new show called 'Sacred Games' and you are building a logistic regression model which will predict whether a person will like it or not based on whether consumers have liked/disliked some previous shows. You have the data of five of the previous shows and you're just using the dummy variables for these five shows to build the model. If the variable is 1, it means that the consumer liked the show and if the variable is zero, it means that the consumer didn't like the show. The following table shows the values of the coefficients for these five shows that you got after building the logistic regression model.
+
+ 
+Variable Name	Coefficient Value
+TrueDetective_Liked	0.47
+ModernFamily_Liked	-0.45
+Mindhunter_Liked	0.39
+Friends_Liked	-0.23
+Narcos_Liked	0.55
+
+ 
+
+Now, you have the data of three consumers Reetesh, Kshitij, and Shruti for these 5 shows indicating whether or not they liked these shows. This is shown in the table below:
+
+ 
+Consumer	TrueDetective_Liked	ModernFamily_Liked	Mindhunter_Liked	Friends_Liked	Narcos_Liked
+Reetesh	1	0	0	0	1
+Kshitij	1	1	1	0	1
+Shruti	0	1	0	1	1
+
+ 
+
+Based on this data, which one of these three consumers is most likely to like to new show 'Sacred Games'?
+
+Reetesh
+Feedback :
+
+Correct!
+
+To find the person who is most likely to like the show, you can use log odds. Recall the log odds is given by:
+
+ln(P1−P)=β0+β1X1+β2X2+β3X3+...+βnXn
+
+Here, there are five variables for which the coefficients are given. Hence, the log odds become:
+
+ln(P1−P)=0.47X1−0.45X2+0.39X3−0.23X4+0.55X5
+
+As you can see, we have ignored the β0 since it will be the same for all the three consumers. Now, using the values of the 5 variables given, you get - 
+
+(Log Odds)Reetesh=(0.47×1)−(0.45×0)+(0.39×0)−(0.23×0)+(0.55×1)=1.02
+
+(Log Odds)Kshitij=(0.47×1)−(0.45×1)+(0.39×1)−(0.23×0)+(0.55×1)=0.96
+
+(Log Odds)Shruti=(0.47×0)−(0.45×1)+(0.39×0)−(0.23×1)+(0.55×1)=−0.13
+
+As you can clearly see, the log odds of Reetesh is the highest, hence, the odds of Reetesh liking the show is the highest and hence, he is most likely to like the new show, Sacred Games.
+Correct
+
+Kshitij
+
+Shruti
+Feedback :
+
+To find the person who is most likely to like the show, you can use log odds. Recall the log odds is given by:
+
+ln(P1−P)=β0+β1X1+β2X2+β3X3+...+βnXn
+
+Here, there are five variables for which the coefficients are given. Hence, the log odds become:
+
+ln(P1−P)=0.47X1−0.45X2+0.39X3−0.23X4+0.55X5
+
+Note: You can ignore the β0 since it will be the same for all the three consumers.
+
+And in the question, you have been provided with the values of all five variables for the three consumers given. Can you answer the question now?
