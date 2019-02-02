@@ -1,0 +1,452 @@
+troduction
+
+Welcome to the session on 'Multivariate Logistic Regression (Model Evaluation)'.
+
+ 
+In this session
+
+In this session, you will first learn about a few more metrics beyond accuracy that are essential to evaluate the performance of a logistic regression model. Then based on these metrics, you'll learn how to find out the optimal scenario where the model will perform the best. The metrics that you'll learn about are:
+
+    Accuracy
+
+    Sensitivity, specificity and the ROC curve
+
+    Precision and Recall
+
+Finally, once you've chosen the optimal scenario based on the evaluation metrics, you'll finally go on and make predictions on the test dataset and see how your model performs there as well.
+
+ 
+Prerequisites
+
+There are no prerequisites for this session, other than knowledge of the previous two sessions!
+
+ 
+Guidelines for in-session questions
+
+The in-video and in-content questions for this module are not graded. Note that graded questions are given on a separate page labelled 'Graded Questions' at the end of this session. The graded questions in this session will adhere to the following guidelines:
+
+ 
+
+ 	First Attempt Marks	Second Attempt Marks
+Questions with 2 Attempts	10	5
+Questions with 1 Attempt	10	0
+
+ 
+
+ 
+
+People you will hear from in this session
+
+Subject Matter Expert
+
+Mirza Rahim Baig
+Lead Business Analyst, Flipkart
+
+Flipkart Pvt Ltd. is an Indian electronic commerce company based in Bengaluru, India. As of 2017, Flipkart held a 39.5% market share of India's e-commerce industry.
+
+Metrics Beyond Accuracy: Sensitivity & Specificity
+
+In the previous session, you built a logistic regression model and arrived at the final set of features using RFE and manual feature elimination. You got an accuracy of about 80.475% for the model. But the question now is - Is accuracy enough to assess the goodness of the model? As you'll see, the answer is a big NO! 
+
+ 
+
+To understand why accuracy is often not the best metric, consider this business problem -
+
+ 
+
+"Let’s say that increasing ‘churn’ is the most serious issue in the telecom company, and the company desperately wants to retain customers. To do that, the marketing head decides to roll out discounts and offers to all customers who are likely to churn - ideally, not a single ‘churn’ customer should be missed. Hence, it is important that the model identifies almost all the ‘churn’ customers correctly. It is fine if it incorrectly predicts some of the ‘non-churn’ customers as ‘churn’ since in that case, the worst that will happen is that the company will offer discounts to those customers who would anyway stay."
+
+ 
+
+Let's take a look at the confusion matrix we got for our final model again - the actual labels are along the column while the predicted labels are along the rows (for e.g. 595 customers are actually 'churn' but predicted as 'not-churn'):
+
+ 
+Actual/Predicted	Not Churn	Churn
+Not Churn	3269	366
+Churn	595	692
+
+ 
+
+From the table above, you can see that there are 595 + 692  = 1287 actual ‘churn’ customers, so ideally the model should predict all of them as ‘churn’ (i.e. corresponding to the business problem above). But out of these 1287, the current model only predicts 692 as ‘churn’. Thus, only 692 out of 1287, or only about 53% of ‘churn’ customers, will be predicted by the model as ‘churn’. This is very risky - the company won’t be able to roll out offers to the rest 47% ‘churn’ customers and they could switch to a competitor!
+ 
+
+So although the accuracy is about 80%, the model only predicts 53% of churn cases correctly.
+
+ 
+
+In essence, what’s happening here is that you care more about one class (class='churn') than the other. This is a very common situation in classification problems - you almost always care more about one class than the other. On the other hand, the accuracy tells you model's performance on both classes combined - which is fine, but not the most important metric.
+
+ 
+
+Consider another example - suppose you're building a logistic regression model for heart patients. Based on certain features, you need to predict whether the patient has cancer or not. In this case, if you incorrectly predict many diseased patients as 'Not having cancer', it can be very risky. In such cases, it is better that instead of looking at the overall accuracy, you care about predicting the 1's (the diseased) correctly. 
+
+ 
+
+Similarly, if you're building a model to determine whether you should block (where blocking is a 1 and not blocking is a 0) a customer's transactions or not based on his past transaction behaviour in order to identify frauds, you'd care more about getting the 0's right. This is because you might not want to wrongly block a good customer's transactions as it might lead to a very bad customer experience. 
+
+ 
+
+Hence, it is very crucial that you consider the overall business problem you are trying to solve to decide the metric you want to maximise or minimise.
+
+ 
+
+This brings us to two of the most commonly used metrics to evaluate a classification model:
+
+    Sensitivity
+    Specificity
+
+ 
+
+Let's understand these metrics one by one. Sensitivity is defined as:
+
+ 
+
+Sensitivity=Number of actual Yeses correctly predictedTotal number of actual Yeses
+
+ 
+
+Here, 'yes' means 'churn' and 'no' means 'non-churn'. Let's look at the confusion matrix again.
+
+ 
+Actual/Predicted	Not Churn	Churn
+Not Churn	3269	366
+Churn	595	692
+
+ 
+
+The different elements in this matrix can be labelled as follows:
+
+ 
+Actual/Predicted	Not Churn	Churn
+Not Churn	True Negatives	False Positives
+Churn	False Negatives	True Positives
+
+ 
+
+    The first cell contains the actual 'Not Churns' being predicted as 'Not-Churn' and hence, is labelled 'True Negatives' (Negative implying that the class is '0', here, Not-Churn.).
+    The second cell contains the actual 'Not Churns' being predicted as 'Churn' and hence, is labelled 'False Positive' (because it is predicted as 'Churn' (Positive) but in actuality, it's not a Churn).
+    Similarly, the third cell contains the actual 'Churns' being predicted as 'Not Churn' which is why we call it 'False Negative'.
+    And finally, the fourth cell contains the actual 'Churns' being predicted as 'Churn' and so, it's labelled as 'True Positives'.
+
+ 
+
+Now, to find out the sensitivity, you first need the number of actual Yeses correctly predicted. This number can be found at in the last row, last column of the matrix (which is denoted as true positives). This number if 692. Now, you need the total number of actual Yeses. This number will be the sum of the numbers present in the last row, i.e. the actual number of churns (this will include the actual churns being wrongly identified as not-churns, and the actual churns being correctly identified as churns). Hence, you get (595 + 692) = 1287. 
+
+ 
+
+Now, when you replace these values in the sensitivity formula, you get:
+
+ 
+
+Sensitivity=6921287≈53.768%
+
+ 
+
+Thus, you can clearly see that although you had a high accuracy (~80.475%), your sensitivity turned out to be quite low (~53.768%)
+
+ 
+
+Now, similarly, specificity is defined as:
+
+ 
+
+Specificity=Number of actual Nos correctly predictedTotal number of actual Nos
+
+ 
+
+ 
+
+As you can now infer, this value will be given by the value True Negatives (3269) divided by the actual number of negatives, i.e. True Negatives + False Positives (3269 + 366 = 3635). Hence, by replacing these values in the formula, you get specificity as:
+
+ 
+
+Specificity=32693635≈89.931% 
+
+
+Questions:1/3
+ 
+ 
+ 
+False Positives
+
+What is the number of False Positives for the model given below?
+Actual/Predicted	Not Churn	Churn
+Not Churn	400	100
+Churn	50	150
+
+ 
+
+400
+
+100
+Feedback :
+
+Correct! The false positives are the values which were actually 'Not Churn' but have been predicted as Churn. Hence, from the matrix above, the answer would be 100.
+
+You can also have a look at the labelled confusion matrix you just learnt about: 
+Actual/Predicted	Not Churn	Churn
+Not Churn	True Negatives	False Positives
+Churn	False Negatives	True Positives
+Correct
+
+50
+
+150
+
+
+Questions:2/3
+ 
+ 
+ 
+Sensitivity
+
+Sensitivity is defined as the fraction of the number of correctly predicted positives and the total number of actual positives, i.e.
+
+Sensitivity=TP(TP+FN)
+
+What is the sensitivity of the following model?
+Actual/Predicted	Not Churn	Churn
+Not Churn	400	100
+Churn	50	150
+
+ 
+
+60%
+
+75%
+Feedback :
+
+Sensitivity is given as:
+
+Sensitivity=TP(TP+FN)
+
+Here, TP (True Positives) = 150
+
+and FN (False Negatives) = 50
+
+Hence, you get:
+
+Sensitivity=150(150+50)=75%
+Correct
+
+80%
+
+90%
+
+
+Evaluation Metrics
+
+Among the three metrics that you've learnt about, which one is the highest for the model below?
+Actual/Predicted	Not Churn	Churn
+Not Churn	400	100
+Churn	50	150
+
+Accuracy
+
+Sensitivity
+
+Specificity
+Feedback :
+
+The formula for the three metrics are given as:
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+Sensitivity=Number of actual Yeses correctly predictedTotal number of actual Yeses=TPTP+FN
+
+Specificity=Number of actual Nos correctly predictedTotal number of actual Nos=TNTN+FP
+
+Hence, you get:
+
+Accuracy=400+150400+100+50+150=78.57%
+
+Sensitivity=150150+50=75%
+
+Specificity=400400+100=80%
+
+As you can clearly see, Specificity (80%) is the highest among the three.
+
+
+Sensitivity & Specificity in Python
+
+In the last segment, you learnt the importance of having evaluation metrics other than accuracy. Thus, you were introduced to two new metrics - sensitivity and specificity. You learnt the theory of sensitivity and specificity and how to calculate them using a confusion matrix. Now, let's learn how to calculate these metrics in Python as well.
+
+As you saw in the code, you can access the different elements in the matrix using the following indexing - 
+
+ 
+
+TP = confusion[1,1] # true positive 
+TN = confusion[0,0] # true negatives
+FP = confusion[0,1] # false positives
+FN = confusion[1,0] # false negatives
+
+ 
+
+And now, let's rewrite the formulas of sensitivity and specificity using the labels of the confusion matrix.
+
+ 
+
+Sensitivity=True Positives/(True Positives+False Negatives)
+
+ 
+
+Specificity=True Negatives/(True Negatives+False Positives)
+
+
+Questions:1/4
+ 
+ 
+ 
+ 
+False Negatives
+
+What is the number of False Negatives for the model given below?
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	40
+Churn	30	50
+
+ 
+
+80
+
+40
+
+30
+Feedback :
+
+The false negatives are the values which were actually 'Churn' but have been predicted as 'Not Churn'. Recall the labelling for the confusion matrix:
+Actual/Predicted	Not Churn	Churn
+Not Churn	True Negatives	False Positives
+Churn	False Negatives	True Positives
+
+ 
+
+Hence, you can see from the matrix above that the element in the 2nd row, 1st column gives you the value of 'False Negatives'. From the model given in the question, you can see that this number is equal to 30.
+
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Specificity
+
+Specificity is defined as the fraction of the number of correctly predicted negatives and the total number of actual negatives, i.e.
+
+Specificity=TN(TN+FP)
+
+What is the approximate specificity of the following model?
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	40
+Churn	30	50
+
+60%
+
+67%
+Feedback :
+
+Specificity is given as:
+
+Specificity=TN(TN+FP)
+
+Here, TN (True Negatives) = 80
+
+and FP (False Positives) = 40
+
+Hence, you get:
+
+Specificity=80(80+40)=66.67%≈67%
+Correct
+
+75%
+
+80%
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Evaluation Metrics
+
+Which among accuracy, sensitivity, and specificity is the highest for the model below?
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	40
+Churn	30	50
+
+Accuracy
+
+Sensitivity
+
+Specificity
+Feedback :
+
+The formula for the three metrics are given as:
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+Sensitivity=Number of actual Yeses correctly predictedTotal number of actual Yeses=TPTP+FN
+
+Specificity=Number of actual Nos correctly predictedTotal number of actual Nos=TNTN+FP
+
+Hence, you get:
+
+Accuracy=80+5080+40+30+50=65%
+
+Sensitivity=5030+50=62.5%
+
+Specificity=8080+40≈67%
+
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Other Metrics
+
+In the code, you saw Rahim evaluate some other metrics as well. These were:
+
+ 
+
+False Positive Rate=FPTN+FP
+
+Positive Predictive Value=TPTP+FP
+
+Negative Predictive Value=TNTN+FN
+
+ 
+
+    As you can see, the 'False Positive Rate' is basically (1 - Specificity). Check the formula and the values in the code to verify.
+    The positive predictive value is the number of positives correctly predicted by the total number of positives predicted. This is also known as 'Precision' which you'll learn more about soon.
+    Similarly, the negative predictive value is the number of negatives correctly predicted by the total number of negatives predicted. There's no particular term for this as such.
+
+Calculate the given three metrics for the model below and identify which one is the largest among them.
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	40
+Churn	30	50
+
+False Positive Rate
+
+Positive Predictive Value
+
+Negative Predictive Value
+Feedback :
+
+Correct! The values that you'll get are:
+
+False Positive Rate=FPTN+FP=4080+40≈33%
+
+You could have also used the specificity value you calculated in the last question (~67%) and simply calculated this as 1-Specificity = 1 - 0.67 = 33%
+
+Positive Predictive Value=TPTP+FP=5050+40=55.55%≈56%
+
+Negative Predictive Value=TNTN+FN=8080+30≈72.72%≈73%
+
+As you can clearly see, the Negative Predictive Value is the highest of the three.
+As you can clearly see, Specificity (~67%) is the highest among the three.
+
+
+
