@@ -55,3 +55,837 @@ Now, as you can clearly see, the first 5 customer IDs are exactly the same for e
 Coming Up
 
 In the next segment, you will start with reading and inspecting the dataframes and then move on to preparing that data for model building.
+
+Data Cleaning and Preparation - I
+
+Before you jump into the actual model building, you first need to clean and prepare your data. As you might have seen in the last segment, all the useful information is present in three dataframes with ‘Customer ID’ being the common column. So as the first step, you need to merge these three data files so that you have all the useful data combined into a single master dataframe.
+
+
+So the process of dummy variable creation was quite familiar, except this time, you manually dropped one of the columns for many dummy variables. For example, for the column ‘MultipleLines’, you dropped the level ‘MultipleLines_No phone service’ manually instead of simply using ‘drop_first = True’ which would’ve dropped the first level present in the ‘MultipleLines’ column. The reason we did this is that if you check the variables ‘MultipleLines’ using the following command, you can see that it has the following three levels:
+ 
+Dummy Variable Levels
+
+Now, out of these levels, it is best that you drop ‘No phone service’ since it isn’t of any use because it is anyway being indicated by the variable ‘PhoneService’ already present in the dataframe.
+
+ 
+
+To simply put it, the variable ‘PhoneService’ already tells you whether the phone services are availed or not by a particular customer. In fact, if you check the value counts of the variable 'PhoneService', following is the output that you get:
+Levels of the Variable 'PhoneService'
+
+You can see that the level 'No' appears 682 times which is exactly equal to the count of the level 'No phone service' in 'MultipleLines'.
+
+ 
+
+You can see that the dummy variable for this level, i.e. 'MultipleLines_No phone service' is clearly redundant since it doesn't contain any extra information and hence, to drop it is the best option at this point. You can verify it similarly for all the other categorical variables for which one of the levels was manually dropped.
+
+Questions:1/2
+ 
+ 
+Level counts
+
+In the text above, you saw that for the variable ‘MultipleLines’ the value counts of the levels ‘Yes’, ‘No’, and ‘No phone service’ are 3390, 2971, and 682 respectively. When you run the same command for the column ‘OnlineBackup’, what will the value count for its level ‘No internet service’ turn out to be?
+
+
+
+
+3088
+
+2429
+Feedback :
+
+Run the following command on you Jupyter notebook:
+
+telecom['OnlineBackup'].astype('category').value_counts()
+Incorrect
+
+2019
+
+1526
+Feedback :
+
+When you run the command, 
+
+telecom['OnlineBackup'].astype('category').value_counts()
+
+you’ll get the following output:
+
+No                             2785
+Yes                            2732
+No internet service    1526
+
+ 
+
+Levels of Dummy Variables
+
+If you check the value counts of the levels ‘OnlineBackup’, ‘OnlineSecurity’, ‘DeviceProtection’, and all the others for which one of the levels was dropped manually, you can see that the count of the level ‘No internet service’ is the same for all, i.e. 1526. Can you explain briefly why this has happened?
+
+Suggested Answer
+
+This happens because the level ‘No internet service’ just tells you whether a user has internet service or not. Now because the number of users not having an internet service is the same, the count of this level in all of these variables will be the same. You can also check the value counts of the variable ‘InternetService’ and you’ll see that the output you’ll get is:
+
+
+
+
+Fiber Optic    3096
+DSL                   2421
+No                      1526
+
+Coincidence? No! 
+This information is already contained in the variable ‘InternetService’ and hence, the count will be the same in all the variables with the level ‘No internet service’. This is actually also the reason we chose to drop this particular level.
+
+
+Data Cleaning and Preparation - II
+
+You’ve merged your dataframes and handled the categorical variables present in them. But you still need to check the data for any outliers or missing values and treat them accordingly. Let's get this done as well.
+
+You saw that one of the columns, i.e. 'TotalCharges' had 11 missing values. Since this isn't a big number compared to the number of rows present in a dataset, we decided to drop them since we won't lose much data.
+
+ 
+
+Now that you have completely prepared your data, you can start with the preprocessing steps. As you might remember from the previous module, you first need to split the data into train and test sets and then rescale the features. So let’s start with that.
+
+Recall that, for continuous variables, Rahim scaled the variables to standardise the three continuous variables — tenure, monthly charges and total charges. Recall that scaling basically reduces the values in a column to within a certain range — in this case, we have converted the values to the Z-scores.
+
+ 
+
+For example, let’s say that, for a particular customer, tenure = 72. After standardising, the value of scaled tenure becomes:
+
+
+72−32.424.6=1.61
+
+ 
+
+because for the variable tenure, mean(μ) = 32.4 and standard deviation(σ) = 24.6.
+
+ 
+
+The variables had these ranges before standardisation:
+
+    Tenure = 1 to 72
+    Monthly charges = 18.25 to 118.80
+    Total charges = 18.8 to 8685
+
+ 
+
+After standardisation, the ranges of the variables changed to:
+
+    Tenure = -1.28 to +1.61
+    Monthly charges = -1.55 to +1.79
+    Total charges = -0.99 to 2.83
+
+Clearly, none of the variables will have a disproportionate effect on the model’s results now.
+
+ 
+
+Churn Rate and Class Imbalance
+
+Another thing to note here was the Churn Rate which Rahim talked about at the end of the video. You saw that the data has almost 27% churn rate. Checking the churn rate is important since you usually want your data to have a balance between the 0s and 1s (in this case churn and not-churn). 
+
+ 
+
+The reason for having a balance is simple. Let’s do a simple thought experiment - if you had a data with, say, 95% not-churn (0) and just 5% churn (1), then even if you predict everything as 0, you would still get a model which is 95% accurate (though it is, of course, a bad model). This problem is called class-imbalance and you'll learn to solve such cases later.
+
+ 
+
+Fortunately, in this case, we have about 27% churn rate. This is neither exactly 'balanced' (which a 50-50 ratio would be called) nor heavily imbalanced. So we'll not have to do any special treatment for this dataset.
+
+Questions:1/2
+ 
+ 
+Standardising Variables
+
+In a dataset with mean 50 and standard deviation 12, what will be the value of a variable with an initial value of 20 after you standardise it?
+
+1.9
+
+-1.9
+
+2.5
+
+-2.5
+Feedback :
+
+The formula for standardising a value in a dataset is given by:
+(X−μ)σ
+
+Hence, you get:
+
+20−5012=−2.5
+
+Questions:2/2
+ 
+ 
+Standardising the train and test sets
+
+As Rahim mentioned in the lecture, you use 'fit_transform' on the train set but just 'transform' on the test set. Recall you had learnt this in linear regression as well. Why do you think this is done?
+! Note: Once submitted, answer is not editable.
+
+Suggested Answer
+
+Suggested Answer
+
+The 'fit_transform'  command first fits the data to have a mean of 0 and a standard deviation of 1, i.e. it scales all the variables using:
+
+Xscaled=X−μσ
+
+Now, once this is done, all the variables are transformed using this formula. Now, when you go ahead to the test set, you want the variables to not learn anything new. You want to use the old centralisation that you had when you used fit on the train dataset. And this is why you don't apply 'fit' on the test data, just the 'transform'.
+ 
+You can also refer to this StackOverflow answer. https://datascience.stackexchange.com/questions/12321/difference-between-fit-and-fit-transform-in-scikit-learn-models
+
+Building your First Model
+
+Let’s now proceed to model building. Recall that the first step in model building is to check the correlations between features to get an idea about how the different independent variables are correlated. In general, the process of feature selection is almost exactly analogous to linear regression.
+
+Looking at the correlations certainly did help, as you identified a lot of features beforehand which wouldn’t have been useful for model building. Recall that Rahim dropped the following features after looking at the correlations from the heatmap:
+
+    MultipleLines_No
+    OnlineSecurity_No
+    OnlineBackup_No
+    DeviceProtection_No
+    TechSupport_No
+    StreamingTV_No
+    StreamingMovies_No
+
+ 
+
+If you look at the correlations between these dummy variables with their complimentary dummy variables, i.e. ‘MultipleLines_No’ with ‘MultipleLines_Yes’ or ‘OnlineSecurity_No’ with ‘OnlineSecurity_Yes’, you’ll find out they’re highly correlated. Have a look at the heat map below:
+
+Heatmap for the Complimentary Dummy Variables
+
+If you check the highlighted portion, you’ll see that there are high correlations among the pairs of dummy variables which were created for the same column. For example, ‘StreamingTV_No’ has a correlation of -0.64 with ‘StreamingTV_Yes’. So it is better than we drop one of these variables from each pair as they won’t add much value to the model. The choice of which of these pair of variables you desire to drop is completely up to you; we’ve chosen to drop all the 'Nos' because the 'Yeses' are generally more interpretable and easy-to-work-with variables.
+
+
+Questions:1/2
+ 
+ 
+Correlation Table
+
+Which of the following command can be used to view the correlation table for the dataframe telecom?
+
+telecom.corr()
+Feedback :
+
+Correct!
+
+telecom.corr() will give you the correlation table for the dataframe telecom.
+Correct
+
+sns.heatmap(telecom.corr(), annot = True)
+Feedback :
+
+The heatmap function just cascades a heatmap on top of the correlation table. To just view the table, you don’t need to use the heatmap command. The answer is actually just a part of this command.
+Incorrect
+
+sns.pairplot(telecom)
+
+All of the above
+
+Questions:2/2
+ 
+ 
+Checking Correlations
+
+Take a look at the heatmap provided above. Which of the variables have the highest correlation between them?
+
+StreamingTV_Yes and StreamingMovies_Yes
+
+StreamingTV_No and StreamingMovies_No
+
+MultipleLines_No and MultipleLines_Yes
+Feedback :
+
+The following are the correlation values between the four pair of variables given in the options:
+
+    0.53
+    0.54
+    -0.82
+    -0.64
+
+As you can clearly see, the third pair, i.e. MultipleLines_No and MultipleLines_yes is the most correlated with a value of -0.82.
+
+So you finally built your first multivariate logistic regression model using all the features present in the dataset. This is the summary output for different variables that you got:
+Summary Statistics for Logistic Regression Model
+
+In this table, our key focus area is just the different coefficients and their respective p-values. As you can see, there are many variables whose p-values are high, implying that that variable is statistically insignificant. So we need to eliminate some of the variables in order to build a better model.
+
+ 
+
+We'll first eliminate a few features using Recursive Feature Elimination (RFE), and once we have reached a small set of variables to work with, we can then use manual feature elimination (i.e. manually eliminating features based on observing the p-values and VIFs).
+
+Questions:1/3
+ 
+ 
+ 
+Significant Variables
+
+Which of the following variables are insignificant as of now based on the summary statistics above? (More than one option may be correct.)
+
+Note: Use p-value to determine the insignificant variables.
+
+PhoneService
+Feedback :
+
+Correct! For a variable to be insignificant, the p-value should be greater than 0.05. For this variable, the p-value is 0.228 which is clearly greater than 0.05.
+Correct
+
+MultipleLines_Yes
+
+TechSupport_Yes
+Feedback :
+
+Correct! For a variable to be insignificant, the p-value should be greater than 0.05. For this variable, the p-value is 0.888 which is clearly greater than 0.05.
+Correct
+
+TotalCharges
+
+
+Questions:2/3
+ 
+ 
+ 
+Negatively Correlated Variables
+
+Which of the following variables are negatively correlated with the target variable based on the summary statistics given above? (More than one option may be correct.)
+
+tenure
+Feedback :
+
+Correct! Recall to check whether a variable is positively or negatively correlated with the target variable, you simply need to see the sign on its coefficient. The coefficient for 'tenure' is -1.5172 which is indeed negative and hence, there is a negative correlation between the target variable and tenure.
+Correct
+
+TotalCharges
+
+MonthlyCharges
+Feedback :
+
+Correct! Recall to check whether a variable is positively or negatively correlated with the target variable, you simply need to see the sign on its coefficient. The coefficient for 'MonthlyCharges' is -2.1806 which is indeed negative and hence, there is a negative correlation between the target variable and MonthlyCharges.
+Correct
+
+TechSupport_Yes
+Feedback :
+
+Correct! Recall to check whether a variable is positively or negatively correlated with the target variable, you simply need to see the sign on its coefficient. The coefficient for 'TechSupport_Yes' is -0.0305 which is indeed negative and hence, there is a negative correlation between the target variable and TechSupport_Yes.
+
+Questions:3/3
+ 
+ 
+ 
+p-values
+
+After learning the coefficients of each variable, the model also produces a ‘p-value’ of each coefficient. Fill in the blanks so that the statement is correct: 
+
+“The null hypothesis is that the coefficient is __. If the p-value is small, you can say that the coefficient is significant and hence the null hypothesis ____.”
+
+zero, can be rejected
+Feedback :
+
+Yes! Recall that the null hypothesis for any beta was:
+
+βi=0
+
+And if the p-value is small, you can say that the coefficient is significant, and hence, you can reject the null hypothesis that βi=0
+Correct
+
+not zero, can be rejected
+
+zero, cannot be rejected
+
+not zero, cannot be rejected
+
+
+Feature Elimination using RFE
+
+You built your first model in the previous segment. Based on the summary statistics, you inferred that many of the variables might be insignificant and hence, you need to do some feature elimination. Since the number of features is huge, let's first start off with an automated feature selection technique (RFE) and then move to manual feature elimination (using p-values and VIFs) - this is exactly the same process that you did in linear regression.
+
+ 
+
+So let's start off with the automatic feature selection technique - RFE.
+
+
+Let's summarise the steps you just performed one by one. First, you imported the logistic regression library from sklearn and created a logistic regression object using:
+
+ 
+
+from sklearn.linear_model import LogisticRegression
+logreg = LogisticRegression()
+
+ 
+
+Then you run an RFE on the dataset using the same command as you did in linear regression. In this case, we choose to select 15 features first (15 is, of course, an arbitrary number).
+
+ 
+
+from sklearn.feature_selection import RFE
+rfe = RFE(logreg, 15)             # running RFE with 15 variables as output
+rfe = rfe.fit(X_train, y_train)
+
+RFE selected 15 features for you and following is the output you got:
+RFE Output
+
+You can see that RFE has eliminated certain features such as 'MonthlyCharges', 'Partner', 'Dependents', etc.
+
+ 
+
+We decided to go ahead with this model but since we are also interested in the statistics, we take the columns selected by RFE and use them to build a model using statsmodels using:
+
+ 
+
+X_train_sm = sm.add_constant(X_train[col])
+logm2 = sm.GLM(y_train,X_train_sm, family = sm.families.Binomial())
+res = logm2.fit()
+
+Here, you use the GLM (Generalized Linear Models) method of the library statsmodels. 'Binomial()' in the 'family' argument tells statsmodels that it needs to fit a logit curve to a binomial data (i.e. in which the target will have just two classes, here 'Churn' and 'Non-Churn').
+
+ 
+
+Now, recall that the logistic regression curve gives you the probabilities of churning and not churning. You can get these probabilities by simply using the 'predict' function as shown in the notebook.
+
+ 
+
+Since the logistic curve gives you just the probabilities and not the actual classification of 'Churn' and 'Non-Churn', you need to find a threshold probability to classify customers as 'churn' and 'non-churn'. Here, we choose 0.5 as an arbitrary cutoff wherein if the probability of a particular customer churning is less than 0.5, you'd classify it as 'Non-Churn' and if it's greater than 0.5, you'd classify it as 'Churn'. The choice of 0.5 is completely arbitrary at this stage and you'll learn how to find the optimal cutoff in 'Model Evaluation', but for now, we'll move forward with 0.5 as the cutoff.
+
+Questions:1/3
+ 
+ 
+ 
+Threshold Value
+
+You saw that Rahim chose a cut-off of 0.5. What can be said about this threshold?
+
+It was arbitrarily chosen by us, i.e. there’s nothing special about 0.5. We could have chosen something else as well.
+Feedback :
+
+Correct! The threshold of 0.5 chosen as of now is completely arbitrary. You will learn how to choose an optimal threshold during model evaluation.
+Correct
+
+Learnt by the model during training.
+Feedback :
+
+The model didn't learn the threshold during training. It only learnt the beta coefficients, the corresponding p-values.
+Incorrect
+
+Learnt by the model while making predictions.
+Questions:2/3
+ 
+ 
+ 
+Significance based on RFE
+
+Based on the RFE output shown above, which of the variables is least significant?
+
+OnlineBackup_Yes
+
+Partner
+
+gender_Male
+Feedback :
+
+Correct! Recall that RFE assigns ranks to the different variables based on their significance. While 1 means that the variable should be selected, a rank > 1 tells you that the variable is insignificant. The ranking given to 'gender_Male' by RFE is 9 which is the highest and hence, it is the most insignificant variable present in the RFE output.
+Correct
+
+PhoneService
+Questions:3/3
+ 
+ 
+ 
+Churn based on Threshold
+
+Suppose the following table shows the predicted values for the probabilities for 'Churn'. Assuming you chose an arbitrary cut-off of 0.5 wherein a probability of greater than 0.5 means the customer would churn and a probability of less than or equal 0.5 means the customer wouldn't churn, which of these customers do you think will churn? (More than one option may be correct.)
+Customer	Probability(Churn)
+A	0.45
+B	0.67
+C	0.98
+D	0.49
+E	0.03
+
+A
+
+B
+Feedback :
+
+The threshold mentioned in the question for churning is given to be 0.5 which means that the customers with a churn probability > 0.5 will churn and those with a churn probability of < 0.5.  For customer B, the churn probability is 0.67 which is greater than 0.5 and hence, customer B will churn based on the decided threshold.
+Correct
+
+C
+Feedback :
+
+The threshold mentioned in the question for churning is given to be 0.5 which means that the customers with a churn probability > 0.5 will churn and those with a churn probability of < 0.5.  For customer B, the churn probability is 0.98 which is greater than 0.5 and hence, customer C will churn based on the decided threshold.
+Correct
+
+D
+
+E
+ 
+
+You chose a cutoff of 0.5 in order to classify the customers into 'Churn' and 'Non-Churn'. Now, since you're classifying the customers into two classes, you'll obviously have some errors. The classes of errors that would be there are:
+
+    'Churn' customers being (incorrectly) classified as 'Non-Churn'
+    'Non-Churn' customers being (incorrectly) classified as 'Churn'
+
+ 
+
+To capture these errors, and to evaluate how well the model is, you'll use something known as the 'Confusion Matrix'. A typical confusion matrix would look like the following:
+Confusion Matrix
+
+This table shows a comparison of the predicted and actual labels. The actual labels are along the vertical axis, while the predicted labels are along the horizontal axis. Thus, the second row and first column (263) is the number of customers who have actually ‘churned’ but the model has predicted them as non-churn.
+
+ 
+
+Similarly, the cell at second row, the second column (298) is the number of customers who are actually ‘churn’ and also predicted as ‘churn’.
+
+ 
+
+Note that this is an example table and not what you'll get in Python for the model you've built so far. It is just used an example to illustrate the concept.
+
+ 
+
+Now, the simplest model evaluation metric for classification models is accuracy - it is the percentage of correctly predicted labels. So what would the correctly predicted labels be? They would be:
+
+    'Churn' customers being actually identified as churn
+    'Non-churn' customers being actually identified as non-churn.
+
+As you can see from the table above, the correctly predicted labels are contained in the first row and first column, and the last row and last column as can be seen highlighted in the table below:
+Correctly Predicted Labels
+
+Now, accuracy is defined as:
+
+ 
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+ 
+
+Hence, using the table, we can say that the accuracy for this table would be:
+
+ 
+
+Accuracy=1406+2981406+143+263+298≈80.75
+
+ 
+
+Now that you know about confusion matrix and accuracy, let's see how good is your model built so far based on the accuracy. But first, answer a couple of questions.
+
+Questions:1/2
+ 
+ 
+Confusion Matrix and Accuracy
+
+Given the confusion matrix below, can you tell how many 'Churns' were correctly identified, i.e. if the person has actually churned, it is predicted as a churn?
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	30
+Churn	20	70
+
+ 
+
+80
+
+30
+
+20
+
+70
+Feedback :
+
+Yes! Look at the table carefully. The value in the last row and last column will give you this number. You can see that there are 70 people who had actually churned and were also 
+
+Questions:2/2
+ 
+ 
+Calculating Accuracy
+
+From the confusion matrix you saw in the last question, compute the accuracy of the model.
+Actual/Predicted	Not Churn	Churn
+Not Churn	80	30
+Churn	20	70
+
+70%
+
+75%
+Feedback :
+
+Correct! The accuracy of a model is given by:
+
+Accuracy=Correctly precited labelsTotal Number of Labels
+
+Here, the number of correctly predicted labels are present in the first row, first column and the last row, last column.
+
+Hence, you get - 
+
+Correctly predicted labels = 80 + 70 = 150
+
+And the total number of labels is simply the sum of all the numbers present in the confusion matrix. Therefore, 
+
+Total number of labels = 80 + 30 + 20 + 70 = 200
+
+Hence, you get -
+
+Accuracy=150200=75%
+Correct
+
+80%
+
+90%
+
+
+So using the confusion matrix, you got an accuracy of about 80.8% which seems to be a good number to begin with. The steps you need to calculate accuracy are:
+
+    Create the confusion matrix
+    Calculate the accuracy by applying the 'accuracy_score' function to the above matrix
+
+The code used to do this was:
+
+ 
+
+# Create confusion matrix
+confusion = metrics.confusion_matrix(y_train_pred_final.Churn, y_train_pred_final.predicted)
+
+# Calculate accuracy
+print(metrics.accuracy_score(y_train_pred_final.Churn, y_train_pred_final.predicted))
+
+
+Questions:1/3
+ 
+ 
+ 
+Confusion Matrix
+
+Suppose you built a logistic regression model to predict whether a patient has lung cancer or not and you get the following confusion matrix as the output.
+Actual/Predicted	No	Yes
+No	400	100
+Yes	50	150
+
+How many of the patients were wrongly identified as a 'Yes'?
+
+400
+
+100
+Feedback :
+
+Look at the table carefully. The value in the first row and the second column will tell you this number. Hence, you get 100 patients which actually didn't have lung cancer but were identified as having lung cancer.
+Correct
+
+50
+
+150
+
+
+Questions:2/3
+ 
+ 
+ 
+Confusion Matrix
+
+Take a look at the table again.
+Actual/Predicted	No	Yes
+No	400	100
+Yes	50	150
+
+How many of these patients were correctly labelled, i.e. if the patient had lung cancer it was actually predicted as a 'Yes' and if they didn't have lung cancer, it was actually predicted as a 'No'?
+
+150
+
+400
+
+500
+
+550
+Feedback :
+
+The sum of values of the numbers in the first row, first column and the last row, last column will give you the answer.
+Actual/Predicted	No	Yes
+No	400	100
+Yes	50	150
+
+ 
+
+From the table above, the value in the first row, first column is 400, and the value in the last row, last column is 150. Hence, you get the total correctly predicted labels as 400 + 150 = 550
+
+
+Questions:3/3
+ 
+ 
+ 
+Accuracy Calculation
+
+From the table you used for the last two questions, what will be the accuracy of the model?
+Actual/Predicted	No	Yes
+No	400	100
+Yes	50	150
+
+57.14%
+
+64.29%
+
+71.43%
+
+78.57%
+Feedback :
+
+The accuracy of a model is given by:
+
+Accuracy=Correctly precited labelsTotal Number of Labels
+
+The number of correctly predicted labels as you found out from the last question is equal to 550. The total number of labels is (400 + 100 + 50 + 150) = 700. Hence, the accuracy becomes:
+
+Accuracy=550700≈78.57%
+
+
+
+Manual Feature Elimination
+
+Recall that you had used RFE to select 15 features. But as you saw in the pairwise correlations, there are high values of correlations present between the 15 features, i.e. there is still some multicollinearity among the features. So you definitely need to check the VIFs as well to further eliminate the redundant variables. Recall that VIF  calculates how well one independent variable is explained by all the other independent variables combined. And its formula is given as:
+
+ 
+
+VIFi=11−Ri2
+
+ 
+
+where 'i' refers to the ith variable which is being represented as a combination of rest of the independent variables.
+
+ 
+
+Let's see Rahim talk about eliminating the insignificant variables based on the VIFs, and the p-values.
+
+
+To summarise, you basically performed an iterative manual feature elimination using the VIFs and p-values repeatedly. You also kept on checking the value of accuracy to make sure that dropping a particular feature doesn't affect the accuracy much. 
+
+ 
+
+This was the set of 15 features that RFE had selected which we began with:
+Initial Set of Features (after RFE)
+
+And this is the final set of features which you arrived at after eliminating features manually:
+Final Set of Features after Manual Feature Elimination
+
+As you can see, we had dropped the features 'PhoneService' and 'TotalCharges' as a part of manual feature elimination.
+
+ 
+Interpreting the Model
+
+Refer to the above image, i.e. the final summary statistics after completing manual feature elimination. Now suppose you are a data analyst working for the telecom company, and you want to compare two  customers, customer A and customer B. For both of them, the value of the variables tenure, PhoneService, Contract_One year, etc. are all the same, except for the variable PaperlessBilling, which is equal to 1 for customer A and 0 for customer B.
+
+ 
+
+In other words, customer A and customer B have the exact same behaviour as far as these variables are concerned, except that customer A opts for paperless billing, and customer B does not. Now use this information to answer the following questions.
+
+
+Questions:1/3
+ 
+ 
+ 
+Multivariate Logistic Regression (Variable Selection)
+
+Based on the above information, what can you say about the log odds of these two customers? 
+
+PS: Recall the log odds for univariate logistic regression was given as:
+
+ln(P1−P)=β0+β1X
+
+Hence, for multivariate logistic regression, it would simply become:
+
+ln(P1−P)=β0+β1X1+β2X2+β3X3+...+βnXn
+
+log odds (customer A) < log odds (customer B)
+
+log odds (customer A) = log odds (customer B)
+Feedback :
+
+Recall the log odds are just the linear term present in the logistic regression equation. Hence, here we have 13 variables, so the log odds will be given by:
+
+ln(P1−P)=β0+β1X1+β2X2+β3X3+...+β13X13
+
+Now, for the two customers, all beta and all x values are the same, except for X2 (the variable for paperless billing), which is equal to 1 for customer A and 0 for customer B. Now, can you tell which one of them has higher log odds?
+Incorrect
+
+log odds (customer A) > log odds (customer B)
+Feedback :
+
+Recall the log odds are just the linear term present in the logistic regression equation. Hence, here we have 13 variables, so the log odds will be given by:
+
+ln(P1−P)=β0+β1X1+β2X2+β3X3+...+β13X13
+
+Now, for the two customers, all beta and all x values are the same, except for X2 (the variable for paperless billing), which is equal to 1 for customer A and 0 for customer B. 
+
+Hence, the value will exceed by the coefficient of 'PaperlessBilling' which is 0.3367.
+
+Basically, for customer A, this term would be = 0.3367 * 1
+
+And for customer B, this term would be = 0.3367 * 0
+
+Questions:2/3
+ 
+ 
+ 
+Multivariate Logistic Regression (Variable Selection)
+
+Now, what can you say about the odds of churn for these two customers?
+
+For customer A, the odds of churning are lower than for customer B
+
+For customer A, the odds of churning are equal to those for customer B
+
+For customer A, the odds of churning are higher than for customer B
+Feedback :
+
+Recall that in the last question, you were told that log odds for customer A are higher than those for customer B. So, the odds of churning for customer A are also higher than the odds of churning for customer B. This is because, as the number increases, its log increases and vice versa.
+Correct
+
+Not enough information
+
+
+Questions:3/3
+ 
+ 
+ 
+Multivariate Logistic Regression - Log Odds
+
+Now, suppose two customers, customer C and customer D, are such that their behaviour is exactly the same, except for the fact that customer C has OnlineSecurity, while customer D does not. What can you say about the odds of churn for these two customers?
+
+For customer C, the odds of churning are lower than for customer D
+Feedback :
+
+Recall that the log odds for customer C will differ from those for customer D, by a margin of βOnlineSecurity. Now since in this case, this coefficient is negative (-0.3739), this means that the log odds of customer C will be 0.3739 less than that of customer D. Since the log odds of customer C are lower, naturally, the actual odds for C would also be lower.
+Correct
+
+For customer C, the odds of churning are equal to those for customer D
+
+For customer C, the odds of churning are higher than for customer D
+
+Not enough information
+
+
+Summary
+
+In this session, you learnt how to build a multivariate logistic regression model in Python. The equation for multivariate logistic regression is basically just an extension of the univariate equation:
+
+ 
+
+P=11+e−(β0+β1X1+β2X2+β3X3+...+βnXn)
+
+ 
+
+The example used for building the multivariate model in Python was the telecom churn example. Basically, you learnt how Python can be used to decide the probability of a customer churning based on the value of 21 predictor variables such as monthly charges, paperless billing, etc.
+
+ 
+
+First, the data was imported, which was present in 3 separate csv files. After creating a merged master data set, one that contains all 21 variables, data preparation was done, which involved the following steps:
+
+    Missing value imputation
+
+    Outlier treatment
+
+    Dummy variable creation for categorical variables
+
+    Test-train split of the data
+
+    Standardisation of the scales of continuous variables
+
+ 
+
+After all of this was done, a logistic regression model was built in Python using the function GLM() under statsmodel library. This model contained all the variables, some of which had insignificant coefficients. Hence, some of these variables were removed first based on an automated approach, i.e. RFE and then a manual approach based on VIF and p-value.
+
+ 
+
+Apart from this, you also learnt about confusion matrix and accuracy and saw how accuracy was calculated for a logistic regression model.
+
