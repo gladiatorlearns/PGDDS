@@ -1,0 +1,75 @@
+Multivariate Logistic Regression - Model Building
+Introduction
+
+Welcome to the session on 'Multivariate Logistic Regression (Model Building)'.
+
+ 
+
+Just like when you’re building a model using linear regression, one independent variable might not be enough to capture all the uncertainties of the target variable in logistic regression as well. So in order to make good and accurate predictions, you need multiple variables and that is what we’ll study in this session.
+
+ 
+
+Before starting with multivariate logistic regression, the first question that arises is, “Do you need any extensions while moving from univariate to multivariate logistic regression?” Recall the equation used in the case of univariate logistic regression was:
+
+ 
+
+P=11+e−(β0+β1X)
+
+ 
+
+The above equation has only one feature variable X, for which the coefficient is β1. Now, if you have multiple features, say n, you can simply extend this equation with ‘n’ feature variables and ‘n’ corresponding coefficients such that the equation now becomes:
+
+ 
+
+P=11+e−(β0+β1X1+β2X2+β3X3+...+βnXn)
+
+ 
+
+Recall this extension is similar to what you did while moving from simple to multiple linear regression.
+
+ 
+In this session
+
+In this session, you will learn how to:
+
+    Build a multivariate logistic regression model in Python
+    Conduct feature selection for logistic regression using:
+        Automated methods: RFE -Recursive Feature Elimination
+        Manual methods: VIF and p-value check
+
+We will use the ‘Telecom Churn’ dataset in this session to build a model using multivariate logistic regression. This will involve all the familiar steps such as:
+
+    Data cleaning and preparation
+    Preprocessing steps
+    Test-train split
+    Feature scaling
+    Model Building using RFE, p-values and VIFs
+
+Apart from the familiar old steps, you’ll also be introduced to something known as a confusion matrix and you’ll also learn how the accuracy is measured for a logistic regression model.
+ 
+
+Prerequisites
+
+There are no prerequisites for this session other than the knowledge of the previous session and the previous module.
+
+ 
+Guidelines for in-module questions
+
+The in-video and in-content questions for this module are not graded. Note that graded questions are given on a separate page labelled 'Graded Questions' at the end of this session. The graded questions in this session will adhere to the following guidelines:
+
+ 
+ 	First Attempt Marks	
+
+Second Attempt Marks
+Questions with 2 Attempts	10	5
+Questions with 1 Attempt	10	0
+
+ 
+People you will hear from in this session
+
+Subject Matter Expert
+
+Mirza Rahim Baig
+Lead Business Analyst, Flipkart
+
+Flipkart Pvt Ltd. is an Indian electronic commerce company based in Bengaluru, India. As of 2017, Flipkart held a 39.5% market share of India's e-commerce industry.
