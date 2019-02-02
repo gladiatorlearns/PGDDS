@@ -1,0 +1,143 @@
+Model Evaluation Metrics - Exercise
+
+These questions are non-graded.
+
+ 
+
+In the last segment, you saw that the optimal cut-off for the model turned out to be 0.3. Now, in order to assess the model, you need to re-run the predictions on the train set using the cut-off of 0.3. Recall when you did this using the cut-off of 0.5, you used the following code:
+
+ 
+
+# Creating new column 'predicted' with 1 if Churn_Prob > 0.5 else 0
+y_train_pred_final['predicted'] = y_train_pred_final.Churn_Prob.map(lambda x: 1 if x > 0.5 else 0)
+
+ 
+
+Now, using the same code with just the cut-off value changed, calculate all the metrics (accuracy, sensitivity, specificity) and answer the questions below.
+
+ 
+
+ Questions:1/3
+ 
+ 
+ 
+Accuracy of the Model
+
+Using the threshold of 0.3, what is the approximate accuracy of the model now?
+
+72%
+
+77%
+Feedback :
+
+Correct!
+
+Use the following code to calculate the accuracy:
+
+metrics.accuracy_score(y_train_pred_final.Churn, y_train_pred_final.final_predicted)
+
+You'll see that you get an accuracy of about 77.14%.
+Correct
+
+79%
+Feedback :
+
+Use the following code to calculate the accuracy:
+
+metrics.accuracy_score(y_train_pred_final.Churn, y_train_pred_final.final_predicted)
+
+Incorrect
+
+80%
+
+
+Questions:2/3
+ 
+ 
+ 
+Confusion Matrix
+
+Get the confusion matrix after using the cut-off 0.3. What is the number of 'False Negatives' now?
+
+2793
+
+842
+Feedback :
+
+Use the following code to get the confusion matrix:
+
+confusion2 = metrics.confusion_matrix(y_train_pred_final.Churn, y_train_pred_final.final_predicted )
+
+ 
+
+Also, recall that the labels in the confusion matrix are:
+Actual/Predicted	Not Churn	Churn
+Not Churn	True Negatives	False Positives
+Churn	False Negatives	True Positives
+Incorrect
+
+283
+Feedback :
+
+Correct! When you run the following code to get the confusion matrix,
+
+confusion2 = metrics.confusion_matrix(y_train_pred_final.Churn, y_train_pred_final.final_predicted )
+
+ 
+
+you'll get the following confusion matrix:
+Actual/Predicted	Not Churn	Churn
+Not Churn	2793	842
+Churn	283	1004
+
+ 
+
+Also, recall that the labels in the confusion matrix are:
+Actual/Predicted	Not Churn	Churn
+Not Churn	True Negatives	False Positives
+Churn	False Negatives	True Positives
+
+ 
+
+You can clearly see that the number of 'False Negatives' is now 283. Also, note that the number of 'False Negatives' has now dropped significantly and the number of 'True Positives' has increased. Thus, choosing a lower cut-off has definitely helped in capturing the 'Churns' better.
+Correct
+
+1004
+
+
+Questions:3/3
+ 
+ 
+ 
+Sensitivity
+
+In the last question you saw that in the confusion matrix, the Churns are being captured better now. Using the confusion matrix, can you tell what will the approximate sensitivity of the model now be?
+
+67
+
+72
+
+76
+
+78
+Feedback :
+
+Correct!
+
+The sensitivity is given as:
+
+Sensitivity=TPTP+FN
+
+Hence, you get:
+
+Sensitivity=10041004+283≈78.01%
+
+It is recommended that you calculate this in your Jupyter notebook as well.
+
+If you want the solution to these questions, the code has been provided in the Logistic Regression Jupyter Notebook that you downloaded. It is present below the plotted trade-off curve, although it is recommended that you write the code and attempt these questions on your own before looking at the given code.
+
+ 
+Coming Up
+
+In the next segment, you'll learn a few more evaluation metrics that are used in the industry.
+
