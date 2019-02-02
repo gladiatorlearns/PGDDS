@@ -1,0 +1,185 @@
+Module Introduction: Logistic Regression
+
+Welcome to the module on ‘Logistic Regression’. In the last module on linear regression, you learnt how a linear regression model can be used to make predictions for continuous variables.
+
+In this module
+
+Now, in this module, you will learn logistic regression, which is a classification model, i.e. it will help you make predictions in cases where the output is a categorical variable.
+
+ 
+
+Since logistic regression is the most easily interpretable of all classification models, it is very commonly used in various industries such as banking, healthcare, etc.
+
+ 
+
+You can download the data sets used in this module from the files given below.
+
+Diabetes Data
+file_downloadDownload
+Telecom Churn
+file_downloadDownload
+Prerequisites
+
+
+Subject Matter Expert
+
+Mirza Rahim Baig
+Lead Business Analyst, Flipkart
+
+Flipkart Pvt Ltd. is an Indian electronic commerce company based in Bengaluru, India. As of 2017, Flipkart held a 39.5% market share of India's e-commerce industry.
+
+ 
+
+Industry Expert
+
+Hindol Basu
+
+Partner, Analytics Division at Tata (Tata IQ)
+
+Tata IQ is one of the leading analytics services providers in India and is a part of the prestigious Tata Group.  Mr. Hindol leads the analytics practices at Tata.
+
+You’ll need to brush up on basic maths related to exponentials and logarithms before you begin this session. You can brush up on these topics using the links given below.
+
+    Mathplanet - Exponentials https://www.mathplanet.com/education/algebra-1/exponents-and-exponential-functions/properties-of-exponents
+
+    Mathplanet - Logarithms  https://www.mathplanet.com/education/algebra-2/exponential-and-logarithmic-functions/logarithm-property
+
+You can also solve the practice questions provided in the Resources section.
+
+    Optional questions on exponentials https://learn.upgrad.com/v/course/208/session/25289/segment/129946
+    
+    Questions:1/4
+    
+    
+    
+ 
+ 
+ 
+Exponentials
+
+What is e3∗e2 equal to?
+​e1​
+​e5​
+Feedback :
+Recall that one property of exponentials is that ​ea∗eb​ is equal to ​ea+b​. Hence ​e3∗e2​ = e3+2​ = e5​
+Correct
+​e6​
+​e9​ 
+Questions:2/4
+ 
+ 
+ 
+ 
+Exponentials
+
+What is e3e2 equal to?
+​e1​
+Feedback :
+Recall that one property of exponentials is that ​eaeb​ is equal to ​ea−b​. Hence, ​e3e2​ = e3−2​=e1​
+Correct
+​e5​
+​e6​
+​e9​
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Exponentials
+
+What is (e3)2 equal to?
+​e5​
+​e6​
+Feedback :
+Recall that one property of exponentials is that ​(ea)b​ is equal to ​ea∗b​. Hence, ​​(e3)2​ = ​e3∗2​ = ​e6​
+Correct
+​e8​
+​e9​ 
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Exponentials
+
+What is e−2 equal to?
+​−e2​
+​e1/2​
+1/​e2​
+Feedback :
+Recall that one property of exponentials is that ​e−a​ is equal to 1/​ea​. Hence, ​e−2​ = ​1/e2
+Correct
+None of the above
+
+
+
+
+
+    Optional questions on logarithms https://learn.upgrad.com/v/course/208/session/25289/segment/129947
+    
+    Questions:1/4
+ 
+ 
+ 
+ 
+Logarithms
+
+If x3=y, then:
+​logx3=y​
+​log3x=y​
+​logxy=3​
+Feedback :
+Recall the definition of log. If ​ab=c​, then ​logac=b​. So, if ​x3=y​, then, by definition, logxy=3​
+Correct
+​logyx=3​ 
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Logarithms
+
+What is log 9 + log 3 equal to?
+log (93)
+log (9*3)
+Feedback :
+Recall that one property of logarithms is that log a + log b= log (a*b). Hence, log 9 + log 3 = log (9*3) = log 27.
+Correct
+log (9+3)
+log (39) 
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Logarithms
+
+What is log 9 - log 3 equal to?
+log (9*-3)
+log (9/3)
+Feedback :
+Recall that one property of logarithms is that log a - log b= log (a/b). Hence, log 9 - log 3 = log (9/3) = log 3.
+Correct
+log (9-3)
+None of the Above
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Logarithms
+
+What is log(93) equal to?
+(log 3)(log 9)
+9 log 3
+3 log 9
+Feedback :
+Recall that one property of logarithms is that ​log(ab)​= b log a. Hence, log(93)​ = 3 log 9.
+Correct
+None of the above
