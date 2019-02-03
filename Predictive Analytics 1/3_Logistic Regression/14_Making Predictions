@@ -1,0 +1,76 @@
+Making Predictions
+
+So the model evaluation on the train set is complete and the model seems to be doing a decent job. You saw two views of the evaluation metrics - one was the sensitivity-specificity view, and the other was the precision-recall view. You can choose any of the metrics you like; it is completely up to you. In this session, we will go forward with the sensitivity-specificity view of things and make predictions based on the 0.3 cut-off that we decided earlier.
+
+ 
+
+Note: At 2:45, Rahim mistakenly says, "On the main model we had accuracy about 79%. Please note that he said this by mistake. It should be 77% as you had calculated in the 'Model Evaluation Metrics - Exercise' as well.
+
+The metrics seem to hold on the test dataset as well. So, it looks like you have created a decent model for the churn dataset as the metrics are decent for both the training and test datasets.
+
+ 
+
+You can also take the cutoff you got from the precision-recall tradeoff curve and try making predictions based on that on your own.
+
+Questions:1/2
+ 
+ 
+Calculating Accuracy
+
+Recall that in the last segment you saw that the cutoff based on the precision-recall tradeoff curve was approximately 0.42. When you take this cut-off, you get the following confusion matrix on the test set.
+Actual/Predicted	Not Churn	Churn
+Not Churn	1294	234
+Churn	223	359
+
+What will the approximate value of accuracy be on the test set now?
+
+60%
+
+72%
+
+75%
+
+78%
+Feedback :
+
+Correct! 
+
+Recall that the accuracy of the model is given by:
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+Hence, you get -
+
+Accuracy=1294+3591294+234+223+359≈78.34%
+
+
+Questions:1/2
+ 
+ 
+Calculating Accuracy
+
+Recall that in the last segment you saw that the cutoff based on the precision-recall tradeoff curve was approximately 0.42. When you take this cut-off, you get the following confusion matrix on the test set.
+Actual/Predicted	Not Churn	Churn
+Not Churn	1294	234
+Churn	223	359
+
+What will the approximate value of accuracy be on the test set now?
+
+60%
+
+72%
+
+75%
+
+78%
+Feedback :
+
+Correct! 
+
+Recall that the accuracy of the model is given by:
+
+Accuracy=Correctly Predicted LabelsTotal Number of Labels
+
+Hence, you get -
+
+Accuracy=1294+3591294+234+223+359≈78.34%
