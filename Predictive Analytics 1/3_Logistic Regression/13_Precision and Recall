@@ -1,0 +1,149 @@
+Precision & Recall
+
+So far you learnt about sensitivity and specificity. You learnt how these metrics are defined, why they are important, and how to calculate them. Now, apart from sensitivity and specificity, there are two more metrics that are widely used in the industry which you should know about. They're known as 'Precision' and 'Recall'. Now, these metrics are very similar to sensitivity and specificity; it's just that knowing the exact terminologies can be helpful as both of these pairs of metrics are often used in the industry. So let's first hear Rahim introduce these metrics.
+
+Let's go through the definitions of precision and recall once again:
+
+    Precision: Probability that a predicted 'Yes' is actually a 'Yes'.
+
+ 
+Precision Elements in a Confusion Matrix
+
+The formula for precision can be given as:
+
+ 
+
+Precision=TP/TP+FP
+
+ 
+
+Remember that 'Precision' is the same as the 'Positive Predictive Value' that you learnt about earlier. From now on, we will call it precision.
+
+    Recall:  Probability that an actual 'Yes' case is predicted correctly.
+
+Recall Elements in a Confusion Matrix
+
+The formula for recall can be given as:
+
+ 
+
+Recall=TP/TP+FN
+
+ 
+
+Remember that 'Recall' is exactly the same as sensitivity. Don't get confused between these.
+
+ 
+
+You might be wondering, if these are almost the same, then why even study them separately? The main reason behind this is that in the industry, some businesses follow the 'Sensitivity-Specificity' view and some other businesses follow the 'Precision-Recall' view and hence, will be helpful for you if you know both these standard pairs of metrics.
+
+ 
+
+Now, let's check the precision and recall in code as well.
+
+
+Questions:1/3
+ 
+ 
+ 
+Calculating Precision
+
+Calculate the precision value for the following model.
+Actual/Predicted	Not Churn	Churn
+Not Churn	400	100
+Churn	50	150
+
+ 
+
+60%
+Feedback :
+
+Correct! The formula for precision is given by:
+
+Precision=TPTP+FP
+
+From the matrix given,
+
+TP = 150
+
+FP = 100
+
+Hence, you get,
+
+Precision=150150+100=60%
+Correct
+
+75%
+
+78%
+
+80%
+
+
+https://en.wikipedia.org/wiki/Harmonic_mean
+
+Questions:2/3
+ 
+ 
+ 
+F1-score
+
+There is a measure known as F1-score which essentially combines both precision and recall. It is the basically the harmonic mean of precision and recall and its formula is given by:
+
+F=2×precision×recallprecision+recall
+
+The F1-score is useful when you want to look at the performance of precision and recall together.
+
+Calculate the F1-score for the model below:
+Actual/Predicted	Not Churn	Churn
+Not Churn	400	100
+Churn	50	150
+
+33%
+
+67%
+Feedback :
+
+Correct!
+
+From the confusion matrix given,
+
+TP = 150
+
+FP = 100
+
+FN = 50
+
+Hence, you get -
+
+Precision=100100+150=0.6
+
+Recall=150150+50=0.75
+
+So, the F1-score becomes - 
+
+F=2×0.6×0.750.6+0.75≈66.67%≈67%
+
+Questions:3/3
+ 
+ 
+ 
+Optimal Cut-off
+
+When using the sensitivity-specificity tradeoff, you found out that the optimal cutoff point was 0.3. Now, when you plotted the precision-recall tradeoff, you got the following curve:
+
+What is the optimal cutoff point according to the curve given above?
+
+ 
+
+0.24
+
+0.42
+Feedback :
+
+Yes! The optimal cutoff point is where the values of precision and recall will be equal. This is similar to what you saw in the sensitivity-specificity tradeoff curve as well. So, when precision and recall are both around 0.62, the two curves are intersecting. And at this place, if you extend the line to the X-axis as given, you can see that the threshold value is 0.42.
+Correct
+
+0.62
+
+0.8
