@@ -1,0 +1,69 @@
+Graded Questions
+
+You have already worked on the loan dataset in the Gramener case study. Let’s try out the questions below.
+grade_woe_data
+file_downloadDownload
+
+Note: You are supposed to download the attached Excel file for answering the questions. This file contains two sheets. The first sheet contains observation or data entries of two variables — 'Loan status' and 'Grade'. And the second sheet contains the distribution of goods and bad buckets for the 'Grade' variable.
+
+Questions:1/3
+ 
+ 
+ 
+Logistic Regression
+
+What do you infer from the woe plot of the 'Grade' variable?
+As the loan grade varies from A to G, the woe values gradually decrease from +0.99 to -1.09
+Feedback :
+Woe values for each bucket are A=0.99, B=0.21, C=-0.20, D=-0.50, E=-0.77, F=-1.04 and G = -1.09. All the values starting from A to G gradually decrease from +0.99 to -1.09.
+Correct
+As the loan grade varies from A to G, woe values graduall increase from -0.99 to +1.09
+As the loan grade varies from A to G, woe values gradually decrease from -0.99 to -1.09
+As the loan grade varies from A to G, woe values gradually increase from +0.99 to +1.09
+
+
+Questions:2/3
+ 
+ 
+ 
+Logistic Regression
+
+Choose the correct option:
+Woe graph shows monotonic nature
+Feedback :
+If you create a plot out of woe value, you can clearly visualise a monotonic plot.
+Correct
+Woe graph doesn’t show monotonic nature
+All the grade categories show positive woe values
+All the grade categories show negative woe values
+
+Questions:3/3
+ 
+ 
+ 
+Logistic Regression
+
+Information value of the 'Grade' variable is:
+0.56
+Feedback :
+Recall the information value expression i.e Vbucket = WOEbucket * (% good - % bad ) Total IV for grade variable = IVbucket-1(A) + IVbucket-2(B) + IVbucket-3(C)+ IVbucket-4(D) + IVbucket-5(E)+ IVbucket-4(F) + IVbucket-5(G)
+Incorrect
+0.43
+0.34
+Feedback :
+Information Value for each bucket can be calculated as: IVbucket = WOEbucket * (% good - % bad ) Total IV for grade variable = IVbucket-1(A) + IVbucket-2(B) + IVbucket-3(C)+ IVbucket-4(D) + IVbucket-5(E)+ IVbucket-4(F) + IVbucket-5(G) Total IV for grade variable = 0.18 + 0.01 + 0.01 + 0.04 + 0.05+0.04+0.01 = 0.34
+Correct
+
+
+Summary
+
+Note: You can access the solution of the graded questions from the link below:
+Grade Woe Solution
+file_downloadDownload
+
+In this session, you learnt the industry relevance of logistic regression and its applicability. Apart from its applicability, you learnt new techniques such as sample selection, segmentation and variable transformation in order to improve the model performance.
+
+ 
+
+Here is the flowchart, which will help you understand what we have covered so far in this session.
+Fig 1: Logistic Regression
