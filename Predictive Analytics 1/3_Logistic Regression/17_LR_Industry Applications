@@ -320,9 +320,325 @@ Is there any other variable on the basis of which you can segment the population
 
 So with that, we've looked at the various aspects to take care of while selecting data (samples) for building a model. In the next lecture, you will learn which aspects you should take care of when you talk about variables.
 
+Ans- Term, employee length, how ownership, loan amount
  
 Additional reading
 
     Guide to building better predictive models using segmentation  https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/
+
+
+Nuances of Logistic Regression - Variable Transformation-I
+
+In the last lecture, you learnt about segmentation, which is primarily done for increasing the predictive power of a model. However, so far you’ve only seen topics such as sample selection and segmentation, which talk about the data that is used in the model building process.
+
+ 
+
+Now, the next steps, as you may recall from the last session, are dummy variable creation, standardising scales of continuous variables, etc. These processes are generally referred to as variable transformation. Can other types of variable transformations be performed before building a logistic regression model?
+
+ 
+
+Let's hear from Hindol about that.
+
+From earlier sessions, you already know that categorical variables have to be transformed into dummies. Also, you were told that numeric variables have to be standardised, so that they all have the same scale. However, you could also convert numeric variables into dummy variables, using the techniques mentioned by Hindol in the video above.
+
+ 
+
+There are some pros and cons of transforming variables to dummies. Creating dummies for categorical variables is very straightforward. You can directly create n-1 new variables from an existing categorical variable if it has n levels. But for continuous variables, you would be required to do some kind of EDA analysis for binning the variables.
+
+ 
+
+The major advantage offered by dummies especially for continuous variables is that they make the model stable. In other words, small variations in the variables would not have a very big impact on a model that was made using dummies, but they would still have a sizeable impact on a model built using continuous variables as is.
+
+
+On the other side, there are some major disadvantages that exist. E.g. if you change the continuous variable to dummies, all the data will be compressed into very few categories and that might result in data clumping.
+
+Nuances of Logistic Regression - Variable Transformation-II
+
+So, creating dummy variables is one way of transforming variables. Let’s now move on to another technique commonly used for transforming variables — Weight of evidence (WOE) analysis.
+
+
+So, to summarise, you learnt three important things in this lecture:
+
+    Calculating woe values for fine binning and coarse binning
+
+    The importance of woe for fine binning and coarse binning
+
+    The usage of woe transformation
+
+ 
+
+WOE can be calculated using the following equation:
+
+ 
+
+ WOE = ln(good in the bucket/Total  Good )−ln(bad in the bucket/Total  bad ) 
+
+ 
+
+Or, it can be expressed as: 
+
+ 
+
+WOE=ln(PercentageofGood/PercentageofBad)
+
+
+Once you've calculated woe values, it is also important to note that they should follow an increasing or decreasing trend across bins. If the trend is not monotonic, then you would need to compress the buckets/ bins (coarse buckets) of that variable and then calculate the WOE values again.
+
+ 
+
+As mentioned in the lecture, there are two main advantages of WOE:
+
+    WOE reflects group identity: This means it captures the general trend of distribution of good and bad customers. E.g. the difference between customers with 30% credit card utilisation and 45% credit card utilisation is not the same as the difference between customers with 45% credit card utilisation and customers with 60% credit card utilisation. This is captured by transforming the variable credit card utilisation using WOE.
+
+    WOE helps you in treating missing values logically for both types of variables — categorical and continuous. E.g. in the credit card case, if you replace the continuous variable credit card utilisation with WOE values, you would replace all categories mentioned above (0%-45%, 45% - 60%, etc.) with certain specific values, and that would include the category "missing" as well, which would also be replaced with a WOE value.
+
+Let’s also understand the positives and negatives of woe transformation from Hindol.
+
+So, basically, the pros and cons of a WOE transformation are similar to dummy variables.
+
+    Pros: The model becomes more stable because small changes in the continuous variables will not impact the input so much.
+    Cons: You may end up doing some score clumping.
+
+ 
+
+This is because when you are using WOE values in your model, you are doing something similar to creating dummy variables — you are replacing a range of values with an indicative variable. It is just that, instead of replacing it with a simple 1 or 0, which was not thought out at all, you are replacing it with a well thought out WOE value. Hence, the chances of undesired score clumping will be a lot less here.
+
+ 
+
+Let's now move on to IV (Information Value), which is a very important concept.
+Current Time 2:58
+/
+Duration 3:19
+ 
+Playback Rate
+Auto
+1.5x
+
+So, information value can be calculated using the following expression:
+
+ 
+
+IV=WOE∗ (Good in the bucket/Total Good−Bad in the Bucket/Total Bad)
+
+ 
+
+Or it can expressed as:
+
+ 
+
+IV=WOE ∗(Percentageofgoodinthebucket−Percentageofbadinthebucket)
+
+ 
+
+It is an important indicator of predictive power.
+
+ 
+
+Mainly, it helps you understand how the binning of variables should be done. The binning should be done such that the WOE trend across bins is monotonic — either increasing all the time or decreasing all the time. But one more thing that needs to be taken care of is that IV (infomation value) should be high.
+
+ 
+
+Comprehension 1: WOE and Information Value Analysis
+
+ 
+
+You are required to download the data set from below for answering the questions that follow:
+Tenure-Contract-Woe-Data
+file_downloadDownload
+
+In the attached file, there are three sheets. The first sheet contains three variables (Tenure, Second Contract and Churn) from the telecom data. The second sheet contains the distribution of the binned tenure variable. The third sheet contains the distribution of goods and bad information of the contract variable.
+
+ 
+
+With this information, let’s try out the following questions:
+
+Questions:1/6
+ 
+ 
+ 
+ 
+ 
+ 
+Woe Analysis
+
+What information would you infer from the woe trend of tenure variable?
+
+As tenure increases, the chances of churning decrease
+Feedback :
+
+If you calculate woe value of all the 10 buckets, you would notice, as tenure increases from 1 year to 72 years, woe values are also increasing continuously from -1.46 to 2.12. Thus it results in decreasing the chances of churning over the bucket.
+Correct
+
+As tenure increases, the chances of churning increase
+
+As tenure decreases, the chances of churning decrease
+
+Questions:2/6
+ 
+ 
+ 
+ 
+ 
+ 
+Woe Analysis
+
+Choose the correct option:
+Coarse binning is required for tenure variable as there is no monotonic trend in fine binning
+Coarse binning is not required for tenure variable as there is a clear monotonic trend in fine binning
+Feedback :
+If you create a plot out of woe value, you can clearly visualise a monotonic plot.
+
+Questions:3/6
+ 
+ 
+ 
+ 
+ 
+ 
+Woe Analysis
+
+What does negative woe signify in 'contract' variable (refer sheet-3)?
+
+% of churners (bad customers) are more than % of no-churners (good customers)
+Feedback :
+
+The woe is expressed by ln (percentage of non-churns in bucket/ percentage of churns in the bucket). If the woe is negative, it means the percentage of churns in that bucket is greater than the percentage of non-churns in that bucket.
+Correct
+
+% of churners (bad customers) are less than % of no-churners (good customers)
+
+% of churners (bad customers) are equal to the % of no-churners (good customers)
+
+
+Questions:4/6
+ 
+ 
+ 
+ 
+ 
+ 
+Woe Analysis
+
+Compare the woe trends of both variables (tenure and contract).
+
+Based on the woe trend, which variable when increased in value, will decrease the likelihood of churn?
+Tenure
+Contract
+Feedback :
+Woe values of contract variable help you understand the trend of churn rate over the buckets
+Incorrect
+Both
+Feedback :
+“Tenure”, as well as “Contract” both, negatively impacts churns rate over the bucket. It means that if the tenure increases, churn rate decreases and vice-versa. Similarly for contract variable as well, the two-year contract has the low chance of 
+
+Questions:5/6
+ 
+ 
+ 
+ 
+ 
+ 
+Information Value
+
+What is the total information value of both the variables?
+Contract = 0.83, Tenure = 1.24
+Contract = 1.24 , Tenure = 0.83
+Feedback :
+Information Value for each bucket can be calculated as: IVbucket = WOEbucket * (% good - % bad ) Total IV for Tenure = IVbucket-1(0-1) + IVbucket-2(2-5) + IVbucket-3(6-11)+IVbucket-4(12-19) + IVbucket-5(20-28) + IVbucket-1(29-39) + IVbucket-2(40-49) + IVbucket-3(50-59)+IVbucket-4(60-68) + IVbucket-5(69-72) Total IV for Tenure = 0.23+0.12+0.02+0.01+0.00+0.01+0.02+0.05+0.12+0.26 = 0.83 Total IV for Contract = IVbucket-1(month-to-month) + IVbucket-2(One-year) + IVbucket-3(two-year) Total IV for Contract = 0.33+0.17+0.74 = 1.24 
+
+
+Questions:6/6
+ 
+ 
+ 
+ 
+ 
+ 
+Information Value
+
+Choose the correct option?
+Contract variable has stronger predictive power than tenure
+Feedback :
+Predictive power can be measured based on information values, higher the information value, higher the predictive power. In this example as well, Contract variable shows IV of 1.24 and Tenure variable shows IV of 0.83
+Correct
+Contract variable has weaker predictive power than tenure
+Both variables show the same predictive power
+Can’t say anything
+
+Nuances of Logistic Regression - Variable Transformation-III
+
+Note: You can access the solution to the Comprehension 1 questions from below:
+Tenure - Contract Woe Analysis Solution
+file_downloadDownload
+
+In previous sessions, you learnt about the different ways of transforming woe transformation, the importance of information variables, and various other advantages and disadvantages of woe transformation.
+
+
+You learnt how these methods can be used to treat continuous variables. In the next video. let's explore it a little more.
+
+This is how you can work on continuous variables.
+
+ 
+
+In the next lecture, you will learn about some advanced transformation techniques such as spline transformation, interaction variables, mathematical transformation and principal component transformation. These transformations are hardly used in the model exercise. However, let’s see what the benefits and importance of these transformations are in the next lecture.
+
+ 
+
+Comprehension  2: Missing Value -WOE
+
+You saw that NA values can be treated with WOE values. However, you can replace the NA bucket with a bucket which shows similar woe values.
+
+ 
+
+Let’s try to practice this with some examples. For this exercise, you are supposed to download the data set from below which is the subset data of the loan file
+
+
+Questions:1/2
+ 
+ 
+WOE Missing Value
+
+Woe value for NA bucket is:
+0.51
+Feedback :
+Woe can be express for NA bucket as WoeNA_bucket = ln(% Good for NA bucket / % Bad for NA bucket)
+Incorrect
+0.41
+-0.41
+-0.51
+Feedback :
+Woe can be express for NA bucket as WoeNA_bucket = ln(% Good for NA bucket / % Bad for NA bucket) i.e WoeNa_bucket = Ln(0.024/0.041) = -0.51
+
+Questions:2/2
+ 
+ 
+Missing value
+
+NA bucket can be merged with -
+1-1 Bucket
+2-2 Bucket
+7-9 Bucket
+Feedback :
+Calculate the woe values for each bucket. Do you think WOE for NA bucket can be similar with any other bucket?
+Incorrect
+None
+Feedback :
+The woe value for NA bucket is nearly -0.51, whereas woe values for other buckets are very different from the NA bucket. So basically, there is not bucket which shows same woe values as NA does.
+
+Nuances of Logistic Regression - Variable Transformation-IV (Optional)
+
+Note: You can access the solution to the Comprehension 2 questions from below:
+Employment Woe Solution
+file_downloadDownload
+
+Please note that the content on this page is purely optional and you will not be graded on this content, nor is it required for the logistic regression case study. You can skip through this page if needed and directly move to the next page.
+
+ 
+
+However, if you wish to go through the content on the page, you are welcome to do so. You should keep in mind, though, that the videos on this page assume that the viewer has knowledge of some advanced concepts.
+
+ 
+ 
+The page can be accessed from this link. https://learn.upgrad.com/v/course/208/session/25289/segment/129949
 
 
