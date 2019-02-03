@@ -1,0 +1,328 @@
+Logistic Regression - Industry Applications - Part I
+Introduction
+
+Welcome to the session on "Industry Applications of Logistic Regression". In the previous sessions, you learnt the process of building a logistic regression model in Python and evaluating its performance using a few key metrics.
+
+In this session
+
+You will learn how to use the concepts you learnt earlier in actual business settings. Broadly speaking, the agenda for the session is as follows:
+
+     Types of logistic regression
+
+    Nuances of logistic regression
+
+        Sample selection
+
+        Segmentation
+
+        Variable transformation
+        
+        
+        Getting familiar with Logistic Regression
+
+So far, you have understood how logistic regression works and how performance measures can be evaluated. Now that you've acquired the theoretical knowledge of this technique, let's move on to its application since it is equally important. So, let’s understand the various applications of logistic regression in different business scenarios across multiple industries from our industry expert Hindol Basu.
+
+In general, logistic regression by definition tries to predict what state a particular individual or system will be in the future. You learnt about the two types of logistic regression:
+
+    Binary logit
+
+    Multinomial logit
+
+ 
+
+Binary logit involves two levels of the dependent variable. For example, the telecom churn example you learnt in earlier sessions is a binary logistic regression problem, as it classifies customers into two levels, churns and non-churns. Multinomial logit, however, involves more than 2 levels of dependent variables, such as whether a customer will purchase product A, product B or not purchase anything.
+
+ 
+
+So, the rule of thumb for deciding whether the problem is a binary classification problem or multinomial classification problem is that you should first understand the dependent variable.\
+
+Logistic Regression
+
+Try to recall - What is the dependent variable in a binary (binomial) logistic regression?
+Continuous variable
+Discrete variable having more than two categories
+Discrete variable having two categories
+Feedback :
+Recall from earlier sessions, that a binary classification problem is one in which the dependent variable has only two possible categories. For example, suppose you want to identify fraudulent loan applications from loan applicants. You can use binary classification for classifying the loan applicants to fraudulent or non-fraudulent.
+Correct
+
+
+Questions:1/1
+ 
+Logistic Regression
+
+Based on your understanding till now, what are the two main differences between logistic regression and linear regression?
+
+Suggested Answer
+
+The two main important differences between logistic and linear regression are: 1. Dependent/response variable in linear regression is continuous whereas, in logistic regression, it is the discrete type. 2. Cost function in linear regression minimise the error term Sum(Actual(Y)-Predicted(Y))^2 but logistic regression uses maximum likelihood method for maximising probabilities.
+
+To summarise, logistic regression is a widely used technique in various types of industries. This is because of two main reasons:
+
+    It is very easy to understand and offers an intuitive explanation of the variables
+
+    The output (i.e. the probabilities) has a linear relationship with the log of odds, which can be very useful for explaining results to managers
+
+ 
+
+Also, recall that Hindol mentioned something called model scores. In an earlier session though, you learnt that a logistic regression model gives log odds as output. So, to understand what scores are, let’s go back to the telecom churn example from earlier sessions:
+
+ 
+
+customerID
+	
+
+Probability
+	
+
+Odds
+	
+
+Log Odds
+	
+
+Score
+
+8773-HHUOZ
+	
+
+0.084
+	
+
+0.092
+	
+
+-2.389
+	
+
+331
+
+8865-TNMNX
+	
+
+0.257
+	
+
+0.346
+	
+
+-1.062
+	
+
+369
+
+9867-JCZSP
+	
+
+0.297
+	
+
+0.422
+	
+
+-0.862
+	
+
+375
+
+9420-LOJKX
+	
+
+0.435
+	
+
+0.770
+	
+
+-0.261
+	
+
+392
+
+6234-RAAPL
+	
+
+0.439
+	
+
+0.783
+	
+
+-0.245
+	
+
+393
+
+7760-OYPDY
+	
+
+0.443
+	
+
+0.795
+	
+
+-0.229
+	
+
+393
+
+8012-SOUDQ
+	
+
+0.446
+	
+
+0.805
+	
+
+-0.217
+	
+
+394
+
+3413-BMNZE
+	
+
+0.461
+	
+
+0.855
+	
+
+-0.156
+	
+
+395
+
+6575-SUVOI
+	
+
+0.688
+	
+
+2.205
+	
+
+0.791
+	
+
+423
+
+6388-TABGU
+	
+
+0.753
+	
+
+3.049
+	
+
+1.115
+	
+
+432
+
+ 
+
+You must have noticed the column called score. Basically, it’s a different way of reporting your findings. Earlier, you saw that log odds make more sense as the output instead of probabilities because of their linear relationship with the variables. However, log odds have weird values, such as -0.245, -0.156 etc., which is not a very elegant form of output.
+
+ 
+
+Hence, instead of reporting the log odds as output, you can report scores.
+
+ 
+
+Score is calculated using the following expression:
+
+ 
+
+Score=400+(20∗log(odds)log(2))
+
+ 
+
+This expression is decided based on business understanding. You could come up with your own expression for the score, one that converts log odds into a more presentable form.
+
+Questions:1/1
+ 
+Logistic Regression
+
+Consider that you are working in a large manufacturing company such as “APB.” APB produces high-tech appliances to test equipment attached to planes. Most of these appliances are often used to track equipment performance on an hourly basis. This generates a high amount of performance data. For now, let's focus only on the three most critical equipment - smoking detector, oxygen balance detector and microphone. The overall data contains two types of variables:
+
+    Performance variables such as an equipment's life expectancy, rpm (speed) etc.
+
+    Environmental variables such as humidity, temperature, pressure etc.
+
+This data was collected over the past 2 years for each piece of equipment.
+
+In your opinion, which of the following problems, when solved using the data from above, will result in the highest business growth?
+Data can be used for calculating the life expectancy of the equipment.
+13%
+Data can be used for identifying the chances of an equipment’s failure.
+60%
+Data can be used for controlling the equipment's performance on a daily basis.
+27%
+
+Nuances of Logistic Regression - Sample Selection
+
+In earlier sessions, you learnt how to build a logistic regression model in Python, and how to evaluate it. However, even before you start building a model, you have to decide what kind of data would be appropriate for building it.
+
+ 
+
+Let's listen to Hindol on what nuances you should keep in mind while doing so:
+
+So, to summarise, selecting the right sample is essential for solving any business problem. As discussed in the lecture, there are major errors you should be on the lookout for while selecting a sample. These include: 
+
+    Cyclical or seasonal fluctuations in the business that need to be taken care of while building the samples. E.g. Diwali sales, economic ups and downs, etc.
+
+    The sample should be representative of the population on which the model will be applied in the future.
+
+    For rare events samples, the sample should be balanced before it is used for modelling.
+
+ 
+
+So, these were the nuances of sample selection. Are there any other nuances you need to be aware of? Yes. In the next segment, you will learn about the various nuances of segmentation.
+
+Nuances of Logistic Regression - Segmentation
+
+You learnt the nuances of sample selection in the last lecture. However, suppose the model you built, after selecting the data with all due considerations, has a low accuracy. Here, you know that the model is not performing well on the chosen sample data set. Your task is to make a model which gives a decent model performance.
+
+
+So, assuming that you cannot take another sample, what can you do to increase the model’s performance? There are various ways of handling such problems in industries, and one of them is segmentation of the population. Let’s learn how to perform a population segmentation in detail from Hindol Basu.
+
+
+Hence, it is very helpful to perform segmentation of the population before building a model.
+
+ 
+
+Let's talk about the ICICI example again.
+
+ 
+
+For students and salaried people, different variables may be important. While students' defaulting and not defaulting will depend on factors such as program enrolled for, the prestige of the university attended, parents' income, etc., the probability of salaried people will depend on factors such as marital status, income, etc. So, the predictive pattern across these two segments is very different, and hence, it would make more sense to make different child models for both of them, than to make one parent model.
+
+ 
+
+A segmentation that divides your population into male and female may not be that effective, as the predictive pattern would not be that different for these two segments. 
+
+ 
+Loan Data Set
+file_downloadDownload
+Questions:1/1
+ 
+Segmentation
+
+Earlier, you worked on the loan dataset in the Gramener case study, where the company wanted to understand the driving factors (or driver variables) behind a loan default. You can download the loan dataset from the link above to understand the data in detail.
+
+Now, one way in which segmentation of the population can be done is on the basis of the loan purpose, i.e., the population can be divided into several segments, each of which will be used to build a separate model.
+
+Is there any other variable on the basis of which you can segment the population? Why do you think that variable is a good choice?
+
+So with that, we've looked at the various aspects to take care of while selecting data (samples) for building a model. In the next lecture, you will learn which aspects you should take care of when you talk about variables.
+
+ 
+Additional reading
+
+    Guide to building better predictive models using segmentation  https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/
+
+
