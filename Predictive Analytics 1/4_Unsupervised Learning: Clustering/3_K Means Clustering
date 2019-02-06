@@ -1,0 +1,196 @@
+Introduction
+
+Welcome to the session on 'K-Means Clustering'. In the previous session, you got a basic idea of what unsupervised learning is. You also learnt about one such unsupervised technique called clustering. Now let's dive deeper into the concept and learn about the first common algorithm to achieve this unsupervised clustering — the K-Means algorithm.
+
+ 
+In this session
+
+You will learn about:
+
+    The steps in the K-Means algorithm
+
+    How to graphically visualise the steps of K-Means algorithm
+
+    Practical considerations while using the K-Means algorithm
+    
+    
+    
+    Steps of the Algorithm
+
+Let’s go through the K-Means algorithm using a very simple example. Let’s consider a set of 10 points on a plane and try to group these points into, say, 2 clusters. So let’s see how the K-Means algorithm achieves this goal.
+
+ 
+
+Before moving ahead, think about the following problem. Let’s say you have the data of 10 students and their marks in Biology and Math (as shown in the plot below). You want to divide them into two clusters so that you can see what kind of students are there in the class.
+
+ 
+
+The y-axis shows the marks in Biology, and the x-axis shows the marks in Math.
+
+ 
+
+Imagine two clusters dividing this data — one red and the other yellow. How many points would each cluster have?
+Fig 1: Random points to be divided into 2 clusters
+
+Centroid
+
+ 
+
+The K-Means algorithm uses the concept of the centroid to create K clusters. Before you move ahead, it will be useful to recall the concept of the centroid.
+https://en.wikipedia.org/wiki/Centroid
+ 
+
+In simple terms, a centroid of n points on an x-y plane is another point having its own x and y coordinates and is often referred to as the geometric centre of the n points.
+
+ 
+
+For example, consider three points having coordinates (x1, y1), (x2, y2) and (x3, y3). The centroid of these three points is the average of the x and y coordinates of the three points, i.e.
+
+(x1 + x2 + x3 / 3, y1 + y2 + y3 / 3).
+
+ 
+
+Similarly, if you have n points, the formula (coordinates) of the centroid will be:
+
+(x1+x2…..+xn / n, y1+y2…..+yn / n). 
+
+ 
+
+So let’s see how the K-Means algorithm achieves this goal.
+
+Each time the clusters are made, the centroid is updated. The updated centroid is the centre of all the points which fall in the cluster associated with the centroid. This process continues till the centroid no longer changes, i.e. the solution converges.
+
+ 
+
+Thus, you can see that the K-means algorithm is a clustering algorithm that takes N data points and groups them into K clusters. In this example, we had N =10 points and we used the K-means algorithm to group these 10 points into K = 2 clusters.
+
+Fig 2: Final cluster
+
+Download the Excel file below. It is designed to give you hands-on practice of k-means clustering algorithm. The file contains a set of 10 points (with x and y coordinates in column A and B respectively) and two initial centres 1 and 2 (in columns F and G). Answer the questions below based on the Excel file.
+Clustering Activity File
+file_downloadDownload
+
+Questions:1/3
+ 
+ 
+ 
+K-Means algorithm
+
+Find the distance of each of the 10 points from the two cluster centers (in column H & I) and fill the cells S6:T16. Select the distance formula to be used to find the distance of a point (xi,yi) from a centre (Xi,Yi).
+SQRT((Xi-xi) + (Yi-yi))
+((Xi-xi)^2) + ((Yi-yi)^2)
+Feedback :
+Here we are using the Euclidean distance. What is the formula for finding the euclidean distance?
+Incorrect
+SQRT(((Xi-xi)^2) + (Yi-yi)^2))
+Feedback :
+This is the formula for the Euclidean distance. You can see that once the cells S6:T16 are filled with the required distances, the points are assigned to one of the clusters (marked in column E) based on the minimum distance.
+Correct
+(Xi-xi) + (Yi-yi)
+
+Questions:2/3
+ 
+ 
+ 
+K-Means algorithm
+
+In the next step of k-means clustering, you need to find the new cluster centers (H22:I23). Select the correct method used to find the new cluster centers.
+Calculate the mode of the points assigned to a particular cluster in the previous step
+Calculate the centroid of the points assigned to a particular cluster in the previous step
+Feedback :
+The way is new center is calculated in K-Mean clustering is the mean of all the data points belonging to that cluster.Notice that the new centers are already filled in the excel sheet.
+Correct
+Calculate the z-score of the points assigned to a particular cluster in the previous step
+
+
+Questions:3/3
+ 
+ 
+ 
+K-Means algorithm
+
+Repeating the previous two steps again, you get the new cluster centers (H38:I39).Continue this process until the algorithm converges (Two consecutive iterations have the same center). What are the x and y coordinates of the center of cluster 1 finally?
+16.6, 5.6
+5.6, 5.4
+Feedback :
+Notice the clusters formed on the chart with their centers. You can explore k the -means algorithm by randomly assigning the centers and looking at the number of iterations needed for convergence.
+Correct
+10, 8
+11, 6
+
+
+K Means Algorithm
+
+In the previous segment, we learned about K-means clustering and how the algorithm works using a simple example. We learned about how assignment and the optimisation work in K Means clustering, Now in this lecture, we will look K-means more algorithmically. We will be learning how the K Means algorithm proceeds with the assignment step and then with the optimisation step and will also be looking at the cost of function for the K-means algorithm.
+
+ 
+
+Let's understand the K-means algorithm in more detail.
+
+
+From the previous lecture, we understood that the algorithm’s inner-loop iterates over two steps:
+
+    Assign each observation Xi to the closest cluster centroid μk
+    Update each centroid to the mean of the points assigned to it.
+
+In the next lecture, we will learn about the Kmeans cost function and will also see how to compute the cost function for each iteration in the K-means algorithm.
+
+So the cost function for the K-Means algorithm is given as: 
+
+ 
+
+J=∑ni=1||Xi−μk(i)||2=∑KK=1∑iϵck||Xi−μk||2
+
+ 
+
+Now in the next video, we will learn what exactly happens in the assignment step? and we will also look at how to assign each data point to a cluster using the K-Means algorithm assignment step.
+
+Questions:1/1
+ 
+K-Means
+
+What is the significance of "argmin" in the assignment step equation?
+! Note: Once submitted, answer is not editable.
+lightbulb_outline
+
+Suggested Answer
+
+For a ith data point which is a 2d object and μ which 
+
+e
+
+Suggested Answer
+
+For a ith data point which is a 2d object and μ which is again a 2d object, we compute the distance between these two, this is given by d(xi,μk) where k is the number of clusters and then from these k different results we will choose the minimum of all.
+
+
+In the assignment step, we assign every data point to K clusters. The algorithm goes through each of the data points and depending on which cluster is closer, in our case, whether the green cluster centroid or the blue cluster centroid; It assigns the data points to one of the 2 cluster centroids.
+
+ 
+
+The equation for the assignment step is as follows:
+
+ 
+
+Zi=argmin||Xi−μk||2
+
+ 
+
+Now having assigned each data point to a cluster, now we need to recompute the cluster centroids. In the next lecture, Prof.Dinesh will explain how to recompute the cluster centroids or the mean of each cluster.
+
+
+In the optimisation step, the algorithm calculates the average of all the points in a cluster and moves the centroid to that average location.
+
+ 
+
+The equation for optimisation is as follows:
+
+ 
+
+μk=1nk∑i:zi=kXi
+
+ 
+
+The process of assignment and optimisation is repeated until there is no change in the clusters or possibly until the algorithm converges.
+
+http://thespread.us/clustering.html
