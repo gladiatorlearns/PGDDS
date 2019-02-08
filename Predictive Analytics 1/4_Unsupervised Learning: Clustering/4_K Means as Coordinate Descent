@@ -1,0 +1,26 @@
+K Means as Coordinate Descent
+
+In the previous segment, we learned that the K-means algorithm iterate between two steps.
+
+    In the first step, we assign each observation to the nearest cluster centre.
+    In the second step, we update the cluster center.
+
+If we carefully look into the first step in which we are assigning each step to the nearest cluster center, we are minimising the objective function. In general, we want the cluster assignment in such a way that the corresponding cost can be reduced.
+
+ 
+
+Let's listen to Prof.Dinesh and understand this in detail
+
+The K-Means algorithm repeatedly works to minimise the function concerning cluster assignment Zi given μ and then minimise the function concerning μ  given the cluster assignment Zi
+
+ 
+
+In the next lecture, we will look that the K-Means cost function is a non-convex function, which means the coordinate descent is not guaranteed to converge to the global minimum and the cost function can converge to local minima. Choosing the initial value of K centroids can affect the K-Means algorithm and its final results.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.9806&rep=rep1&type=pdf
+ 
+
+Let's look at this in detail in the next lecture.
+Additional Reading
+
+    In the previous lecture, we got an idea that the K-Means algorithm is not a convex clustering algorithm. To find a convex solution for K-means, there is a technique called Support Vector Clustering. In Support Vector Clustering,  we describe a smooth boundary around the data points for which we need to state the length scale for the Gaussian Kernel to define how smooth we want the boundary to be. 
+    To understand more about Convex and Non-Convex cost function, you may go through this YouTube link. https://www.youtube.com/watch?v=LxjL_yLaFS8&feature=youtu.be
