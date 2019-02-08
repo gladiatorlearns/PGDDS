@@ -1,0 +1,54 @@
+Let's have some fun
+
+You have learnt how about how to make clusters using the hierarchical clustering algorithm. Let's use that knowledge to play around with clusters. Again we will be using the example of education in Indian states.
+
+ 
+
+Given below is a data set on the education status of Indian states.
+
+
+Indian Census Data
+file_downloadDownload
+
+You can download the data set and run the hierarchical algorithm on this. You can try to make the clusters on different attributes. 
+
+ 
+
+You can see the effect of various elements of the hierarchical clustering on the clusters formed.
+
+ 
+
+For the purpose of creating the above visualisation, we have cleaned the data to include only the 2 factors under consideration. You can download the file below.
+Cleaned Census File
+file_downloadDownload
+keyboard_arrow_leftkeyboard_arrow_rightQuestions:1/2
+ 
+ 
+Hierarchical Clustering
+
+Compare the different linkages. Which one do you think gives a well-separated dendrogram? Are there any advantages of that?
+
+Average and Complete linkage methods give a well-separated dendrogram, whereas single linkage gives us dendrograms which are not very well separated. We generally want well separated clusters.
+
+Questions:2/2
+ 
+ 
+Hierarchical Clustering
+
+Play around with various linkages and number of clusters. You will be able to see the number of natural clusters from the dendrogram itself. If you want, you can change the scale as well. Which group of parameters give you the best result - For the best result, you can use your general knowledge about various Indian states. (Basically which clusters make logical sense)
+
+
+Summary
+
+So what did you learn in this session?
+Questions:1/1
+ 
+Takeaway
+
+What are your top three takeaways from the session? (Word Limit: 100)
+Word Limit1-100
+Word Count0
+
+You can download the lecture notes of the Unsupervised Learning module from below.
+Lecture Notes - Clustering
+file_downloadDownload
