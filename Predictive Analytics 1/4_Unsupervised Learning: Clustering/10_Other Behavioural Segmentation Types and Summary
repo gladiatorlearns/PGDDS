@@ -1,0 +1,48 @@
+Other Behavioural Segmentation Types
+
+You have seen what RFM segmentation is. Now, you will look at other segmentation types commonly used in the industry.
+
+You looked at RPI segmentation, which looks at what kind of relationship you have had with the person before, what type of person he/she is, and the intent of the person at the time of buying.
+
+ 
+
+You also looked at the CDJ segmentation, which looks at the path that customers take while experiencing your product.
+
+ 
+
+Now, let us turn our attention to another clustering technique — hierarchical clustering — in the next session.
+
+
+Summary
+
+So what did you learn in this session?
+
+ 
+
+You learnt how to create clusters using the K-means algorithm in Python with the analysis of the Online Store data set. We wanted to group the customers of the store into different clusters based on their purchasing habits. The different steps involved were:
+
+    Missing values treatment
+
+    Data transformation
+
+    Outlier treatment
+
+    Data standardisation
+
+    Finding the optimal value of K
+
+    Implementing K Means algorithm
+
+    Analysing the clusters of customers to obtain business insights
+
+ 
+
+Once we are through with the data preparation, the K-means algorithm is quite easy to implement. All it takes is running the KMeans() function. The only ambiguous point you may notice here is that you need to decide the number of required clusters beforehand and in fact run the algorithm multiple times with a different number K before you can figure out the most optimal number of clusters.
+
+ 
+
+This is also what happens in the industry practices that we run the algorithm multiple times with different values of K and then pick the clusters which make the most business sense. In fact, the k-means algorithm finds large application in the industry. For example, it can be used to find out the most optimal centre to install the mobile towers by clustering the customers geographically. Similarly, it has wide application in medical science, where say the patients can be clustered together on the basis of their symptoms, and then analysed to figure out the cause of their illness.
+
+ 
+
+However, K means was just one of the clustering algorithm. In the next session, we will learn about another clustering algorithm called hierarchical clustering, which does not require you to decide the number of clusters beforehand.
