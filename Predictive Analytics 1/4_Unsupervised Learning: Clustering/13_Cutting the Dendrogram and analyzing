@@ -1,0 +1,57 @@
+Cutting the Dendrogram & Analyzing the Clusters
+
+We will use the same online retail case study and data set that we used for the K-Means algorithm. For making the customer segments this time, we will use the hierarchical algorithm.
+
+ 
+
+We will start at the point where we are done with the data preparation and already have the RFM dataset which has been treated for missing values and outliers, and is also standardised.
+
+ 
+
+The hierarchical clustering involves 2 basic steps:
+
+    Creating the dendrogram
+    Cutting the dendrogram at an appropriate level
+    
+    
+    After we got the clusterIDs for each customer, we then appended the obtained ClusterIDs to the RFM data set, and analysed the characteristics of each cluster to derive the business insights from the different customer segments or clusters, in the same way as you did for the K-Means algorithm.
+Fig 1: Cluster Analysis
+
+ 
+
+Now look at the following dendrogram and answer the questions that follow.
+Hierarchical Clustering
+
+Questions:1/2
+ 
+ 
+Hierarchical Clustering
+
+Consider the above dendrogram for agglomerative clustering and answer the following questions.
+
+ 
+
+Find number of clusters if threshold value is 10000. (refer fig)
+3
+4
+5
+Feedback :
+Draw a horizontal line at that height. It cuts 5 vertical lines, all of which represent a cluster.
+Correct!
+7
+
+Questions:2/2
+ 
+ 
+Hierarchical Clustering
+
+Find the threshold value if the no. of clusters to be formed is 4. (refer fig)
+5000
+10000
+15000
+Feedback :
+Look at the height at which a horizontal line will cut 4 vertical lines.
+Correct!
+20000
+Feedback :
+How do you find out the number of clusters at a specific height? Try and remember cutree function.
