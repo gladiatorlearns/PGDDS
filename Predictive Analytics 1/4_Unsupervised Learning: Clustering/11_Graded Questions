@@ -1,0 +1,76 @@
+Graded Questions
+
+Questions:1/2
+ 
+ 
+K-Means algorithm
+
+Select the problem sets, where k-means clustering can be applied.
+Weather forecast for next week, given the dataset of weather information for last five years
+Given an ecom company’s customer details - the products they purchased and the amount spent. The company wants to group it’s customers based on their buying behaviour.
+Feedback :
+The given option is correct. The other options are predicting the response based on independent variables.
+Correct!
+Predict whether a new customer would respond to a bank’s new product basis his historical information
+All of the above
+
+Questions:2/2
+ 
+ 
+K-Means algorithm
+
+Select the correct statement among the following:
+The clusters formed by k-means algorithm do not depend on the initial selection of cluster centers.
+The results of k-means algorithm get impacted by outliers and range of the attributes.
+Feedback :
+Depending on the initial selection of centers, the formed clusters might be different. The value of k has to be decided by the user
+Correct!
+k-means algorithm can be applied to both categorical and numerical variables.
+K-means clustering automatically selects the most optimum value of k
+
+
+Comprehension
+
+Download the data set about the batting figures of batsmen in ODI matches given below. Analyse the data.
+Cricket
+file_downloadDownload
+
+Choose strike rate and average as the two factors on which you will cluster the data. You don’t need to clean the data. Just scale the data using the scale command and create the clusters.
+
+ 
+
+Pointers before you proceed:
+
+    standardise all parameters using standard_scaler.fit_transform() and save the output to a variable before you proceed. (check the K-Means code)
+    Choose random_state=100 for running K-Means in Python with SKLearn.
+    
+    Questions:1/2
+ 
+ 
+Cricket
+
+Choose the number of clusters as 4. Who falls in the same cluster as Virat Kohli?
+
+ST Jayasuriya
+
+SR Tendulkar
+Correct!
+
+CH Gayle
+
+Yuvraj Singh
+
+Questions:2/2
+ 
+ 
+Cricket
+
+Based on the clustering, choose the correct statement given that the clusters formed are (high SR, high Ave) - A, (low SR, low Ave) - B, (High SR, Low Ave) - C, (Low SR, High Ave) - D
+IVA RIchards and SR Tendulkar both belong to group A
+Feedback :
+You can even plot the graph after scaling for better separation of points and more intuitive visualisation.
+Correct!
+R Dravid is in group C
+Chris Gayle belongs to group B
+MJ Guptill belongs to group D
+    
