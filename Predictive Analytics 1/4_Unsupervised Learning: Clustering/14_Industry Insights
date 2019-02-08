@@ -1,0 +1,29 @@
+Now let's hear from our industry experts regarding the comparison between the K-Means algorithm and the Hierarchical clustering algorithm, before learning how to choose between the two based on your business problem.
+
+So, you learnt that whether you use k-means or hierarchical clustering algorithm depends on your hardware and the data that you are dealing with.
+
+ 
+
+Now, you will look at a good statistical hack to solve segmentation problems so that you get meaningful segments, where you will use both hierarchical and k-means algorithms to complement each other.
+
+These insights were really helpful. You looked at how these clustering methods can be used to complement each other. You also looked at the differences between these methods, and the cases where you would prefer one method over the other.
+
+Questions:1/2
+ 
+ 
+Hierarchical vs K-Means
+
+What are the benefits of Hierarchical Clustering over K-Means clustering? What are the disadvantages?
+
+Hierarchical clustering generally produces better clusters, but is more computationallyintensive.
+
+Questions:2/2
+ 
+ 
+Hierarchical Clustering
+
+Can you use the dendrogram to make meaningful clusters? (By looking at which elements leave and join at what height)
+
+Yes. It is a great tool. You can look at what stage an element is joining a cluster and hence see how similar or dissimilar it is to the rest of the cluster. If it joins at the higher height, it is quite different from the rest of the group. You can also see which elements are joining which cluster at what stage and can thus use business understanding to cut the dendrogram more accurately.
+
+
