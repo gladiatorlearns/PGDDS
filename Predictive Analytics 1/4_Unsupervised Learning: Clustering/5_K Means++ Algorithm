@@ -1,0 +1,138 @@
+K Means++ Algorithm
+
+We looked in the previous segment that for K-Means optimisation problem, the algorithm it iterate between two steps and tries to minimise the objective function given as,
+
+ 
+
+Zi=argmin||Xi−μk||2
+
+ 
+
+We also looked that the K-Means cost function is a non-convex function, which means the coordinate descent is not guaranteed to converge to the global minimum. The problem with K-Means is to initialise the cluster centers to achieve the global minima smartly. 
+
+ 
+
+To choose the cluster centers smartly, we will learn about K-Mean++ algorithm. K-means++ is just an initialisation procedure for K-means. In K-means++ you pick the initial centroids using an algorithm that tries to initialise centroids that are far apart from each other.
+
+ 
+
+Let's understand the algorithm in detail in the next lecture.
+
+To summarise, In K-Means++ algorithm,
+
+    We choose one center as one of the data points at random.
+    For each data point Xi, We compute the distance between Xi and the nearest center that had already been chosen.
+    Now, we choose the next cluster center using the weighted probability distribution where a point X is chosen with probability proportional to d(X)2 .
+    Repeat Steps 2 and 3 until K centers have been chosen.
+    
+    Visualising the K Means Algorithm
+
+Let’s see the K-Means algorithm in action using a visualisation tool. This tool can be found on naftaliharris.com. You can go to this link after watching the video below and play around with the different options available to get an intuitive feel of the K-Means algorithm. --https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
+
+Upon trying the different options, you may have noticed that the final clusters that you obtain vary depending on many factors, such as choice of the initial cluster centres and the value of K, i.e. the number of clusters that you want. You will understand these factors and other practical considerations while using the K-means algorithm in more detail in the next segment.
+
+ 
+
+Now look at the given image and answer the question that follows:
+Figure 1: Image for Comprehension
+
+
+K-Means algorithm
+
+Consider the above arrangement of points. How many clusters do you intuitively feel are present. What will happen if you use K-Means clustering here? How do you think this problem can be solved?
+
+Ans - Intuitively, it looks like 2 clusters are present. If we use K means, then we will get wrong clusters since the points in the outer ring like structure will not be segmented accurately. A reason for that is K-Means looks for how close the points are to a centroid and this distance or measure of closeness is the “linear distance”. One way to correct this can be to see the distance between all the points and then cluster the closest points.
+
+K-Means algorithm
+
+In this exercise, you will perform k-means clustering manually on a small dataset. Consider the following dataset having 2 features and 6 observations.
+Observation number	X1	X2
+1	1	4
+2	1	3
+3	0	4
+4	5	1
+5	6	2
+6	4	0
+
+Use k = 2 for the entire exercise.
+
+Assign clusters to each observation such that the odd numbered observations get assigned cluster = 1, i.e. points 1, 3 and 5 get assigned cluster = 1 and the even ones get assigned cluster = 2.
+
+Compute the centroid of the two clusters
+
+Assign each observation to the centroid to which it is closest (using euclidean distance). Report the new cluster labels for each observation.
+
+Repeat the above steps until the clusters stop changing
+
+ 
+
+The observations (identified by their row numbers) in the two clusters respectively are:
+
+
+
+(1, 3, 5) and (2, 4, 6)
+(1, 5, 6) and (2, 3, 4)
+(1, 2, 3) and (4, 5, 6)
+Feedback :
+You will see that the solution converges really fast. After just the first iteration, the solution converges. After the first iteration, observation 1,2,3 get assigned to cluster 1 and observation 4,5,6 get assigned to cluster 2. The initial cluster centroids were (2.3,3.3) and (3.3,1.3) and the distances from these is calculated to assign the clusters.
+Correct!
+(1, 3, 4) and (2, 5, 6)
+
+
+Practical Consideration in K Means Algorithm
+
+Let’s understand some of the factors that can impact the final clusters that you obtain from the K-means algorithm. This would also give you an idea about the issues that you must keep in mind before you start to make clusters to solve your business problem.
+
+Thus, the major practical considerations involved in K-Means clustering are:
+
+    The number of clusters that you want to divide your data points into, i.e. the value of K has to be pre-determined.
+
+    The choice of the initial cluster centres can have an impact on the final cluster formation.
+
+    The clustering process is very sensitive to the presence of outliers in the data.
+
+    Since the distance metric used in the clustering process is the Euclidean distance, you need to bring all your attributes on the same scale. This can be achieved through standardisation.
+
+    The K-Means algorithm does not work with categorical data.
+
+    The process may not converge in the given number of iterations. You should always check for convergence.
+
+You will understand some of these issues in detail and also see the ways to deal with them when you implement the K-means algorithm in Python.
+
+ 
+
+Now let's look in detail how to choose K for K-Means algorithm.
+
+
+Having understood about the approach of choosing K for K-Means algorithm, we will now look at silhouette analysis or silhouette coefficient. Silhouette coefficient is a measure of how similar a data point is to its own cluster (cohesion) compared to other clusters (separation).
+
+ 
+
+Let's look at it in detail in the next lecture
+
+
+
+
+So to compute silhouette metric, we need to compute two measures i.e. a(i) and b(i) where,
+
+    a(i) is the average distance from own cluster(Cohesion).
+    b(i) is the average distance from the nearest neighbour cluster(Separation). 
+
+Now, let's look at how to combine cohesion and separation to compute the silhouette metric.
+
+Additional reading
+
+You can read more about K-Mode clustering here, We will be covering it in detail in the next section.
+
+https://shapeofdata.wordpress.com/2014/03/04/k-modes/
+
+Questions:1/1
+ 
+K-Means algorithm
+
+If we are worried about K-means getting stuck in bad local optima, one way to solve this problem is if we try using multiple random initializations. Is this true or false? You can read about local optimum and global optimum here
+True
+Feedback :
+Since each run of K-means is independent, multiple runs can find different local optima, and this can help in choosing the global optimum value.
+Correct!
+False
