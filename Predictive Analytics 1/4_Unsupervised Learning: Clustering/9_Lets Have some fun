@@ -42,3 +42,45 @@ For the purpose of creating the above visualisation, we have cleaned the data to
 
 Cleaned File
 file_downloadDownload
+
+Questions:1/3
+ 
+ 
+ 
+K - Means in Python
+
+Which parameters do you think are the most important for segmenting the states? How did you decide this?
+
+Suggested Answer
+
+The parameters used depend on the question at hand. We can choose different age groups and different categories such as graduate or above etc.
+
+
+Questions:2/3
+ 
+ 
+ 
+K - Means in Python
+
+How will you check if the segmenting is good or whether you need to use different factors for segmenting?
+
+
+One really easy way is to see if the .are logically correct. For example, we can check if states in a similar geography and economic situation are clustered together or not. You can also run hypothesis test to check whether the population of different clusters is significantly different or not, If you look at the data, you can see that some specific customers or some specific states should be grouped together.
+
+Questions:3/3
+ 
+ 
+ 
+K - Means in Python
+
+How are the clusters different when we have not scaled compared to clusters formed after scaling?
+
+Illiteracy percentage gets higher weightage when there is no scaling
+Feedback :
+
+Look at the clusters formed with and without scaling. You will see that for the ones formed without scaling, the states with similar literacy rates will fall in the same cluster, even though their graduate percentage differs.
+Correct!
+
+Graduate and above percentage gets higher weightage when there is no scaling done
+
+There is no difference in the clusters formed
