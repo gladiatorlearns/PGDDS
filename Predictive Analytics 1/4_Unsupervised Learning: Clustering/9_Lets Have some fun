@@ -1,0 +1,44 @@
+Let's Have Some Fun
+
+You have learnt about how to make clusters using the K-Means algorithm. Let's use that knowledge to play around with clustering using K-Means.
+
+ 
+
+Given below is a data set on the education status of Indian states.
+Indian Census Data
+file_downloadDownload
+
+The data contains state-level information on attributes such as the number of literates, illiterates, the number of literates who are graduate and above, etc.
+
+ 
+
+But there’s a problem — the number of variables is quite large, and after forming the clusters, it may get difficult to describe each cluster’s characteristics.
+
+ 
+
+This is not an uncommon problem. You may have noticed data sets having as many as 100-200 variables. There are techniques which are used to ‘reduce the number of variables while retaining as much information as possible’.
+
+ 
+
+Two most common techniques, also called variable reduction techniques, are factor analysis and principal component analysis.
+
+ 
+
+Lawmakers can cluster the states to find out which states have similar education statistics, and thus assign the budget accordingly. Clustering can also help them figure out the best policies to make for these clusters.
+
+ 
+
+You can download the data set and run the K-Means algorithm on this. You can try to make the clusters on different attributes. 
+
+ 
+
+You can see the effect of various elements of the K-Means clustering on the clusters formed. You can zoom in by selecting and double-clicking the map to look at the clusters.
+
+ 
+
+ 
+
+For the purpose of creating the above visualisation, we have cleaned the data to include only the 2 factors under consideration. You could have chosen any other factors as well. Factors here mean the variables that you will use to build the clustering model. You can download the file below to answer the questions that follow:
+
+Cleaned File
+file_downloadDownload
