@@ -1,0 +1,109 @@
+Graded Questions - I
+
+Below is given a set of 6 points which have to be clustered by agglomerative clustering method. Use the single linkage method for clustering.
+
+ 
+Point Label	X	Y
+A	6	0
+B	1	2
+C	2	7
+D	4	6
+E	5	3
+F	11	1
+
+ 
+
+Answer the following questions based on the data given above.
+
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Hierarchical Clustering
+
+What is the distance between points B and E?
+4.1
+Feedback :
+Distance is sqrt( 5-1)^2 + (3-2)^2)
+Correct!
+5.0
+Feedback :
+The distance between two points (x1,y1) and (x2,y2) is given by sqrt((x1-x2)^2 + (y1-y2)^2).
+Incorrect!
+5.1
+8.6
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Hierarchical Clustering
+
+Select the appropriate option which describes the Single Linkage method.
+In single linkage hierarchical clustering, the distance between two clusters is defined as the shortest distance between two points in each cluster.
+Feedback :
+Single linkage cluster takes the distance as the shortest distance between any 2 points in each of the clusters.
+Correct!
+In single linkage hierarchical clustering, the distance between two clusters is defined as the longest distance between two points in each cluster.
+In single linkage hierarchical clustering, the distance between two clusters is defined as the distance between the centroids of the clusters.
+In single linkage hierarchical clustering, the distance between two clusters is defined as the average distance between all the points in each cluster.
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Hierarchical Clustering
+
+Based on the concept of agglomerative clustering, which two points will get clustered first?
+A-B
+B-C
+C-D
+Feedback :
+The distance between C and D is sqrt(5), which is lower than any other pair of clusters.
+Correct!
+D-E
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Hierarchical Clustering
+
+How many clusters will be formed in total after the completion of second iteration. (Each iteration is defined as the process of merging of clusters)
+1
+2
+3
+4
+Feedback :
+After each iteration, the number of clusters decreases by 1
+
+
+Graded Questions - II
+
+Download the data set given below about the batting figures of batsmen in ODI matches. Analyse the data to answer the following questions.
+
+Cricket
+file_downloadDownload
+
+Choosing strike rate and average as the two factors on which you will cluster the data. You don’t need to clean the data. Just scale the data and start making the cluster.
+
+Questions:1/1
+ 
+Hierarchical Clustering
+
+Make the dendrogram using the complete linkage.Cut the tree at k = 4. Which of the following is correct statement
+
+Virat Kohli and Sachin Tendulkar are in the same cluster
+
+CH Gayle and V Sehwag are in the same cluster
+
+SC Ganguly, R Dravid and SR Tendulkar are in the same cluster
+Correct!
+
+RG Sharma is in the cluster with the highest average strike rate
+
