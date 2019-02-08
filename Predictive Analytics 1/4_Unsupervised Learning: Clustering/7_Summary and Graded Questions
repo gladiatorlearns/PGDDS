@@ -1,0 +1,85 @@
+We covered a lot in this session. We started with understanding the K-Means intuitively by grouping the 10 random points in 2 clusters.
+
+ 
+
+The algorithm begins with choosing K random cluster centres.
+
+ 
+
+Then the 2 steps of Assignment and Optimisation continue iteratively till the clusters stop updating. This gives you the most optimal clusters — the clusters with minimum intra-cluster distance and maximum inter-cluster distance.
+
+ 
+
+You also saw the different practical issues that need to be considered while employing clustering to your data set. You need to choose how many clusters you want to group your data points into. Secondly, the K-means algorithm is non-deterministic. This means that the final outcome of clustering can be different each time the algorithm is run even on the same data set. This is because, as you saw, the final cluster that you get can vary by the choice of the initial cluster centres.
+
+ 
+
+You also saw that the outliers have an impact on the clusters and thus outlier-infested data may not give you the most optimal clusters. Similarly, since the most common measure of the distance is the Euclidean distance, you would need to bring all the attributes into the same scale using standardisation.
+
+ 
+
+You also saw that you cannot use categorical data for the K-Means algorithm. There are other customised algorithms for such categorical data.
+
+
+Graded Questions
+
+
+
+Questions:1/3
+ 
+ 
+ 
+K-Means algorithm
+
+Arrange the steps of k-means algorithm in the order in which they occur:
+
+    Randomly selecting the cluster centroids
+    Updating the cluster centroids iteratively
+    Assigning the cluster points to their nearest center
+
+1-2-3
+1-3-2
+Feedback :
+First the cluster centers are pre-decided. Then all the points are assigned to their nearest cluster center and then the center is recalculated as the mean of all the points which fall in that cluster. Then the clustering is repeated with the new centers and the centers are updated according to the new cluster points.
+Correct!
+2-1-3
+3-1-2
+
+Questions:2/3
+ 
+ 
+ 
+K-Means algorithm
+
+Consider three cluster centres A(2,3), B(4,5) and C(6,2). A point (1,2) is to be assigned to one of these clusters. According to k-means clustering concepts and using euclidean distance as the measure of closeness, which cluster should it be assigned to?
+A
+Feedback :
+According to k-means algorithm, the point should be assigned to the centre with the minimum distance from the point. The distances for A, B, C are sqrt(2), sqrt(18) and sqrt(25)
+Correct!
+B
+C
+Any of the above - It doesn’t matter since it has to be randomly selected the first time
+
+
+Questions:3/3
+ 
+ 
+ 
+K-Means algorithm
+
+Which of the following options are prerequisites for k-means algorithm:
+
+ 
+
+A) initial centers should be very close to each other
+
+B) Choice of number of clusters
+
+C) Choice of initial centroids
+Only A
+B & C
+Feedback :
+Note that the k-means algorithm requires the initial centers to be far apart.
+Correct!
+A & B
+A, B & C
