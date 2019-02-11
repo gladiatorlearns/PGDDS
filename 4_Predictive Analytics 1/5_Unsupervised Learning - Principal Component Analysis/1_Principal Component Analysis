@@ -1,0 +1,43 @@
+Introduction
+
+Welcome to the module on ‘Principal Component Analysis’.
+
+ 
+
+In this module, you will learn about another type of unsupervised machine learning technique — Principal Component Analysis (PCA). PCA is widely used to simplify high-dimensional datasets to lower dimensional ones.
+
+ 
+
+In this module, you will learn some important concepts of dimensionality reduction, the basic idea and the learning algorithm of PCA, and its practical applications on supervised and unsupervised problems.
+
+ 
+In this session
+
+ 
+
+This session will introduce you to the following topics: 
+
+    The why and what of PCA
+
+    Building blocks of PCA
+
+    Principal components: choosing an optimal number
+
+    Singular value decomposition (SVD)
+
+ 
+Prerequisites
+
+Apart from knowledge of previous sessions, there are certain basic concepts of linear algebra that will be useful when you study PCA. Although you don't need to understand the complete math behind eigenvalues and eigenvectors, you may want to revise the basics of these (you may also revise these later during the session if you need). Some helpful links are given below:
+
+    The basic idea of linear dependence/independence of vectors - Khan Academy  https://www.youtube.com/watch?v=CrV1xCWdY-g
+
+    Eigenvectors and eigenvalues - a visual understanding - 3Blue1Brown  https://www.youtube.com/watch?v=PFDu9oVAE-g
+
+    Computing the eigenvalues and eigenvectors - Khan Academy https://www.youtube.com/watch?v=PhfbEr2btGQ
+    
+     
+
+You can download the lecture notes/handout from below and use it as a reference while watching the videos.
+PCA And Dimensionality Reduction
+file_downloadDownload
