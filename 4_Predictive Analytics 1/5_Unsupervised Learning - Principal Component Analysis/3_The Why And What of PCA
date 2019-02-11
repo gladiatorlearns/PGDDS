@@ -1,0 +1,149 @@
+The Why And What of PCA
+
+Let's start with understanding the motivation of studying PCA and look at a brief overview of the technique. Rahim will walk you through what you will learn in this module.
+
+ 
+
+You are requested to refer to the lecture notes as you go through this module.
+
+Rahim mentioned that PCA is useful when you have a large number of potentially correlated variables (such as in a logistic regression set up). Also, PCA can be used to visualise complex datasets. Later in this session, you will learn to apply PCA (with logistic regression) to the telecom churn prediction problem.
+
+ 
+
+Now that you have understood the need for an unsupervised technique like PCA, let's look at some common applications of PCA. Specifically, Rahim will talk about the following applications:
+
+    Dimensionality reduction
+
+    Data visualization and Exploratory Data Analysis
+
+    Create uncorrelated features/variables that can be an input to a prediction model
+
+    Uncovering latent variables/themes/concepts
+
+    Noise reduction in the dataset
+    
+    
+    Questions:1/1
+ 
+PCA
+
+ 
+
+While defining PCA, we've discussed some key characteristics of 'Principal Components'. Choose all the characteristics that have been discussed.
+
+They are independent of each other
+Correct
+
+It performs one-to-one mapping of original columns with their relative positions rearranged on the basis of importance with respect to the predictable variable.
+Feedback :
+
+Principal component analysis (PCA) is a statistical procedure that uses orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components in such a way that every principal component tries capturing the maximum of remaining variance. The positions of columns play no role in any calculation.
+Incorrect
+
+They capture ‘sufficient’ information
+CorrectYou missed this!
+
+They are the linear combination of original variables
+Correct
+Questions:1/5
+ 
+ 
+ 
+ 
+ 
+Multicollinearity
+
+Which of the following is not true about multicollinearity?
+
+Multicollinearity generally occurs when there are high correlations between two or more predictor variables.
+
+In case of multicollinearity, some of the predictor variables can be used to predict some other predictor variables.
+
+An easy way to detect multicollinearity is to calculate correlation coefficients for all pairs of predictor variables.
+
+Multicollinearity helps in faster convergence of regression.
+Feedback :
+
+Multicollinearity makes the model unstable and doesn't help in faster convergence of regression.
+
+Questions:2/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+When can (or should) PCA be used?
+
+When the attributes of your data are highly correlated
+
+When better data visualisation is possible using less number of dimensions
+
+When the number of dimensions needs to be reduced 
+
+All of the above
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+Number of Scatter Plots
+
+Given 5 attributes or columns of information in a dataset, how many pairwise scatter plots will be required to know the relation between all pairs of attributes?
+
+10
+Feedback :
+
+It requires pC2 = p*(p-1)/2 plots where p is the number of columns
+Correct!
+
+20
+
+5
+Incorrect!
+
+15
+
+uestions:4/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Which of the following is true regarding PCA (principal component analysis)?
+
+It is an unsupervised technique
+
+Principal components are the linear combinations of original variables
+
+Principal components are constructed to capture the maximum information
+
+All of the above
+
+
+Questions:5/5
+ 
+ 
+ 
+ 
+ 
+Themes
+
+Which of the following is true with respect to uncovering latent variables/themes?
+
+It means giving a proper name to a column so that it gives a true description of the values it contains
+
+Latent variables are linear combinations of original attributes that can also be interpreted as meaningful latent themes in some cases
+Correct!
+
+It means dropping a few columns and combining the remaining ones to discover a pattern in the data
+
+None of the above
+
+
+
