@@ -1,0 +1,187 @@
+Linear Algebra Practice Questions
+
+In this module, you will need to recollect some basic linear algebra concepts (such as the basis of coordinate systems, eigenvalues and eigenvectors etc.). Before moving ahead, it is important to make sure that you spend some time understanding/recollecting these concepts.
+
+ 
+
+In this segment, you can attempt some practice questions and check your proficiency in these concepts. You can go through the optional resource provided- Maths for Data Analysis along with the external links before attempting this set. 
+
+ https://learn.upgrad.com/v/course/208/session/26071/segment/134540
+
+The major topics that you need to brush up on are - linear transformations, basis vectors, basis transformation and eigendecomposition.
+
+ 
+
+Also, it is essential to know that the mathematical background needed for understanding the mathematics of PCA in detail is pretty vast and well beyond the scope. However, an intuitive understanding of the analysis part and a brief overview of the maths part is sufficient to gain a good hold on PCA.
+
+Questions:1/6
+ 
+ 
+ 
+ 
+ 
+ 
+Different basis vectors for 2-D Space
+
+You know that the commonly used basis vectors for a 2-D vector space are i(1,0) and j(0,1). However, any vector space can have an infinite number of basis vectors. Can you identify which one of the following could be another set of basis vectors?
+
+(3,4) and (6,8)
+
+(2,0) and (1,0)
+Feedback :
+
+What property of the vectors do you need to check first before deciding whether they can be basis vectors or not?
+Incorrect!
+
+(1,2) and (3,4)
+Feedback :
+
+If you visualise other options on a 2-D space, you can clearly see that the 2 vectors are linearly dependent, i.e. the vectors are collinear. Hence they would never be able to explain the entire 2-D space. The most important characteristic that you need to check before deciding on the basis vector is that they are linearly independent.
+Correct!
+
+(0,1) and (0,3)
+
+
+Questions:2/6
+ 
+ 
+ 
+ 
+ 
+ 
+Different basis vectors for 2-D space
+
+You saw how (1,2) and (3,4) are also one of the sets of basis vectors for the 2-D space. However, there is one key difference between the original basis vectors (0,1) and (1,0) and the new ones - which is that the original ones are orthogonal as well. This would mean that there is no 'projection' or correlation (as you'll learn further in this session) between the 2 basis vectors. Can you tell which of the following basis vectors are orthogonal as well?
+
+(1,4) and (-1,4)
+
+(1,2) and (2,1)
+Feedback :
+
+How do you check whether 2 vectors are orthogonal or not?
+Incorrect!
+
+(-3,4) and (3,5)
+
+(-1,2) and (-2,-1)
+Feedback :
+
+If you calculate the dot product of these two vectors it comes out to be -1*-2 + 2*-1 = 0. Hence this set of basis vectors is orthogonal as well.
+
+
+Questions:3/6
+ 
+ 
+ 
+ 
+ 
+ 
+Linear Transformation
+
+Matrices are generally considered as linear transformations which can distort a vector - by either stretching it, rotating it, shearing it, etc. when you multiply them by the given vector. Consider the vector v = (2,3). What would be the linear transformation of this vector when the following matrix L  is operated on it?
+
+ L=[1001]
+
+It remains the same
+Feedback :
+
+If you consider the linear transformation Lv, we see that   Lv=[1001][23]     =  [23]         . Thus it remains the same
+Correct!
+
+It gets stretched by a factor of 2
+
+It is rotated by 90 degrees
+
+It is shifted to (3,2)
+Feedback :
+
+Just multiply the matrix  L by the given vector v and observe the change.
+
+
+Questions:4/6
+ 
+ 
+ 
+ 
+ 
+ 
+Basis Transformation
+
+In the previous question, the matrix L caused no transformation in the vector because its column vectors are in fact the standard basis vectors for 2-D space, i.e., the one in which the original vector is represented in. This brings upon the important concept of basis transformation, where a matrix consisting of a different set of basis vectors can be multiplied to the given vector and you'll get the representation of the given vector with respect to the newer basis.
+
+Earlier you calculated (-1,2) and (-2,-1) as one set of basis vectors. Can you find the representation of the given vector v =(2,3) with respect to the newer basis?
+
+(8,1)
+
+(-8,1)
+Feedback :
+
+Taking L as the newer basis vector we have, Lv=[−1−22−1][23]=[−81]
+Correct!
+
+(8,-1)
+
+(-8,-1)
+
+
+Questions:5/6
+ 
+ 
+ 
+ 
+ 
+ 
+Eigenvalues and Eigenvectors
+
+A special kind of linear transformation that can happen to a vector is that when a matrix is multiplied to it, it only manages to stretch the vector by a certain scalar magnitude. These vectors are known as eigenvectors for that particular matrix and that scalar magnitude is known as the corresponding eigenvalue. Formally, they can be written as follows,
+
+Av=λv,where v is the eigenvector and λ is the corresponding eigenvalue
+
+Among the following examples which ones represent a matrix and eigenvector pair
+
+A=[2112]and v=[1−1]
+Feedback :
+
+If you multiply these two vectors we find that Av=[2112][1−1]=[1−1]
+Correct!
+
+A=[2212]and v=[1−1]
+Feedback :
+
+Calculate Av and then observe whether the result is a scalar multiple of v or not.
+Incorrect!
+
+A=[2112]and v=[1−2]
+
+A=[2212]and v=[1−2]
+
+
+Questions:6/6
+ 
+ 
+ 
+ 
+ 
+ 
+Eigenvalues and Eigenvectors
+
+Consider the following statement and choose the correct option.
+
+"If an eigenvalue exists for a certain matrix, then the corresponding number of eigenvectors can be infinite."
+
+ 
+
+ 
+
+The statement is always true.
+Feedback :
+
+Try multiplying the given equation Av=λv by a scalar k on both sides. Hence the equation can be re-written as  k(Av)=kλv  and further simplified asA(kv)=λ(kv) .  Thus you see that kv is also an eigenvector that satisfies the given equation. Since k can take an infinite number of real values, we have an infinite number of eigenvectors.
+Correct!
+
+The statement is always false.
+Feedback :
+
+Try multiplying the given equation Av=λv by a scalar k on both sides and observe. Does the same effect work for the vector kv as well?
+
+
