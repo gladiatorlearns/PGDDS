@@ -1,0 +1,349 @@
+Building Blocks of PCA
+
+In this segment, you will learn about the building blocks of PCA. Let's dive in and look at the first building block - the notion of the basis of a vector space. Since you have already studied this concept before, this lecture will act as a quick refresher.
+
+You revised the notion of the basis of a space. In terms of datasets, each row represents a point in the space, while the columns are the basis vectors of this space.
+
+ 
+
+Let's now look at an example to strengthen this notion.
+
+With this example covered, you've completed learning about the first building block of PCA — the basis of a space.
+
+ 
+
+Now, let's take a look at the next building block of PCA, i.e. basis transformation. 
+
+You saw some examples of basis transformation and understood why it is useful. To revise the concepts of basis transformation from a linear algebra point of view, you may want to go through the following optional videos:
+
+    Basis Transformation: 3Blue1Brown  https://www.youtube.com/watch?v=P2LTAUO1TdA
+
+    Linear transformations and matrices: 3Blue1Brown https://www.youtube.com/watch?v=kYB8IZa5AuE&vl=en
+
+ 
+
+Till now we have seen two building blocks of PCA - the basis of a space and basis transformation. Next, we see the third and the last building block of PCA - variance as information.
+
+So that completes all the building blocks of PCA. In the next segment, you will learn how to find the principal components of a given dataset. 
+
+ Questions:1/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+ 
+
+Which of the following is NOT true:
+
+Set of linearly independent vectors that span the entire space is known as basis
+
+Each row of the dataset is a point in the space
+
+Any point in the space can be represented by a linear combination of basis vectors
+Incorrect!
+
+Datasets of any dimensionality can be visualised in a 3-d space
+Feedback :
+
+A dataset with higher dimensionality( more than 3-dimensions) cannot be visualized in 3-D space
+
+Questions:2/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+The vectors i and j are the basis of two-dimensional space. Which of the following is true?
+
+The magnitude of both these vectors is unity
+
+The combination of i and j can represent any point on the two-dimensional space
+
+i cannot be expressed in terms of j and vice versa
+
+All of the above
+Feedback :
+
+i =(1,0) and j=(0,1) are unit vectors with magnitudes of 1.
+
+Any point on the 2-D space is a linear combination of i and j.
+
+i and j are orthogonal vectors, and hence, one can't be represented by the other.
+
+Questions:3/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+In a two-dimensional space, the only information given about a point is that the distance of the point from the origin is 5. Which of the following is not true?
+
+For any chosen basis, there is an infinite number of basis vectors that can represent this vector.
+
+If one of the basis vectors passes through the point, then there are four possible coordinates for this point.
+
+Using the conventional basis vectors i and j, the only way this point can be described is (3i,4j)
+Feedback :
+
+Draw a circle of radius 5 from the origin. Now, any point on the circumference of this circle satisfies this condition. Now, there are infinite points. When the point lies on the basis vector, the only possible coordinates would be (5,0), {(-5,0), (0,5)}, and (0,-5).
+
+Questions:4/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+The point (3,4) in a 2-D space can be represented as the vector 3i + 4j where i and j are basis vectors with the coordinates of (1,0) and (0,1). If we rotate the basis vector 90 degrees anticlockwise, the new position of i becomes (0,1) and that of the new j becomes (-1,0). What are the coordinates of point P in the new vector space?
+
+(3,4)
+
+(4,3)
+
+(4,-3)
+Feedback :
+
+Y-axis becomes the new X-axis, so the previous Y coordinate becomes the new X coordinate. Negative X-axis is the new Y-axis, so the negative of X-axis becomes the new Y-axis. Therefore, the new coordinates of P are (4,-3).
+
+Correct!
+
+(-3,4)
+
+Questions:5/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+Basis vectors are often represented as the column vectors of a matrix. For example, your i and j basis vectors can be expressed as — 
+
+ 
+
+The first column represents the basis vector i (1,0) and the second column represents the basis vector j (0,1). What will this matrix become if the basis vectors are rotated 180 degrees in a clockwise direction?
+
+ 
+
+Feedback :
+
+The new X-axis is the negative of X-axis; hence, it is (-1,0). Similarly, Y-axis becomes (0,-1).
+
+Correct!
+
+
+Questions:6/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis
+
+A point in a 2-D space can be thought of as a data point or a record. If your dataset has only two columns X and Y, then a record A with X =6 and Y =8 can be thought of as a point (6, 8). The values 6 and 8 are the ‘attributes’ of this data point on the original vector space. If you rotate your basis vectors, say, by 90 degrees in clockwise direction, what will happen to data point A?
+
+It will also rotate with the basis vectors
+
+It will remain fixed in its space, and only its attributes, with respect to the new vector space, will change.
+Feedback :
+
+In the transformation of space, the origin and the data points don’t change their locations. They remain fixed in the space. However, the representation of the point on the new vector space changes.
+Correct!
+
+The columns interchange the values
+
+None of the above
+
+
+Questions:7/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variance
+
+Which of these best describes the relationship between the variance of a column and the information?
+
+More variance means more information, and thus columns having higher variance always contain more information than those having lower variance
+
+Generally, more variance means more information, but columns having higher variance may not always contain more information than those having lower variance
+Feedback :
+
+Though variance and information are correlated, the correlation is not 100%. Also, higher variance does not always imply higher information, for e.g. a column having values in millions will have higher variance than a column having fractions, but that doesn't imply it has more information.
+Correct!
+
+Variance and information are inversely related to each other
+
+Generally, variance and information are not related to each other, but there may be cases when they would be related
+
+
+Questions:8/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variance
+
+In the following dataset, which column has the second least variance?
+
+Date
+
+Gender
+Feedback :
+
+Gender has the second least variance as the least variance is in the Date column, which contains the same value in all its rows. And in Gender, only one row has a different value, i.e. F.
+
+Correct!
+
+CityTier
+
+Shoe Size (cm)4_
+
+Questions:9/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variance
+
+Which axis captures more variance in the following plot between Age and Weight?
+
+Weight
+
+Age
+Feedback :
+
+When the farthest points of the data are projected on the axis, the length of the projection becomes proportional to the variance. In the given image, the length of the projection of the farthest points of data on the Y-axis is more than the length of the projection on the X-axis.
+Correct!
+
+Both capture almost equal amounts of variance
+
+Can't be determined
+
+
+Questions:10/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Which of the following is not a valid use case of PCA?
+
+Noise reduction in the dataset
+
+To create uncorrelated features that can be used as an input for a prediction model
+
+To remove correlated rows from the dataset
+Feedback :
+
+We don't calculate the correlation between the rows; it is only considered between the columns.
+Correct!
+
+Dimensionality reduction
+
+
+Questions:11/11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Basis Transformation
+
+Basis transformation is a process of converting information from one set of basis vectors into another set of basis vectors. As you have seen in earlier questions, a basis vector can be represented as a matrix where each column of the matrix is one basis vector. Let's consider one such matrix A = and a point P = in this basis space. You know what this point will look like in your conventional basis. You can find it out by multiplying point P with vector A. What would the coordinates of point P be in conventional basis?
+
+(4,3)
+
+(3,4)
+Feedback :
+
+Multiplying Matrix  A with vector P (⅗ *5 + -⅘ *0, ⅘ *5 +⅗ *0)=(3,4) transforms the vector in the conventional reference frame as the matrix itself has been represented with respect to conventional reference frame.
+
+Correct!
+
+(0,5)
+
+(5,0)
+
+
+
+
