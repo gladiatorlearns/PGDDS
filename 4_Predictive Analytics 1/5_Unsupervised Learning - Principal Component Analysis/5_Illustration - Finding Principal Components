@@ -1,0 +1,75 @@
+Illustration - Finding Principal Components
+
+Before we get into viewing the illustration showing how to find principal components, let's study PCA formally. Before moving on to the video, try and understand the textbook definition of PCA:
+
+ 
+
+'Principal component analysis (PCA) is one of a family of techniques for taking high-dimensional data and using the dependencies between the variables to represent it in a more tractable, lower-dimensional basis, without losing too much information.'
+
+ 
+
+The following lecture will help you understand this better.
+
+
+To summarise, PCA finds the principal components z1,z2....zp such that each principal component is independent (i.e. perpendicular) to each other and captures as much variance as possible. The principal components are linear combinations of the original features.
+
+ 
+
+The following illustration will help you understand the process of finding principal components much better. 
+
+
+To summarise, you learnt how the principal components are successfully computed. The following paragraph summarises the algorithm and introduces some important terms as well.
+
+ 
+
+If the original dataset has p features (x1,x2,...xp), each principal component vector z is a p-dimensional vector. The first principal component vector is denoted as 
+
+
+PC1=(ϕ11,ϕ21,....ϕp1),
+
+ 
+
+and its 'weights' ϕ11,ϕ21...ϕp1 are sometimes called the loadings. The scalar quantities z1,z2...zp, called the scores, are linear combinations of the original feature vectors with loadings as the coefficients, for e.g. the scores along the first component are
+
+ 
+
+z1=ϕ11x1+ϕ21x2+....+ϕp1xp
+
+ 
+
+The the first component vector (ϕ11,ϕ21,....ϕp1) is  calculated such that the variance of the score z1 is maximised.
+
+ 
+
+The next component z2 is represented as
+
+ 
+
+z2=ϕ12x1+ϕ22x2+....+ϕp2xp
+
+ 
+
+and its loadings / coefficients ϕ2 are computed such that it is perpendicular to ϕ1, in addition to maximising the variance of z2. The constraint of perpendicularity can be imposed by stating that the dot product of the vectors should be 0, i.e.
+
+ 
+
+ϕ1.ϕ2=0
+
+ 
+
+Similarly, all the other components ϕ3,ϕ4...ϕp are successively computed, each being perpendicular to all the previous components.
+
+ 
+
+You'll learn how the loadings are computed using a popular techinque called SVD in the next segment.
+
+ 
+
+Let's now look at a quick summary of what you've learnt so far.
+
+Shortly, you will learn about SVD or singular value decomposition, which is a technique to compute the principal components, i.e. the scores and the loadings. 
+
+ 
+References
+
+    The definition of PCA used here is from the textbook 'Extending the Linear Model with R' by Julian Faraway.
