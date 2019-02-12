@@ -1,0 +1,103 @@
+Note: This is an optional and a gentler recap of the topics covered in this module until this point. If you are comfortable with the topics taught till now, you can jump on to the next segment. There are no questions in this segment. Also, this segment is pretty maths heavy. Make sure that you are comfortable with the notations mentioned previously so that you understand the following example thoroughly.
+
+ 
+
+At this point, you may have gotten a fair idea about PCA. Let’s try to understand it from multiple angles. Consider the following dataset of shoe sizes and heights of six people:
+
+ 
+
+ 
+Person	Shoe Size	Height
+A	10	6
+B	11	4
+C	8	5
+D	3	3
+E	2	3
+F	1	2
+
+ 
+
+The plot of the data will look like the following:
+
+ 
+Shoe Size and Height
+
+ 
+
+ 
+
+While doing PCA, the first step is standardisation of data, i.e. computing the standardised value of each column x to (x - mean)/sd. The plot below shows the standardised values:
+
+ 
+Standardised Values
+
+ 
+
+Notice that there is no difference in the relative placement of the data. ‘F’ is still the bottom-most point and ‘B’ is the rightmost point. The only difference is that the mean of both the columns is now zero, and their standard deviation is 1.
+
+ 
+
+PCA tries to find a line passing through the origin such that it captures the maximum variance in the dataset. What does this mean? Let’s focus on the following figure:
+
+ 
+PCA - Vectors
+
+ 
+
+The projection of point A on X-axis is OR, on Y-axis is OQ, and on the red line passing through the origin is OP. The aim of PCA is to find a line passing through the origin such that A’s projection on it is maximum. 
+
+ 
+
+As we rotate the red line about the origin, the length of AP=p and OP=d change. The relation between c, p, and d is given by Pythagoras’ theorem as c2=p2+d2. Since c is constant, decreasing p is equivalent to increasing d.  But we don’t have only one data point A, but we have six of them — A, B, C, D, E, and F. Suppose that their projections on the red line are d1,d2...d6. If d1+d2+...+d6=D, then the aim of PCA is to maximise D. 
+
+ 
+
+ 
+PCA - Projections
+
+ 
+
+The other way of looking at the projections d is that they are the dot product of the vectors OA and the principal component vector OP. If principal component-1 is denoted by ϕ1,ϕ2,...ϕp and the data point A by( x1,x2) the dot product is given by the score z1:
+
+ 
+
+z1=ϕ11x1+ϕ21x2
+
+ 
+
+Thus, the task of maximising the projections d1,d2...d6 is equivalent to maximising the scores z1,z2.. Now, maximising z1,z2.. etc. is equivalent to maximising z21,z22... etc.
+
+ 
+
+If the coefficients of the PCs are standardised and centered, then the mean of the vectors z1,z2.. will be zero and the variances will be given by z21,z22... etc. Thus, do you see how maximising the projections is equivalent to maximising the variances captured in the principal components?
+
+ 
+
+Now say that after maximising the projections, the best fit line is OP, as shown below:
+OP
+
+ 
+
+OP passes through the point (4, 3) and can be expressed through the vector 4i + 3j. Since (basis) vectors are usually represented as unit vectors, the vector can be represented as 4/5i + 3/5j = 0.8i + 0.6j. This vector is the first principal component. The values 0.8 and 0.6 are its loadings, i.e. ϕ1=(ϕ11,ϕ21)=(0.8,0.6).
+
+ 
+PCA - Unit Vectors
+
+Now, any point x = (a, b)'s projection on the first PC is the dot product between x and ϕ1, i.e.
+
+ 
+
+z1=ϕ11x1+ϕ21x2 = 0.8a+0.6b
+
+ 
+
+This is the score of the point (a, b) on the first principal component. For e.g. for a person with a (shoe size = 10, height = 5 ft), the length of his/her projection, or score, on the firstPC will be 0.8 x 10 + 0.6 x 5 = 11 units.
+
+ 
+
+ 
+
+Finding out the second principal component is easy in 2-D, since there is only possible direction which is orthogonal to PC1 - it’s a line passing through the origin and perpendicular to PC1. One such vector is −0.6i+0.8j.  
+
+ 
+Second PC
