@@ -1,0 +1,62 @@
+You will now learn an important technique used to compute the principal components, called singular value decomposition or SVD.
+
+ 
+
+Before you get into the details of SVD, wouldn’t it be nice to get a quick recap of the basics and the important terms of vectors and matrices?
+
+ 
+
+The document attached below will help you recall the common terminologies of matrices, some of which is used in the following lectures. Please go through it if you think you are not totally comfortable with matrix transpose, eigenvectors and eigenvalues, singular matrices etc.
+
+ 
+
+In the following lecture, Rahim explains the various methods used to find the principal components.
+
+
+Matrices - Quick Refresher
+file_downloadDownload
+
+In the following lecture, you will see an example of SVD to concretize the concepts you have just learnt:
+
+To summarise, SVD helps you decompose an m x n matrix A into three component matrices - U, S and V' as shown below. 
+SVD
+Comprehension - PCA and SVD
+
+You saw that if each row in the original dataset A (m x n) represents a user and each column an item such as a book, then:
+
+    The matrix U (m x k) maps the users to the new k themes/latent variables
+    The diagonal matrix S (k x k) represents the strength of each feature
+     Matrix V' (k x n) maps each of the k themes/latent variables to the original n features.
+
+ 
+
+If you choose k < n, i.e. k principal components, then you essentially achieve dimensionality reduction, since you have now reduced an m x n dataset with n original features to an m x k dataset with k principal components. 
+
+ 
+
+In the previous segment, we had mentioned that the coefficients of the ith principal component vector ϕi= ϕ1i,ϕ2i,....ϕni (an n-dimensional vector) are called the loadings, while the scores along the ith component are represented as:  
+
+ 
+
+zi=ϕ1ix1+ϕ2ix2+....+ϕnixn,
+
+ 
+
+The matrix Us, i.e. the product of the first two matrices given by SVD, is an m x k matrix which contains the scores z - each of the m rows contains the score of an observation along the kth principal component. 
+
+ 
+
+Also, the matrix VT, which is a k x n matrix, contains the loadings ϕi,j where each of the k rows represents a principal component vector ϕi. In other words, each row of this matrix represents an n-dimensional principal component vector.
+
+ 
+
+Thus, one can interpret the output of SVD as:
+
+ 
+
+A=Us  VT=Scores.Loadings
+
+ 
+
+ 
+
