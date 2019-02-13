@@ -55,7 +55,7 @@ Thus, one can interpret the output of SVD as:
  
 
 A=Us  VT=Scores.Loadings
-
+ 
  
 
  
