@@ -1,0 +1,318 @@
+Introduction
+
+Welcome to the second session of PCA. In the previous session, you discovered and learnt the theoretical concepts of PCA. In this session, you will learn how to implement PCA in python on some real examples.
+
+ 
+
+In this session, you will learn how to use PCA on a problem you have already encountered before - predicting telecom churn using logistic regression. You will now learn to implement PCA in tandem with logistic regression.
+
+ 
+
+Before you move ahead, it is recommended that you quickly go through the notebook once and get yourself familiar with the dataset etc. You can download the notebook and the datasets from the bottom of this page.
+
+Prerequisites
+
+There are no prerequisites for this session other than the knowledge of the previous session.
+
+ 
+
+Guidelines for in-module questions
+
+The in-video and in-content questions for this module are not graded. The graded questions are given in a separate segment labelled 'Graded Questions' at the end of the session. The questions in that segment will adhere to the following guidelines:
+
+ 
+ 	First Attempt Marks	Second Attempt Marks
+
+Question
+
+with 2 Attempts
+	10	5
+
+Question
+
+with 1 Attempt
+	10 	0
+
+ 
+People you will hear from in this session 
+
+Subject Matter Expert
+
+Mirza Rahim Baig
+
+Lead Business Analyst, Flipkart
+
+ 
+Downloads
+IPython Notebook
+file_downloadDownload
+internet.csv
+file_downloadDownload
+customer_data.csv
+file_downloadDownload
+churn_data.csv
+file_downloadDownload
+
+
+PCA: Python Implementation
+
+You will now learn to implement PCA in python. Please download the Jupyter notebook and the datasets given below and implement the code along with the lecture.
+
+ 
+
+Ipython Notebook
+
+Logistic Regression - Telecom Churn with PCA
+file_downloadDownload
+
+ 
+
+Datasets
+Advertising
+file_downloadDownload
+churn_data
+file_downloadDownload
+customer_data
+file_downloadDownload
+internet_data
+file_downloadDownload
+
+First, let's quickly recall how we had implemented logistic regression on the telecom churn problem. This lecture will quickly walk you through the entire process of building a logistic regression model.
+
+ 
+
+Video Correction: At 03:52, Rahim says 'linear regression' though he meant 'logistic regression'. 
+Current Time 0:25
+/
+Duration 8:54
+ 
+Playback Rate
+Auto
+1.5x
+
+You saw the process of building a churn prediction model using logistic regression. Some important problems with this process that Rahim pointed out are:
+
+    Multicollinearity among a large number of variables, which is not totally avoided even after reducing variables using RFE (or a similar technique)
+    Need to use a lengthy iterative procedure, i.e. identifying collinear variables, using variable selection techniques, dropping insignificant ones etc.
+    A potential loss of information due to dropping variables
+    Model instability due to multicollinearity
+
+ 
+
+Now, let's take a look at how PCA can be used to solve these problems.
+
+With PCA, you could achieve so much with just a couple of lines of code. PCA helped us solve the problem of multicollinearity (and thus model instability), loss of information due to dropping variables, and we don't need to use iterative feature selection procedures.
+
+ 
+
+Now, let's see how you can use PCA to automatically choose the principal components which explain x% of the variance. You'll also learn some other tips and tricks to work with PCA.
+
+This brings us to the end of this segment. In the next segment, you will get to know more about the practical considerations of PCA and also its alternatives to overcome PCA's shortcomings.
+
+
+Practical Considerations and Alternatives
+
+Let's now look at some practical considerations that need to be kept in mind while applying PCA.
+
+Those were some important points to remember while using PCA. To summarise:
+
+    Most software packages use SVD to compute the components and assume that the data is scaled and centred, so it is important to do standardisation/normalisation
+    PCA is a linear transformation method and works well in tandem with linear models such as linear regression, logistic regression etc., though it can be used for computational efficiency with non-linear models as well
+    It should not be used forcefully to reduce dimensionality (when the features are not correlated)
+
+ 
+
+
+
+You learnt some important shortcomings of PCA:
+
+    PCA is limited to linearity, though we can use non-linear techniques such as t-SNE as well (you can read more about t-SNE in the optional reading material below)
+    PCA needs the components to be perpendicular, though in some cases, that may not be the best solution. The alternative technique is to use Independent Components Analysis 
+    PCA assumes that columns with low variance are not useful, which might not be true in prediction setups (especially classification problem with class imbalance)
+
+ 
+
+If you are interested in reading about t-SNE (t-Distributed Stochastic Neighbor Embedding) or ICA, you can go through the additional reading provided below.
+
+ 
+
+This brings us to the end of this segment. And now, you will see your optional assignment in
+
+the next segment.
+
+ 
+Additional Reading 
+
+t-SNE
+
+    Laurens van der Maaten's (creator of t-SNE) website https://lvdmaaten.github.io/tsne/
+    Visualising data using t-SNE: Journal of Machine Learning Research http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
+    How to use t-SNE effectively  https://distill.pub/2016/misread-tsne/
+
+ 
+
+Independent Components Analysis
+
+    Stanford notes on ICA  http://cs229.stanford.edu/notes/cs229-notes11.pdf
+In the next short lecture, Rahim will talk about some shortcomings of PCA. 
+
+
+Optional Assignment (MNIST Dataset)
+
+In this optional practice assignment, you can try your hands on applying PCA to a supervised classification problem.
+
+ 
+
+You will use the popular MNIST handwritten digits dataset and build a classifier to predict the label of a given digit. Rahim will quickly walk you through the problem statement.
+
+
+Dataset
+
+The dataset consists of images of handwritten numeric digits between 0-9. Each image is of 28 x 28 pixels, i.e. 28 pixels along both length and breadth of the image. Each pixel is an attribute with a numeric value (representing the intensity of the pixel), and thus, there are 784 attributes in the dataset.
+
+ 
+
+You can download the dataset from Kaggle here.
+
+https://www.kaggle.com/c/digit-recognizer/data
+ 
+
+Problem Statement
+
+The task is to build a classifier that predicts the label of an image (a digit between 0-9) given the features. Thus, this is a 10-class classification problem. Since this dataset has a large number of features (784), you can use PCA to reduce the dimensionality, and then, build a model on the low-dimensional data.
+
+ 
+
+An informative workflow is mentioned below:
+
+    Classifier without PCA: If you haven’t attempted the optional SVM assignment, first try to build a model on the original 784 attributes. You may try using logistic regression, Naive Bayes, SVM (linear and non-linear), random forests, and so on.
+
+        Tune the hyperparameters of your model using an appropriate method. Which evaluation metric would you choose to measure the model performance?
+
+        Which model would perform the best?
+
+ 
+
+    Classifier with PCA: Now, try to reduce the dimensionality of the dataset from 784 to a lower number k, and build a model of your choice (ideally chosen based on step-1 above) on the lower dimension data. Here, you’ll need to think about the following uncertainties:
+
+        How would you find the optimal value of k? Try experimenting with various values of k, build and tune the classifier with various values of k, and compare the model performance at various values of k with the model hyperparameters.
+
+        Notice that now you are treating k as a ‘model’ hyperparameter along with the classifier’s hyperparameters, where now your ‘composite model’ has two models in sequence — PCA and a classifier.
+
+            How would you tune the optimal value of k and the classifier’s hyperparameters simultaneously? For example, if you are building an SVM with a radial kernel, you need to tune C and gamma. Can you also tune k just like you tuned the other hyperparameters?
+
+                Hint: Try using the Pipeline feature of sklearn to chain the two models and tune the hyperparameters using GridSearchCV. 
+https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+ 
+
+You can use the following rubrics to self-evaluate your solution. 
+
+ 
+
+Self-evaluation Rubrics
+
+ 
+
+Criteria
+	
+
+ 
+	
+
+ 
+	
+
+Meets Expectations
+	
+
+ 
+	
+
+Doesn't Meet Expectations
+
+ 
+
+Data Understanding, Preparation, and EDA
+	
+
+ 
+
+Relevant data quality checks are performed, and all data quality issues are addressed in the right way (missing value imputation, removing duplicate data, and other kinds of data redundancies if any).
+
+ 
+
+Data is not scaled appropriately before applying PCA.
+	
+
+ 
+
+All the quality checks are not done, and data quality issues are not addressed correctly up to an appropriate level.
+
+
+ 
+
+Data is not scaled appropriately.
+Model Building and Evaluation	
+
+Model parameters are tuned using correct principles, and the approach is explained clearly.
+
+ 
+
+Model evaluation is done using the correct principles, and appropriate evaluation metrics are chosen.
+
+ 
+
+Optimal hyperparameters are correctly chosen using cross-validation.
+
+ 
+
+Pipelining of PCA and the classifier is done correctly, and the optimal 'n_components' and hyperparameters are chosen.
+
+ 
+
+The results are on par with the best possible model in the dataset.  
+	
+
+ 
+
+Model parameters are not tuned using the correct principles, and the approach is not explained clearly.
+
+ 
+
+Model evaluation is not done using the correct principles, and appropriate evaluation metrics are not chosen.
+
+ 
+
+Optimal hyperparameters are incorrectly chosen using cross-validation (e.g. using incorrect metrics/training data rather than test).
+
+ 
+
+The results are not on par with the best possible model in the dataset.
+
+ 
+Conciseness and Readability of Code	
+
+ 
+
+The code is concise and syntactically correct. Wherever appropriate, built-in functions and standard libraries are used instead of writing long code snippets (containing if-else statements, for loops, and so on).
+
+ 
+
+Custom functions are used to perform repetitive tasks.
+
+ 
+
+The code is readable with appropriately named variables, and detailed comments are provided wherever necessary.
+	
+
+ 
+
+Long, complex code snippets are used instead of shorter built-in functions.
+
+ 
+
+Custom functions are not used to perform repetitive tasks, which results in the repeated execution of the same piece of code.
+
+ 
+
+Code readability is poor because of vaguely named variables or a lack of comments where they are necessary.
