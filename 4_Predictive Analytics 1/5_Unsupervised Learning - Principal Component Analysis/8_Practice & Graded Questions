@@ -1,0 +1,391 @@
+Practice Questions
+
+ 
+
+Singular Value Decomposition
+
+SVD is a technique to find out the orthogonal axes for capturing the maximum variance in data. It breaks down the original data matrix to three component matrices, as shown by the following equation:
+
+ A = UΣ VT
+
+ 
+
+Here, A is an m x n data matrix with m observations containing n columns/attributes. For better understanding of U , Σ, and  VT, let's take a highly exaggerated dataset that shows food item ratings given by users. This is a 12 x 9 dataset with 12 users' ratings on 9 food items: 
+DataMatrix
+
+The table has deliberately been kept unrealistic to drive home some key concepts. You may already have noticed a pattern.
+
+ 
+
+The first three food items, namely, Chicken, Mutton, and Paneer are Indian dishes; Chow Mein, Spring Roll, and Momo are Chinese dishes, while the last three, Sushi, Ramen, and Tempura, are Japanese dishes.
+
+ 
+
+Notice that the first four users — A, B, C, and D — mainly eat Indian food, and their ratings for the items highly correlated with each other. Similarly, users E, F, G, and H prefer Chinese food and their ratings for Chinese dishes have high correlation.
+
+ 
+
+Now, do we really need nine columns to represent these obervations? Can’t we reduce the total number of columns to three (one for each food type)? One column for Indian food, one for Chinese, and another for Japanese. This is what SVD can help us accomplish. It finds out the columns that have a common theme and combines them linearly with a certain weightage.
+
+ 
+
+On appying SVD to the original matrix, you'll get the matrices U,  Σ,  and VT.
+
+    U is a User x Themes matrix.
+    Σ is a diagonal matrix, where each diagonal entry represents the weight of a theme (in decreasing order from left to right).
+    VT maps the latent themes to the original columns and is a Themes x Original features matrix. 
+
+Here's an illustration to help you get a clearer picture:
+
+ 
+
+Note: The dimensions outside the matrices show another way of splitting the original mXn matrix A.
+
+ 
+
+You will now implement SVD in Python on this dataset. Download the following data files that are required to run the program.
+
+ 
+MyFoodRatings
+file_downloadDownload
+FoodRatings_all_same_5
+file_downloadDownload
+FoodRatings_all_same_5_4_3
+file_downloadDownload
+
+ 
+
+You can write the code in any Python environment to obtain the answers.
+
+ 
+
+In Python, SVD comes with the 'linalg' (linear algebra) module of NumPy:
+
+ 
+
+U, s, VT = np.linalg.svd(data, full_matrices=True)
+
+ 
+
+ 
+
+Note that in questions 1-6, you will have to use the file 'MyFoodRatings.csv'. Also, note that although rescaling the variables is an important task before applying SVD/PCA (you'll learn that in the next session), it is okay if you don't do that in this example since the variables are anyway of comparable scales.
+
+ 
+
+Note: In question number 5 by the highest value we mean the highest magnitude ignoring the sign
+
+
+Questions:1/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+The file  'MyFoodRatings.csv' contains the first column 'Name'. Read the file and drop the column so that you have an m x n numeric dataset. Then implement SVD on it as follows:
+
+u, s, vt = np.linalg.svd(data, full_matrices=True)
+
+What are the sizes of the U and VT matrices respectively?
+
+12 x 3  and 3 x 9
+
+12 x 12 and 9 x 9
+Feedback :
+
+U is a matrix containing all eigenvectors of AAT. So, if A is an m x n matrix, the dimension of U will be m X m. Similarly, V is a matrix containing all eigenvectors of ATA. Therefore, its dimension would be n x n.
+
+print ("Shape of U :",U.shape)print ("Shape of VT :",VT.shape)
+
+ 
+
+Correct!
+
+12 x 9 and 9 x 12
+Incorrect!
+
+3 x 12 and 9 x 3
+
+Questions:2/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+All non-zero entries in the s matrix are the weights given to the different themes. What is the maximum weight?
+
+12.73
+Feedback :
+
+This is the first diagonal entry in the s matrix.
+Correct!
+
+13.73
+
+14.73
+
+12.85
+
+Questions:3/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+Look at the first three diagonal entries (themes) in the s matrix using 'np.diag(s[:3])'.
+
+Assume that each of these represents a theme — Indian, Chinese, or Japanese food. Which theme do you think has been given the lowest weight?
+
+Hint: Look at the first three columns of the User x Themes matrix U and compare its rows with the original dataset. Which 'theme' does each column of U seem to represent? Then, look at the first three entries of s and point out the one with the lowest weight.
+
+Indian food
+Incorrect!
+
+Chinese food
+
+Japanese food
+Feedback :
+
+If you look at the first three columns of U, it's clear that the first column represents users who prefer Indian food (those rows have high magnitudes). Similarly, the other two columns represent the latent variables Chinese and Japanese food.
+
+In the s matrix, the third element has the lowest weight, i.e. it corresponds to Japanese food.
+
+The reason why the weight of the latent variable ‘Japanese food’ is the lowest is that the correlation between the columns corresponding to Japanese food is lower than the other two themes. For example, if you consider Indian food items (the first three columns), then there would be a 100% correlation between them. In Chinese food items, the correlation is lower than that of Indian food but higher than Japanese.
+Correct!
+
+They all have equal weightage
+
+Questions:4/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+Print the first three rows of the matrix VT (tip: converting NumPy arrays to data frames may improve readability). Which row is about Chinese food?
+
+First row
+
+Second row
+Feedback :
+
+All columns of Indian food in the original table have equal ratings, so we expect equal weightage to be attributed to these columns in the Indian themes. Thus, the row showing equal values in the corresponding columns in the VT matrix is the row representing Indian food. This is reflected in the VT matrix. Find out a similar pattern for Chinese food.
+Correct!
+
+Third row
+
+None of the above
+
+Questions:5/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+In the first three rows of VT, look at the row corresponding to Japanese food. Which column has the highest value?
+
+Ninth
+Feedback :
+
+'Tempura' has the highest ratings amongst all Japanese food items. The same fact has been captured in the VT matrix.
+
+Correct!
+
+Eighth
+Incorrect!
+
+Fourth
+
+Second
+
+Questions:6/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+Import linalg from NumPy and run the following again, but this time, use the file 'FoodRatings_all_same_5.csv':
+
+U, s, VT = np.linalg.svd(data, full_matrices=True) 
+
+As the name suggests, all the ratings for Indian food items by users A, B, C, and D are 5. Similarly, all the ratings for Chinese food items by E, F, G, and H are 5; and all the ratings for Japanese food items by I, J, K, and L are 5.
+
+As the ratings for all the main food themes are the same, we expect SVD to give them the same weights. What is the weight assigned to each theme? (Explore s to find out the answer.)
+
+18.45
+
+17.32
+Correct!
+
+15.43
+Incorrect!
+
+16.56
+
+
+Questions:7/7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Practice Question
+
+Run the following again, but this time, with the file 'FoodRatings_all_same_5_4_3.csv':
+
+U, s, VT = np.linalg.svd(data, full_matrices=True)
+
+In this file, all the ratings for Indian food by users A, B, C, and D are 5. Similarly, all the ratings for Chinese food by E, F, G, and H are 4; and all the ratings for Japanese food by users I, J, K and L are 3.
+
+We expect the weights of the themes to be different this time. What would be the lowest weight assigned to a theme (i.e. among the three themes: Indian, Chinese, and Japanese) by SVD?
+
+10.39
+Correct!
+
+9.67
+Incorrect!
+
+13.86
+
+4.55
+
+Graded Questions
+
+Please attempt the following graded questions.
+
+ 
+keyboard_arrow_leftkeyboard_arrow_rightQuestions:1/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Choose the correct option.
+
+Principal components are highly correlated to each other
+
+Principal components are uncorrelated to each other
+Feedback :
+
+One of the reasons of performing PCA on a dataset is to get features that are not correlated to each other.
+Correct!
+
+Questions:2/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+You have a huge set of potentially correlated variables. The number of variables (features) is 1000. You want to reduce the count of variables (features) to 100. Which of the following methods would you choose to reduce the number of variables?
+
+Randomly drop exactly 900 variables
+
+Perform PCA on the dataset
+Feedback :
+
+PCA  will help in keeping most of the information. So, it is the best method to reduce the number of variables count.
+
+
+Questions:3/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Choose the correct statement(s). More than one options may be correct.
+
+Principal components are the linear combination of original variables
+Feedback :
+
+Principal components are a linear combination of original variables.
+Correct
+
+The principal components are calculated using an unsupervised learning technique
+Feedback :
+
+There is no response variable i.e. 'Y' in the calculation of principal components. Only the feature set is used to get the principal components.
+Correct
+
+The principal components are calculated using a supervised learning technique
+
+The first component in PCA has the minimum variance.
+
+Questions:4/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+In SVD, the matrix is represented as A = U∑VT. Choose the correct statement.
+
+∑ relates rows to themes 
+
+∑ is a diagonal matrix
+Feedback :
+
+Only the diagonal entries in ∑ are non-zero. Hence it is a diagonal matrix.
+
+
+
+Questions:5/5
+ 
+ 
+ 
+ 
+ 
+PCA
+
+If the loadings for the first principal component (ϕ1) is given by (ϕ11,ϕ21,....,ϕp1) then to calculate loadings for the second principal component (ϕ2), what all conditions should be fulfilled? More than one options may be correct.
+
+Reduce the number of features, i.e. k<n
+Feedback :
+
+To compute the lodgings of the second principal component, this condition is not required. Please revisit the lecture.
+Incorrect
+
+Compute the matrix V
+Feedback :
+
+To compute the lodgings of the second principal component, we don't compute matrix V. Please revisit the lecture.
+Incorrect
+
+ϕ2 is computed such that it is perpendicular to ϕ1.
+Feedback :
+
+ϕ2 should be uncorrelated to ϕ1. 
+Correct
+
+
