@@ -1,0 +1,404 @@
+Graded Questions
+
+The following .csv file contains the same data you used while learning linear regression. All data has been thoroughly cleaned in the dataset provided. The dataset contains 16 columns. The column ‘Price’ is the dependent variable, and the rest of the columns are independent variables and are quite self-explanatory. All columns have numerical values. There is a total of 545 data points.
+
+ 
+
+Also, please round off all the values till 2 decimal places for answering the questions even if not explicitly mentioned.
+
+ 
+
+Please use the following code file to solve the graded questions. Fill in the code at relevant places to get the answers. There are two sections in the code, one for questions 1 and 2; other for question 4.
+Code_for_Graded_Questions_PCA
+file_downloadDownload
+
+Please download the .csv data file here.
+newhousing
+file_downloadDownload
+
+Questions:1/4
+ 
+ 
+ 
+ 
+Graded Question
+
+Which two independent variables have the highest correlation between them?
+
+bathroom and bbratio
+
+bedrooms and stories
+
+area and areaperbedroom
+Feedback :
+
+ij_max = np.unravel_index(corrmat_diag_zero.argmax(), corrmat_diag_zero.shape)
+print("ij_max",ij_max)
+
+The highest correlation is between (0,13)
+Correct!
+
+parking and area
+
+
+Questions:2/4
+ 
+ 
+ 
+ 
+Graded Question
+
+What is the value of the highest correlation amongst the explanatory variables?
+
+Approximately 0.8
+Feedback :
+
+print("Maximum correlation :", corrmat_diag_zero[ij_max])
+
+Correct!
+
+Approximately 0.7
+
+Approximately 0.9
+
+Approximately 0.6
+
+
+Questions:3/4
+ 
+ 
+ 
+ 
+Graded Question
+
+Which of the following preprocessing steps is the most crucial before performing PCA?
+
+Standardisation of data
+Feedback :
+
+If variables are on a different scale (e.g. fractions and millions), then PCA (while trying to maximise the variance) will give higher importance to the variables with high variance simply because of scale. For example, if you change one variable from km to cm (increasing its variance), it may go from having little impact to dominating the first.
+Correct!
+
+Imputing missing values with mean/median
+
+An excellent encoding
+
+
+
+Questions:4/4
+ 
+ 
+ 
+ 
+Graded Question
+
+Use the following to create a PCA object that uses only the first six principal components:
+
+ pca = PCA(n_components=6,random_state=100)
+
+Use this object to fit and transform the data. Use this transformed data in sklearn linear model to predict. What would the mean squared error of this model be (up to two decimal places)?
+
+0.43
+Feedback :
+
+Use fit_transform and transform.
+Incorrect!
+
+0.53
+
+0.33
+Feedback :
+
+Xtrain_reduced = pca.fit_transform(Xtrain)
+Xtest_reduced = pca.transform(Xtest)
+
+ 
+
+Correct!
+
+0.23
+None of the above
+
+
+
+Additional Practice Questions (Non - Graded)
+
+In the previous section, you solved some graded question which helped you learn and implement PCA in Python.
+
+ 
+
+In this segment, you will continue to implement PCA with the same data as in the previous graded question. 
+
+ 
+
+The following notebook contains code relevant for the following practice questions. Refer to it in case you are stuck.
+Housing Case Study - Code
+file_downloadDownload
+Housing Case Study - Data
+file_downloadDownload
+
+
+Questions:1/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Import preprocessing from sklearn. Use the following on your training data to get a scaler:
+
+X_scaler = preprocessing.StandardScaler().fit()
+
+Now use 'X_scaler.transform()' to scale your training and test data. What would the maximum value of the area column be after the standardisation of the training data? Choose the most appropriate option.
+
+Approximately  4.99
+Feedback :
+
+xtrain_df = pd.DataFrame(Xtrain,columns=X_train.columns) Xtrain[:,0].max() xtrain_df['area'].max()
+Correct!
+
+Approximately  6.11
+
+Approximately  8.11
+
+Approximately  7.11
+
+Questions:2/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+After splitting and standardising the data, let's run a simple linear regression algorithm using linear_model of sklearn. What is the approximate mean squared error of the model?
+
+Approximately 0.35
+Feedback :
+
+print("Mean squared error: %.2f" % mean_squared_error(ytest, y_pred))
+# Explained variance score: 1 is perfect prediction
+print('R2 score: %.2f' % r2_score(ytest, y_pred))
+
+Correct!
+
+Approximately 0.25
+
+Approximately 0.45
+Feedback :
+
+from sklearn import  linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+# Create linear regression object
+regr = linear_model.LinearRegression()
+# Train the model using the training sets
+regr.fit(Xtrain, ytrain)
+# Make predictions using the testing set
+y_pred = regr.predict(Xtest)
+
+Then use the results to find the MSE.
+Incorrect!
+
+
+Questions:3/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Import PCA from sklearn.decomposition and use pca = PCA(random_state=100) to create an instance of pca. Then, use pca.fit() on the training data. Which feature of the original columns has the highest variance in the direction of the first PC (principal component)?
+
+basement
+
+guestroom
+
+bathrooms
+
+area
+Feedback :
+
+components = pd.DataFrame({'PC1':pca.components_[0],'PC2':pca.components_[1],'Feature':X.columns })
+components
+
+0.466911
+
+Questions:4/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+What is the percentage of variance explained by the 3rd principal component?
+
+Approximately 15%
+
+Approximately 17%
+
+Approximately 11%
+Feedback :
+
+print("pca.explained_variance_ratio_: ",pca.explained_variance_ratio_.round(3)*100)
+
+Correct!
+
+Approximately 6%
+
+
+Questions:5/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+How many PCs would you exactly need to explain 80% of the total variance?
+
+5
+Feedback :
+
+Find the cumulative sum and then round the values to two decimals. You may multiply the values by 100 the get the percentage value.
+Incorrect!
+
+6
+
+7
+
+8
+Feedback :
+
+np.cumsum(np.round(pca.explained_variance_ratio_, decimals=4)*100)
+
+Correct!
+
+
+Questions:6/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+After how many PCs would the scree plot become almost horizontal?
+
+12
+Feedback :
+
+#Making the screeplot - plotting the cumulative variance against the number of components
+%matplotlib inline
+fig = plt.figure(figsize = (12,8))
+plt.plot(np.cumsum(pca.explained_variance_ratio_))
+plt.xlabel('number of components')
+plt.ylabel('cumulative explained variance')
+plt.show()
+
+Correct!
+
+14
+
+10
+
+9
+
+Questions:7/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+State true or false
+
+All entries except for the diagonal entries of the matrix in the correlation matrix of the transformed data are near to zero.
+
+True
+Feedback :
+
+Use the below code:
+
+corrmat = np.corrcoef(pca_train.transpose())
+sns.heatmap(corrmat,annot = True)
+
+Correct!
+
+False
+
+
+Questions:8/8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Run an sklearn linear regression on the PCA transformed data using all the principal components. What would the mean squared error of this operation be (up to two decimal places)?
+
+0.33
+
+0.35
+Feedback :
+
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import  linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+# Create linear regression object
+regrpca = linear_model.LinearRegression()
+# Train the model using the principal components of the transformed training sets
+regrpca.fit(pca_train, ytrain)
+# Make predictions using the principal components of the transformed testing set
+y_pca_pred = regrpca.predict(pca_test)
+print("Mean squared error: %.2f" % mean_squared_error(ytest, y_pca_pred))
+# Explained variance score: 1 is perfect prediction
+print('R2 score: %.2f' % r2_score(ytest, y_pca_pred))
+
+Correct!
+
+0.34
+Feedback :
+
+# Importing LinearRegression 
+regrpca = linear_model.LinearRegression()
+# Train the model using the principal components of the transformed training sets
+regrpca.fit(pca_train, ytrain)
+# Make predictions using the principal components of the transformed testing set
+y_pca_pred = regrpca.predict(pca_test)
+
+Use the result from the above code to find MSE.
+Incorrect!
+
+0.31
+Approximately 0.15
+
