@@ -316,3 +316,269 @@ Custom functions are not used to perform repetitive tasks, which results in the 
  
 
 Code readability is poor because of vaguely named variables or a lack of comments where they are necessary.
+
+
+Comprehension: PCA, SVD and Eigenvectors
+
+Now that you have learnt the key concepts of PCA, let's look at PCA from another point of view. You have seen that SVD is used to compute the principal components, but there's an alternative technique to do that as well - using eigenvectors. 
+
+ 
+
+Please go through the handout attached below.
+
+The Relation Between SVD, PCA and Eigenvectors
+file_downloadDownload
+
+Now, solve the following questions:
+
+
+Questions:1/6
+ 
+ 
+ 
+ 
+ 
+ 
+Eigenvector
+
+If a matrix operates on a vector and the vector doesn't change its span, then the vector is an eigenvector of the said matrix. Which of the following options is an eigenvector of the matrix below?
+
+ 
+
+(1, 2)
+Feedback :
+
+Multiplying vector (1,2) with the given vector produces (2 x 1+3 x 2 = 8, 4 x 1+6 x 2 = 16) = (8,16) = 8 times (1,2). As the span of the vector remains the same, it is an eigenvector.
+
+Correct!
+
+(2, 1)
+
+(3, 2)
+
+(2, 3)
+Incorrect!
+
+Questions:2/6
+ 
+ 
+ 
+ 
+ 
+ 
+Eigenvalue
+
+If the span of a vector remains the same after the matrix operation, and there's a change in the magnitude of the vector, then the ratio of the original magnitude to the new magnitude is called the eigenvalue. In other words, the factor by which a vector is enlarged or squashed on its span is called eigenvalue. If one of the eigenvectors of the matrix is , what is the eigenvalue?
+
+3
+
+5
+Feedback :
+
+Multiplying (2,1) with the given matrix gives (2 x 2+6 x 1 = 10, 1 x 2 + 3 x 1 = 5) = (10, 5) = 5 times (2,1). Hence, the given vector gets enlarged by 5 times; therefore, the eigenvalue is 5.
+Correct!
+
+2
+
+1
+
+
+Questions:3/6
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+Consider the following picture. A square of two unit lengths is drawn at the centre of a two-dimensional subspace defined by the basis i (1,0) and j (0,1). The space is vertically scaled, which transforms the square into a rectangle with double the height of that of the square, though the width remains the same.
+
+Answer the following questions based on the facts above.
+
+Which of the three vectors will not be pointing in the same direction after a vertical scaling?
+
+(0, 1)
+
+(1, 1)
+Feedback :
+
+The slope of the diagonal vector changes from 1 to 2.
+Correct!
+
+(1, 0)
+
+None of the above
+
+Questions:4/6
+ 
+ 
+ 
+ 
+ 
+ 
+SVD
+
+SVD and PCA are related to each other as:
+
+SVD is an analogous data analysis technique to PCA and these two are often used alternately
+
+SVD is a computational technique used to find the principal components
+Feedback :
+
+Yes, it does that by decomposing the data matrix into U, S, VT
+Correct!
+
+PCA cannot be done without SVD
+
+None of these
+
+
+Questions:5/6
+ 
+ 
+ 
+ 
+ 
+ 
+Co variance Matrix
+
+If the original data matrix A is of dimensions n x p, i.e. n observations and p features, then the covariance matrix of A (choose all correct options):
+
+Is an n x n square matrix
+Feedback :
+
+The covariance matrix contains variances of original columns along the diagonal and covariances at the off-diagonal entries.
+Incorrect
+
+Is a p x p square matrix
+Feedback :
+
+The covariance matrix contains p rows and p columns with each diagonal entry being the variance of a column and the off-diagonal entries being the covariances. Since cov(x, y) = cov(y, x), the element at index (i,j) and (j, i) are the same, and hence the matrix is symmetric.
+CorrectYou missed this!
+
+Is a symmetric matrix
+Feedback :
+
+The covariance matrix contains p rows and p columns with each diagonal entry being the variance of a column and the off-diagonal entries being the covariances. Since cov(x, y) = cov(y, x), the element at index (i,j) and (j, i) are the same, and hence the matrix is symmetric.
+CorrectYou missed this!
+
+Is a diagonal matrix
+
+Contains variances of original columns along the diagonal
+Feedback :
+
+The covariance matrix contains p rows and p columns with each diagonal entry being the variance of a column and the off-diagonal entries being the covariances. Since cov(x, y) = cov(y, x), the element at index (i,j) and (j, i) are the same, and hence the matrix is symmetric.
+CorrectYou missed this!
+
+Contains covariances among the original columns at the off-diagonal elements
+Feedback :
+
+The covariance matrix contains variances of original columns along the diagonal and covariances at the off-diagonal entries.
+
+Questions:6/6
+ 
+ 
+ 
+ 
+ 
+ 
+PCA
+
+More than one options may be correct. While conducting PCA of an n x p data matrix A:
+
+SVD decomposes the covariance matrix of A into U, S and VT
+
+Eigenvectors of the matrix A form the principal components
+Feedback :
+
+No, eigenvectors of the covariance matrix of A are computed, not A itself
+Incorrect
+
+Eigenvectors of the covariance matrix of A form the principal components
+Feedback :
+
+Yes, in eigenvalue decomposition, the covariance matrices eigenvectors are the PCs.
+Correct
+
+SVD decomposes the matrix of into U, S and VT where the column vectors of V are the principal component vectors
+Feedback :
+
+Yes, the matrix V’s columns basically contain the principal component vectors.  
+
+
+ 
+
+Consider the following picture. A  square of two unit lengths is drawn at the centre of a two-dimensional subspace defined by the basis i (1,0) and j (0,1). The space is vertically scaled, which transforms the square into a rectangle with double the height of that of the square, though the width remains the same.
+
+ 
+
+ 
+
+Answer the following questions based on the facts above.
+
+
+Questions:1/3
+ 
+ 
+ 
+Eigenvector
+
+Which of the three vectors will not change its magnitude after this transformation of space?
+
+(0, 1)
+
+(1, 1)
+
+(1, 0)
+Correct!
+
+None of the above
+
+
+Questions:2/3
+ 
+ 
+ 
+Eigenvector
+
+Eigenvectors are characteristics of any such transformation. The vectors that don't change their directions are the eigenvectors of the transformation. Which of the three vectors is not an eigenvector of this transformation?
+
+(0, 1)
+
+(1,1)
+Feedback :
+
+Point (1, 1) becomes (1, 2) after the transformation. As the span of this vector gets changed, it's not an eigenvector.
+Correct!
+
+(1, 0)
+
+None of the above
+
+
+Questions:3/3
+ 
+ 
+ 
+Eigenvalue
+
+Eigenvalue is the factor by which the magnitude of a vector changes. What is the eigenvalue for the transformation of the vertical black vector?
+
+2
+Feedback :
+
+It's clearly evident in the diagram that the vector gets doubled, and hence, the eigenvalue is 2.
+Correct!
+
+1
+
+3
+
+4
+ 
+
+
+
+
+
